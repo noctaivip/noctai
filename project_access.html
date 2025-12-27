@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project Access — 1$EXIT</title>
+
+<style>
+:root{
+  --bg:#050b16;
+  --panel:#071827;
+  --muted:#95a6b9;
+  --text:#e6eef7;
+  --gold:#d6b15e;
+  --gold-soft:#f1d48a;
+  --border:rgba(214,177,94,.35);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:radial-gradient(1200px 600px at 50% -200px,#0b2238 0%,#050b16 55%);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+}
+
+.container{
+  max-width:900px;
+  margin:80px auto;
+  padding:0 20px;
+}
+
+.badge{
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:.08em;
+}
+
+h1{
+  margin:18px 0 12px;
+  font-size:36px;
+  font-weight:700;
+}
+
+.sub{
+  color:var(--muted);
+  max-width:760px;
+  line-height:1.6;
+}
+
+.section{
+  margin-top:40px;
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:28px;
+}
+
+.section h2{
+  margin:0 0 10px;
+  font-size:20px;
+  color:var(--gold-soft);
+}
+
+.section p{
+  margin:0 0 10px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+}
+
+ul{
+  margin:10px 0 0 18px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+}
+
+.form{
+  margin-top:18px;
+}
+
+label{
+  display:block;
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+
+input{
+  width:100%;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:#050b16;
+  color:var(--text);
+  margin-bottom:14px;
+}
+
+.note{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:10px;
+}
+
+.footer-note{
+  margin-top:36px;
+  color:var(--muted);
+  font-size:13px;
+}
+</style>
+<style>
+.top-nav{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(10,13,18,0.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+}
+.nav-container{
+max-width:1120px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+
+.logo:hover{
+  text-decoration:none;
+}
+
+.nav-links a{
+margin-left:28px;
+text-decoration:none;
+color:var(--text);
+position:relative;
+padding-bottom:4px;
+}
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:2px;
+background:var(--gold);
+transition:width 0.3s ease;
+}
+.nav-links a:hover::after{
+width:100%;
+}
+.nav-cta{
+border:1px solid var(--gold-soft);
+padding:8px 18px;
+border-radius:999px;
+}
+.nav-cta::after{
+  display:none !important;
+}
+.nav-cta:hover{
+  background:rgba(214,177,94,.08);
+  box-shadow:0 0 0 1px var(--gold-soft);
+}
+</style>
+<style>
+.site-footer{
+  border-top:1px solid var(--border);
+  margin-top:80px;
+  padding:36px 20px;
+}
+.footer-container{
+  max-width:1120px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:28px;
+  color:var(--muted);
+  font-size:14px;
+}
+.site-footer a{
+  color:var(--gold);
+  text-decoration:none;
+}
+.site-footer a:hover{
+  text-decoration:underline;
+}
+</style>
+
+</head>
+<body>
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">1$EXIT™</a>
+
+    <div class="nav-links">
+      <a href="how_it_works.html">Как это работает</a>
+      <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+      <a href="projects.html">Проекты</a>
+      <a href="invest_usdt.html" class="nav-cta">Инвестировать</a>
+    </div>
+  </div>
+</nav>
+
+  <div class="container">
+    <span class="badge">PROJECT ACCESS</span>
+    <h1>Доступ к проектам платформы</h1>
+    <p class="sub">
+      Project Access — это расширенный уровень доступа к отдельным проектам и инвестиционным раундам платформы 1$EXIT.
+      Доступ предоставляется по результатам индивидуального рассмотрения.
+    </p>
+    <div class="section">
+      <h2>Условия рассмотрения</h2>
+      <p>
+        Рассмотрение Project Access возможно для инвесторов с совокупным участием
+        <strong>от $10,000</strong> в проектах платформы.
+      </p>
+      <ul>
+        <li>учитывается совокупный объём инвестиций</li>
+        <li>доступ не предоставляется автоматически</li>
+        <li>платформа сохраняет право отказа без объяснения причин</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Что даёт Project Access</h2>
+      <ul>
+        <li>доступ к закрытым и будущим проектам</li>
+        <li>ранний доступ к инвестиционным раундам</li>
+        <li>приватные обновления по проектам</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Запрос на Project Access</h2>
+      <p>
+        Для рассмотрения запроса укажите email для связи и Transaction Hash (TxID)
+        инвестиции, подтверждающей участие.
+      </p>
+      <div class="form">
+        <label>Email для связи</label>
+        <input id="pa-email" id="pa-email" type="email" placeholder="you@email.com"/>
+
+        <label>TxID / Transaction Hash</label>
+        <input id="pa-txid" id="pa-txid" type="text" placeholder="0x..."/>
+      </div>
+      <div style="margin-top:24px;text-align:center;">
+        <button id="requestAccessBtn" type="button" style="background:linear-gradient(180deg,#f1d48a,#d6b15e);color:#050b16;border:none;border-radius:14px;padding:16px 34px;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 10px 30px rgba(214,177,94,.35);transition:all .2s ease;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">Запросить Project Access</button>
+      </div>
+    </div>
+<div class="note-wrap">
+  <p class="note">
+    Запросы рассматриваются вручную. В случае одобрения доступ предоставляется по email.
+  </p>
+</div>
+    <p class="footer-note">
+      Project Access не является гарантией участия в закрытых проектах.
+      Все решения принимаются командой 1$EXIT индивидуально.
+    </p>
+  </div>
+
+
+
+
+
+
+
+
+<!-- Access Approved Modal -->
+<div id="accessApprovedModal" style="
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(5,11,22,.85);
+  backdrop-filter:blur(6px);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+">
+  <div style="
+    max-width:760px;
+    width:92%;
+    background:radial-gradient(1200px 600px at 50% -200px,#0b2238 0%,#050b16 55%);
+    border:1px solid rgba(214,177,94,.45);
+    border-radius:18px;
+    padding:36px;
+    position:relative;
+    box-shadow:0 0 60px rgba(214,177,94,.25);
+  ">
+    <button onclick="closeApproved()" style="
+      position:absolute;
+      top:14px;
+      right:14px;
+      background:none;
+      border:none;
+      color:#d6b15e;
+      font-size:22px;
+      cursor:pointer;
+    ">×</button>
+
+    <div style="color:#d6b15e;font-size:12px;letter-spacing:.12em;margin-bottom:10px;">
+      ACCESS APPROVED
+    </div>
+
+    <h2 style="margin-top:0">Project Access предоставлен</h2>
+
+    <p style="color:#9fb3c8">
+      Ваш запрос на Project Access одобрен командой 1$EXIT.
+      Доступ активирован и закреплён за вашим email.
+    </p>
+
+    <div style="
+      margin-top:24px;
+      border:1px solid rgba(214,177,94,.35);
+      border-radius:14px;
+      padding:20px;
+    ">
+      <strong style="color:#d6b15e">Что доступно</strong>
+      <ul style="margin-top:10px;color:#c7d6e6">
+        <li>просмотр закрытых и будущих проектов платформы</li>
+        <li>ранний доступ к отдельным инвестиционным раундам</li>
+        <li>приватные обновления и материалы по проектам</li>
+      </ul>
+    </div>
+
+    <div style="text-align:center;margin-top:28px">
+      <button onclick="goPrivateProjects()" style="
+        background:linear-gradient(180deg,#f1d48a,#d6b15e);
+        color:#050b16;
+        border:none;
+        border-radius:12px;
+        padding:14px 30px;
+        font-size:14px;
+        font-weight:600;
+        cursor:pointer;
+      ">
+        Перейти к Private Projects
+      </button>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div>
+      <strong>1$EXIT™</strong><br>
+      Платформа долевого участия в реальных проектах.<br>
+      <span style="font-size:13px;color:#9aa3b2;">
+        Централизованное управление · Ручной допуск · Permission‑based access
+      </span>
+    </div>
+    <div>
+      <a href="legal.html">Условия</a><br>
+      <a href="privacy.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+    </div>
+    <div>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
+        noctai.vip@proton.me
+      </a><br>
+      <span style="font-size:13px;">
+        Indicative information only. No public offering.
+      </span><br>
+      © 2025 1$EXIT™
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('requestAccessBtn');
+  const emailInput = document.getElementById('pa-email');
+  const txidInput = document.getElementById('pa-txid');
+
+  if (!btn) return;
+
+  btn.onclick = function () {
+    const email = emailInput.value.trim();
+    const txid = txidInput.value.trim();
+
+    if (!email || !txid) {
+      alert('Пожалуйста, укажите email и Transaction Hash (TxID).');
+      return;
+    }
+
+    const subject =
+      'Project Access Request — NOCTAI';
+
+    const body =
+      'Здравствуйте,%0A%0A' +
+      'Прошу рассмотреть мой запрос на Project Access.%0A%0A' +
+      'Email для связи: ' + encodeURIComponent(email) + '%0A' +
+      'Transaction Hash (TxID): ' + encodeURIComponent(txid) + '%0A%0A' +
+      'С уважением';
+
+    const gmailURL =
+      'https://mail.google.com/mail/?view=cm&fs=1' +
+      '&to=noctai.vip@proton.me' +
+      '&su=' + encodeURIComponent(subject) +
+      '&body=' + body;
+
+    window.open(gmailURL, '_blank', 'noopener');
+  };
+});
+</script>
+
+</body>
+</html>

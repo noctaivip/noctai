@@ -1,0 +1,605 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Private Investor Club</title>
+<style>
+body{
+    margin:0;
+    background:#0b0f16;
+    font-family: Inter, Arial, sans-serif;
+    color:#e6e8ec;
+}
+.container{
+    max-width:1100px;
+    margin:80px auto;
+    padding:0 24px;
+}
+.card{
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:16px;
+    padding:28px 32px;
+    margin-bottom:32px;
+    background:linear-gradient(180deg, rgba(18,24,36,.95), rgba(12,16,26,.95));
+}
+h1,h2{
+    margin:0 0 12px 0;
+    font-weight:600;
+}
+h1{font-size:34px;}
+h2{font-size:26px;}
+.label{color:#d4af37;font-weight:500;margin-bottom:6px;}
+.value-approved{color:#4ade80;font-weight:500;}
+.value-pending{color:#facc15;font-weight:500;}
+.value-locked{color:#94a3b8;font-weight:500;}
+p{line-height:1.6;color:#cbd5e1;}
+.doors{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:24px;
+}
+.door{
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:14px;
+    padding:20px;
+    background:rgba(10,14,22,.9);
+}
+.footer{
+    text-align:center;
+    color:#64748b;
+    font-size:13px;
+    margin-top:40px;
+}
+
+.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:10}
+.modal-content{background:#0b1220;border:1px solid rgba(212,175,55,.4);border-radius:16px;padding:32px;max-width:560px;width:90%;position:relative}
+.close{position:absolute;top:14px;right:18px;font-size:22px;cursor:pointer}
+
+
+.room-panel{
+  position:fixed;
+  inset:0;
+  background:#0b0f16;
+  color:#e6e8ec;
+  padding:60px 6%;
+  display:none;
+  z-index:30;
+  overflow:auto;
+}
+.room-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+.room-back{
+  cursor:pointer;
+  color:#d4af37;
+  font-size:14px;
+}
+
+
+.door.locked{
+    cursor:default;
+    opacity:0.55;
+}
+.door.locked:hover{
+    box-shadow:none;
+}
+
+
+/* NDA Proceed button – institutional style */
+#ndaModal button{
+    background: linear-gradient(180deg, #e6c56f 0%, #c9a24d 100%);
+    border: none;
+    color: #0a0d12;
+    padding: 14px 34px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    opacity: 0.45;
+    transition: opacity .25s ease, box-shadow .25s ease, transform .2s ease;
+}
+#ndaModal button.active{
+    opacity: 1;
+    box-shadow: 0 10px 30px rgba(201,162,77,.35);
+}
+#ndaModal button.active:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 14px 36px rgba(201,162,77,.45);
+}
+
+</style>
+<style>
+.top-nav{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(10,13,18,0.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+}
+.nav-container{
+max-width:1120px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+
+.logo:hover{
+  text-decoration:none;
+}
+
+.nav-links a{
+margin-left:28px;
+text-decoration:none;
+color:var(--text);
+position:relative;
+padding-bottom:4px;
+}
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:2px;
+background:var(--gold);
+transition:width 0.3s ease;
+}
+.nav-links a:hover::after{
+width:100%;
+}
+.nav-cta{
+border:1px solid var(--gold-soft);
+padding:8px 18px;
+border-radius:999px;
+}
+.nav-cta::after{
+  display:none !important;
+}
+.nav-cta:hover{
+  background:rgba(214,177,94,.08);
+  box-shadow:0 0 0 1px var(--gold-soft);
+}
+</style>
+<style>
+:root{
+  --bg:#050b16;
+  --panel:#071827;
+  --muted:#95a6b9;
+  --text:#e6eef7;
+  --gold:#d6b15e;
+  --gold-soft:#f1d48a;
+  --border:rgba(214,177,94,.35);
+}
+</style>
+<style>
+.site-footer{
+  border-top:1px solid var(--border);
+  margin-top:80px;
+  padding:36px 20px;
+}
+.footer-container{
+  max-width:1120px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:28px;
+  color:var(--muted);
+  font-size:14px;
+}
+.site-footer a{
+  color:var(--gold);
+  text-decoration:none;
+}
+.site-footer a:hover{
+  text-decoration:underline;
+}
+</style>
+
+</head>
+<body>
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">1$EXIT™</a>
+
+    <div class="nav-links">
+      <a href="how_it_works.html">Как это работает</a>
+      <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+      <a href="projects.html">Проекты</a>
+      <a href="invest_usdt.html" class="nav-cta">Инвестировать</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="card">
+<h1>Private Data Room Entry</h1>
+<p>This page represents a secured access layer for private investment materials provided by the 1$EXIT platform.</p>
+
+<div class="label">Access Status</div>
+<div class="value-approved">Approved</div>
+
+<br>
+
+<div class="label">Confidential Scope</div>
+<p>All materials related to private projects are prepared individually and are not hosted publicly on the platform.</p>
+
+<div class="label">Data Room Availability</div>
+<p>Access to data room materials is provided exclusively through direct communication with the investment team and may involve separate delivery channels.</p>
+
+<div class="label">What Happens Next</div>
+<p>Your entry into the private access layer has been recorded. The investment team is aware that you have reached this stage and will initiate further communication directly using the contact details previously provided.</p>
+</div>
+
+<div class="card">
+<h2>Private Investor Club</h2>
+<p>This private access layer represents an institutional-grade investment environment. Entry is controlled. Visibility is selective. Allocation is manual.</p>
+
+<div class="doors">
+    <div class="door" onclick="openNDA()" style="cursor:pointer;">
+        <div class="label">Door 1 — Private Projects Room</div>
+        <p>Invitation-only investment projects structured individually. Participation is determined manually by the investment team.</p>
+        <div class="value-approved">Status: Accessed</div>
+    </div>
+
+    <div class="door locked">
+        <div class="label">Door 2 — Co-Investment Opportunities</div>
+        <p>Strategic co-investment structures with limited participants. Capital alignment and timing requirements apply.</p>
+        <div class="value-pending">Status: Pending</div>
+    </div>
+
+    <div class="door" onclick="openRoomPanel('room-communication')" style="cursor:pointer;">
+        <div class="label">Door 3 — Investor Communication</div>
+        <p>Direct communication channel with the investment team. No public discussions. All interactions are NDA-covered.</p>
+        <div class="value-approved">Status: Available</div>
+    </div>
+
+    <div class="door locked">
+        <div class="label">Door 4 — Data Room Materials</div>
+        <p>Investment materials are delivered individually. No documents are hosted publicly on the platform. Access is provided per project.</p>
+        <div class="value-locked">Status: Controlled Access</div>
+    </div>
+</div>
+
+<div class="room-panel" id="room-projects">
+  <div class="room-header">
+    <span class="room-back" onclick="closeRoomPanel()">← Back to Investor Club</span>
+    <h2>Private Projects</h2>
+  </div>
+  
+<div class="container">
+<div class="card">
+
+<span class="badge">Private Projects</span>
+<h1>Закрытые инвестиционные проекты</h1>
+<div class="subtitle">
+Вы находитесь в приватном инвестиционном пространстве <strong>1$EXIT</strong>.
+Ниже представлены проекты, доступ к которым предоставляется только инвесторам с подтверждённым статусом и индивидуальным согласованием условий.
+</div>
+
+<div class="section">
+<h3>Почему проекты являются private</h3>
+<ul>
+<li>нестандартная структура сделок и долей</li>
+<li>ограниченное количество участников</li>
+<li>индивидуальные юридические и финансовые условия</li>
+<li>отсутствие публичного маркетинга и размещений</li>
+<li>контроль капитала и состава инвесторов</li>
+</ul>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+<h3>Доступные private projects</h3>
+<div class="projects">
+
+<div class="project" onclick="openModal('logistics')" style="cursor:pointer;">
+<h4>Logistics Intelligence Platform</h4>
+<div class="status">Status: Private Review</div>
+<p>
+Инфраструктурный проект в сфере логистической аналитики и брокерского трекинга.
+Структура участия формируется индивидуально под инвестора.
+</p>
+</div>
+
+<div class="project" onclick="openModal('data')" style="cursor:pointer;">
+<h4>Data Intelligence Asset</h4>
+<div class="status">Status: Limited Access</div>
+<p>
+Проект по работе с отраслевыми данными и закрытой аналитикой.
+Доступ предоставляется ограниченному числу стратегических инвесторов.
+</p>
+</div>
+
+<div class="project" onclick="openModal('capital')" style="cursor:pointer;">
+<h4>Capital Structuring Vehicle</h4>
+<div class="status">Status: Invitation Only</div>
+<p>
+Частная инвестиционная структура для работы с капиталом в закрытых раундах.
+Условия участия определяются вручную командой.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+<h3>Как происходит дальнейшее взаимодействие</h3>
+<p>
+После выбора интересующего направления команда <strong>1$EXIT</strong> связывается с инвестором напрямую.
+Материалы, параметры сделки и юридические детали передаются индивидуально.
+</p>
+</div>
+
+<div class="contact">
+<p>Контакт для коммуникации:</p>
+<p><strong>Email:</strong> noctai.vip@proton.me</p>
+</div>
+
+<div class="footer">
+Private Projects не являются публичной инвестиционной офертой.
+Участие подтверждается исключительно по решению команды 1$EXIT.
+</div>
+
+</div>
+</div>
+<div class="modal" id="modal">
+<div class="modal-content">
+<div class="close" onclick="closeModal()">×</div>
+<div id="modal-body"></div>
+</div>
+<script>
+
+function openModal(type){
+let body=document.getElementById('modal-body');
+if(type==='logistics'){
+body.innerHTML=`
+<h2>Logistics Intelligence Platform</h2>
+<div class="metric"><b>Target ROI:</b> 22–28% annually</div>
+<div class="metric"><b>Capital Requirement:</b> $50k+</div>
+<div class="metric"><b>Structure:</b> Revenue-linked participation</div>
+<p>Private infrastructure analytics platform operating across regulated logistics flows. Allocation size and structure are defined manually.</p>`;
+}
+if(type==='data'){
+body.innerHTML=`
+<h2>Data Intelligence Asset</h2>
+<div class="metric"><b>Target ROI:</b> 18–24%</div>
+<div class="metric"><b>Capital Requirement:</b> Strategic only</div>
+<div class="metric"><b>Structure:</b> Equity / data-rights hybrid</div>
+<p>Closed analytical asset focused on sector-specific data extraction. Access limited to aligned investors.</p>`;
+}
+if(type==='capital'){
+body.innerHTML=`
+<h2>Capital Structuring Vehicle</h2>
+<div class="metric"><b>Target ROI:</b> Deal-dependent</div>
+<div class="metric"><b>Capital Requirement:</b> By invitation</div>
+<div class="metric"><b>Structure:</b> SPV / bespoke mandate</div>
+<p>Private vehicle for structured capital deployment into non-public opportunities. Terms defined individually.</p>`;
+}
+document.getElementById('modal').style.display='flex';
+}
+function closeModal(){document.getElementById('modal').style.display='none';}
+
+</script>
+
+</div>
+
+<div class="room-panel" id="room-communication">
+  <div class="room-header">
+    <span class="room-back" onclick="closeRoomPanel()">← Back to Investor Club</span>
+    <h2>Investor Communication Layer</h2>
+  </div>
+  <p>This environment represents a direct institutional communication layer.</p>
+  <ul>
+    <li>No public threads</li>
+    <li>No visible participants</li>
+    <li>All interaction NDA-governed</li>
+    <li>Engagement initiated manually by the desk</li>
+  </ul>
+</div>
+
+</div>
+
+<div class="footer">© 1$EXIT — Private Investor Access Environment</div>
+
+</div>
+
+<div class="modal" id="roomModal">
+  <div class="modal-content">
+    <div class="close" onclick="closeRoom()">×</div>
+    <div id="roomContent"></div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div>
+      <strong>1$EXIT™</strong><br>
+      Платформа долевого участия в реальных проектах.<br>
+      <span style="font-size:13px;color:#9aa3b2;">
+        Централизованное управление · Ручной допуск · Permission‑based access
+      </span>
+    </div>
+    <div>
+      <a href="legal.html">Условия</a><br>
+      <a href="privacy.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+    </div>
+    <div>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
+        noctai.vip@proton.me
+      </a><br>
+      <span style="font-size:13px;">
+        Indicative information only. No public offering.
+      </span><br>
+      © 2025 1$EXIT™
+    </div>
+  </div>
+</footer>
+<script>
+function openRoom(room){
+  let c = document.getElementById('roomContent');
+  if(room==='projects'){
+    c.innerHTML = `<h2>Private Projects Room</h2>
+    <p>This room contains non-public investment initiatives. Each project is structured manually with bespoke legal and capital terms.</p>
+    <ul>
+      <li>Indicative target metrics only</li>
+      <li>No standardized allocations</li>
+      <li>Capital acceptance by approval</li>
+    </ul>`;
+  }
+  if(room==='coinvest'){
+    c.innerHTML = `<h2>Co-Investment Opportunities</h2>
+    <p>Selective co-investment structures alongside aligned capital partners.</p>
+    <ul>
+      <li>Limited participant count</li>
+      <li>Synchronized deployment windows</li>
+      <li>Manual ticket sizing</li>
+    </ul>`;
+  }
+  if(room==='communication'){
+    c.innerHTML = `<h2>Investor Communication</h2>
+    <p>Direct and confidential communication layer.</p>
+    <ul>
+      <li>No intermediaries</li>
+      <li>All communication NDA-covered</li>
+      <li>Asynchronous, documented exchanges</li>
+    </ul>`;
+  }
+  if(room==='dataroom'){
+    c.innerHTML = `<h2>Data Room Materials</h2>
+    <p>Materials are distributed individually and are never hosted publicly.</p>
+    <ul>
+      <li>Per-project delivery</li>
+      <li>Controlled scope</li>
+      <li>Access revocable at any stage</li>
+    </ul>`;
+  }
+  document.getElementById('roomModal').style.display='flex';
+}
+function closeRoom(){
+  document.getElementById('roomModal').style.display='none';
+}
+</script>
+
+
+<script>
+function openRoomPanel(id){
+  document.querySelectorAll('.room-panel').forEach(r=>r.style.display='none');
+  document.getElementById(id).style.display='block';
+}
+function closeRoomPanel(){
+  document.querySelectorAll('.room-panel').forEach(r=>r.style.display='none');
+}
+function silentDoor(){
+  return;
+}
+</script>
+
+
+<script>
+function projectProjection(){
+    // Institutional projection to Private Projects layer
+    window.location.href = 'private_projects.html';
+}
+</script>
+
+
+<!-- Investor NDA Modal -->
+<div class="modal" id="ndaModal" style="display:none;z-index:50;">
+  <div class="modal-content" style="max-width:820px;">
+    <div class="close" onclick="closeNDA()">×</div>
+    
+<div class="container">
+    <h1>Investor NDA - Confidential Agreement</h1>
+    <p>This page contains confidential information related to private investment opportunities provided by the 1$EXIT platform.</p>
+
+    <div class="box">
+        <p><strong>By accessing this material, you acknowledge and agree that:</strong></p>
+        <ul>
+            <li>All information is confidential and intended solely for the recipient.</li>
+            <li>No information may be shared, distributed, or disclosed to third parties.</li>
+            <li>This material does not constitute a public investment offer.</li>
+            <li>All investment decisions are made individually by the 1$EXIT team.</li>
+        </ul>
+    
+<div class="box">
+<p><strong>Additional Acknowledgements:</strong></p>
+<ul>
+    <li>You acknowledge that access is granted on a revocable basis and may be withdrawn at any time without notice.</li>
+    <li>You agree not to rely on the information herein for public disclosure, solicitation, or redistribution.</li>
+    <li>You understand that any forward-looking statements are indicative only and not guarantees of performance.</li>
+    <li>You acknowledge that no fiduciary relationship is created by accessing these materials.</li>
+</ul>
+</div>
+
+
+    <div class="footer">
+        <input type="checkbox" id="agree">
+        <label for="agree">I confirm that I have read, understood, and agree to the terms of this Confidential Agreement.</label>
+    </div>
+
+    <div style="margin-top:28px;">
+        <button id="proceedBtn" onclick="proceed()" disabled>Proceed to Private Materials</button>
+    </div>
+<br/>
+    <small>© 1$EXIT – Private Investor Materials</small>
+</div>
+
+<script>
+const cb = document.getElementById('agree');
+const btn = document.getElementById('proceedBtn');
+
+cb.addEventListener('change',()=>{
+    btn.classList.toggle('active',cb.checked);
+    btn.disabled = !cb.checked;
+});
+
+function proceed(){
+    if(!cb.checked){
+        alert('Please confirm the NDA to proceed.');
+        return;
+    }
+    window.location.href = 'private_project.html';
+}
+</script>
+
+  </div>
+</div>
+
+<script>
+function openNDA(){
+  document.getElementById('ndaModal').style.display='flex';
+}
+function closeNDA(){
+  document.getElementById('ndaModal').style.display='none';
+}
+function proceed(){
+  const cb = document.getElementById('agree');
+  if(!cb || !cb.checked){
+    alert('Please confirm the NDA to proceed.');
+    return;
+  }
+  window.location.href = 'private_projects.html';
+}
+</script>
+
+</body>
+</html>

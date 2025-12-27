@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Oversight & Governance — 1$EXIT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin:0;
+    background:#0b0f14;
+    color:#e6e6e6;
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Inter,Arial,sans-serif;
+}
+.container {
+    max-width:960px;
+    margin:0 auto;
+    padding:80px 24px 120px;
+}
+h1 {
+    font-size:38px;
+    font-weight:600;
+    margin-bottom:12px;
+}
+.subtitle {
+    color:#9aa4af;
+    font-size:15px;
+    margin-bottom:48px;
+}
+.section {
+    background:linear-gradient(180deg,#0f1621,#0b0f14);
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:16px;
+    padding:32px 36px;
+    margin-bottom:28px;
+}
+.section h2 {
+    font-size:22px;
+    margin:0 0 14px;
+}
+.section p {
+    color:#cfd6dd;
+    line-height:1.7;
+    margin:0 0 14px;
+}
+.chain {
+    font-weight:500;
+    color:#d4af37;
+}
+.footer-note {
+    margin-top:40px;
+    font-size:13px;
+    color:#8b94a1;
+}
+</style>
+
+<style>
+.top-nav{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(10,13,18,0.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+}
+.nav-container{
+max-width:1120px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+
+.logo:hover{
+  text-decoration:none;
+}
+
+.nav-links a{
+margin-left:28px;
+text-decoration:none;
+color:var(--text);
+position:relative;
+padding-bottom:4px;
+}
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:2px;
+background:var(--gold);
+transition:width 0.3s ease;
+}
+.nav-links a:hover::after{
+width:100%;
+}
+.nav-cta{
+border:1px solid var(--gold-soft);
+padding:8px 18px;
+border-radius:999px;
+}
+.nav-cta::after{
+  display:none !important;
+}
+.nav-cta:hover{
+  background:rgba(214,177,94,.08);
+  box-shadow:0 0 0 1px var(--gold-soft);
+}
+</style>
+<style>
+:root{
+  --bg:#050b16;
+  --panel:#071827;
+  --muted:#95a6b9;
+  --text:#e6eef7;
+  --gold:#d6b15e;
+  --gold-soft:#f1d48a;
+  --border:rgba(214,177,94,.35);
+}
+</style>
+<style>
+.site-footer{
+  border-top:1px solid var(--border);
+  margin-top:80px;
+  padding:36px 20px;
+}
+.footer-container{
+  max-width:1120px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:28px;
+  color:var(--muted);
+  font-size:14px;
+}
+.site-footer a{
+  color:var(--gold);
+  text-decoration:none;
+}
+.site-footer a:hover{
+  text-decoration:underline;
+}
+</style>
+
+</head>
+<body>
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">1$EXIT™</a>
+
+    <div class="nav-links">
+      <a href="how_it_works.html">Как это работает</a>
+      <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+      <a href="projects.html">Проекты</a>
+      <a href="invest_usdt.html" class="nav-cta">Инвестировать</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<h1>Oversight & Governance</h1>
+<div class="subtitle">
+Контур ответственности и управления инвестиционной платформы 1$EXIT
+</div>
+
+<div class="section">
+<h2>Принцип управления</h2>
+<p>
+Платформа 1$EXIT управляется <strong>централизованной инвестиционной командой</strong>, несущей полную ответственность за отбор проектов, юридическую структуру, патентную защиту и допуск инвесторов.
+</p>
+<p>
+Платформа не является маркетплейсом и не использует автоматизированные механизмы инвестиционного доступа.
+</p>
+</div>
+
+<div class="section">
+<h2>Цепочка принятия решений</h2>
+<p class="chain">
+Экспертиза → Юридическая проверка → Патент / защита → Структурирование → Открытие доступа
+</p>
+<p>
+Ни один этап не может быть пропущен. Решения принимаются вручную и фиксируются внутри управляющей команды.
+</p>
+</div>
+
+<div class="section">
+<h2>Контроль инвестиционного доступа</h2>
+<p>
+Инвестиционный доступ не является публичным правом и предоставляется выборочно.
+</p>
+<p>
+Доступ может быть <strong>ограничен или отозван</strong> в случае несоответствия условиям платформы, изменения структуры проекта или регуляторных факторов.
+</p>
+</div>
+
+<div class="section">
+<h2>Отсутствие публичных лиц</h2>
+<p>
+1$EXIT — это инфраструктурная инвестиционная платформа, а не персональный бренд или медиа-проект.
+</p>
+<p>
+Ответственность закреплена на уровне системы управления, процедур и решений, а не на уровне публичных персон.
+</p>
+</div>
+
+
+<div class="section">
+<h2>Ограничения и рамки управления</h2>
+<p>
+Платформа действует в рамках внутреннего инвестиционного мандата, который определяет допустимые типы проектов,
+уровни риска и структуру допуска капитала.
+</p>
+<p>
+Ни один проект не может быть открыт для инвестиций вне утверждённой модели ответственности и защиты интересов инвесторов.
+</p>
+</div>
+
+<div class="footer-note">
+Данная страница фиксирует архитектуру ответственности и управления платформой.  
+Все инвестиционные условия определяются индивидуально.
+</div>
+
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div>
+      <strong>1$EXIT™</strong><br>
+      Платформа долевого участия в реальных проектах.<br>
+      <span style="font-size:13px;color:#9aa3b2;">
+        Централизованное управление · Ручной допуск · Permission‑based access
+      </span>
+    </div>
+    <div>
+      <a href="legal.html">Условия</a><br>
+      <a href="privacy.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+    </div>
+    <div>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
+        noctai.vip@proton.me
+      </a><br>
+      <span style="font-size:13px;">
+        Indicative information only. No public offering.
+      </span><br>
+      © 2025 1$EXIT™
+    </div>
+  </div>
+</footer>
+</body>
+</html>

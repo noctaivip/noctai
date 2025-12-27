@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Private Projects — 1$EXIT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    margin:0;
+    background:radial-gradient(ellipse at top,#0f1623 0%,#070b12 60%);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+    color:#e6e6e6;
+}
+.container{
+    max-width:1100px;
+    margin:120px auto;
+    padding:0 24px;
+}
+.card{
+  border:1px solid #3a2f1a;
+  border-radius:16px;
+  padding:24px;
+  background:linear-gradient(180deg,#0e1526,#090f1b);
+}
+.project{
+  ;
+}
+
+.badge{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:999px;
+    border:1px solid rgba(212,175,55,.6);
+    color:#d4af37;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    margin-bottom:28px;
+}
+h1{
+    font-size:36px;
+    margin:0 0 14px 0;
+    font-weight:600;
+}
+.subtitle{
+    color:#a8b0bf;
+    font-size:15px;
+    max-width:760px;
+    line-height:1.65;
+    margin-bottom:48px;
+}
+.section{
+    margin-top:42px;
+}
+.section h3{
+    font-size:19px;
+    margin-bottom:14px;
+    color:#f2f2f2;
+}
+.section p,.section li{
+    color:#b6bdc9;
+    font-size:14px;
+    line-height:1.75;
+}
+ul{padding-left:18px;}
+.divider{
+    height:1px;
+    background:linear-gradient(to right,transparent,rgba(212,175,55,.55),transparent);
+    margin:52px 0;
+}
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;
+    margin-top:28px;
+}
+.project{
+    border:1px solid rgba(212,175,55,.3);
+    border-radius:16px;
+    padding:24px;
+    background:rgba(0,0,0,.28);
+}
+.project h4{
+    margin:0 0 10px 0;
+    font-size:17px;
+    color:#ffffff;
+}
+.project .status{
+    font-size:12px;
+    color:#d4af37;
+    margin-bottom:10px;
+}
+.project p{
+    font-size:13.5px;
+    color:#b6bdc9;
+    line-height:1.65;
+}
+.contact{
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:16px;
+    padding:28px;
+    background:rgba(0,0,0,.28);
+}
+.contact strong{color:#d4af37;font-weight:500;}
+.footer{
+    margin-top:34px;
+    font-size:12px;
+    color:#7f8896;
+}
+
+/* Modal styles */
+
+body{margin:0;font-family:Inter,Arial;background:#070b14;color:#e6e9ef}
+.container{max-width:1200px;margin:60px auto;padding:40px;border:1px solid #3a2f1a;border-radius:18px;background:linear-gradient(180deg,#0b1220,#070b14)}
+h1{font-size:32px;margin-bottom:30px}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{border:1px solid #3a2f1a;border-radius:16px;padding:24px;background:linear-gradient(180deg,#0e1526,#090f1b);}
+.card h3{margin-top:0}
+.status{font-size:13px;color:#d4af37;margin-bottom:12px}
+.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center}
+.modal-content{background:#0b1220;border:1px solid #3a2f1a;border-radius:16px;padding:32px;max-width:520px;width:90%;position:relative}
+.close{position:absolute;top:16px;right:20px;font-size:20px;}
+.metric{margin:8px 0}
+footer{margin-top:40px;font-size:13px;color:#8a8f9c}
+
+
+/* Gold accent enhancements */
+.modal-content{
+    box-shadow: 0 0 60px rgba(212,175,55,.18);
+    border:1px solid rgba(212,175,55,.45);
+}
+.modal-content h2{
+    color:#f5e7b0;
+}
+.metric b{
+    color:#d4af37;
+}
+.modal-content::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:16px;
+    padding:1px;
+    background:linear-gradient(180deg, rgba(212,175,55,.55), rgba(212,175,55,.05), transparent);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events:none;
+}
+
+
+/* Make only project cards clearly clickable */
+.project {
+  cursor: pointer;
+}
+
+.project:hover {
+  box-shadow: 0 0 0 1px rgba(214,174,77,0.6) inset;
+  transition: box-shadow 0.2s ease;
+}
+</style>
+
+<style>
+.top-nav{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(10,13,18,0.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+}
+.nav-container{
+max-width:1120px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+
+.logo:hover{
+  text-decoration:none;
+}
+
+.nav-links a{
+margin-left:28px;
+text-decoration:none;
+color:var(--text);
+position:relative;
+padding-bottom:4px;
+}
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:2px;
+background:var(--gold);
+transition:width 0.3s ease;
+}
+.nav-links a:hover::after{
+width:100%;
+}
+.nav-cta{
+border:1px solid var(--gold-soft);
+padding:8px 18px;
+border-radius:999px;
+}
+.nav-cta::after{
+  display:none !important;
+}
+.nav-cta:hover{
+  background:rgba(214,177,94,.08);
+  box-shadow:0 0 0 1px var(--gold-soft);
+}
+
+/* Make only project cards clearly clickable */
+.project {
+  cursor: pointer;
+}
+
+.project:hover {
+  box-shadow: 0 0 0 1px rgba(214,174,77,0.6) inset;
+  transition: box-shadow 0.2s ease;
+}
+</style>
+
+<style>
+:root{
+  --bg:#050b16;
+  --panel:#071827;
+  --muted:#95a6b9;
+  --text:#e6eef7;
+  --gold:#d6b15e;
+  --gold-soft:#f1d48a;
+  --border:rgba(214,177,94,.35);
+}
+
+/* Make only project cards clearly clickable */
+.project {
+  cursor: pointer;
+}
+
+.project:hover {
+  box-shadow: 0 0 0 1px rgba(214,174,77,0.6) inset;
+  transition: box-shadow 0.2s ease;
+}
+</style>
+
+<style>
+.site-footer{
+  border-top:1px solid var(--border);
+  margin-top:80px;
+  padding:36px 20px;
+}
+.footer-container{
+  max-width:1120px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:28px;
+  color:var(--muted);
+  font-size:14px;
+}
+.site-footer a{
+  color:var(--gold);
+  text-decoration:none;
+}
+.site-footer a:hover{
+  text-decoration:underline;
+}
+
+/* Make only project cards clearly clickable */
+.project {
+  cursor: pointer;
+}
+
+.project:hover {
+  box-shadow: 0 0 0 1px rgba(214,174,77,0.6) inset;
+  transition: box-shadow 0.2s ease;
+}
+</style>
+
+
+</head>
+<body>
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">1$EXIT™</a>
+
+    <div class="nav-links">
+      <a href="how_it_works.html">Как это работает</a>
+      <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+      <a href="projects.html">Проекты</a>
+      <a href="invest_usdt.html" class="nav-cta">Инвестировать</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+<div class="card">
+
+<span class="badge">Private Projects</span>
+<h1>Закрытые инвестиционные проекты</h1>
+<div class="subtitle">
+Вы находитесь в приватном инвестиционном пространстве <strong>1$EXIT</strong>.
+Ниже представлены проекты, доступ к которым предоставляется только инвесторам с подтверждённым статусом и индивидуальным согласованием условий.
+</div>
+
+<div class="section">
+<h3>Почему проекты являются private</h3>
+<ul>
+<li>нестандартная структура сделок и долей</li>
+<li>ограниченное количество участников</li>
+<li>индивидуальные юридические и финансовые условия</li>
+<li>отсутствие публичного маркетинга и размещений</li>
+<li>контроль капитала и состава инвесторов</li>
+</ul>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+<h3>Доступные private projects</h3>
+<div class="projects">
+
+<div class="project" onclick="openModal('logistics')" style=";">
+<h4>AI Dispatcher + Marketplace</h4>
+<div class="status">Status: Private Review</div>
+<p>
+Инфраструктурный проект в сфере логистической аналитики и брокерского трекинга.
+Структура участия формируется индивидуально под инвестора.
+</p>
+</div>
+
+<div class="project" onclick="openModal('data')" style=";">
+<h4>Data Intelligence Asset</h4>
+<div class="status">Status: Limited Access</div>
+<p>
+Проект по работе с отраслевыми данными и закрытой аналитикой.
+Доступ предоставляется ограниченному числу стратегических инвесторов.
+</p>
+</div>
+
+<div class="project" onclick="openModal('capital')" style=";">
+<h4>Capital Structuring Vehicle</h4>
+<div class="status">Status: Invitation Only</div>
+<p>
+Частная инвестиционная структура для работы с капиталом в закрытых раундах.
+Условия участия определяются вручную командой.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+<h3>Как происходит дальнейшее взаимодействие</h3>
+<p>
+После выбора интересующего направления команда <strong>1$EXIT</strong> связывается с инвестором напрямую.
+Материалы, параметры сделки и юридические детали передаются индивидуально.
+</p>
+</div>
+
+<div class="contact">
+<p>Контакт для коммуникации:</p>
+<p><strong>Email:</strong> noctai.vip@proton.me</p>
+</div>
+
+<div class="footer">
+Private Projects не являются публичной инвестиционной офертой.
+Участие подтверждается исключительно по решению команды 1$EXIT.
+</div>
+
+</div>
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div>
+      <strong>1$EXIT™</strong><br>
+      Платформа долевого участия в реальных проектах.<br>
+      <span style="font-size:13px;color:#9aa3b2;">
+        Централизованное управление · Ручной допуск · Permission‑based access
+      </span>
+    </div>
+    <div>
+      <a href="legal.html">Условия</a><br>
+      <a href="privacy.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+    </div>
+    <div>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
+        noctai.vip@proton.me
+      </a><br>
+      <span style="font-size:13px;">
+        Indicative information only. No public offering.
+      </span><br>
+      © 2025 1$EXIT™
+    </div>
+  </div>
+</footer>
+<div class="modal" id="modal">
+<div class="modal-content">
+<div class="close" onclick="closeModal()">×</div>
+<div id="modal-body"></div>
+</div>
+<script>
+
+function openModal(type){
+let body=document.getElementById('modal-body');
+if(type==='logistics'){ body.innerHTML=`
+<h2>AI Dispatcher <span style="font-weight:400;color:#9ca3af">+ Marketplace</span></h2>
+
+<div class="metric"><b>Market Failure</b></div>
+<p>The US logistics market (~$940B annually) is structurally broken by broker dominance, fraud, double brokering, and lack of enforcement.</p>
+
+<div class="metric"><b>Core Breakthrough</b></div>
+<p>First broker-free logistics marketplace in the US built on a patented enforcement architecture that makes intermediary bypass technically impossible.</p>
+
+<div class="metric"><b>Why Now</b></div>
+<p>Market downturn (2023–2025), carrier bankruptcies, broker distrust, and regulatory pressure create a unique adoption window for a new national logistics standard.</p>
+
+<div class="metric"><b>Scale Signal</b></div>
+<p>Addressable market: ~1.2M active OTR trucks in the US. Even partial penetration produces infrastructure-scale economics.</p>
+
+<div class="metric"><b>Monetization Logic</b></div>
+<p>$180/month subscription per truck. Additional upside from marketplace and infrastructure modules (not included in base projections).</p>
+
+<div class="metric"><b>Defensibility</b></div>
+<p>Protected by a patent covering device-level enforcement and platform exclusivity. Architecture is legally and technically non-replicable.</p>
+
+<div class="metric"><b>Investment Framing</b></div>
+<p>Capital participation is structured individually. Allocation size, economics, and legal form are defined manually.</p>
+`; }
+if(type==='data'){
+body.innerHTML=`
+<h2>Data Intelligence Asset</h2>
+<div class="metric"><b>Target ROI:</b> 18–24%</div>
+<div class="metric"><b>Capital Requirement:</b> Strategic only</div>
+<div class="metric"><b>Structure:</b> Equity / data-rights hybrid</div>
+<p>Closed analytical asset focused on sector-specific data extraction. Access limited to aligned investors.</p>`;
+}
+if(type==='capital'){
+body.innerHTML=`
+<h2>Capital Structuring Vehicle</h2>
+<div class="metric"><b>Target ROI:</b> Deal-dependent</div>
+<div class="metric"><b>Capital Requirement:</b> By invitation</div>
+<div class="metric"><b>Structure:</b> SPV / bespoke mandate</div>
+<p>Private vehicle for structured capital deployment into non-public opportunities. Terms defined individually.</p>`;
+}
+document.getElementById('modal').style.display='flex';
+}
+function closeModal(){document.getElementById('modal').style.display='none';}
+
+</script>
+</body>
+</html>

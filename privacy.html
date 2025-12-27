@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Privacy Policy | 1$EXIT</title>
+
+<style>
+:root{
+  --bg:#050b16;
+  --panel:#071827;
+  --muted:#9fb1c6;
+  --text:#e6eef7;
+  --gold:#d6b15e;
+  --gold-soft:#f1d48a;
+  --border:rgba(214,177,94,.35);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:radial-gradient(1200px 600px at 50% -200px,#0b2238 0%,#050b16 55%);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+}
+.top-nav{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(10,13,18,0.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav-container{
+  max-width:1120px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 20px;
+}
+.nav-cta::after{
+  display:none !important;
+}
+.nav-cta:hover{
+  background:rgba(214,177,94,.08);
+  box-shadow:0 0 0 1px var(--gold-soft);
+}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+
+.logo:hover{
+  text-decoration:none;
+}
+
+.nav-links a{
+  margin-left:28px;
+  text-decoration:none;
+  color:var(--text);
+  position:relative;
+  padding-bottom:4px;
+}
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;bottom:0;
+  width:0;height:2px;
+  background:var(--gold);
+  transition:width .3s ease;
+}
+.nav-links a:hover::after{width:100%}
+.nav-cta{
+  border:1px solid var(--gold-soft);
+  padding:8px 18px;
+  border-radius:999px;
+}
+
+.container{
+  max-width:900px;
+  margin:80px auto;
+  padding:0 20px;
+}
+h1{
+  font-size:36px;
+  margin-bottom:18px;
+}
+.section{
+  margin-top:32px;
+  padding:26px;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));
+}
+.section h2{
+  margin:0 0 10px;
+  font-size:18px;
+  color:var(--gold);
+}
+.section p{
+  margin:0;
+  line-height:1.7;
+  color:var(--muted);
+}
+
+.site-footer{
+  border-top:1px solid var(--border);
+  margin-top:80px;
+  padding:36px 20px;
+}
+.footer-container{
+  max-width:1120px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:28px;
+  color:var(--muted);
+  font-size:14px;
+}
+.site-footer a{
+  color:var(--gold);
+  text-decoration:none;
+}
+.site-footer a:hover{text-decoration:underline}
+</style>
+</head>
+
+<body>
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">1$EXIT™</a>
+
+    <div class="nav-links">
+      <a href="how_it_works.html">Как это работает</a>
+      <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+      <a href="projects.html">Проекты</a>
+      <a href="invest_usdt.html" class="nav-cta">Инвестировать</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Политика конфиденциальности</h1>
+
+  <div class="section">
+    <h2>Общие положения</h2>
+    <p>
+      1$EXIT уважает конфиденциальность пользователей и обрабатывает персональные данные
+      исключительно в рамках ограниченного инвестиционного доступа и внутренней проверки.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Сбор информации</h2>
+    <p>
+      Мы можем собирать email, данные транзакций (TXID), а также информацию,
+      предоставленную пользователем добровольно при запросе доступа или инвестиции.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Использование данных</h2>
+    <p>
+      Все данные используются исключительно для идентификации инвестора,
+      фиксации долей и соблюдения внутренних процедур контроля и ответственности.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Передача третьим лицам</h2>
+    <p>
+      Данные не передаются третьим лицам, за исключением случаев,
+      предусмотренных применимым законодательством или внутренними требованиями контроля.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Безопасность</h2>
+    <p>
+      Мы применяем административные и технические меры для защиты данных.
+      Доступ к информации ограничен и предоставляется по принципу необходимости.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Отсутствие публичной оферты</h2>
+    <p>
+      Данный сайт и размещённая информация не являются публичной инвестиционной офертой.
+      Любое участие осуществляется на основании индивидуального решения инвестора.
+    </p>
+  </div>
+
+  <div class="section">
+    <p style="font-size:13px; color:var(--muted); font-style:italic;">
+      This policy applies exclusively to private, permission-based access and may be updated without prior public notice.
+    </p>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div>
+      <strong>1$EXIT™</strong><br>
+      Платформа долевого участия в реальных проектах.<br>
+      Централизованное управление · Ручной допуск · Permission-based access
+    </div>
+    <div>
+      <a href="legal.html">Условия</a><br>
+      <a href="privacy.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance.html">Oversight & Governance</a>
+    </div>
+    <div>
+      <a href="mailto:noctai.vip@proton.me">noctai.vip@proton.me</a><br>
+      Indicative information only. No public offering.<br>
+      © 2025 1$EXIT™
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
