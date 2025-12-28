@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Private Investor Club - NoctAI.VIP</title>
+<title>Private Investor Environment — NoctAI.VIP</title>
 <style>
 body{
     margin:0;
@@ -209,9 +209,246 @@ border-radius:999px;
   text-decoration:underline;
 }
 </style>
+<!-- EXACT CALCULATOR CSS FROM index.html -->
+<style>
+.calc-overlay{
+  position:fixed; inset:0; background:rgba(5,8,14,0.85);
+  backdrop-filter:blur(6px); z-index:3000;
+  display:flex; align-items:center; justify-content:center;
+}
+.calc-modal{
+  width:100%; max-width:960px; background:#0f141c;
+  border:1px solid #c9a44c; border-radius:18px;
+  padding:36px; position:relative;
+}
+.calc-close{
+  position:absolute; top:16px; right:18px;
+  background:none; border:none; color:#aaa; font-size:24px;
+  cursor:pointer;
+}
+.calc-sub{color:#9aa3ad; margin-bottom:20px;}
+.coverage-title{font-size:14px; color:#9aa3ad; margin-bottom:10px;}
+.coverage-buttons{display:flex; gap:10px; margin-bottom:26px;}
+.coverage-buttons button{
+  width:56px; height:34px; border-radius:8px;
+  background:#0b0f16; border:1px solid #c9a44c;
+  color:#fff; font-size:12px; cursor:pointer;
+}
+.coverage-buttons button.active{
+  background:linear-gradient(180deg,#f1d48a,#d6b15e);
+  color:#050b16;
+}
+.calc-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+.calc-panel{
+  border:1px solid #c9a44c; border-radius:14px; padding:24px;
+}
+.calc-value{font-size:22px; margin:10px 0;}
+.calc-muted{font-size:13px; color:#9aa3ad;}
+.calc-income .calc-main{font-size:26px; color:#f1d48a;}
+.calc-footer{text-align:right; margin-top:24px;}
+.calc-close-btn{
+  background:#0b0f16; border:1px solid #c9a44c;
+  padding:10px 18px; border-radius:10px; color:#fff;
+}
+</style>
+<style>
+/* Enhanced calculator manual input styling */
+.calc-panel input[type=number]{
+  width:100%;
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius:10px;
+  background:#0b0f16;
+  border:1px solid #c9a44c;
+  color:#f1d48a;
+  font-size:16px;
+  font-weight:600;
+  box-shadow: inset 0 0 0 1px rgba(201,164,76,0.15);
+}
+.calc-panel input[type=number]:focus{
+  outline:none;
+  border-color:#f1d48a;
+  box-shadow:0 0 0 2px rgba(201,164,76,0.25);
+}
+.calc-muted{
+  margin-top:10px;
+}
+</style>
+<style>
+/* RANGE — FINAL, IDENTICAL TO INDEX */
+.calc-range{
+  width:100%;
+  height:6px;
+  accent-color:#d6b15e;
+}
 
+.calc-range::-webkit-slider-runnable-track{
+  height:6px;
+  background:#3a3f47;
+  border-radius:6px;
+}
+
+.calc-range::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  appearance:none;
+  width:18px;
+  height:18px;
+  margin-top:-6px;
+  border-radius:50%;
+  background:#d6b15e;
+  border:2px solid #050b16;
+  cursor:pointer;
+}
+
+.calc-range::-moz-range-track{
+  height:6px;
+  background:#3a3f47;
+  border-radius:6px;
+}
+
+.calc-range::-moz-range-thumb{
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:#d6b15e;
+  border:2px solid #050b16;
+  cursor:pointer;
+}
+</style>
+</style>
 </head>
 <body>
+<div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
+  <div class="calc-modal">
+    <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
+<div style="margin:-6px 0 18px 0;">
+  <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
+    Проект
+  </label>
+  <select id="projectSelector"
+    style="
+      width:100%;
+      padding:12px 14px;
+      border-radius:10px;
+      background:#0b0f16;
+      border:1px solid #c9a44c;
+      color:#f1d48a;
+      font-size:15px;
+      font-weight:600;
+    "
+    onchange="onProjectChange(this.value)"
+  >
+    <option value="p001" selected>
+      Active Project #001 — AI Dispatcher + Marketplace (Logistics)
+    </option>
+    <option value="private" disabled>
+      Private Projects — Invitation Only
+    </option>
+  </select>
+  <div style="font-size:12px;color:var(--muted);margin-top:6px;">
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
+</div>
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
+
+    <div class="coverage-block">
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
+      <div class="coverage-buttons">
+        <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
+        <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
+        <button data-p="50" class="active" onclick="setCoverageCalc(50)">50%</button>
+        <button data-p="70" onclick="setCoverageCalc(70)">70%</button>
+        <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
+      </div>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-panel">
+        <h3>Сумма инвестиций</h3>
+        <input type="range"
+       class="calc-range"
+       min="1"
+       max="300000"
+       value="1000"
+       id="m_invRange"
+       oninput="syncFromRange()">
+
+        <div class="calc-value">$<span id="m_invValue">1,000</span></div>
+        <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
+      </div>
+
+      <div class="calc-panel">
+        <h3>Оценка дохода</h3>
+        <div class="calc-income">
+          <div>Доход / месяц</div>
+          <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-footer">
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
+    </div>
+	</div>
+  </div>
+  <script>
+let coverage = 50;
+const MAX = 300000;
+
+function q(id){ return document.getElementById(id); }
+
+function openInvestmentCalc(){
+  q('investmentCalcOverlay').style.display = 'flex';
+  recalc();
+}
+function closeInvestmentCalc(){
+  q('investmentCalcOverlay').style.display = 'none';
+}
+
+function setCoverageCalc(p){
+  coverage = p;
+  document.querySelectorAll('.coverage-buttons button')
+    .forEach(b => b.classList.remove('active'));
+  document.querySelector('.coverage-buttons button[data-p="'+p+'"]')
+    .classList.add('active');
+  recalc();
+}
+
+function syncFromRange(){
+  const v = Number(q('m_invRange').value);
+  q('m_invInput').value = v;
+  recalc();
+}
+
+function syncFromInput(){
+  let v = Number(q('m_invInput').value);
+  if (isNaN(v)) return;
+  if (v < 1) v = 1;
+  if (v > MAX) v = MAX;
+  q('m_invInput').value = v;
+  q('m_invRange').value = v;
+  recalc();
+}
+
+function recalc(){
+  const v = Number(q('m_invRange').value);
+  q('m_invValue').innerText = v.toLocaleString();
+  q('m_invShare').innerText = ((v / 3000000) * 20).toFixed(6) + '%';
+  const baseIncome = 54000000 * (coverage / 50);
+  q('m_incomeValue').innerText =
+    (baseIncome * (v / 3500000)).toFixed(2);
+}
+
+function onProjectChange(v){
+  // пока используется единая экономика (Active Project #001)
+  // архитектура готова для подключения других проектов
+  recalc();
+}
+
+</script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
@@ -220,7 +457,6 @@ border-radius:999px;
       <a href="how_it_works.html">Как это работает</a>
       <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
       <a href="projects.html">Проекты</a>
-      <a href="invest_usdt.html" class="nav-cta">Инвестировать</a>
     </div>
   </div>
 </nav>
@@ -228,206 +464,50 @@ border-radius:999px;
 <div class="container">
 
 <div class="card">
-<h1>Private Data Room Entry</h1>
-<p>This page represents a secured access layer for private investment materials provided by the NoctAI platform.</p>
+<h2>Private Investor Environment</h2>
+<p>
+Вы находитесь в закрытой инвестиционной среде <strong>NoctAI</strong>.
+Доступы, проекты и коммуникации управляются индивидуально.
+Ниже представлены активные и потенциальные инвестиционные контуры, доступ к которым предоставляется по индивидуальному мандату.
+</p>
 
-<div class="label">Access Status</div>
-<div class="value-approved">Approved</div>
-
-<br>
-
-<div class="label">Confidential Scope</div>
-<p>All materials related to private projects are prepared individually and are not hosted publicly on the platform.</p>
-
-<div class="label">Data Room Availability</div>
-<p>Access to data room materials is provided exclusively through direct communication with the investment team and may involve separate delivery channels.</p>
-
-<div class="label">What Happens Next</div>
-<p>Your entry into the private access layer has been recorded. The investment team is aware that you have reached this stage and will initiate further communication directly using the contact details previously provided.</p>
-</div>
-
-<div class="card">
-<h2>Private Investor Club</h2>
-<p>This private access layer represents an institutional-grade investment environment. Entry is controlled. Visibility is selective. Allocation is manual.</p>
+<p style="color:#9aa3b2;font-size:14px;max-width:760px;">
+Доступы в данной среде активируются поэтапно.
+Каждая зона имеет собственные условия, статус и требования конфиденциальности.
+</p>
 
 <div class="doors">
     <div class="door" onclick="openNDA()" style="cursor:pointer;">
-        <div class="label">Door 1 — Private Projects Room</div>
-        <p>Invitation-only investment projects structured individually. Participation is determined manually by the investment team.</p>
-        <div class="value-approved">Status: Accessed</div>
+        <div class="label">Дверь 1 — Частные проекты</div>
+<p>
+Закрытые инвестиционные проекты с индивидуальной структурой.
+Доступ открывается после подтверждения NDA.
+</p>
+<div class="value-approved">Статус: Доступ после NDA</div>
+
     </div>
 
     <div class="door locked">
-        <div class="label">Door 2 — Co-Investment Opportunities</div>
-        <p>Strategic co-investment structures with limited participants. Capital alignment and timing requirements apply.</p>
-        <div class="value-pending">Status: Pending</div>
+        <div class="label">Дверь 2 — Возможности совместных инвестиций</div>
+        <p>Стратегические co-investment структуры с ограниченным числом участников. Параметры и тайминг определяются индивидуально.</p>
+        <div class="value-pending">Статус: Ожидание</div>
     </div>
 
-    <div class="door" onclick="openRoomPanel('room-communication')" style="cursor:pointer;">
-        <div class="label">Door 3 — Investor Communication</div>
-        <p>Direct communication channel with the investment team. No public discussions. All interactions are NDA-covered.</p>
-        <div class="value-approved">Status: Available</div>
+    <div class="door" onclick="silentDoor()" style="cursor:pointer;">
+        <div class="label">Дверь 3 — Коммуникация с инвесторами</div>
+        <p>Прямой канал связи с инвестиционной командой. Публичные обсуждения отсутствуют. Все взаимодействия подпадают под действие соглашения о неразглашении.</p>
+        <div class="value-approved">Статус: Доступно</div>
     </div>
 
     <div class="door locked">
-        <div class="label">Door 4 — Data Room Materials</div>
-        <p>Investment materials are delivered individually. No documents are hosted publicly on the platform. Access is provided per project.</p>
-        <div class="value-locked">Status: Controlled Access</div>
+        <div class="label">Дверь 4 — Материалы для обработки данных</div>
+        <p>Инвестиционные материалы предоставляются индивидуально. Никакие документы не размещаются в открытом доступе на платформе. Доступ предоставляется для каждого проекта отдельно.</p>
+        <div class="value-locked">Статус: Контролируемый доступ</div>
     </div>
 </div>
-
-<div class="room-panel" id="room-projects">
-  <div class="room-header">
-    <span class="room-back" onclick="closeRoomPanel()">← Back to Investor Club</span>
-    <h2>Private Projects</h2>
-  </div>
-  
-<div class="container">
-<div class="card">
-
-<span class="badge">Private Projects</span>
-<h1>Закрытые инвестиционные проекты</h1>
-<div class="subtitle">
-Вы находитесь в приватном инвестиционном пространстве <strong>NoctAI</strong>.
-Ниже представлены проекты, доступ к которым предоставляется только инвесторам с подтверждённым статусом и индивидуальным согласованием условий.
 </div>
 
-<div class="section">
-<h3>Почему проекты являются private</h3>
-<ul>
-<li>нестандартная структура сделок и долей</li>
-<li>ограниченное количество участников</li>
-<li>индивидуальные юридические и финансовые условия</li>
-<li>отсутствие публичного маркетинга и размещений</li>
-<li>контроль капитала и состава инвесторов</li>
-</ul>
-</div>
 
-<div class="divider"></div>
-
-<div class="section">
-<h3>Доступные private projects</h3>
-<div class="projects">
-
-<div class="project" onclick="openModal('logistics')" style="cursor:pointer;">
-<h4>Logistics Intelligence Platform</h4>
-<div class="status">Status: Private Review</div>
-<p>
-Инфраструктурный проект в сфере логистической аналитики и брокерского трекинга.
-Структура участия формируется индивидуально под инвестора.
-</p>
-</div>
-
-<div class="project" onclick="openModal('data')" style="cursor:pointer;">
-<h4>Data Intelligence Asset</h4>
-<div class="status">Status: Limited Access</div>
-<p>
-Проект по работе с отраслевыми данными и закрытой аналитикой.
-Доступ предоставляется ограниченному числу стратегических инвесторов.
-</p>
-</div>
-
-<div class="project" onclick="openModal('capital')" style="cursor:pointer;">
-<h4>Capital Structuring Vehicle</h4>
-<div class="status">Status: Invitation Only</div>
-<p>
-Частная инвестиционная структура для работы с капиталом в закрытых раундах.
-Условия участия определяются вручную командой.
-</p>
-</div>
-
-</div>
-</div>
-
-<div class="divider"></div>
-
-<div class="section">
-<h3>Как происходит дальнейшее взаимодействие</h3>
-<p>
-После выбора интересующего направления команда <strong>NoctAI</strong> связывается с инвестором напрямую.
-Материалы, параметры сделки и юридические детали передаются индивидуально.
-</p>
-</div>
-
-<div class="contact">
-<p>Контакт для коммуникации:</p>
-<p><strong>Email:</strong> noctai.vip@proton.me</p>
-</div>
-
-<div class="footer">
-Private Projects не являются публичной инвестиционной офертой.
-Участие подтверждается исключительно по решению команды NoctAI.
-</div>
-
-</div>
-</div>
-<div class="modal" id="modal">
-<div class="modal-content">
-<div class="close" onclick="closeModal()">×</div>
-<div id="modal-body"></div>
-</div>
-<script>
-
-function openModal(type){
-let body=document.getElementById('modal-body');
-if(type==='logistics'){
-body.innerHTML=`
-<h2>Logistics Intelligence Platform</h2>
-<div class="metric"><b>Target ROI:</b> 22–28% annually</div>
-<div class="metric"><b>Capital Requirement:</b> $50k+</div>
-<div class="metric"><b>Structure:</b> Revenue-linked participation</div>
-<p>Private infrastructure analytics platform operating across regulated logistics flows. Allocation size and structure are defined manually.</p>`;
-}
-if(type==='data'){
-body.innerHTML=`
-<h2>Data Intelligence Asset</h2>
-<div class="metric"><b>Target ROI:</b> 18–24%</div>
-<div class="metric"><b>Capital Requirement:</b> Strategic only</div>
-<div class="metric"><b>Structure:</b> Equity / data-rights hybrid</div>
-<p>Closed analytical asset focused on sector-specific data extraction. Access limited to aligned investors.</p>`;
-}
-if(type==='capital'){
-body.innerHTML=`
-<h2>Capital Structuring Vehicle</h2>
-<div class="metric"><b>Target ROI:</b> Deal-dependent</div>
-<div class="metric"><b>Capital Requirement:</b> By invitation</div>
-<div class="metric"><b>Structure:</b> SPV / bespoke mandate</div>
-<p>Private vehicle for structured capital deployment into non-public opportunities. Terms defined individually.</p>`;
-}
-document.getElementById('modal').style.display='flex';
-}
-function closeModal(){document.getElementById('modal').style.display='none';}
-
-</script>
-
-</div>
-
-<div class="room-panel" id="room-communication">
-  <div class="room-header">
-    <span class="room-back" onclick="closeRoomPanel()">← Back to Investor Club</span>
-    <h2>Investor Communication Layer</h2>
-  </div>
-  <p>This environment represents a direct institutional communication layer.</p>
-  <ul>
-    <li>No public threads</li>
-    <li>No visible participants</li>
-    <li>All interaction NDA-governed</li>
-    <li>Engagement initiated manually by the desk</li>
-  </ul>
-</div>
-
-</div>
-
-<div class="footer">© NoctAI — Private Investor Access Environment</div>
-
-</div>
-
-<div class="modal" id="roomModal">
-  <div class="modal-content">
-    <div class="close" onclick="closeRoom()">×</div>
-    <div id="roomContent"></div>
-  </div>
-</div>
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -453,51 +533,7 @@ function closeModal(){document.getElementById('modal').style.display='none';}
     </div>
   </div>
 </footer>
-<script>
-function openRoom(room){
-  let c = document.getElementById('roomContent');
-  if(room==='projects'){
-    c.innerHTML = `<h2>Private Projects Room</h2>
-    <p>This room contains non-public investment initiatives. Each project is structured manually with bespoke legal and capital terms.</p>
-    <ul>
-      <li>Indicative target metrics only</li>
-      <li>No standardized allocations</li>
-      <li>Capital acceptance by approval</li>
-    </ul>`;
-  }
-  if(room==='coinvest'){
-    c.innerHTML = `<h2>Co-Investment Opportunities</h2>
-    <p>Selective co-investment structures alongside aligned capital partners.</p>
-    <ul>
-      <li>Limited participant count</li>
-      <li>Synchronized deployment windows</li>
-      <li>Manual ticket sizing</li>
-    </ul>`;
-  }
-  if(room==='communication'){
-    c.innerHTML = `<h2>Investor Communication</h2>
-    <p>Direct and confidential communication layer.</p>
-    <ul>
-      <li>No intermediaries</li>
-      <li>All communication NDA-covered</li>
-      <li>Asynchronous, documented exchanges</li>
-    </ul>`;
-  }
-  if(room==='dataroom'){
-    c.innerHTML = `<h2>Data Room Materials</h2>
-    <p>Materials are distributed individually and are never hosted publicly.</p>
-    <ul>
-      <li>Per-project delivery</li>
-      <li>Controlled scope</li>
-      <li>Access revocable at any stage</li>
-    </ul>`;
-  }
-  document.getElementById('roomModal').style.display='flex';
-}
-function closeRoom(){
-  document.getElementById('roomModal').style.display='none';
-}
-</script>
+
 
 
 <script>
@@ -526,34 +562,34 @@ function projectProjection(){
 <div class="modal" id="ndaModal" style="display:none;z-index:50;">
   <div class="modal-content" style="max-width:820px;">
     <div class="close" onclick="closeNDA()">×</div>
-    
+
 <div class="container">
-    <h1>Investor NDA - Confidential Agreement</h1>
-    <p>This page contains confidential information related to private investment opportunities provided by the NoctAI platform.</p>
+    <h1>Соглашение о неразглашении конфиденциальной информации для инвесторов.</h1>
+    <p>На этой странице содержится конфиденциальная информация, касающаяся возможностей частных инвестиций, предоставляемых платформой NoctAI.</p>
 
     <div class="box">
-        <p><strong>By accessing this material, you acknowledge and agree that:</strong></p>
+        <p><strong>Получая доступ к этим материалам, вы подтверждаете и соглашаетесь со следующим:</strong></p>
         <ul>
-            <li>All information is confidential and intended solely for the recipient.</li>
-            <li>No information may be shared, distributed, or disclosed to third parties.</li>
-            <li>This material does not constitute a public investment offer.</li>
-            <li>All investment decisions are made individually by the NoctAI team.</li>
+            <li>Вся информация является конфиденциальной и предназначена исключительно для получателя.</li>
+            <li>Запрещается передавать, распространять или раскрывать какую-либо информацию третьим лицам.</li>
+            <li>Данный материал не является публичным предложением об инвестировании.</li>
+            <li>Все инвестиционные решения принимаются командой NoctAI индивидуально.</li>
         </ul>
-    
+
 <div class="box">
-<p><strong>Additional Acknowledgements:</strong></p>
+<p><strong>Дополнительные подтверждения:</strong></p>
 <ul>
-    <li>You acknowledge that access is granted on a revocable basis and may be withdrawn at any time without notice.</li>
-    <li>You agree not to rely on the information herein for public disclosure, solicitation, or redistribution.</li>
-    <li>You understand that any forward-looking statements are indicative only and not guarantees of performance.</li>
-    <li>You acknowledge that no fiduciary relationship is created by accessing these materials.</li>
+    <li>Вы подтверждаете, что доступ предоставляется на отзывной основе и может быть отозван в любое время без предварительного уведомления.</li>
+    <li>Вы соглашаетесь не использовать содержащуюся здесь информацию для публичного раскрытия, привлечения клиентов или распространения.</li>
+    <li>Вы понимаете, что любые заявления, содержащие прогнозы на будущее, носят лишь ориентировочный характер и не являются гарантией результатов.</li>
+    <li>Вы подтверждаете, что доступ к этим материалам не создает никаких фидуциарных отношений.</li>
 </ul>
 </div>
 
 
     <div class="footer">
         <input type="checkbox" id="agree">
-        <label for="agree">I confirm that I have read, understood, and agree to the terms of this Confidential Agreement.</label>
+        <label for="agree">Я подтверждаю, что прочитал, понял и согласен с условиями настоящего Конфиденциального соглашения.</label>
     </div>
 
     <div style="margin-top:28px;">
@@ -572,9 +608,9 @@ cb.addEventListener('change',()=>{
     btn.disabled = !cb.checked;
 });
 
-function proceed(){
+function proceedNDA(){
     if(!cb.checked){
-        alert('Please confirm the NDA to proceed.');
+        alert('Подтвердите соглашение о неразглашении для продолжения.');
         return;
     }
     window.location.href = 'private_project.html';
@@ -594,7 +630,7 @@ function closeNDA(){
 function proceed(){
   const cb = document.getElementById('agree');
   if(!cb || !cb.checked){
-    alert('Please confirm the NDA to proceed.');
+    alert('Подтвердите соглашение о неразглашении для продолжения.');
     return;
   }
   window.location.href = 'private_projects.html';

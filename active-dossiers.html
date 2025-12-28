@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NOCTAI — Active Dossiers</title>
+
+<style>
+:root{
+  --bg:#0b0e11;
+  --text:#e6e6e6;
+  --muted:#9aa0a6;
+  --line:#b89b5e;
+  --max:1280px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  background:radial-gradient(circle at top,#12161b 0%,var(--bg) 55%);
+  color:var(--text);
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 64px;
+  border-bottom:1px solid rgba(184,155,94,.25)
+}
+.logo{letter-spacing:.35em;font-size:13px}
+nav a{
+  margin-left:28px;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-decoration:none;
+  color:var(--muted);
+  position:relative
+}
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:1px;
+  background:var(--line);
+  transition:.3s
+}
+nav a:hover::after{width:100%}
+nav a:hover{color:var(--text)}
+
+/* WRAPPER */
+.wrapper{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:100px 64px
+}
+
+/* HERO */
+small{
+  letter-spacing:.18em;
+  font-size:11px;
+  color:var(--muted)
+}
+h1{
+  font-size:44px;
+  margin:18px 0
+}
+.desc{
+  max-width:640px;
+  color:var(--muted);
+  line-height:1.6
+}
+
+/* METRICS */
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+  margin:60px 0 40px;
+  font-size:12px
+}
+.metric span{
+  display:block;
+  color:var(--muted);
+  margin-top:6px
+}
+
+/* DIVIDER */
+.divider{
+  height:1px;
+  background:linear-gradient(
+    to right,
+    rgba(184,155,94,0),
+    rgba(184,155,94,.7),
+    rgba(184,155,94,0)
+  );
+  margin:60px 0
+}
+
+/* DOSSIERS */
+.dossier{
+  border:1px solid rgba(184,155,94,.45);
+  padding:32px;
+  margin-bottom:28px;
+  background:linear-gradient(180deg,#10161c,#0c1014)
+}
+.dossier-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:14px
+}
+.dossier-id{
+  font-size:11px;
+  letter-spacing:.18em;
+  color:var(--muted)
+}
+.status{
+  font-size:11px;
+  letter-spacing:.14em;
+  color:var(--line)
+}
+.dossier h2{
+  margin:0 0 10px;
+  font-size:26px
+}
+.dossier p{
+  color:var(--muted);
+  max-width:720px;
+  line-height:1.6
+}
+.action a{
+  font-size:12px;
+  letter-spacing:.14em;
+  color:var(--text);
+  text-decoration:none;
+  position:relative
+}
+.action a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:1px;
+  background:var(--line);
+  transition:.3s
+}
+.action a:hover::after{width:100%}
+
+/* FOOTER */
+footer{
+  border-top:1px solid rgba(184,155,94,.25);
+  padding:28px 64px;
+  margin-top:120px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  font-size:11px;
+  color:var(--muted)
+}
+footer .center{text-align:center}
+footer a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px
+}
+footer a:hover{color:var(--text)}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NOCTAI</div>
+  <nav>
+    <a href="control.html">HOME</a>
+    <a href="briefings.html">BRIEFINGS</a>
+    <a href="access-protocol.html">ACCESS PROTOCOL</a>
+    <a href="request-access.html">REQUEST ACCESS</a>
+  </nav>
+</header>
+
+<div class="wrapper">
+
+  <small>STRATEGIC CAPITAL INTERFACE</small>
+  <h1>Active Dossiers</h1>
+  <p class="desc">
+    Controlled access to live investment situations. Dossiers rotate based on timing,
+    structure, and capital alignment.
+  </p>
+
+  <div class="metrics">
+    <div class="metric">Active Dossiers<span>6</span></div>
+    <div class="metric">Under Reservation<span>1</span></div>
+    <div class="metric">Disclosure Window<span>Open</span></div>
+    <div class="metric">Capital Stage<span>Pre-allocation</span></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- DOSSIER 0.0.1 -->
+  <div class="dossier">
+    <div class="dossier-head">
+      <div class="dossier-id">DOSSIER 0.0.1</div>
+      <div class="status">ACTIVE</div>
+    </div>
+    <h2>Structural Capital Arbitrage — Industrial IP</h2>
+    <p>Patent-first structuring exploiting regulatory latency.</p>
+    <div class="action"><a href="dossier.html?id=NCT-001">Open Dossier →</a></div>
+  </div>
+
+  <!-- DOSSIER 0.0.2 -->
+  <div class="dossier">
+    <div class="dossier-head">
+      <div class="dossier-id">DOSSIER 0.0.2</div>
+      <div class="status">ACTIVE</div>
+    </div>
+    <h2>Energy Grid Latency Capture</h2>
+    <p>Capital gradient created by jurisdictional energy pricing mismatch.</p>
+    <div class="action"><a href="dossier.html?id=NCT-002">Open Dossier →</a></div>
+  </div>
+
+  <!-- DOSSIER 0.0.3 -->
+  <div class="dossier">
+    <div class="dossier-head">
+      <div class="dossier-id">DOSSIER 0.0.3</div>
+      <div class="status">ACTIVE</div>
+    </div>
+    <h2>AI Inference Cost Compression</h2>
+    <p>Structural inefficiency in inference-layer economics.</p>
+    <div class="action"><a href="dossier.html?id=NCT-003">Open Dossier →</a></div>
+  </div>
+
+  <!-- DOSSIER 0.0.4 -->
+  <div class="dossier">
+    <div class="dossier-head">
+      <div class="dossier-id">DOSSIER 0.0.4</div>
+      <div class="status">ACTIVE</div>
+    </div>
+    <h2>Water Rights Financialization</h2>
+    <p>Conversion of regional water rights into financial instruments.</p>
+    <div class="action"><a href="dossier.html?id=NCT-004">Open Dossier →</a></div>
+  </div>
+
+  <!-- DOSSIER 0.0.5 -->
+  <div class="dossier">
+    <div class="dossier-head">
+      <div class="dossier-id">DOSSIER 0.0.5</div>
+      <div class="status">ACTIVE</div>
+    </div>
+    <h2>Logistics Dark Capacity Arbitrage</h2>
+    <p>Unlocking underutilized logistics capacity through structural mapping.</p>
+    <div class="action"><a href="dossier.html?id=NCT-005">Open Dossier →</a></div>
+  </div>
+
+  <!-- DOSSIER 0.0.6 -->
+  <div class="dossier">
+    <div class="dossier-head">
+      <div class="dossier-id">DOSSIER 0.0.6</div>
+      <div class="status">ACTIVE</div>
+    </div>
+    <h2>Carbon Credit Flow Arbitrage</h2>
+    <p>Temporal mismatch between regulatory issuance and secondary market liquidity.</p>
+    <div class="action"><a href="dossier.html?id=NCT-006">Open Dossier →</a></div>
+  </div>
+
+  <!-- DOSSIER 0.0.7 -->
+  <div class="dossier">
+    <div class="dossier-head">
+      <div class="dossier-id">DOSSIER 0.0.7</div>
+      <div class="status">UNDER RESERVATION</div>
+    </div>
+    <h2>Semiconductor Supply Priority Structuring</h2>
+    <p>Pre-allocation positioning within constrained advanced-node supply chains.</p>
+    <div class="action"><a href="dossier.html?id=NCT-007">View Status →</a></div>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    NOCTAI is a private strategic investment intelligence platform.<br/>
+    Controlled disclosure. No public solicitation.
+  </div>
+  <div class="center">
+    <a href="terms.html">Terms</a> ·
+    <a href="private-privacy.html">Privacy</a> ·
+    <a href="nda-framework.html">NDA Framework</a> ·
+    <a href="contact.html">Contact</a>
+  </div>
+  <div style="text-align:right;">
+    System status: operational<br/>© NOCTAI
+  </div>
+</footer>
+
+</body>
+</html>

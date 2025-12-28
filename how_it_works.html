@@ -198,8 +198,6 @@ border-radius:999px;
   box-shadow:0 0 0 1px var(--gold-soft);
 }
 </style>
-
-
 <!-- EXACT CALCULATOR CSS FROM index.html -->
 <style>
 .calc-overlay{
@@ -306,128 +304,9 @@ border-radius:999px;
   cursor:pointer;
 }
 </style>
-
 </head>
 
 <body>
-<nav class="top-nav">
-  <div class="nav-container">
-    <a href="index.html" class="logo">NoctAI™</a>
-
-    <div class="nav-links">
-      <a href="how_it_works.html">Как это работает</a>
-      <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
-      <a href="projects.html">Проекты</a>
-      <a href="invest_usdt.html" class="nav-cta">Инвестировать</a>
-    </div>
-  </div>
-</nav>
-
-  <div class="container">
-
-    <span class="badge">HOW IT WORKS</span>
-    <h1>Как работает платформа NoctAI</h1>
-    <p class="sub">
-      NoctAI — это платформа долевого участия в реальных проектах.
-      Все инвестиции фиксируются вручную, а доли инвесторов закрепляются после проверки.
-    </p>
-
-    <div class="section">
-      <div class="grid">
-        <div class="card">
-          <div class="step">ШАГ 1</div>
-          <h3>Выбор проекта</h3>
-          <p>
-            Вы выбираете активный проект на платформе и знакомитесь с параметрами инвестиционного раунда.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="step">ШАГ 2</div>
-          <h3>Отправка USDT</h3>
-          <p>
-            Инвестиции принимаются в USDT (TRC20). После отправки средств вы переходите к подтверждению.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="step">ШАГ 3</div>
-          <h3>Подтверждение транзакции</h3>
-          <p>
-            Вы указываете email для связи и Transaction Hash (TxID). Это позволяет зафиксировать инвестицию.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="step">ШАГ 4</div>
-          <h3>Ручная проверка</h3>
-          <p>
-            Команда NoctAI вручную подтверждает транзакцию и фиксирует долю инвестора.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <hr/>
-
-    <div class="section">
-      <div class="grid">
-        <div class="card">
-          <h3>Почему используется ручная проверка</h3>
-          <p>
-            Ручная проверка снижает риски ошибок, защищает инвесторов и позволяет сохранять контроль
-            над структурой долей.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Сроки фиксации доли</h3>
-          <p>
-            Подтверждение и фиксация доли происходят в течение 24 часов после отправки данных.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Крупные инвестиции</h3>
-          <p>
-            Инвестиции от крупных инвесторов рассматриваются индивидуально через прямой контакт с командой.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <p class="footer-note">
-      NoctAI не является публичной инвестиционной офертой.
-      Все инвестиции осуществляются на основании индивидуального решения инвестора.
-    </p>
-  </div>
-  <footer class="site-footer">
-  <div class="footer-container">
-    <div>
-      <strong>NoctAI™</strong><br>
-      Платформа долевого участия в реальных проектах.<br>
-      <span style="font-size:13px;color:#9aa3b2;">
-        Централизованное управление · Ручной допуск · Permission‑based access
-      </span>
-    </div>
-    <div>
-      <a href="legal.html">Условия</a><br>
-      <a href="privacy.html">Политика конфиденциальности</a><br>
-      <a href="oversight_governance.html">Oversight &amp; Governance</a>
-    </div>
-    <div>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
-        noctai.vip@proton.me
-      </a><br>
-      <span style="font-size:13px;">
-        Indicative information only. No public offering.
-      </span><br>
-      © 2025 NoctAI™
-    </div>
-  </div>
-</footer>
-
-
 <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -501,10 +380,9 @@ border-radius:999px;
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
+	</div>
   </div>
-
-
-<script>
+  <script>
 let coverage = 50;
 const MAX = 300000;
 
@@ -559,6 +437,217 @@ function onProjectChange(v){
 }
 
 </script>
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">NoctAI™</a>
+
+    <div class="nav-links">
+      <a href="how_it_works.html">Как это работает</a>
+      <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+      <a href="projects.html">Проекты</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <span class="badge">HOW IT WORKS</span>
+  <h1>Как устроена модель участия NoctAI</h1>
+  <p class="sub">
+    NoctAI — это платформа долевого участия в реальных инфраструктурных проектах.
+    Участие фиксируется через ручную проверку, а доли инвесторов закрепляются
+    в рамках единой структуры владения.
+  </p>
+
+  <div class="section">
+    <h2>Почему минимальный вход начинается от $1</h2>
+    <p class="sub">
+      Минимальный вход не является обещанием доходности и не предназначен
+      для спекулятивных ожиданий.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3>Единая структура участия</h3>
+        <p>
+          Минимальный порог позволяет формировать единый инвесторский пул,
+          в котором все участники входят в одну структуру владения,
+          независимо от размера вклада.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Масштабируемость модели</h3>
+        <p>
+          Низкий порог входа используется для масштабирования проекта
+          и распределения долей, а не для создания иллюзии быстрых результатов.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Пропорциональная фиксация</h3>
+        <p>
+          Каждое участие фиксируется пропорционально внесённому капиталу
+          и подчиняется единым правилам распределения.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Как работает участие при небольшом капитале</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Доля в общем пуле</h3>
+        <p>
+          Участник получает долю в общем инвестиционном пуле,
+          размер которой определяется вкладом относительно общего объёма капитала.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Зависимость от развития проекта</h3>
+        <p>
+          Потенциал участия зависит от развития проекта,
+          его операционных показателей и масштабирования.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Отсутствие гарантий</h3>
+        <p>
+          Участие не предполагает гарантированной доходности
+          и связано с инвестиционными рисками.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Почему расчёты ведутся в USDT</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Единый расчётный стандарт</h3>
+        <p>
+          Использование USDT обеспечивает единый и предсказуемый
+          расчётный стандарт для всех участников.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Прозрачность и верификация</h3>
+        <p>
+          Все транзакции поддаются проверке и упрощают учёт долей.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Подготовка к масштабированию</h3>
+        <p>
+          Такая модель упрощает последующее подключение
+          дополнительных расчётных механизмов.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+<p class="sub" style="margin-top:24px;">
+  Процесс участия и допуска инвесторов регулируется внутренним
+  контуром управления и ответственности платформы.
+  <a href="oversight_governance.html" style="color:var(--gold); text-decoration:none;">
+    Подробнее об Oversight & Governance →
+  </a>
+</p>
+
+  <div class="section">
+      <div class="grid">
+        <div class="card">
+          <div class="step">ШАГ 1</div>
+          <h3>Выбор проекта</h3>
+          <p>
+            Вы выбираете активный проект на платформе и знакомитесь с параметрами инвестиционного раунда.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="step">ШАГ 2</div>
+          <h3>Отправка USDT</h3>
+          <p>
+            Инвестиции принимаются в USDT (TRC20). После отправки средств вы переходите к подтверждению.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="step">ШАГ 3</div>
+          <h3>Подтверждение транзакции</h3>
+          <p>
+            Вы указываете email для связи и Transaction Hash (TxID). Это позволяет зафиксировать инвестицию.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="step">ШАГ 4</div>
+          <h3>Ручная проверка</h3>
+          <p>
+            Команда NoctAI вручную подтверждает транзакцию и фиксирует долю инвестора.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr/>
+
+    <div class="section">
+      <div class="grid">
+        <div class="card">
+          <h3>Почему используется ручная проверка</h3>
+          <p>
+            Ручная проверка снижает риски ошибок, защищает инвесторов и позволяет сохранять контроль
+            над структурой долей.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Сроки фиксации доли</h3>
+          <p>
+            Подтверждение и фиксация доли происходят в течение 24 часов после отправки данных.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Крупные инвестиции</h3>
+          <p>
+            Инвестиции от крупных инвесторов рассматриваются индивидуально через прямой контакт с командой.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-note">
+      NoctAI не является публичной инвестиционной офертой.
+      Все инвестиции осуществляются на основании индивидуального решения инвестора.
+    </p>
+  </div>
+  
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div>
+      <strong>NoctAI™</strong><br>
+      Платформа долевого участия в реальных проектах.<br>
+      <span style="font-size:13px;color:#9aa3b2;">
+        Централизованное управление · Ручной допуск · Permission‑based access
+      </span>
+    </div>
+    <div>
+      <a href="legal.html">Условия</a><br>
+      <a href="privacy.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+    </div>
+    <div>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
+        noctai.vip@proton.me
+      </a><br>
+      <span style="font-size:13px;">
+        Indicative information only. No public offering.
+      </span><br>
+      © 2025 NoctAI™
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
