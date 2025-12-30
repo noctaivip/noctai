@@ -210,7 +210,6 @@ text-decoration:underline;
 </style>
 
 <style>
-/* --- Button hover effects (added only) --- */
 .cta-primary{
 transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
 }
@@ -228,7 +227,6 @@ box-shadow: 0 0 0 1px rgba(201,162,77,0.35) inset;
 }
 </style>
 <style>
-/* --- Header Invest button hover (added only) --- */
 .top-nav .nav-cta{
 text-decoration: none;
 transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
@@ -239,7 +237,6 @@ transform: translateY(-1px);
 box-shadow: 0 8px 22px rgba(201,162,77,0.25);
 filter: brightness(1.05);
 }
-/* remove underline effect from nav links hover for CTA */
 .top-nav .nav-cta::after{
 display:none !important;
 }
@@ -281,7 +278,6 @@ margin-top:6px;
 }
 </style>
 <style>
-/* --- Logo shimmer effect (added only) --- */
 .shimmer{
 position:relative;
 overflow:hidden;
@@ -380,7 +376,6 @@ border-color:var(--gold);
 }
 </style>
 <style>
-/* Enhanced calculator manual input styling */
 .calc-panel input[type=number]{
   width:100%;
   margin-top:12px;
@@ -540,8 +535,6 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
 

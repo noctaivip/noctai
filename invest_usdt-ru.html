@@ -338,8 +338,6 @@ display:none;
 }
 </style>
 
-
-<!-- EXACT CALCULATOR CSS FROM index.html -->
 <style>
 .calc-overlay{
   position:fixed; inset:0; background:rgba(5,8,14,0.85);
@@ -382,7 +380,6 @@ display:none;
 }
 </style>
 <style>
-/* Enhanced calculator manual input styling */
 .calc-panel input[type=number]{
   width:100%;
   margin-top:12px;
@@ -532,8 +529,6 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
 
@@ -691,7 +686,6 @@ function sendConfirm(){
   cAmountView.innerText = cAmount.value;
   cTxView.innerText = cTx.value;
 
-  // hide input modal, show branded confirmation
   closeConfirm();
   document.getElementById('onsiteConfirm').style.display = 'block';
 }
@@ -752,12 +746,10 @@ function sendConfirm(){
     alert("Заполните email и TxID");
     return;
   }
-  // fill confirmation view
   cEmailView.innerText = cEmail.value;
   cAmountView.innerText = cAmount.value;
   cTxView.innerText = cTx.value;
 
-  // hide input modal, show branded confirmation
   closeConfirm();
   document.getElementById('onsiteConfirm').style.display = 'block';
 }
@@ -788,7 +780,6 @@ window.open(gmailUrl, '_blank');
 
 
 
-<!-- Branded On-site Confirmation -->
 <div id="onsiteConfirm" class="modal">
   <div class="panel" style="max-width:560px;margin:80px auto;text-align:center;position:relative">
 
@@ -835,7 +826,6 @@ function copyAddress(){
 }
 </script>
 
-<!-- Global Calculator Module -->
 <script>
 if (!window.__calculatorModuleLoaded) {
   window.__calculatorModuleLoaded = true;
