@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Что такое NOCTAI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root{
+  --bg:#050b16;
+  --panel:#071827;
+  --text:#e6eef7;
+  --muted:#9fb1c6;
+  --gold:#d6b15e;
+  --border:rgba(214,177,94,.35);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:radial-gradient(1200px 600px at 50% -200px,#0b2238 0%,#050b16 55%);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+}
+.container{
+  max-width:960px;
+  margin:90px auto;
+  padding:0 20px;
+}
+h1{
+  font-size:36px;
+  margin-bottom:20px;
+}
+h2{
+  font-size:22px;
+  margin-top:50px;
+  margin-bottom:14px;
+}
+p{
+  color:var(--muted);
+  line-height:1.7;
+  margin-bottom:16px;
+}
+ul{
+  padding-left:18px;
+  color:var(--muted);
+}
+li{margin-bottom:8px}
+hr{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:48px 0;
+}
+blockquote{
+  margin:40px 0;
+  padding-left:18px;
+  border-left:3px solid var(--gold);
+  color:var(--text);
+  font-size:18px;
+}
+.cta-primary{
+display:inline-block;
+margin-top:24px;
+padding:15px 34px;
+border-radius:8px;
+background:linear-gradient(180deg,#e6c56f 0%,#c9a24d 100%);
+color:#0a0d12;
+text-decoration:none;
+font-weight:700
+}
+.cta-secondary{
+display:inline-block;
+margin-top:14px;
+padding:13px 28px;
+border-radius:8px;
+border:1px solid var(--gold-soft);
+color:var(--gold);
+text-decoration:none;
+background:rgba(201,162,77,.04)
+}
+.panel{
+background:linear-gradient(180deg,#131a24 0%,var(--panel) 100%);
+border:1px solid var(--gold-soft);
+border-radius:14px;
+padding:30px;
+box-shadow:0 0 0 1px rgba(201,162,77,.05) inset
+}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.calculator{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}
+.result{font-size:22px;font-weight:700;color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--gold)}
+footer{margin-top:96px;padding:36px 20px;border-top:1px solid var(--border);color:var(--muted);font-size:13px}
+@media(max-width:900px){.hero,.grid,.calculator{grid-template-columns:1fr}}
+<style>
+.top-nav{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(10,13,18,0.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+}
+.nav-container{
+max-width:1120px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+
+.logo:hover{
+  text-decoration:none;
+}
+
+.nav-links a{
+margin-left:28px;
+text-decoration:none;
+color:var(--text);
+position:relative;
+padding-bottom:4px;
+}
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:2px;
+background:var(--gold);
+transition:width 0.3s ease;
+}
+.nav-links a:hover::after{
+width:100%;
+}
+.nav-cta{
+border:1px solid var(--gold-soft);
+padding:8px 18px;
+border-radius:999px;
+}
+.site-footer{
+margin-top:100px;
+border-top:1px solid var(--border);
+background:#0a0d12;
+}
+.footer-container{
+max-width:1120px;
+margin:0 auto;
+padding:40px 20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+color:var(--muted);
+font-size:14px;
+}
+.footer-container a{
+color:var(--gold);
+text-decoration:none;
+}
+.footer-container a:hover{
+text-decoration:underline;
+}
+@media(max-width:900px){
+.footer-container{grid-template-columns:1fr}
+.nav-links a{margin-left:16px}
+}
+.lang-switch{
+  margin-left:28px;
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:8px;
+}
+
+.lang-switch a.active{
+  color:var(--gold);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+.lang-switch{
+  margin-left:28px;
+  padding:4px 10px;
+  border:1px solid rgba(201,162,77,0.35);
+  border-radius:999px;
+  background:rgba(201,162,77,0.06);
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.lang-switch a.active{
+  color:var(--gold);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+
+</style>
+
+<style>
+.cta-primary{
+transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+.cta-primary:hover{
+transform: translateY(-1px);
+box-shadow: 0 8px 22px rgba(201,162,77,0.25);
+filter: brightness(1.05);
+}
+.cta-secondary{
+transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.cta-secondary:hover{
+border-color: var(--gold);
+box-shadow: 0 0 0 1px rgba(201,162,77,0.35) inset;
+}
+</style>
+<style>
+.top-nav .nav-cta{
+text-decoration: none;
+transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+.top-nav .nav-cta:hover{
+text-decoration: none;
+transform: translateY(-1px);
+box-shadow: 0 8px 22px rgba(201,162,77,0.25);
+filter: brightness(1.05);
+}
+.top-nav .nav-cta::after{
+display:none !important;
+}
+</style>
+<style>
+.platform-tag{
+font-size:14px;
+letter-spacing:0.08em;
+text-transform:uppercase;
+color:var(--muted);
+margin-bottom:14px;
+}
+.active-project{
+margin-top:10px;
+}
+.project-label{
+display:inline-block;
+margin-bottom:6px;
+font-size:12px;
+letter-spacing:0.12em;
+color:var(--gold);
+}
+</style>
+<style>
+.platform-badge{
+background: rgba(201,162,77,0.08);
+border-color: var(--gold);
+color: var(--gold);
+letter-spacing: 0.12em;
+}
+</style>
+<style>
+.project-box{
+margin-bottom:18px;
+}
+.project-box .project-title{
+font-weight:600;
+margin-top:6px;
+}
+</style>
+<style>
+.shimmer{
+position:relative;
+overflow:hidden;
+}
+.shimmer::after{
+content:"";
+position:absolute;
+top:0;
+left:-150%;
+width:50%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent 0%,
+rgba(255,255,255,0.35) 50%,
+transparent 100%
+);
+opacity:0.4;
+animation:shimmer 8s ease-in-out infinite;
+}
+@keyframes shimmer{
+0%{left:-150%;}
+70%{left:-150%;}
+100%{left:150%;}
+}
+</style>
+<style>
+.manual-input-label{
+display:block;
+margin-top:14px;
+margin-bottom:6px;
+font-size:13px;
+color:var(--muted);
+}
+.manual-input{
+width:100%;
+padding:10px 12px;
+border-radius:8px;
+background:#0f141c;
+border:1px solid var(--border);
+color:var(--text);
+font-size:15px;
+}
+.manual-input:focus{
+outline:none;
+border-color:var(--gold);
+}
+</style>
+<style>
+.section-title{
+  margin-top:80px;
+  margin-bottom:28px;
+  font-size:30px;
+  font-weight:700;
+}
+</style>
+<style>
+.calc-overlay{
+  position:fixed; inset:0; background:rgba(5,8,14,0.85);
+  backdrop-filter:blur(6px); z-index:3000;
+  display:flex; align-items:center; justify-content:center;
+}
+.calc-modal{
+  width:100%; max-width:960px; background:#0f141c;
+  border:1px solid #c9a44c; border-radius:18px;
+  padding:36px; position:relative;
+}
+.calc-close{
+  position:absolute; top:16px; right:18px;
+  background:none; border:none; color:#aaa; font-size:24px;
+  cursor:pointer;
+}
+.calc-sub{color:#9aa3ad; margin-bottom:20px;}
+.coverage-title{font-size:14px; color:#9aa3ad; margin-bottom:10px;}
+.coverage-buttons{display:flex; gap:10px; margin-bottom:26px;}
+.coverage-buttons button{
+  width:56px; height:34px; border-radius:8px;
+  background:#0b0f16; border:1px solid #c9a44c;
+  color:#fff; font-size:12px; cursor:pointer;
+}
+.coverage-buttons button.active{
+  background:linear-gradient(180deg,#f1d48a,#d6b15e);
+  color:#050b16;
+}
+.calc-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+.calc-panel{
+  border:1px solid #c9a44c; border-radius:14px; padding:24px;
+}
+.calc-value{font-size:22px; margin:10px 0;}
+.calc-muted{font-size:13px; color:#9aa3ad;}
+.calc-income .calc-main{font-size:26px; color:#f1d48a;}
+.calc-footer{text-align:right; margin-top:24px;}
+.calc-close-btn{
+  background:#0b0f16; border:1px solid #c9a44c;
+  padding:10px 18px; border-radius:10px; color:#fff;
+}
+</style>
+<style>
+.calc-panel input[type=number]{
+  width:100%;
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius:10px;
+  background:#0b0f16;
+  border:1px solid #c9a44c;
+  color:#f1d48a;
+  font-size:16px;
+  font-weight:600;
+  box-shadow: inset 0 0 0 1px rgba(201,164,76,0.15);
+}
+.calc-panel input[type=number]:focus{
+  outline:none;
+  border-color:#f1d48a;
+  box-shadow:0 0 0 2px rgba(201,164,76,0.25);
+}
+.calc-muted{
+  margin-top:10px;
+}
+</style>
+<style>
+:root{
+  --bg:#050b16;
+  --panel:#071827;
+  --muted:#95a6b9;
+  --text:#e6eef7;
+  --gold:#d6b15e;
+  --gold-soft:#f1d48a;
+  --border:rgba(214,177,94,.35);
+}
+</style>
+</style>
+</head>
+<body>
+ <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
+  <div class="calc-modal">
+    <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
+<div style="margin:-6px 0 18px 0;">
+  <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
+    Проект
+  </label>
+  <select id="projectSelector"
+    style="
+      width:100%;
+      padding:12px 14px;
+      border-radius:10px;
+      background:#0b0f16;
+      border:1px solid #c9a44c;
+      color:#f1d48a;
+      font-size:15px;
+      font-weight:600;
+    "
+    onchange="onProjectChange(this.value)"
+  >
+    <option value="p001" selected>
+      Active Project #001 — AI Dispatcher + Marketplace (Logistics)
+    </option>
+    <option value="private" disabled>
+      Private Projects — Invitation Only
+    </option>
+  </select>
+  <div style="font-size:12px;color:var(--muted);margin-top:6px;">
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
+</div>
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
+
+    <div class="coverage-block">
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
+      <div class="coverage-buttons">
+        <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
+        <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
+        <button data-p="50" class="active" onclick="setCoverageCalc(50)">50%</button>
+        <button data-p="70" onclick="setCoverageCalc(70)">70%</button>
+        <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
+      </div>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-panel">
+        <h3>Сумма инвестиций</h3>
+        <input type="range"
+       class="calc-range"
+       min="1"
+       max="300000"
+       value="1000"
+       id="m_invRange"
+       oninput="syncFromRange()">
+
+        <div class="calc-value">$<span id="m_invValue">1,000</span></div>
+        <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
+      </div>
+
+      <div class="calc-panel">
+        <h3>Оценка дохода</h3>
+        <div class="calc-income">
+          <div>Доход / месяц</div>
+          <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-footer">
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
+    </div>
+	</div>
+  </div>
+  <script>
+let coverage = 50;
+const MAX = 300000;
+
+function q(id){ return document.getElementById(id); }
+
+function openInvestmentCalc(){
+  q('investmentCalcOverlay').style.display = 'flex';
+  recalc();
+}
+function closeInvestmentCalc(){
+  q('investmentCalcOverlay').style.display = 'none';
+}
+
+function setCoverageCalc(p){
+  coverage = p;
+  document.querySelectorAll('.coverage-buttons button')
+    .forEach(b => b.classList.remove('active'));
+  document.querySelector('.coverage-buttons button[data-p="'+p+'"]')
+    .classList.add('active');
+  recalc();
+}
+
+function syncFromRange(){
+  const v = Number(q('m_invRange').value);
+  q('m_invInput').value = v;
+  recalc();
+}
+
+function syncFromInput(){
+  let v = Number(q('m_invInput').value);
+  if (isNaN(v)) return;
+  if (v < 1) v = 1;
+  if (v > MAX) v = MAX;
+  q('m_invInput').value = v;
+  q('m_invRange').value = v;
+  recalc();
+}
+
+function recalc(){
+  const v = Number(q('m_invRange').value);
+  q('m_invValue').innerText = v.toLocaleString();
+  q('m_invShare').innerText = ((v / 3000000) * 20).toFixed(6) + '%';
+  const baseIncome = 54000000 * (coverage / 50);
+  q('m_incomeValue').innerText =
+    (baseIncome * (v / 3500000)).toFixed(2);
+}
+
+function onProjectChange(v){
+  recalc();
+}
+
+</script>
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="index-ru.html" class="logo">NoctAI™</a>
+
+    <div class="nav-right">
+  <div class="nav-links">
+    <a href="how_it_works-ru.html">Как это работает</a>
+    <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+    <a href="projects-ru.html">Проекты</a>
+  </div>
+
+  <div class="lang-switch">
+    <a href="platform_overview-ru.html" class="active">RU</a>
+	-
+    <a href="platform_overview.html">EN</a>
+  </div>
+</div>
+
+  </div>
+</nav>
+<div class="container">
+
+<h1>Что такое NOCTAI</h1>
+
+<p><strong>NOCTAI</strong> — это цифровая платформа доступа к возможностям, проектам и аналитическому контексту вне публичных рынков.</p>
+
+<p>Платформа создана для людей, которые ищут не шум, не рекламу и не обещания, а <strong>понятную и структурированную среду для движения, роста и участия</strong> — на своём уровне.</p>
+
+<p>NOCTAI не является инвестиционным фондом, брокером или публичным маркетплейсом. Это <strong>среда взаимодействия</strong>, в которой возможности открываются поэтапно — в зависимости от готовности, профиля и уровня участия.</p>
+
+<hr>
+
+<h2>Как работает платформа</h2>
+
+<p>В NOCTAI не существует единой точки входа с одинаковыми условиями для всех.</p>
+
+<p>Платформа построена по принципу <strong>уровней доступа</strong>:</p>
+
+<ul>
+<li>базовый уровень открыт для любого пользователя</li>
+<li>расширенные возможности становятся доступны по мере движения внутри системы</li>
+<li>закрытые разделы предназначены для участников с подтверждённым профилем</li>
+</ul>
+
+<p>Это означает, что:</p>
+
+<ul>
+<li>начать может любой</li>
+<li>уровень доступа не покупается — он подтверждается</li>
+<li>каждый видит ровно тот объём информации и возможностей, который соответствует его текущему статусу</li>
+</ul>
+
+<hr>
+
+<h2>Что даёт NOCTAI</h2>
+
+<p>NOCTAI не даёт гарантий и не раздаёт обещаний. Платформа даёт <strong>возможность находиться внутри правильной среды</strong>.</p>
+
+<ul>
+<li>аналитический контекст и структурированная информация</li>
+<li>понимание того, как устроены частные проекты и закрытые рынки</li>
+<li>доступ к проектам и взаимодействию в контролируемом формате</li>
+<li>прозрачные правила без хаоса и случайных решений</li>
+</ul>
+
+<p>Для одних NOCTAI — это точка входа и обучения.<br>
+Для других — рабочая среда и инструмент отбора.<br>
+Для третьих — закрытое пространство взаимодействия.</p>
+
+<hr>
+
+<h2>Принцип платформы</h2>
+
+<p>NOCTAI не разделяет людей на «бедных» и «богатых». Платформа разделяет <strong>уровни ответственности и допуска</strong>.</p>
+
+<ul>
+<li>статус не декларируется — он формируется действиями</li>
+<li>доступ не продаётся — он предоставляется</li>
+<li>участие возможно только при соблюдении правил среды</li>
+</ul>
+
+<hr>
+
+<h2>Важно понимать</h2>
+
+<ul>
+<li>NOCTAI не обещает доход</li>
+<li>не навязывает участие</li>
+<li>не раскрывает всё сразу</li>
+<li>не работает в публичной логике «чем больше — тем лучше»</li>
+</ul>
+
+<p>Платформа создана для тех, кто понимает, что <strong>доступ к возможностям всегда начинается с доверия и дисциплины</strong>.</p>
+
+<blockquote>
+NOCTAI — это платформа, где каждый может начать,<br>
+но не каждый выбирает дойти до следующего уровня.
+</blockquote>
+
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div>
+      <strong>NoctAI™</strong><br>
+      Платформа долевого участия в реальных проектах.<br>
+      <span style="font-size:13px;color:#9aa3b2;">
+        Централизованное управление · Ручной допуск · Permission‑based access
+      </span>
+    </div>
+    <div>
+      <a href="terms-ru.html">Условия</a><br>
+      <a href="privacy-ru.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance-ru.html">Oversight &amp; Governance</a><br>
+      <a href="overview-ru.html">Обзор платформы</a>
+    </div>
+    <div>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
+        noctai.vip@proton.me
+      </a><br>
+      <span style="font-size:13px;">
+        Indicative information only. No public offering.
+      </span><br>
+      © 2025 NoctAI™
+    </div>
+  </div>
+</footer>
+</body>
+</html>
