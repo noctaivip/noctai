@@ -3,20 +3,18 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projects — NoctAI.VIP</title>
+<title>Privacy Policy | NoctAI.VIP</title>
 
 <style>
 :root{
   --bg:#050b16;
   --panel:#071827;
-  --card:#0a2030;
-  --muted:#a9b6c6;
+  --muted:#9fb1c6;
   --text:#e6eef7;
   --gold:#d6b15e;
   --gold-soft:#f1d48a;
   --border:rgba(214,177,94,.35);
 }
-
 *{box-sizing:border-box}
 body{
   margin:0;
@@ -24,144 +22,28 @@ body{
   color:var(--text);
   font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
 }
-
-.container{
-  max-width:1100px;
-  margin:80px auto;
-  padding:0 20px;
-}
-
-.badge{
-  display:inline-block;
-  padding:6px 14px;
-  border-radius:999px;
-  border:1px solid var(--border);
-  color:var(--gold);
-  font-size:12px;
-  letter-spacing:.08em;
-}
-
-h1{
-  margin:18px 0 10px;
-  font-size:36px;
-  font-weight:700;
-}
-
-.sub{
-  color:var(--muted);
-  max-width:760px;
-}
-
-.section{
-  margin-top:48px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
-}
-
-.card{
-  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:26px;
-  position:relative;
-}
-
-.status{
-  position:absolute;
-  top:18px;
-  right:18px;
-  font-size:12px;
-  color:var(--gold);
-  border:1px solid var(--border);
-  padding:4px 10px;
-  border-radius:999px;
-}
-
-.card h3{
-  margin:0 0 10px;
-  font-size:18px;
-  color:var(--gold-soft);
-}
-
-.card p{
-  margin:0 0 14px;
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.55;
-}
-
-.meta{
-  font-size:13px;
-  color:var(--muted);
-  line-height:1.6;
-}
-
-.meta strong{
-  color:var(--text);
-  font-weight:600;
-}
-
-.cta{
-  margin-top:18px;
-  display:inline-block;
-  background:linear-gradient(180deg,#e7c776,#c9a24f);
-  color:#0b1020;
-  padding:12px 18px;
-  border-radius:10px;
-  font-weight:600;
-  text-decoration:none;
-}
-
-.lock{
-  opacity:.6;
-}
-
-hr{
-  border:none;
-  border-top:1px solid var(--border);
-  margin:48px 0;
-}
-
-.footer-note{
-  margin-top:36px;
-  color:var(--muted);
-  font-size:13px;
-}
-</style>
-
-<style>
-/* Visual hierarchy refinement */
-h1 { color: #ffffff; }
-
-.sub { 
-  color: var(--muted); 
-}
-
-.sub strong {
-  color: var(--text);
-  font-weight: 600;
-}
-</style>
-<style>
 .top-nav{
-position:sticky;
-top:0;
-z-index:999;
-background:rgba(10,13,18,0.85);
-backdrop-filter:blur(10px);
-border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(10,13,18,0.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
 }
 .nav-container{
-max-width:1120px;
-margin:0 auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:14px 20px;
+  max-width:1120px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 20px;
+}
+.nav-cta::after{
+  display:none !important;
+}
+.nav-cta:hover{
+  background:rgba(214,177,94,.08);
+  box-shadow:0 0 0 1px var(--gold-soft);
 }
 .logo{
   color:var(--gold);
@@ -175,37 +57,73 @@ padding:14px 20px;
 }
 
 .nav-links a{
-margin-left:28px;
-text-decoration:none;
-color:var(--text);
-position:relative;
-padding-bottom:4px;
+  margin-left:28px;
+  text-decoration:none;
+  color:var(--text);
+  position:relative;
+  padding-bottom:4px;
 }
 .nav-links a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:0;
-width:0;
-height:2px;
-background:var(--gold);
-transition:width 0.3s ease;
+  content:"";
+  position:absolute;
+  left:0;bottom:0;
+  width:0;height:2px;
+  background:var(--gold);
+  transition:width .3s ease;
 }
-.nav-links a:hover::after{
-width:100%;
-}
+.nav-links a:hover::after{width:100%}
 .nav-cta{
-border:1px solid var(--gold-soft);
-padding:8px 18px;
-border-radius:999px;
+  border:1px solid var(--gold-soft);
+  padding:8px 18px;
+  border-radius:999px;
 }
-.nav-cta::after{
-  display:none !important;
+
+.container{
+  max-width:900px;
+  margin:80px auto;
+  padding:0 20px;
 }
-.nav-cta:hover{
-  background:rgba(214,177,94,.08);
-  box-shadow:0 0 0 1px var(--gold-soft);
+h1{
+  font-size:36px;
+  margin-bottom:18px;
 }
+.section{
+  margin-top:32px;
+  padding:26px;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));
+}
+.section h2{
+  margin:0 0 10px;
+  font-size:18px;
+  color:var(--gold);
+}
+.section p{
+  margin:0;
+  line-height:1.7;
+  color:var(--muted);
+}
+
+.site-footer{
+  border-top:1px solid var(--border);
+  margin-top:80px;
+  padding:36px 20px;
+}
+.footer-container{
+  max-width:1120px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:28px;
+  color:var(--muted);
+  font-size:14px;
+}
+.site-footer a{
+  color:var(--gold);
+  text-decoration:none;
+}
+.site-footer a:hover{text-decoration:underline}
 .lang-switch{
   margin-left:28px;
   font-size:12px;
@@ -257,29 +175,6 @@ border-radius:999px;
   color:var(--text);
 }
 
-</style>
-<style>
-.site-footer{
-  border-top:1px solid var(--border);
-  margin-top:80px;
-  padding:36px 20px;
-}
-.footer-container{
-  max-width:1120px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:1.2fr 1fr 1fr;
-  gap:28px;
-  color:var(--muted);
-  font-size:14px;
-}
-.site-footer a{
-  color:var(--gold);
-  text-decoration:none;
-}
-.site-footer a:hover{
-  text-decoration:underline;
-}
 </style>
 <!-- EXACT CALCULATOR CSS FROM index.html -->
 <style>
@@ -395,7 +290,7 @@ border-radius:999px;
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -418,13 +313,14 @@ border-radius:999px;
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
 
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -436,7 +332,7 @@ The calculator is recalculated depending on the selected project.  </div>
 
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -447,20 +343,20 @@ The calculator is recalculated depending on the selected project.  </div>
 
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
 
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
@@ -519,147 +415,106 @@ function onProjectChange(v){
 }
 
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
 
     <div class="nav-right">
   <div class="nav-links">
-    <a href="how_it_works-ru.html">How it works</a>
-    <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
-    <a href="projects-ru.html">Projects</a>
+    <a href="how_it_works-ru.html">Как это работает</a>
+    <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+    <a href="projects-ru.html">Проекты</a>
   </div>
 
   <div class="lang-switch">
-    <a href="projects.html" class="active">EN</a>
+    <a href="privacy-ru.html" class="active">RU</a>
 	-
-    <a href="projects-ru.html">RU</a>
+    <a href="privacy.html">EN</a>
   </div>
 </div>
 
   </div>
 </nav>
 
-  <div class="container">
+<div class="container">
+  <h1>Политика конфиденциальности</h1>
 
-    <span class="badge">PROJECTS</span>
-    <h1>NoctAI platform projects</h1>
-    
-<p class="sub">
-  <strong>NoctAI is an investment platform with a phased project launch.</strong><br>
-Each project undergoes an individual expert assessment, including technological, legal, and market verification.<br><br>
-<strong>The project is opened for investment only after passing the patenting stage or the official consolidation of key technological solutions.</strong><br><br>
-Projects with <em>upcoming</em> status are at the stage of individual assessment, patent protection preparation, or structure finalization and are not open to investment until these stages are completed.<br><br>
-<strong>Investment access is granted selectively and can only be opened after completion of the relevant protective and structural procedures.</strong></p>
-
-
-    <!-- ACTIVE PROJECT -->
-    <div class="section">
-      <h2>Active project</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="status">ACTIVE</span>
-          <h3>AI Dispatcher + Marketplace</h3>
-          <p>
-A technology platform for analytics and tracking in the US transport logistics sector.          </p>
-          <div class="meta">
-            <div><strong>Round:</strong> $3,500,000</div>
-            <div><strong>Investor pool:</strong> 10% share</div>
-<div><strong>Minimum entry:</strong> $1 (USDT)</div>
-            <div><strong>Status:</strong> MVP / Early Growth</div>
-          </div>
-          <a class="cta" href="index.html">Go to the project</a>
-        </div>
-      </div>
-    </div>
-
-    <hr/>
-
-    <!-- UPCOMING PROJECTS -->
-    <div class="section">
-      <h2>Future projects</h2>
-      <div class="grid">
-        <div class="card lock">
-          <span class="status">UPCOMING</span>
-          <h3>FinTech Infrastructure Project</h3>
-          <p>
-Infrastructure project in the field of financial services.          </p>
-          <div class="meta">
-            <div><strong>Status:</strong> Preparation</div>
-            <div><strong>Access:</strong> Soon</div>
-          </div>
-        </div>
-
-        <div class="card lock">
-          <span class="status">UPCOMING</span>
-          <h3>Data Intelligence Platform</h3>
-          <p>
-Platform for analytics and processing of industry data.          </p>
-          <div class="meta">
-            <div><strong>Status:</strong> Grade</div>
-            <div><strong>Access:</strong> Soon</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr/>
-
-    <!-- INVITATION ONLY -->
-    <div class="section">
-      <h2>Invitation-based projects</h2>
-      <div class="grid">
-        <div class="card lock">
-          <span class="status">PRIVATE</span>
-          <h3>Private Capital Project</h3>
-          <p>
-Closed investment projects, available only by individual invitation.          </p>
-          <div class="meta">
-            <div><strong>Access:</strong> Invitation Only</div>
-            <div><strong>Contact:</strong> Through the team</div>
-          </div>
-        </div>
-      </div>
-    </div>
-<p class="sub" style="margin-top:28px;">
-  Access to individual projects, early investment rounds, and closed
-  materials is provided within a separate Project Access framework.
-</p>
-
-<p class="sub">
-  <a href="project_access.html" style="color:var(--gold); text-decoration:none;">
-Go to Project Access →  </a>
-</p>
-
-    <p class="footer-note">
-      The information on this page does not constitute a public investment offer.
-	  Access to projects may be restricted.
+  <div class="section">
+    <h2>Общие положения</h2>
+    <p>
+      NoctAI уважает конфиденциальность пользователей и обрабатывает персональные данные
+      исключительно в рамках ограниченного инвестиционного доступа и внутренней проверки.
     </p>
-
   </div>
+
+  <div class="section">
+    <h2>Сбор информации</h2>
+    <p>
+      Мы можем собирать email, данные транзакций (TXID), а также информацию,
+      предоставленную пользователем добровольно при запросе доступа или инвестиции.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Использование данных</h2>
+    <p>
+      Все данные используются исключительно для идентификации инвестора,
+      фиксации долей и соблюдения внутренних процедур контроля и ответственности.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Передача третьим лицам</h2>
+    <p>
+      Данные не передаются третьим лицам, за исключением случаев,
+      предусмотренных применимым законодательством или внутренними требованиями контроля.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Безопасность</h2>
+    <p>
+      Мы применяем административные и технические меры для защиты данных.
+      Доступ к информации ограничен и предоставляется по принципу необходимости.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Отсутствие публичной оферты</h2>
+    <p>
+      Данный сайт и размещённая информация не являются публичной инвестиционной офертой.
+      Любое участие осуществляется на основании индивидуального решения инвестора.
+    </p>
+  </div>
+
+  <div class="section">
+    <p style="font-size:13px; color:var(--muted); font-style:italic;">
+      This policy applies exclusively to private, permission-based access and may be updated without prior public notice.
+    </p>
+  </div>
+
+</div>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
       <strong>NoctAI™</strong><br>
-A platform for equity participation in real projects.<br>
-      <span style="font-size:13px;color:#9aa3b2;">
-Centralized management · Manual access · Permission-based access      </span>
+      Платформа долевого участия в реальных проектах.<br>
+      Централизованное управление · Ручной допуск · Permission-based access
     </div>
     <div>
-      <a href="terms.html">Terms</a><br>
-      <a href="privacy.html">Privacy Policy</a><br>
-      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+      <a href="terms-ru.html">Условия</a><br>
+      <a href="privacy-ru.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance-ru.html">Oversight & Governance</a>
     </div>
     <div>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
-        noctai.vip@proton.me
-      </a><br>
-      <span style="font-size:13px;">
-        Indicative information only. No public offering.
-      </span><br>
+      <a href="mailto:noctai.vip@proton.me">noctai.vip@proton.me</a><br>
+      Indicative information only. No public offering.<br>
       © 2025 NoctAI™
     </div>
   </div>
 </footer>
+
 </body>
 </html>

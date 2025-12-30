@@ -173,6 +173,57 @@ border-radius:999px;
   background:rgba(214,177,94,.08);
   box-shadow:0 0 0 1px var(--gold-soft);
 }
+.lang-switch{
+  margin-left:28px;
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:8px;
+}
+
+.lang-switch a.active{
+  color:var(--gold);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+.lang-switch{
+  margin-left:28px;
+  padding:4px 10px;
+  border:1px solid rgba(201,162,77,0.35);
+  border-radius:999px;
+  background:rgba(201,162,77,0.06);
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.lang-switch a.active{
+  color:var(--gold);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+
 </style>
 <style>
 .site-footer{
@@ -310,7 +361,7 @@ border-radius:999px;
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Проект
+    Project
   </label>
   <select id="projectSelector"
     style="
@@ -333,14 +384,13 @@ border-radius:999px;
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-    Калькулятор пересчитывается в зависимости от выбранного проекта.
-  </div>
+The calculator is recalculated depending on the selected project.  </div>
 </div>
-    <h2>Инвестиционный калькулятор</h2>
-    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
+    <h2>Investment calculator</h2>
+    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
 
     <div class="coverage-block">
-      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
+      <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -352,7 +402,7 @@ border-radius:999px;
 
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Сумма инвестиций</h3>
+        <h3>Investment amount</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -363,20 +413,20 @@ border-radius:999px;
 
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Оценка дохода</h3>
+        <h3>Income assessment</h3>
         <div class="calc-income">
-          <div>Доход / месяц</div>
+          <div>Income / month</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
 
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
@@ -437,67 +487,74 @@ function onProjectChange(v){
 </script>
 <nav class="top-nav">
   <div class="nav-container">
-    <a href="index.html" class="logo">NoctAI™</a>
+    <a href="index-ru.html" class="logo">NoctAI™</a>
 
-    <div class="nav-links">
-      <a href="how_it_works.html">Как это работает</a>
-      <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
-      <a href="projects.html">Проекты</a>
-    </div>
+    <div class="nav-right">
+  <div class="nav-links">
+    <a href="how_it_works-ru.html">How it works</a>
+    <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
+    <a href="projects-ru.html">Projects</a>
+  </div>
+
+  <div class="lang-switch">
+    <a href="project_access.html" class="active">EN</a>
+	-
+    <a href="project_access-ru.html">RU</a>
+  </div>
+</div>
+
   </div>
 </nav>
 
   <div class="container">
   <span class="badge">PROJECT ACCESS</span>
 
-  <h1>Доступ к проектам платформы</h1>
+  <h1>Access to platform projects</h1>
 
   <p class="sub">
-    Project Access — это индивидуальный уровень допуска к отдельным инвестиционным проектам и закрытым раундам платформы NoctAI.
-    Решение о предоставлении доступа принимается вручную и основывается на совокупном участии инвестора.
-  </p>
+Project Access is a customized level of access to specific investment projects and closed rounds on the NoctAI platform.
+The decision to grant access is made manually and is based on the investor's total participation.  </p>
 
   <p class="sub" style="margin-top:20px;">
-    Публичные проекты и их текущие статусы представлены в разделе Projects.
-  </p>
+Public projects and their current statuses are presented in the Projects section.  </p>
 
   <p class="sub">
     <a href="projects.html" style="color:var(--gold); text-decoration:none;">
-      Перейти к Projects →
+Go to Projects →
     </a>
   </p>
 
   <div class="section">
-    <h2>Условия рассмотрения</h2>
+    <h2>Conditions of consideration</h2>
     <p>
-      Запрос на Project Access рассматривается при совокупном участии
-      <strong>от $10,000</strong> в проектах платформы.
+Requests for Project Access are considered with the combined participation of
+      <strong>от $10,000</strong> in platform projects.
     </p>
     <ul>
-      <li>учитывается общий объём инвестиций, а не один транш</li>
-      <li>доступ не предоставляется автоматически</li>
-      <li>платформа оставляет за собой право отказа без раскрытия причин</li>
+      <li>the total investment volume is taken into account, not one tranche</li>
+      <li>access is not granted automatically</li>
+      <li>The platform reserves the right to refuse without disclosing the reasons.</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>Что предоставляет Project Access</h2>
+    <h2>What does Project Access provide</h2>
     <ul>
-      <li>доступ к закрытым и будущим проектам</li>
-      <li>ранний доступ к отдельным инвестиционным раундам</li>
-      <li>приватные обновления и материалы по проектам</li>
+      <li>access to closed and future projects</li>
+      <li>early access to individual investment rounds</li>
+      <li>private updates and materials on projects</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>Запрос на Project Access</h2>
+    <h2>Request for Project Access</h2>
     <p>
-      Для рассмотрения запроса укажите контактный email и Transaction Hash (TxID),
-      подтверждающий ваше участие в проектах платформы.
+      To review your request, please provide a contact email and Transaction
+	  Hash (TxID) confirming your participation in the platform's projects.
     </p>
 
     <div class="form">
-      <label>Email для связи</label>
+      <label>Email for communication</label>
       <input id="pa-email" type="email" placeholder="you@email.com"/>
 
       <label>TxID / Transaction Hash</label>
@@ -515,19 +572,17 @@ function onProjectChange(v){
         font-weight:600;
         cursor:pointer;
         box-shadow:0 10px 30px rgba(214,177,94,.35);">
-        Запросить Project Access
+Request Project Access
       </button>
     </div>
   </div>
 
   <p class="note">
-    Все запросы рассматриваются вручную. В случае одобрения доступ предоставляется по указанному email.
-  </p>
+All requests are reviewed manually. If approved, access is granted via the email address provided.  </p>
 
   <p class="footer-note">
-    Project Access не является гарантией участия в закрытых проектах.
-    Все инвестиционные решения принимаются индивидуально.
-  </p>
+Project Access does not guarantee participation in closed projects.
+All investment decisions are made individually.  </p>
 </div>
 
 <!-- Access Approved Modal -->
@@ -569,9 +624,8 @@ function onProjectChange(v){
     <h2 style="margin-top:0">Project Access предоставлен</h2>
 
     <p style="color:#9fb3c8">
-      Ваш запрос на Project Access одобрен командой NoctAI.
-      Доступ активирован и закреплён за вашим email.
-    </p>
+Your request for Project Access has been approved by the NoctAI team.
+Access has been activated and assigned to your email.    </p>
 
     <div style="
       margin-top:24px;
@@ -579,11 +633,11 @@ function onProjectChange(v){
       border-radius:14px;
       padding:20px;
     ">
-      <strong style="color:#d6b15e">Что доступно</strong>
+      <strong style="color:#d6b15e">What's available</strong>
       <ul style="margin-top:10px;color:#c7d6e6">
-        <li>просмотр закрытых и будущих проектов платформы</li>
-        <li>ранний доступ к отдельным инвестиционным раундам</li>
-        <li>приватные обновления и материалы по проектам</li>
+        <li>View closed and future projects on the platform</li>
+        <li>early access to individual investment rounds</li>
+        <li>private updates and materials on projects</li>
       </ul>
     </div>
 
@@ -598,7 +652,7 @@ function onProjectChange(v){
         font-weight:600;
         cursor:pointer;
       ">
-        Перейти к Private Projects
+Go to Private Projects
       </button>
     </div>
   </div>
@@ -607,14 +661,13 @@ function onProjectChange(v){
   <div class="footer-container">
     <div>
       <strong>NoctAI™</strong><br>
-      Платформа долевого участия в реальных проектах.<br>
+A platform for equity participation in real projects.<br>
       <span style="font-size:13px;color:#9aa3b2;">
-        Централизованное управление · Ручной допуск · Permission‑based access
-      </span>
+Centralized management · Manual access · Permission-based access      </span>
     </div>
     <div>
-      <a href="legal.html">Условия</a><br>
-      <a href="privacy.html">Политика конфиденциальности</a><br>
+      <a href="terms.html">Terms</a><br>
+      <a href="privacy.html">Privacy Policy</a><br>
       <a href="oversight_governance.html">Oversight &amp; Governance</a>
     </div>
     <div>
@@ -659,11 +712,11 @@ document.addEventListener('DOMContentLoaded', function () {
       'Project Access Request — NOCTAI';
 
     const body =
-      'Здравствуйте,%0A%0A' +
-      'Прошу рассмотреть мой запрос на Project Access.%0A%0A' +
-      'Email для связи: ' + encodeURIComponent(email) + '%0A' +
+      'Hello,%0A%0A' +
+      'Please consider my request for Project Access..%0A%0A' +
+      'Email for communication: ' + encodeURIComponent(email) + '%0A' +
       'Transaction Hash (TxID): ' + encodeURIComponent(txid) + '%0A%0A' +
-      'С уважением';
+      'Sincerely';
 
     const gmailURL =
       'https://mail.google.com/mail/?view=cm&fs=1' +

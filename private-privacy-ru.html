@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NOCTAI — Конфиденциальность</title>
+
+<style>
+:root{
+  --bg:#0b0e11;
+  --panel:#0f1418;
+  --text:#e6e6e6;
+  --muted:#9aa0a6;
+  --line:#b89b5e;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  background:radial-gradient(circle at top,#12161b 0%,var(--bg) 55%);
+  color:var(--text);
+}
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 64px;
+  border-bottom:1px solid rgba(184,155,94,.25);
+}
+header .logo {
+  letter-spacing: 0.35em;
+  font-size: 13px;
+}
+nav a{
+  margin-left:28px;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-decoration:none;
+  color:var(--muted);
+  position:relative;
+}
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;bottom:-6px;
+  width:0;height:1px;
+  background:var(--line);
+  transition:.3s;
+}
+nav a:hover::after{width:100%}
+nav a:hover{color:var(--text)}
+.lang-switch{
+  margin-left:34px;
+  padding:4px 10px;
+  border:1px solid rgba(184,155,94,0.35);
+  border-radius:999px;
+  background:rgba(184,155,94,0.06);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.lang-switch a.active{
+  color:var(--line);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+.wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:110px 64px;
+}
+small{
+  letter-spacing:.18em;
+  font-size:11px;
+  color:var(--muted);
+}
+h1{
+  font-size:42px;
+  margin:18px 0 26px;
+}
+h2{
+  font-size:22px;
+  margin:40px 0 14px;
+}
+p{
+  color:var(--muted);
+  line-height:1.7;
+  max-width:860px;
+}
+hr{
+  border:none;
+  border-top:1px solid rgba(184,155,94,.35);
+  margin:70px 0;
+}
+.notice{
+  font-size:11px;
+  color:var(--muted);
+  font-style:italic;
+  margin-top:18px;
+  max-width:860px;
+}
+
+footer{
+  border-top:1px solid rgba(184,155,94,.25);
+  padding:28px 64px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  font-size:11px;
+  color:var(--muted);
+}
+footer .center{text-align:center}
+footer a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+footer a:hover{color:var(--text)}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">NOCTAI</a>
+  <nav>
+  <a href="control-ru.html">ГЛАВНАЯ</a>
+  <a href="active-dossiers-ru.html">АКТИВНЫЕ ДОСЬЕ</a>
+  <a href="briefings-ru.html">БРИФИНГИ</a>
+  <a href="access-protocol-ru.html">ПРОТОКОЛ ДОСТУПА</a>
+  <a href="request-access-ru.html">ЗАПРОС ДОСТУПА</a>
+
+  <!-- LANGUAGE SWITCH -->
+  <span class="lang-switch">
+    <a href="private-privacy-ru.html" class="active">RU</a>
+    ·
+    <a href="private-privacy.html">EN</a>
+  </span>
+</nav>
+</header>
+
+<section class="wrap">
+
+  <small>УВЕДОМЛЕНИЕ О КОНФИДЕНЦИАЛЬНОСТИ И ПРИВАТНОСТИ</small>
+  <h1>Конфиденциальность</h1>
+
+  <p>
+    NOCTAI спроектирован для работы с минимальным раскрытием данных.
+    Приватность, осмотрительность и конфиденциальность рассматриваются как
+    структурные требования, а не формальные пункты соответствия.
+  </p>
+
+  <hr>
+
+  <h2>1. Сбор информации</h2>
+  <p>
+    NOCTAI не функционирует как потребительская платформа и не
+    собирает персональные данные для маркетинга, профилирования или перепродажи.
+  </p>
+
+  <p>
+    Ограниченная информация может быть предоставлена добровольно через
+    сигналы контролируемого доступа, защищённые каналы связи или
+    двустороннюю переписку.
+  </p>
+
+  <hr>
+
+  <h2>2. Использование информации</h2>
+  <p>
+    Любая информация, предоставляемая NOCTAI, используется исключительно для:
+  </p>
+
+  <p>
+    – оценки стратегического соответствия<br/>
+    – определения допустимости предоставления доступа<br/>
+    – администрирования контролируемого раскрытия
+  </p>
+
+  <p>
+    Информация никогда не используется для рекламы, перепродажи аналитики,
+    или поведенческого отслеживания.
+  </p>
+
+  <hr>
+
+  <h2>3. Минимизация данных</h2>
+  <p>
+    NOCTAI сознательно ограничивает хранение данных тем, что
+    операционно необходимо. Избыточная или нерелевантная информация
+    не запрашивается и не хранится.
+  </p>
+
+  <p>
+    Отсутствует обязанность предоставлять персональные идентификаторы,
+    финансовую отчётность или документацию на этапе
+    запроса доступа.
+  </p>
+
+  <hr>
+
+  <h2>4. Конфиденциальность и безопасность</h2>
+  <p>
+    Информация, получаемая NOCTAI, рассматривается как конфиденциальная
+    если явно не указано иное.
+  </p>
+
+  <p>
+    Доступ к информации внутри организации ограничен
+    принципом необходимости знания и может дополнительно регулироваться
+    договорными инструментами конфиденциальности.
+  </p>
+
+  <hr>
+
+  <h2>5. Третьи лица</h2>
+  <p>
+    NOCTAI не продаёт, не передаёт в аренду и не раскрывает информацию
+    третьим лицам в коммерческих целях.
+  </p>
+
+  <p>
+    Ограниченное раскрытие возможно только в случаях, требуемых законом,
+    или необходимых для защиты правовой целостности NOCTAI.
+  </p>
+
+  <hr>
+
+  <h2>6. Юрисдикционные аспекты</h2>
+  <p>
+    NOCTAI осуществляет деятельность в нескольких юрисдикциях.
+    Практики обработки информации согласованы с
+    применимыми правовыми режимами, где это уместно.
+  </p>
+
+  <p>
+    Настоящее уведомление не предназначено для создания потребительских прав
+    или законных требований сверх применимого законодательства.
+  </p>
+
+  <hr>
+
+  <h2>7. Обновления</h2>
+  <p>
+    Настоящее уведомление о конфиденциальности может периодически обновляться.
+    Продолжение взаимодействия с NOCTAI означает
+    принятие актуальной версии.
+  </p>
+
+  <p class="notice">
+    Последнее обновление: 2025
+  </p>
+
+</section>
+
+<footer>
+  <div>
+    NOCTAI — частная платформа стратегической инвестиционной аналитики.<br/>
+    Контролируемое раскрытие. Публичных предложений нет.
+  </div>
+  <div class="center">
+    <a href="terms.html">Условия</a> ·
+    <a href="private-privacy.html">Конфиденциальность</a> ·
+    <a href="nda-framework.html">NDA Фреймворк</a> ·
+    <a href="contact.html">Контакты</a>
+  </div>
+  <div style="text-align:right;">
+    Статус системы: работает<br/>
+    © NOCTAI
+  </div>
+</footer>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>NoctAI,VIP — Shared participation platform</title>
+<title>NoctAI,VIP — Платформа долевого участия</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 :root{
@@ -208,6 +208,7 @@ text-decoration:underline;
 }
 
 </style>
+
 <style>
 /* --- Button hover effects (added only) --- */
 .cta-primary{
@@ -420,7 +421,7 @@ border-color:var(--gold);
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -443,13 +444,14 @@ border-color:var(--gold);
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
 
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -461,7 +463,7 @@ The calculator is recalculated depending on the selected project.  </div>
 
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -472,20 +474,20 @@ The calculator is recalculated depending on the selected project.  </div>
 
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
 
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
@@ -546,19 +548,19 @@ function onProjectChange(v){
 </script>
 <nav class="top-nav">
   <div class="nav-container">
-    <a href="index.html" class="logo">NoctAI™</a>
+    <a href="index-ru.html" class="logo">NoctAI™</a>
 
     <div class="nav-right">
   <div class="nav-links">
-    <a href="how_it_works.html">How it works</a>
-    <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
-    <a href="projects.html">Projects</a>
+    <a href="how_it_works-ru.html">Как это работает</a>
+    <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+    <a href="projects-ru.html">Проекты</a>
   </div>
 
   <div class="lang-switch">
-    <a href="index.html" class="active">EN</a>
+    <a href="index-ru.html" class="active">RU</a>
 	-
-    <a href="index-ru.html">RU</a>
+    <a href="index.html">EN</a>
   </div>
 </div>
 
@@ -567,103 +569,114 @@ function onProjectChange(v){
 <header>
 <div class="container hero">
 <div>
-<span class="badge platform-badge">A platform for shared participation in real projects</span>
+<span class="badge platform-badge">ПЛАТФОРМА ДОЛЕВОГО УЧАСТИЯ В РЕАЛЬНЫХ ПРОЕКТАХ</span>
 <h1>NoctAI™</h1>
 <br/>
-<a class="cta-primary" href="invest_usdt.html">Invest (USDT)</a><br>
+<a class="cta-primary" href="invest_usdt-ru.html">Инвестировать (USDT)</a><br>
 <a
   class="cta-secondary"
   href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%0A%0A%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D1%81%D0%BE%20%D0%BC%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%83%20%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85%20%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%86%D0%B8%D0%B9.%0A%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%BE%D1%82%20%24300%2C000.%0A%0A%D0%A1%20%D1%83%D0%B2%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%2C"
   target="_blank"
   rel="noopener"
 >
-Investments from $300,000 - contact the team</a>
+  Инвестиции от $300,000 — связаться с командой
+</a>
 </div>
 <div class="panel">
 <div class="project-box">
   <span class="project-label">Active Project #001</span>
   <div class="project-title">AI Dispatcher + Marketplace</div>
 </div>
-<h3>Key parameters of the round</h3>
+<h3>Ключевые параметры раунда</h3>
 <p>
-• Round: <strong>$3,500,000</strong><br>
-• Investor pool: <strong>10% of shares</strong><br>
-• Minimum entry: <strong>$1</strong><br>
-• Currency: <strong>USDT</strong>
+• Раунд: <strong>$3,500,000</strong><br>
+• Инвесторский пул: <strong>10% акций</strong><br>
+• Минимальный вход: <strong>$1</strong><br>
+• Валюта: <strong>USDT</strong>
 </p>
 </div>
 </div>
 </header>
 <main class="container">
-<h2>Investment availability</h2>
+<h2>Доступность инвестиций</h2>
 <div class="panel">
 <p>
-At the current stage, access to capital participation is open <strong>exclusively</strong> to projects,
-that have undergone full patent protection.</p>
+На текущем этапе доступ к участию в капитале открыт <strong>исключительно</strong> для проектов,
+прошедших полную патентную защиту.
+</p>
 <p>
-Currently, the platform features <strong>one patented infrastructure project</strong>.</p>
+В настоящий момент на платформе представлен <strong>один запатентованный инфраструктурный проект</strong>.
+</p>
 <p>
-Other projects will be presented <strong>only after the completion of patent registration</strong>,
-which ensures legal and technological security of investments
-before providing access to investors.</p>
+Другие проекты будут представлены <strong>только после завершения патентной регистрации</strong>,
+что обеспечивает юридическую и технологическую защищённость инвестиций
+до предоставления доступа инвесторам.
+</p>
 </div>
-<h2>Responsibility Outline</h2>
+<h2>Контур ответственности</h2>
 <div class="panel">
 <p>
-The NoctAI platform is managed by a <strong>centralized investment team</strong>,
-which bears full responsibility for the selection of projects, legal structure,
-patent protection and investor access.</p>
+Платформа NoctAI управляется <strong>централизованной инвестиционной командой</strong>,
+которая несёт полную ответственность за отбор проектов, юридическую структуру,
+патентную защиту и допуск инвесторов.
+</p>
 <p>
-All investment decisions are made <strong>manually</strong>,
-with the recording of key stages: examination → patent → opening access.</p>
+Все инвестиционные решения принимаются <strong>вручную</strong>,
+с фиксацией ключевых этапов: экспертиза → патент → открытие доступа.
+</p>
 <p>
-Access to projects is not automated and may be <strong>restricted or revoked</strong>
-in case of non-compliance with the platform conditions.</p>
+Доступ к проектам не автоматизирован и может быть <strong>ограничен или отозван</strong>
+в случае несоответствия условиям платформы.
+</p>
 </div>
 <p style="margin-top:18px;font-size:13px;color:#9aa3b2;">
-  <a href="oversight_governance.html" style="color:#9aa3b2;text-decoration:underline dotted;">
-Learn more about the responsibility framework →  </a>
+  <a href="oversight_governance-ru.html" style="color:#9aa3b2;text-decoration:underline dotted;">
+    Подробнее о контуре ответственности →
+  </a>
 </p>
 </div>
-<h2 class="section-title">How income is generated</h2><div class="grid">
-<div class="panel"><h3>Attracting Investment</h3>
-<p>$3,500,000 is being raised in exchange for <strong>10% of the project's share</strong>.</p></div>
-<div class="panel"><h3>Business Income</h3>
-<p>50% of the US logistics market → <strong>$54,000,000 / month</strong></p></div>
-<div class="panel"><h3>Investor Income</h3>
-<p>10% of business income → <strong>$5,400,000 / month</strong></p></div>
+<h2 class="section-title">Как формируется доход</h2>
+<div class="grid">
+<div class="panel"><h3>Привлечение инвестиций</h3>
+<p>$3,500,000 привлекаются в обмен на <strong>10% доли</strong> проекта.</p></div>
+<div class="panel"><h3>Доход бизнеса</h3>
+<p>50% рынка логистики США → <strong>$54,000,000 / месяц</strong></p></div>
+<div class="panel"><h3>Доход инвесторов</h3>
+<p>10% дохода бизнеса → <strong>$5,400,000 / месяц</strong></p></div>
 </div>
 
-<h2>Why Investments Start at $1</h2>
+<h2>Почему инвестиции начинаются от $1</h2>
 <div class="panel">
 <p>
-We set the minimum entry at <strong>$1</strong> because not everyone has the opportunity
-invest large sums. Even the smallest amount should give a person
-<strong>real participation</strong> in the project.
+Мы установили минимальный вход от <strong>$1</strong>, потому что не у всех есть возможность
+инвестировать крупные суммы. Даже минимальная сумма должна давать человеку
+<strong>реальное участие</strong> в проекте.
 </p>
 <p>
-Each invested <strong>$1</strong> forms a <strong>proportional micro-share in the project</strong>
-(approximately <strong>0.000002857% of shares</strong>) and gives the right to participate
-in distributing income as the business grows.</p>
+Каждый вложенный <strong>$1</strong> формирует <strong>пропорциональную микродолю в проекте</strong>
+(примерно <strong>0.000002857% акций</strong>) и даёт право участвовать
+в распределении дохода по мере роста бизнеса.
+</p>
 <p>
-Additionally, each nested <strong>$1</strong> provides
-<strong>1 chance</strong> to receive <strong>1% share of the project</strong>
-through an open and public draw after achieving key indicators.</p>
+Дополнительно каждый вложенный <strong>$1</strong> предоставляет
+<strong>1 шанс</strong> на получение <strong>1% доли проекта</strong>
+через открытый и публичный розыгрыш после достижения ключевых показателей.
+</p>
 </div>
 
-<h2>Open drawing for a 3% share of the project</h2>
+<h2>Открытый розыгрыш 3% доли проекта</h2>
 <div class="panel">
-<p>After reaching <strong>50% of the American transport logistics market</strong>
-We are holding a public drawing for a <strong>3% share of the project</strong>.</p>
-<p><strong>$1 = 1 chance.</strong> $100 = 100 chances. $1,000 = 1,000 chances.</p>
-<p>Up to 3 winners. Maximum 1% per participant. Everything is open and public.</p>
+<p>После достижения <strong>50% рынка американской транспортной логистики</strong>
+мы проводим публичный розыгрыш <strong>3% доли проекта</strong>.</p>
+<p><strong>$1 = 1 шанс.</strong> $100 = 100 шансов. $1,000 = 1,000 шансов.</p>
+<p>До 3 победителей. Максимум 1% на одного участника. Всё проходит открыто и публично.</p>
 </div>
 
 <div class="anchor">
-<h2>For strategic investors</h2>
-<p>Investments from <strong>$300,000</strong> are considered individually.</p>
-<p>The round is capped at 10% stake. Anchor terms, SPV, and strategic partnerships are possible.</p>
-<a class="cta-secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%0A%0A%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D1%81%D0%BE%20%D0%BC%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%83%20%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85%20%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%86%D0%B8%D0%B9.%0A%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%BE%D1%82%20%24300%2C000.%0A%0A%D0%A1%20%D1%83%D0%B2%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%2C" target="_blank" rel="noopener">Contact directly</a>
+<h2>Для стратегических инвесторов</h2>
+<p>Инвестиции от <strong>$300,000</strong> рассматриваются индивидуально.</p>
+<p>Раунд ограничен 10% доли. Возможны якорные условия, SPV и стратегическое партнёрство.</p>
+<a class="cta-secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%0A%0A%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D1%81%D0%BE%20%D0%BC%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%83%20%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85%20%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%86%D0%B8%D0%B9.%0A%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%BE%D1%82%20%24300%2C000.%0A%0A%D0%A1%20%D1%83%D0%B2%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%2C" target="_blank" rel="noopener">Связаться напрямую</a>
 </div>
 
 </main>
@@ -672,14 +685,15 @@ We are holding a public drawing for a <strong>3% share of the project</strong>.<
   <div class="footer-container">
     <div>
       <strong>NoctAI™</strong><br>
-A platform for equity participation in real projects.<br>
+      Платформа долевого участия в реальных проектах.<br>
       <span style="font-size:13px;color:#9aa3b2;">
-Centralized management · Manual access · Permission-based access      </span>
+        Централизованное управление · Ручной допуск · Permission‑based access
+      </span>
     </div>
     <div>
-      <a href="terms.html">Terms</a><br>
-      <a href="privacy.html">Privacy Policy</a><br>
-      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+      <a href="terms-ru.html">Условия</a><br>
+      <a href="privacy-ru.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance-ru.html">Oversight &amp; Governance</a>
     </div>
     <div>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
@@ -692,9 +706,6 @@ Centralized management · Manual access · Permission-based access      </span>
     </div>
   </div>
 </footer>
-
-
-
 
 </body>
 </html>

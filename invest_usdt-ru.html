@@ -413,7 +413,7 @@ display:none;
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -436,13 +436,14 @@ display:none;
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
 
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -454,7 +455,7 @@ The calculator is recalculated depending on the selected project.  </div>
 
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -465,20 +466,20 @@ The calculator is recalculated depending on the selected project.  </div>
 
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
 
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
@@ -543,15 +544,15 @@ function onProjectChange(v){
 
     <div class="nav-right">
   <div class="nav-links">
-    <a href="how_it_works-ru.html">How it works</a>
-    <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
-    <a href="projects-ru.html">Projects</a>
+    <a href="how_it_works-ru.html">Как это работает</a>
+    <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+    <a href="projects-ru.html">Проекты</a>
   </div>
 
   <div class="lang-switch">
-    <a href="invest_usdt.html" class="active">EN</a>
+    <a href="invest_usdt-ru.html" class="active">RU</a>
 	-
-    <a href="invest_usdt-ru.html">RU</a>
+    <a href="invest_usdt.html">EN</a>
   </div>
 </div>
 
@@ -560,32 +561,35 @@ function onProjectChange(v){
 
 
 <header class="container">
-  <h1>Investing in Active Project #001</h1>
+  <h1>Инвестирование в Active Project #001</h1>
   <p><strong>AI Dispatcher + Marketplace</strong></p>
-<p>Investments are accepted in <strong>USDT</strong>. The minimum deposit is <strong>$1</strong>.</p></header>
+  <p>Инвестиции принимаются в <strong>USDT</strong>. Минимальный вход — <strong>$1</strong>.</p>
+</header>
 
 <main class="container grid">
 
   <div class="panel">
-<h2>Choosing an investment amount</h2>
+    <h2>Выбор суммы инвестиции</h2>
     <input type="range" id="inv" min="1" max="300000" value="10" oninput="calc()">
     <p class="result">$<span id="invv">10</span></p>
 
-<label>Enter the amount manually</label>
+    <label>Введите сумму вручную</label>
     <input type="number" id="invInput" min="1" step="1" value="10" class="manual-input" oninput="syncFromInput()">
 
-<p>Your share: <strong><span id="eq">0.000003%</span></strong></p>
-<p>Income at 50% of the market: <strong>$<span id="i50">16.67</span> / month</strong></p>
-<p>Income at 100% of the market: <strong>$<span id="i100">33.33</span> / month</strong></p>
+    <p>Ваша доля: <strong><span id="eq">0.000003%</span></strong></p>
+    <p>Доход при 50% рынка: <strong>$<span id="i50">16.67</span> / мес</strong></p>
+    <p>Доход при 100% рынка: <strong>$<span id="i100">33.33</span> / мес</strong></p>
   </div>
 
   <div class="panel">
   <p style="font-size:13px;color:var(--muted);margin-bottom:10px">
-USDT is used as a unit of account, equivalent to the US dollar.
-This is not a crypto investment, but a form of fixing shares.  </p>
-    <h2>Payment in USDT</h2>
-<p><strong>Network:</strong> TRC20</p>    
-<p><strong>Address:</strong></p>
+    USDT используется как расчётная единица, эквивалент доллара США.
+    Это не криптоинвестиция, а форма фиксации долей.
+  </p>
+    <h2>Оплата USDT</h2>
+    <p><strong>Сеть:</strong> TRC20</p>
+    
+<p><strong>Адрес:</strong></p>
 <div class="address-box" onclick="copyAddress()">
   <div class="address-text" id="usdtAddress">
     TYzS8upYw57S5wqHkDDxhsxcwoWE7tYALU
@@ -594,14 +598,14 @@ This is not a crypto investment, but a form of fixing shares.  </p>
     <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
   </svg>
 </div>
-<div class="copy-status" id="copyStatus">The address has been copied.</div>
+<div class="copy-status" id="copyStatus">Адрес скопирован</div>
 
-    <p>After sending funds, click the button below.</p>
-    <a class="cta-primary" href="#" onclick="openConfirm()">I sent USDT</a>
+    <p>После отправки средств нажмите кнопку ниже.</p>
+    <a class="cta-primary" href="#" onclick="openConfirm()">Я отправил USDT</a>
 
-    <h2 style="margin-top:30px">For large investors</h2>
-<p>Investments from <strong>$300,000</strong> are considered individually.</p>
-    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Large%20Investment%20Inquiry&body=Здравствуйте,%0A%0AЯ%20хочу%20обсудить%20крупную%20инвестицию.%0A%0AСпасибо." style="color:var(--gold)">Contact the team</a></p>
+    <h2 style="margin-top:30px">Для крупных инвесторов</h2>
+    <p>Инвестиции от <strong>$300,000</strong> рассматриваются индивидуально.</p>
+    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Large%20Investment%20Inquiry&body=Здравствуйте,%0A%0AЯ%20хочу%20обсудить%20крупную%20инвестицию.%0A%0AСпасибо." style="color:var(--gold)">Связаться с командой</a></p>
   </div>
 
 </main>
@@ -609,24 +613,25 @@ This is not a crypto investment, but a form of fixing shares.  </p>
 <div id="confirmModal" class="modal">
   <div class="panel" style="position:relative;">
     <button class="modal-close" onclick="closeConfirm()">×</button>
-    <h2>Investment confirmation</h2>
-    <p>We manually confirm transactions and record the investor's share.</p>
+    <h2>Подтверждение инвестиции</h2>
+    <p>Мы вручную подтверждаем транзакции и фиксируем долю инвестора.</p>
 
-    <label>Email for communication</label>
+    <label>Email для связи</label>
     <input type="email" id="cEmail" class="manual-input" placeholder="you@email.com">
 
     <label style="margin-top:12px">TxID / Transaction Hash</label>
     <input type="text" id="cTx" class="manual-input" placeholder="0x...">
 
-    <label style="margin-top:12px">Amount</label>
+    <label style="margin-top:12px">Сумма</label>
     <input type="text" id="cAmount" class="manual-input" readonly>
 
     <div style="margin-top:20px;display:flex;justify-content:center">
-      <a class="cta-primary" href="#" onclick="sendConfirm()">Confirm investment</a>
+      <a class="cta-primary" href="#" onclick="sendConfirm()">Подтвердить инвестицию</a>
     </div>
 
     <p style="margin-top:14px;font-size:13px">
-Confirmation and fixation of the share - within 24 hours.    </p>
+      Подтверждение и фиксация доли — в течение 24 часов.
+    </p>
   </div>
 </div>
 
@@ -635,14 +640,15 @@ Confirmation and fixation of the share - within 24 hours.    </p>
   <div class="footer-container">
     <div>
       <strong>NoctAI™</strong><br>
-A platform for equity participation in real projects.<br>
+      Платформа долевого участия в реальных проектах.<br>
       <span style="font-size:13px;color:#9aa3b2;">
-Centralized management · Manual access · Permission-based access      </span>
+        Централизованное управление · Ручной допуск · Permission‑based access
+      </span>
     </div>
     <div>
-      <a href="terms.html">Terms</a><br>
-      <a href="privacy.html">Privacy Policy</a><br>
-      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+      <a href="terms-ru.html">Условия</a><br>
+      <a href="privacy-ru.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance-ru.html">Oversight &amp; Governance</a>
     </div>
     <div>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
@@ -788,24 +794,25 @@ window.open(gmailUrl, '_blank');
 
 <button class="modal-close" onclick="closeOnsiteConfirm()">×</button>
 
-    <h2>$1EXIT™ — Investment Confirmation</h2>
-    <p style="margin-bottom:18px">The investment has been recorded and sent for manual verification..</p>
+    <h2>$1EXIT™ — Подтверждение инвестиций</h2>
+    <p style="margin-bottom:18px">Инвестиция зафиксирована и отправлена на ручную проверку.</p>
 
     <div class="panel" style="text-align:left">
-      <p><strong>Project</strong><br>AI Dispatcher + Marketplace</p>
-      <p><strong>Investor Email</strong><br><span id="cEmailView"></span></p>
-      <p><strong>Amount</strong><br><span id="cAmountView"></span></p>
+      <p><strong>Проект</strong><br>AI Dispatcher + Marketplace</p>
+      <p><strong>Email инвестора</strong><br><span id="cEmailView"></span></p>
+      <p><strong>Сумма</strong><br><span id="cAmountView"></span></p>
       <p><strong>TxID</strong><br><span id="cTxView"></span></p>
-      <p><strong>Status</strong><br>Submitted for manual verification</p>
+      <p><strong>Статус</strong><br>Отправлено на ручную проверку</p>
     </div>
 
     <div style="margin-top:24px;display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap">
-      <a class="cta-primary" href="#" onclick="copyConfirm()">Copy data</a>
-      <a class="gmail-link" href="#" onclick="sendViaGmail()">Send via Gmail</a>
+      <a class="cta-primary" href="#" onclick="copyConfirm()">Скопировать данные</a>
+      <a class="gmail-link" href="#" onclick="sendViaGmail()">Отправить через Gmail</a>
     </div>
 
     <p style="margin-top:14px;font-size:13px">
-Confirmation and fixation of the share - within 24 hours.    </p>
+      Подтверждение и фиксация доли — в течение 24 часов.
+    </p>
   </div>
 </div>
 
@@ -828,6 +835,19 @@ function copyAddress(){
 }
 </script>
 
+<!-- Global Calculator Module -->
+<script>
+if (!window.__calculatorModuleLoaded) {
+  window.__calculatorModuleLoaded = true;
+  fetch('calculator_modal.html')
+    .then(r => r.text())
+    .then(html => {
+      if (!document.getElementById('investmentCalcOverlay')) {
+        document.body.insertAdjacentHTML('beforeend', html);
+      }
+    });
+}
+</script>
 
 </body>
 

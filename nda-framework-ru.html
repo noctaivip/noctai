@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NOCTAI — NDA Фреймворк</title>
+
+<style>
+:root{
+  --bg:#0b0e11;
+  --panel:#0f1418;
+  --text:#e6e6e6;
+  --muted:#9aa0a6;
+  --line:#b89b5e;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  background:radial-gradient(circle at top,#12161b 0%,var(--bg) 55%);
+  color:var(--text);
+}
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 64px;
+  border-bottom:1px solid rgba(184,155,94,.25);
+}
+header .logo {
+  letter-spacing: 0.35em;
+  font-size: 13px;
+}
+nav a{
+  margin-left:28px;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-decoration:none;
+  color:var(--muted);
+  position:relative;
+}
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;bottom:-6px;
+  width:0;height:1px;
+  background:var(--line);
+  transition:.3s;
+}
+nav a:hover::after{width:100%}
+nav a:hover{color:var(--text)}
+.lang-switch{
+  margin-left:34px;
+  padding:4px 10px;
+  border:1px solid rgba(184,155,94,0.35);
+  border-radius:999px;
+  background:rgba(184,155,94,0.06);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.lang-switch a.active{
+  color:var(--line);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+.wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:110px 64px;
+}
+small{
+  letter-spacing:.18em;
+  font-size:11px;
+  color:var(--muted);
+}
+h1{
+  font-size:42px;
+  margin:18px 0 26px;
+}
+h2{
+  font-size:22px;
+  margin:40px 0 14px;
+}
+p{
+  color:var(--muted);
+  line-height:1.7;
+  max-width:860px;
+}
+hr{
+  border:none;
+  border-top:1px solid rgba(184,155,94,.35);
+  margin:70px 0;
+}
+.box{
+  border:1px solid rgba(184,155,94,.45);
+  background:linear-gradient(180deg,#10161c,#0c1014);
+  padding:30px;
+  margin-top:26px;
+}
+.box ul{
+  margin:0;
+  padding-left:18px;
+  color:var(--muted);
+}
+.box li{
+  margin-bottom:10px;
+}
+.notice{
+  font-size:11px;
+  color:var(--muted);
+  font-style:italic;
+  margin-top:18px;
+  max-width:860px;
+}
+
+footer{
+  border-top:1px solid rgba(184,155,94,.25);
+  padding:28px 64px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  font-size:11px;
+  color:var(--muted);
+}
+footer .center{text-align:center}
+footer a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+footer a:hover{color:var(--text)}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index-ru.html" class="logo">NOCTAI</a>
+  <nav>
+  <a href="control-ru.html">ГЛАВНАЯ</a>
+  <a href="active-dossiers-ru.html">АКТИВНЫЕ ДОСЬЕ</a>
+  <a href="briefings-ru.html">БРИФИНГИ</a>
+  <a href="access-protocol-ru.html">ПРОТОКОЛ ДОСТУПА</a>
+  <a href="request-access-ru.html">ЗАПРОС ДОСТУПА</a>
+
+  <!-- LANGUAGE SWITCH -->
+  <span class="lang-switch">
+    <a href="nda-framework-ru.html" class="active">RU</a>
+    ·
+    <a href="nda-framework.html">EN</a>
+  </span>
+</nav>
+</header>
+
+<section class="wrap">
+
+  <small>УРОВЕНЬ УПРАВЛЕНИЯ КОНФИДЕНЦИАЛЬНОСТЬЮ</small>
+  <h1>NDA Фреймворк</h1>
+
+  <p>
+    Конфиденциальность в NOCTAI регулируется посредством структурированного,
+    многоэтапного фреймворка неразглашения. Инструменты NDA не являются
+    универсальными мерами защиты, а представляют собой точечные механизмы контроля, согласованные с объёмом раскрытия,
+    временем и юрисдикцией.
+  </p>
+
+  <hr>
+
+  <h2>1. Назначение фреймворка</h2>
+  <p>
+    Фреймворк NDA существует для защиты структурной целостности,
+    позиционирования капитала и информационной асимметрии.
+    Он обеспечивает избирательное раскрытие информации без ущерба
+    для опциональности или стратегической обратимости.
+  </p>
+
+  <hr>
+
+  <h2>2. Многоуровневая модель конфиденциальности</h2>
+  <p>
+    Обязательства по конфиденциальности вводятся поэтапно,
+    а не универсально.
+  </p>
+
+  <div class="box">
+    <ul>
+      <li><strong>Этап I</strong> — Контекстные сигналы и обзорные брифинги (без NDA)</li>
+      <li><strong>Этап II</strong> — Ограниченное раскрытие досье (рамочный NDA)</li>
+      <li><strong>Этап III</strong> — Материалы, связанные с конкретной сделкой (расширенный NDA)</li>
+      <li><strong>Этап IV</strong> — Двусторонние соглашения и исполнение (индивидуальные инструменты)</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <h2>3. Выпуск NDA</h2>
+  <p>
+    Документы NDA предоставляются только после предварительного согласования
+    и внутренней квалификации. NOCTAI не распространяет
+    шаблоны NDA публично или по запросу.
+  </p>
+
+  <p>
+    Каждый NDA адаптируется под объём раскрытия, юрисдикцию
+    и роль капитала контрагента.
+  </p>
+
+  <hr>
+
+  <h2>4. Использование и ограничения</h2>
+  <p>
+    Информация, раскрытая в рамках NDA, может использоваться исключительно для
+    внутренней оценки. Распространение, производное
+    использование или раскрытие третьим лицам запрещены, если только
+    это прямо не разрешено.
+  </p>
+
+  <hr>
+
+  <h2>5. Исполнение и обратимость</h2>
+  <p>
+    Нарушение конфиденциальности может привести к немедленному прекращению
+    доступа, отзыву материалов и применению правовых мер.
+  </p>
+
+  <p>
+    NOCTAI сохраняет за собой право приостановить или отозвать раскрытие
+    на любом этапе, независимо от ранее предоставленного доступа.
+  </p>
+
+  <hr>
+
+  <h2>6. Юрисдикционная структура</h2>
+  <p>
+    Инструменты NDA могут регулироваться различными юрисдикциями
+    в зависимости от характера раскрытия и задействованных сторон.
+  </p>
+
+  <p class="notice">
+    Данная страница описывает исключительно фреймворк конфиденциальности.
+    Она не является юридическим соглашением или инструментом раскрытия.
+  </p>
+
+</section>
+
+<footer>
+  <div>
+    NOCTAI — частная платформа стратегической инвестиционной аналитики.<br/>
+    Контролируемое раскрытие. Публичных предложений нет.
+  </div>
+  <div class="center">
+    <a href="terms-ru.html">Terms</a> ·
+    <a href="private-privacy-ru.html">Privacy</a> ·
+    <a href="nda-framework-ru.html">NDA Framework</a> ·
+    <a href="contact-ru.html">Contact</a>
+  </div>
+  <div style="text-align:right;">
+    Статус системы: работает<br/>
+    © NOCTAI
+  </div>
+</footer>
+
+</body>
+</html>

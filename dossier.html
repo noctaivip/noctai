@@ -27,7 +27,10 @@ header{
   padding:22px 64px;
   border-bottom:1px solid rgba(184,155,94,.25);
 }
-.logo{letter-spacing:.35em;font-size:13px}
+header .logo {
+  letter-spacing: 0.35em;
+  font-size: 13px;
+}
 nav a{
   margin-left:28px;
   font-size:11px;
@@ -46,6 +49,31 @@ nav a::after{
 }
 nav a:hover::after{width:100%}
 nav a:hover{color:var(--text)}
+.lang-switch{
+  margin-left:34px;
+  padding:4px 10px;
+  border:1px solid rgba(184,155,94,0.35);
+  border-radius:999px;
+  background:rgba(184,155,94,0.06);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.lang-switch a.active{
+  color:var(--line);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
 .wrap{
   max-width:1200px;
   margin:0 auto;
@@ -108,20 +136,33 @@ footer{
 footer .center{text-align:center}
 footer a{color:var(--muted);text-decoration:none;margin:0 6px}
 footer a:hover{color:var(--text)}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">NOCTAI</div>
+  <a href="index.html" class="logo">NOCTAI</a>
   <nav>
-    <a href="control.html">HOME</a>
-    <a href="active-dossiers.html">ACTIVE DOSSIERS</a>
-    <a href="briefings.html">BRIEFINGS</a>
-    <a href="access-protocol.html">ACCESS PROTOCOL</a>
-    <a href="request-access.html">REQUEST ACCESS</a>
-  </nav>
+  <a href="control.html">HOME</a>
+  <a href="active-dossiers.html">ACTIVE DOSSIERS</a>
+  <a href="briefings.html">BRIEFINGS</a>
+  <a href="access-protocol.html">ПРОТОКОЛ ДОСТУПА</a>
+  <a href="request-access.html">REQUEST ACCESS</a>
+
+  <!-- LANGUAGE SWITCH -->
+  <span class="lang-switch">
+    <a href="dossier.html" class="active">EN</a>
+    ·
+    <a href="dossier-ru.html">RU</a>
+  </span>
+</nav>
 </header>
 
 <section class="wrap" id="content"></section>
@@ -273,7 +314,9 @@ if(!d){
       <li>Participation confirmation</li>
       <li>Dossier rotates or proceeds</li>
     </ol>
-    <a href="#">Request Dossier Access →</a>
+    <a href="request-access.html?id=${id}">
+  Request Dossier Access →
+</a>
   </div>
   `;
 }

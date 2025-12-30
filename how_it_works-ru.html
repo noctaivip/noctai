@@ -3,19 +3,43 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projects — NoctAI.VIP</title>
+<title>How It Works — NoctAI.VIP</title>
 
 <style>
 :root{
   --bg:#050b16;
   --panel:#071827;
-  --card:#0a2030;
-  --muted:#a9b6c6;
+  --muted:#95a6b9;
   --text:#e6eef7;
   --gold:#d6b15e;
   --gold-soft:#f1d48a;
   --border:rgba(214,177,94,.35);
 }
+.site-footer{
+  border-top:1px solid var(--border);
+  margin-top:80px;
+  padding:36px 20px;
+}
+
+.footer-container{
+  max-width:1120px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:28px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.site-footer a{
+  color:var(--gold);
+  text-decoration:none;
+}
+
+.site-footer a:hover{
+  text-decoration:underline;
+}
+
 
 *{box-sizing:border-box}
 body{
@@ -26,7 +50,7 @@ body{
 }
 
 .container{
-  max-width:1100px;
+  max-width:980px;
   margin:80px auto;
   padding:0 20px;
 }
@@ -49,7 +73,7 @@ h1{
 
 .sub{
   color:var(--muted);
-  max-width:760px;
+  max-width:720px;
 }
 
 .section{
@@ -58,72 +82,41 @@ h1{
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
 }
 
 .card{
   background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));
   border:1px solid var(--border);
-  border-radius:18px;
-  padding:26px;
-  position:relative;
-}
-
-.status{
-  position:absolute;
-  top:18px;
-  right:18px;
-  font-size:12px;
-  color:var(--gold);
-  border:1px solid var(--border);
-  padding:4px 10px;
-  border-radius:999px;
+  border-radius:16px;
+  padding:22px;
 }
 
 .card h3{
-  margin:0 0 10px;
-  font-size:18px;
+  margin:0 0 8px;
+  font-size:16px;
   color:var(--gold-soft);
 }
 
 .card p{
-  margin:0 0 14px;
+  margin:0;
   color:var(--muted);
   font-size:14px;
   line-height:1.55;
 }
 
-.meta{
+.step{
   font-size:13px;
-  color:var(--muted);
-  line-height:1.6;
-}
-
-.meta strong{
-  color:var(--text);
-  font-weight:600;
-}
-
-.cta{
-  margin-top:18px;
-  display:inline-block;
-  background:linear-gradient(180deg,#e7c776,#c9a24f);
-  color:#0b1020;
-  padding:12px 18px;
-  border-radius:10px;
-  font-weight:600;
-  text-decoration:none;
-}
-
-.lock{
-  opacity:.6;
+  color:var(--gold);
+  margin-bottom:6px;
+  letter-spacing:.06em;
 }
 
 hr{
   border:none;
   border-top:1px solid var(--border);
-  margin:48px 0;
+  margin:36px 0;
 }
 
 .footer-note{
@@ -131,20 +124,18 @@ hr{
   color:var(--muted);
   font-size:13px;
 }
-</style>
 
-<style>
-/* Visual hierarchy refinement */
-h1 { color: #ffffff; }
-
-.sub { 
-  color: var(--muted); 
+/* --- Visual separation for step cards --- */
+.section:first-of-type .card{
+  box-shadow: 0 -1px 0 rgba(214,177,94,0.35) inset;
 }
 
-.sub strong {
+/* --- Bottom section headings: bold white instead of gold --- */
+.section:last-of-type .card h3{
   color: var(--text);
-  font-weight: 600;
+  font-weight: 700;
 }
+
 </style>
 <style>
 .top-nav{
@@ -255,30 +246,6 @@ border-radius:999px;
 
 .lang-switch a:hover{
   color:var(--text);
-}
-
-</style>
-<style>
-.site-footer{
-  border-top:1px solid var(--border);
-  margin-top:80px;
-  padding:36px 20px;
-}
-.footer-container{
-  max-width:1120px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:1.2fr 1fr 1fr;
-  gap:28px;
-  color:var(--muted);
-  font-size:14px;
-}
-.site-footer a{
-  color:var(--gold);
-  text-decoration:none;
-}
-.site-footer a:hover{
-  text-decoration:underline;
 }
 </style>
 <!-- EXACT CALCULATOR CSS FROM index.html -->
@@ -395,7 +362,7 @@ border-radius:999px;
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -418,13 +385,14 @@ border-radius:999px;
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
 
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -436,7 +404,7 @@ The calculator is recalculated depending on the selected project.  </div>
 
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -447,20 +415,20 @@ The calculator is recalculated depending on the selected project.  </div>
 
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
 
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
@@ -525,130 +493,208 @@ function onProjectChange(v){
 
     <div class="nav-right">
   <div class="nav-links">
-    <a href="how_it_works-ru.html">How it works</a>
-    <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
-    <a href="projects-ru.html">Projects</a>
+    <a href="how_it_works-ru.html">Как это работает</a>
+    <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+    <a href="projects-ru.html">Проекты</a>
   </div>
 
   <div class="lang-switch">
-    <a href="projects.html" class="active">EN</a>
+    <a href="how_it_works-ru.html" class="active">RU</a>
 	-
-    <a href="projects-ru.html">RU</a>
+    <a href="how_it_works.html">EN</a>
   </div>
 </div>
 
   </div>
 </nav>
 
-  <div class="container">
+<div class="container">
 
-    <span class="badge">PROJECTS</span>
-    <h1>NoctAI platform projects</h1>
-    
-<p class="sub">
-  <strong>NoctAI is an investment platform with a phased project launch.</strong><br>
-Each project undergoes an individual expert assessment, including technological, legal, and market verification.<br><br>
-<strong>The project is opened for investment only after passing the patenting stage or the official consolidation of key technological solutions.</strong><br><br>
-Projects with <em>upcoming</em> status are at the stage of individual assessment, patent protection preparation, or structure finalization and are not open to investment until these stages are completed.<br><br>
-<strong>Investment access is granted selectively and can only be opened after completion of the relevant protective and structural procedures.</strong></p>
+  <span class="badge">HOW IT WORKS</span>
+  <h1>Как устроена модель участия NoctAI</h1>
+  <p class="sub">
+    NoctAI — это платформа долевого участия в реальных инфраструктурных проектах.
+    Участие фиксируется через ручную проверку, а доли инвесторов закрепляются
+    в рамках единой структуры владения.
+  </p>
 
+  <div class="section">
+    <h2>Почему минимальный вход начинается от $1</h2>
+    <p class="sub">
+      Минимальный вход не является обещанием доходности и не предназначен
+      для спекулятивных ожиданий.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3>Единая структура участия</h3>
+        <p>
+          Минимальный порог позволяет формировать единый инвесторский пул,
+          в котором все участники входят в одну структуру владения,
+          независимо от размера вклада.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Масштабируемость модели</h3>
+        <p>
+          Низкий порог входа используется для масштабирования проекта
+          и распределения долей, а не для создания иллюзии быстрых результатов.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Пропорциональная фиксация</h3>
+        <p>
+          Каждое участие фиксируется пропорционально внесённому капиталу
+          и подчиняется единым правилам распределения.
+        </p>
+      </div>
+    </div>
+  </div>
 
-    <!-- ACTIVE PROJECT -->
-    <div class="section">
-      <h2>Active project</h2>
+  <div class="section">
+    <h2>Как работает участие при небольшом капитале</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Доля в общем пуле</h3>
+        <p>
+          Участник получает долю в общем инвестиционном пуле,
+          размер которой определяется вкладом относительно общего объёма капитала.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Зависимость от развития проекта</h3>
+        <p>
+          Потенциал участия зависит от развития проекта,
+          его операционных показателей и масштабирования.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Отсутствие гарантий</h3>
+        <p>
+          Участие не предполагает гарантированной доходности
+          и связано с инвестиционными рисками.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Почему расчёты ведутся в USDT</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Единый расчётный стандарт</h3>
+        <p>
+          Использование USDT обеспечивает единый и предсказуемый
+          расчётный стандарт для всех участников.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Прозрачность и верификация</h3>
+        <p>
+          Все транзакции поддаются проверке и упрощают учёт долей.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Подготовка к масштабированию</h3>
+        <p>
+          Такая модель упрощает последующее подключение
+          дополнительных расчётных механизмов.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+<p class="sub" style="margin-top:24px;">
+  Процесс участия и допуска инвесторов регулируется внутренним
+  контуром управления и ответственности платформы.
+  <a href="oversight_governance-ru.html" style="color:var(--gold); text-decoration:none;">
+    Подробнее об Oversight & Governance →
+  </a>
+</p>
+
+  <div class="section">
       <div class="grid">
         <div class="card">
-          <span class="status">ACTIVE</span>
-          <h3>AI Dispatcher + Marketplace</h3>
+          <div class="step">ШАГ 1</div>
+          <h3>Выбор проекта</h3>
           <p>
-A technology platform for analytics and tracking in the US transport logistics sector.          </p>
-          <div class="meta">
-            <div><strong>Round:</strong> $3,500,000</div>
-            <div><strong>Investor pool:</strong> 10% share</div>
-<div><strong>Minimum entry:</strong> $1 (USDT)</div>
-            <div><strong>Status:</strong> MVP / Early Growth</div>
-          </div>
-          <a class="cta" href="index.html">Go to the project</a>
+            Вы выбираете активный проект на платформе и знакомитесь с параметрами инвестиционного раунда.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="step">ШАГ 2</div>
+          <h3>Отправка USDT</h3>
+          <p>
+            Инвестиции принимаются в USDT (TRC20). После отправки средств вы переходите к подтверждению.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="step">ШАГ 3</div>
+          <h3>Подтверждение транзакции</h3>
+          <p>
+            Вы указываете email для связи и Transaction Hash (TxID). Это позволяет зафиксировать инвестицию.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="step">ШАГ 4</div>
+          <h3>Ручная проверка</h3>
+          <p>
+            Команда NoctAI вручную подтверждает транзакцию и фиксирует долю инвестора.
+          </p>
         </div>
       </div>
     </div>
 
     <hr/>
 
-    <!-- UPCOMING PROJECTS -->
     <div class="section">
-      <h2>Future projects</h2>
       <div class="grid">
-        <div class="card lock">
-          <span class="status">UPCOMING</span>
-          <h3>FinTech Infrastructure Project</h3>
+        <div class="card">
+          <h3>Почему используется ручная проверка</h3>
           <p>
-Infrastructure project in the field of financial services.          </p>
-          <div class="meta">
-            <div><strong>Status:</strong> Preparation</div>
-            <div><strong>Access:</strong> Soon</div>
-          </div>
+            Ручная проверка снижает риски ошибок, защищает инвесторов и позволяет сохранять контроль
+            над структурой долей.
+          </p>
         </div>
 
-        <div class="card lock">
-          <span class="status">UPCOMING</span>
-          <h3>Data Intelligence Platform</h3>
+        <div class="card">
+          <h3>Сроки фиксации доли</h3>
           <p>
-Platform for analytics and processing of industry data.          </p>
-          <div class="meta">
-            <div><strong>Status:</strong> Grade</div>
-            <div><strong>Access:</strong> Soon</div>
-          </div>
+            Подтверждение и фиксация доли происходят в течение 24 часов после отправки данных.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Крупные инвестиции</h3>
+          <p>
+            Инвестиции от крупных инвесторов рассматриваются индивидуально через прямой контакт с командой.
+          </p>
         </div>
       </div>
     </div>
-
-    <hr/>
-
-    <!-- INVITATION ONLY -->
-    <div class="section">
-      <h2>Invitation-based projects</h2>
-      <div class="grid">
-        <div class="card lock">
-          <span class="status">PRIVATE</span>
-          <h3>Private Capital Project</h3>
-          <p>
-Closed investment projects, available only by individual invitation.          </p>
-          <div class="meta">
-            <div><strong>Access:</strong> Invitation Only</div>
-            <div><strong>Contact:</strong> Through the team</div>
-          </div>
-        </div>
-      </div>
-    </div>
-<p class="sub" style="margin-top:28px;">
-  Access to individual projects, early investment rounds, and closed
-  materials is provided within a separate Project Access framework.
-</p>
-
-<p class="sub">
-  <a href="project_access.html" style="color:var(--gold); text-decoration:none;">
-Go to Project Access →  </a>
-</p>
 
     <p class="footer-note">
-      The information on this page does not constitute a public investment offer.
-	  Access to projects may be restricted.
+      NoctAI не является публичной инвестиционной офертой.
+      Все инвестиции осуществляются на основании индивидуального решения инвестора.
     </p>
-
   </div>
-<footer class="site-footer">
+  
+  <footer class="site-footer">
   <div class="footer-container">
     <div>
       <strong>NoctAI™</strong><br>
-A platform for equity participation in real projects.<br>
+      Платформа долевого участия в реальных проектах.<br>
       <span style="font-size:13px;color:#9aa3b2;">
-Centralized management · Manual access · Permission-based access      </span>
+        Централизованное управление · Ручной допуск · Permission‑based access
+      </span>
     </div>
     <div>
-      <a href="terms.html">Terms</a><br>
-      <a href="privacy.html">Privacy Policy</a><br>
-      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+      <a href="terms-ru.html">Условия</a><br>
+      <a href="privacy-ru.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance-ru.html">Oversight &amp; Governance</a>
     </div>
     <div>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
@@ -661,5 +707,6 @@ Centralized management · Manual access · Permission-based access      </span>
     </div>
   </div>
 </footer>
+
 </body>
 </html>

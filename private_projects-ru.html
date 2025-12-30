@@ -303,7 +303,6 @@ border-radius:999px;
   --border:rgba(214,177,94,.35);
 }
 
-
 /* Make only project cards clearly clickable */
 .project {
   cursor: pointer;
@@ -484,12 +483,13 @@ border-radius:999px;
 </style>
 
 </head>
-<div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
+<body>
+ <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -512,13 +512,14 @@ border-radius:999px;
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
 
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -530,7 +531,7 @@ The calculator is recalculated depending on the selected project.  </div>
 
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -541,20 +542,20 @@ The calculator is recalculated depending on the selected project.  </div>
 
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
 
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
@@ -619,15 +620,15 @@ function onProjectChange(v){
 
     <div class="nav-right">
   <div class="nav-links">
-    <a href="how_it_works-ru.html">How it works</a>
-    <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
-    <a href="projects-ru.html">Projects</a>
+    <a href="how_it_works-ru.html">Как это работает</a>
+    <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+    <a href="projects-ru.html">Проекты</a>
   </div>
 
   <div class="lang-switch">
-    <a href="private_projects.html" class="active">EN</a>
+    <a href="private_projects-ru.html" class="active">RU</a>
 	-
-    <a href="private_projects-ru.html">RU</a>
+    <a href="private_projects.html">EN</a>
   </div>
 </div>
 
@@ -638,51 +639,54 @@ function onProjectChange(v){
 <div class="card">
 
 <span class="badge">Private Projects</span>
-<h1>Closed investment projects</h1>
+<h1>Закрытые инвестиционные проекты</h1>
 <div class="subtitle">
-You are in the private investment space <strong>NoctAI</strong>.
-Below are the projects that are only accessible to investors with verified status and individual approval of terms.
+Вы находитесь в приватном инвестиционном пространстве <strong>NoctAI</strong>.
+Ниже представлены проекты, доступ к которым предоставляется только инвесторам с подтверждённым статусом и индивидуальным согласованием условий.
 </div>
 
 <div class="section">
-<h3>Why are projects private?</h3>
+<h3>Почему проекты являются private</h3>
 <ul>
-<li>non-standard structure of transactions and shares</li>
-<li>limited number of participants</li>
-<li>individual legal and financial conditions</li>
-<li>lack of public marketing and placements</li>
-<li>control of capital and composition of investors</li>
+<li>нестандартная структура сделок и долей</li>
+<li>ограниченное количество участников</li>
+<li>индивидуальные юридические и финансовые условия</li>
+<li>отсутствие публичного маркетинга и размещений</li>
+<li>контроль капитала и состава инвесторов</li>
 </ul>
 </div>
 
 <div class="divider"></div>
 
 <div class="section">
-<h3>Available private projects</h3>
+<h3>Доступные private projects</h3>
 <div class="projects">
 
 <div class="project" onclick="openModal('logistics')" style=";">
 <h4>AI Dispatcher + Marketplace</h4>
 <div class="status">Status: Private Review</div>
 <p>
-An infrastructure project in the field of logistics analytics and broker tracking.
-The participation structure is formed individually for the investor.</p>
+Инфраструктурный проект в сфере логистической аналитики и брокерского трекинга.
+Структура участия формируется индивидуально под инвестора.
+</p>
 </div>
 
 <div class="project" onclick="openModal('data')" style=";">
 <h4>Data Intelligence Asset</h4>
 <div class="status">Status: Limited Access</div>
 <p>
-A project for working with industry data and closed analytics.
-Access is granted to a limited number of strategic investors.</p>
+Проект по работе с отраслевыми данными и закрытой аналитикой.
+Доступ предоставляется ограниченному числу стратегических инвесторов.
+</p>
 </div>
 
 <div class="project" onclick="openModal('capital')" style=";">
 <h4>Capital Structuring Vehicle</h4>
 <div class="status">Status: Invitation Only</div>
 <p>
-A private investment structure for working with capital in closed rounds.
-Participation conditions are determined manually by the team.</p>
+Частная инвестиционная структура для работы с капиталом в закрытых раундах.
+Условия участия определяются вручную командой.
+</p>
 </div>
 
 </div>
@@ -691,25 +695,26 @@ Participation conditions are determined manually by the team.</p>
 <div class="divider"></div>
 
 <div class="section">
-<h3>How does further interaction occur?</h3>
+<h3>Как происходит дальнейшее взаимодействие</h3>
 <p>
-After selecting a direction of interest, the NoctAI team contacts the investor directly.
-Materials, transaction parameters and legal details are transferred individually.</p>
+После выбора интересующего направления команда <strong>NoctAI</strong> связывается с инвестором напрямую.
+Материалы, параметры сделки и юридические детали передаются индивидуально.
+</p>
 </div>
 
 <div class="contact">
-<p>Contact for communication:</p>
+<p>Контакт для коммуникации:</p>
 <p><strong>Email:</strong> noctai.vip@proton.me</p>
 </div>
 <div style="margin-top:18px;">
-  <a href="private_investor_club.html" class="private-inline-link">
-    Continue to Project Access →
+  <a href="project_access-ru.html" class="private-inline-link">
+    Перейти к Project Access →
   </a>
 </div>
 
 <div class="footer">
-Private Projects are not a public investment offer.
-Participation is confirmed solely by decision of the NoctAI team.
+Private Projects не являются публичной инвестиционной офертой.
+Участие подтверждается исключительно по решению команды NoctAI.
 </div>
 </div>
 </div>
@@ -717,14 +722,15 @@ Participation is confirmed solely by decision of the NoctAI team.
   <div class="footer-container">
     <div>
       <strong>NoctAI™</strong><br>
-A platform for equity participation in real projects.<br>
+      Платформа долевого участия в реальных проектах.<br>
       <span style="font-size:13px;color:#9aa3b2;">
-Centralized management · Manual access · Permission-based access      </span>
+        Централизованное управление · Ручной допуск · Permission‑based access
+      </span>
     </div>
     <div>
-      <a href="terms.html">Terms</a><br>
-      <a href="privacy.html">Privacy Policy</a><br>
-      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+      <a href="terms-ru.html">Условия</a><br>
+      <a href="privacy-ru.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance-ru.html">Oversight &amp; Governance</a>
     </div>
     <div>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">

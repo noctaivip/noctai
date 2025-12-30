@@ -113,6 +113,57 @@ border-radius:999px;
   background:rgba(214,177,94,.08);
   box-shadow:0 0 0 1px var(--gold-soft);
 }
+.lang-switch{
+  margin-left:28px;
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:8px;
+}
+
+.lang-switch a.active{
+  color:var(--gold);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+.lang-switch{
+  margin-left:28px;
+  padding:4px 10px;
+  border:1px solid rgba(201,162,77,0.35);
+  border-radius:999px;
+  background:rgba(201,162,77,0.06);
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.lang-switch a.active{
+  color:var(--gold);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+
 </style>
 <style>
 :root{
@@ -146,6 +197,13 @@ border-radius:999px;
 }
 .site-footer a:hover{
   text-decoration:underline;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:radial-gradient(1200px 600px at 50% -200px,#0b2238 0%,#050b16 55%);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
 }
 </style>
 <!-- EXACT CALCULATOR CSS FROM index.html -->
@@ -256,12 +314,13 @@ border-radius:999px;
 </style>
 </head>
 <body>
+
 <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Проект
+    Project
   </label>
   <select id="projectSelector"
     style="
@@ -284,14 +343,13 @@ border-radius:999px;
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-    Калькулятор пересчитывается в зависимости от выбранного проекта.
-  </div>
+The calculator is recalculated depending on the selected project.  </div>
 </div>
-    <h2>Инвестиционный калькулятор</h2>
-    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
+    <h2>Investment calculator</h2>
+    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
 
     <div class="coverage-block">
-      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
+      <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -303,7 +361,7 @@ border-radius:999px;
 
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Сумма инвестиций</h3>
+        <h3>Investment amount</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -314,20 +372,20 @@ border-radius:999px;
 
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Оценка дохода</h3>
+        <h3>Income assessment</h3>
         <div class="calc-income">
-          <div>Доход / месяц</div>
+          <div>Income / month</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
 
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
@@ -384,18 +442,25 @@ function onProjectChange(v){
   // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
-
 <nav class="top-nav">
   <div class="nav-container">
-    <a href="index.html" class="logo">NoctAI™</a>
+    <a href="index-ru.html" class="logo">NoctAI™</a>
 
-    <div class="nav-links">
-      <a href="how_it_works.html">Как это работает</a>
-      <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
-      <a href="projects.html">Проекты</a>
-    </div>
+    <div class="nav-right">
+  <div class="nav-links">
+    <a href="how_it_works-ru.html">How it works</a>
+    <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
+    <a href="projects-ru.html">Projects</a>
+  </div>
+
+  <div class="lang-switch">
+    <a href="oversight_governance.html" class="active">EN</a>
+	-
+    <a href="oversight_governance-ru.html">RU</a>
+  </div>
+</div>
+
   </div>
 </nav>
 
@@ -403,72 +468,60 @@ function onProjectChange(v){
 
 <h1>Oversight & Governance</h1>
 <div class="subtitle">
-Контур ответственности и управления инвестиционной платформы NoctAI
+NoctAI Investment Platform Responsibility and Governance Framework</div>
+
+<div class="section">
+<h2>Control principle</h2>
+<p>
+The NoctAI platform is managed by a <strong>centralized investment team</strong>, which is fully responsible for project selection, legal structure, patent protection, and investor admission.</p>
+<p>
+The platform is not a marketplace and does not use automated investment access mechanisms.</p>
 </div>
 
 <div class="section">
-<h2>Принцип управления</h2>
-<p>
-Платформа NoctAI управляется <strong>централизованной инвестиционной командой</strong>, несущей полную ответственность за отбор проектов, юридическую структуру, патентную защиту и допуск инвесторов.
-</p>
-<p>
-Платформа не является маркетплейсом и не использует автоматизированные механизмы инвестиционного доступа.
-</p>
-</div>
-
-<div class="section">
-<h2>Цепочка принятия решений</h2>
+<h2>Decision-making chain</h2>
 <p class="chain">
-Экспертиза → Юридическая проверка → Патент / защита → Структурирование → Открытие доступа
-</p>
+Expertise → Legal Review → Patent/Protection → Structuring → Opening Access</p>
 <p>
-Ни один этап не может быть пропущен. Решения принимаются вручную и фиксируются внутри управляющей команды.
-</p>
+No stage can be skipped. Decisions are made manually and recorded within the management team.</p>
 </div>
 
 <div class="section">
-<h2>Контроль инвестиционного доступа</h2>
+<h2>Investment access control</h2>
 <p>
-Инвестиционный доступ не является публичным правом и предоставляется выборочно.
-</p>
+Investment access is not a public right and is granted selectively.</p>
 <p>
-Доступ может быть <strong>ограничен или отозван</strong> в случае несоответствия условиям платформы, изменения структуры проекта или регуляторных факторов.
-</p>
+Access may be <strong>restricted or revoked</strong> in case of non-compliance with the platform terms, changes in the project structure, or regulatory factors.</p>
 </div>
 <p class="chain" style="margin-top:18px;">
-  На основании данной модели управления формируется
-  Access Protocol — формальный порядок допуска,
-  раскрытия информации и фиксации участия инвесторов.
+  Based on this governance model, the Access Protocol
+  is being developed—a formal procedure for access, disclosure,
+  and recording of investor participation.
   <a href="access-protocol.html" style="color:#d4af37; text-decoration:none;">
-    Перейти к Access Protocol →
-  </a>
+Go to Access Protocol →  </a>
 </p>
 
 <div class="section">
-<h2>Отсутствие публичных лиц</h2>
+<h2>Absence of public figures</h2>
 <p>
-NoctAI — это инфраструктурная инвестиционная платформа, а не персональный бренд или медиа-проект.
-</p>
+NoctAI is an infrastructure investment platform, not a personal brand or media project.</p>
 <p>
-Ответственность закреплена на уровне системы управления, процедур и решений, а не на уровне публичных персон.
-</p>
+Responsibility is fixed at the level of the management system, procedures and decisions, and not at the level of public figures.</p>
 </div>
 
 
 <div class="section">
-<h2>Ограничения и рамки управления</h2>
+<h2>Limitations and boundaries of management</h2>
 <p>
-Платформа действует в рамках внутреннего инвестиционного мандата, который определяет допустимые типы проектов,
-уровни риска и структуру допуска капитала.
-</p>
+The platform operates under an internal investment mandate that defines the types of projects allowed,
+risk levels and capital admission structure.</p>
 <p>
-Ни один проект не может быть открыт для инвестиций вне утверждённой модели ответственности и защиты интересов инвесторов.
-</p>
+No project can be opened for investment outside of an approved model of responsibility and protection of investors' interests.</p>
 </div>
 
 <div class="footer-note">
-Данная страница фиксирует архитектуру ответственности и управления платформой.  
-Все инвестиционные условия определяются индивидуально.
+This page outlines the platform's responsibility and governance architecture.
+All investment conditions are determined individually.
 </div>
 
 </div>
@@ -476,14 +529,13 @@ NoctAI — это инфраструктурная инвестиционная 
   <div class="footer-container">
     <div>
       <strong>NoctAI™</strong><br>
-      Платформа долевого участия в реальных проектах.<br>
+A platform for equity participation in real projects.<br>
       <span style="font-size:13px;color:#9aa3b2;">
-        Централизованное управление · Ручной допуск · Permission‑based access
-      </span>
+Centralized management · Manual access · Permission-based access      </span>
     </div>
     <div>
-      <a href="legal.html">Условия</a><br>
-      <a href="privacy.html">Политика конфиденциальности</a><br>
+      <a href="terms.html">Terms</a><br>
+      <a href="privacy.html">Privacy Policy</a><br>
       <a href="oversight_governance.html">Oversight &amp; Governance</a>
     </div>
     <div>

@@ -197,6 +197,57 @@ border-radius:999px;
   background:rgba(214,177,94,.08);
   box-shadow:0 0 0 1px var(--gold-soft);
 }
+.lang-switch{
+  margin-left:28px;
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:8px;
+}
+
+.lang-switch a.active{
+  color:var(--gold);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+.lang-switch{
+  margin-left:28px;
+  padding:4px 10px;
+  border:1px solid rgba(201,162,77,0.35);
+  border-radius:999px;
+  background:rgba(201,162,77,0.06);
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.lang-switch a.active{
+  color:var(--gold);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+
 </style>
 <!-- EXACT CALCULATOR CSS FROM index.html -->
 <style>
@@ -312,7 +363,7 @@ border-radius:999px;
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Проект
+    Project
   </label>
   <select id="projectSelector"
     style="
@@ -335,14 +386,13 @@ border-radius:999px;
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-    Калькулятор пересчитывается в зависимости от выбранного проекта.
-  </div>
+The calculator is recalculated depending on the selected project.  </div>
 </div>
-    <h2>Инвестиционный калькулятор</h2>
-    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
+    <h2>Investment calculator</h2>
+    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
 
     <div class="coverage-block">
-      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
+      <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -354,7 +404,7 @@ border-radius:999px;
 
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Сумма инвестиций</h3>
+        <h3>Investment amount</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -365,20 +415,20 @@ border-radius:999px;
 
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Оценка дохода</h3>
+        <h3>Income assessment</h3>
         <div class="calc-income">
-          <div>Доход / месяц</div>
+          <div>Income / month</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
 
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
@@ -439,152 +489,145 @@ function onProjectChange(v){
 </script>
 <nav class="top-nav">
   <div class="nav-container">
-    <a href="index.html" class="logo">NoctAI™</a>
+    <a href="index-ru.html" class="logo">NoctAI™</a>
 
-    <div class="nav-links">
-      <a href="how_it_works.html">Как это работает</a>
-      <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
-      <a href="projects.html">Проекты</a>
-    </div>
+    <div class="nav-right">
+  <div class="nav-links">
+    <a href="how_it_works-ru.html">How it works</a>
+    <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
+    <a href="projects-ru.html">Projects</a>
+  </div>
+
+  <div class="lang-switch">
+    <a href="how_it_works.html" class="active">EN</a>
+	-
+    <a href="how_it_works-ru.html">RU</a>
+  </div>
+</div>
+
   </div>
 </nav>
 
 <div class="container">
 
   <span class="badge">HOW IT WORKS</span>
-  <h1>Как устроена модель участия NoctAI</h1>
+  <h1>How NoctAI's participation model works</h1>
   <p class="sub">
-    NoctAI — это платформа долевого участия в реальных инфраструктурных проектах.
-    Участие фиксируется через ручную проверку, а доли инвесторов закрепляются
-    в рамках единой структуры владения.
-  </p>
+NoctAI is a platform for equity participation in real infrastructure projects.
+Participation is recorded through manual verification, and investor shares are secured
+within a single ownership structure.  </p>
 
   <div class="section">
-    <h2>Почему минимальный вход начинается от $1</h2>
+    <h2>Why does the minimum entry start at $1?</h2>
     <p class="sub">
-      Минимальный вход не является обещанием доходности и не предназначен
-      для спекулятивных ожиданий.
-    </p>
+The minimum entry is not a promise of profitability and is not intended
+for speculative expectations.    </p>
     <div class="grid">
       <div class="card">
-        <h3>Единая структура участия</h3>
+        <h3>Unified participation structure</h3>
         <p>
-          Минимальный порог позволяет формировать единый инвесторский пул,
-          в котором все участники входят в одну структуру владения,
-          независимо от размера вклада.
-        </p>
+The minimum threshold allows for the formation of a single investor pool,
+in which all participants are part of the same ownership structure,
+regardless of the size of the deposit.        </p>
       </div>
       <div class="card">
-        <h3>Масштабируемость модели</h3>
+        <h3>Model scalability</h3>
         <p>
-          Низкий порог входа используется для масштабирования проекта
-          и распределения долей, а не для создания иллюзии быстрых результатов.
-        </p>
+A low entry threshold is used to scale the project.
+and distribution of shares, and not to create the illusion of quick results.        </p>
       </div>
       <div class="card">
-        <h3>Пропорциональная фиксация</h3>
+        <h3>Proportional fixation</h3>
         <p>
-          Каждое участие фиксируется пропорционально внесённому капиталу
-          и подчиняется единым правилам распределения.
-        </p>
+Each participation is fixed in proportion to the invested capital.
+and is subject to uniform distribution rules.        </p>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Как работает участие при небольшом капитале</h2>
+    <h2>How does participation work with small capital</h2>
     <div class="grid">
       <div class="card">
-        <h3>Доля в общем пуле</h3>
+        <h3>Share in the common pool</h3>
         <p>
-          Участник получает долю в общем инвестиционном пуле,
-          размер которой определяется вкладом относительно общего объёма капитала.
-        </p>
+The participant receives a share in the general investment pool,
+the size of which is determined by the contribution relative to the total volume of capital.        </p>
       </div>
       <div class="card">
-        <h3>Зависимость от развития проекта</h3>
+        <h3>Dependence on project development</h3>
         <p>
-          Потенциал участия зависит от развития проекта,
-          его операционных показателей и масштабирования.
-        </p>
+The potential for participation depends on the development of the project,
+its operational performance and scaling.        </p>
       </div>
       <div class="card">
-        <h3>Отсутствие гарантий</h3>
+        <h3>No guarantees</h3>
         <p>
-          Участие не предполагает гарантированной доходности
-          и связано с инвестиционными рисками.
-        </p>
+Participation does not imply a guaranteed return.
+and is associated with investment risks.        </p>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Почему расчёты ведутся в USDT</h2>
+    <h2>Why are settlements conducted in USDT</h2>
     <div class="grid">
       <div class="card">
-        <h3>Единый расчётный стандарт</h3>
+        <h3>Unified calculation standard</h3>
         <p>
-          Использование USDT обеспечивает единый и предсказуемый
-          расчётный стандарт для всех участников.
-        </p>
+Using USDT provides a uniform and predictable
+calculation standard for all participants.        </p>
       </div>
       <div class="card">
-        <h3>Прозрачность и верификация</h3>
+        <h3>Transparency and verification</h3>
         <p>
-          Все транзакции поддаются проверке и упрощают учёт долей.
-        </p>
+All transactions are verifiable and simplify share accounting.        </p>
       </div>
       <div class="card">
-        <h3>Подготовка к масштабированию</h3>
+        <h3>Preparing for scaling</h3>
         <p>
-          Такая модель упрощает последующее подключение
-          дополнительных расчётных механизмов.
-        </p>
+This model simplifies subsequent connection.
+additional calculation mechanisms.        </p>
       </div>
     </div>
   </div>
 
   <hr/>
 <p class="sub" style="margin-top:24px;">
-  Процесс участия и допуска инвесторов регулируется внутренним
-  контуром управления и ответственности платформы.
+The process of participation and admission of investors is regulated internally
+the platform's governance and responsibility framework.
   <a href="oversight_governance.html" style="color:var(--gold); text-decoration:none;">
-    Подробнее об Oversight & Governance →
-  </a>
+Learn more about Oversight and Governance →  </a>
 </p>
 
   <div class="section">
       <div class="grid">
         <div class="card">
-          <div class="step">ШАГ 1</div>
-          <h3>Выбор проекта</h3>
+          <div class="step">STEP 1</div>
+          <h3>Selecting a project</h3>
           <p>
-            Вы выбираете активный проект на платформе и знакомитесь с параметрами инвестиционного раунда.
-          </p>
+You select an active project on the platform and become familiar with the investment round parameters.          </p>
         </div>
 
         <div class="card">
-          <div class="step">ШАГ 2</div>
-          <h3>Отправка USDT</h3>
+          <div class="step">STEP 2</div>
+          <h3>Sending USDT</h3>
           <p>
-            Инвестиции принимаются в USDT (TRC20). После отправки средств вы переходите к подтверждению.
-          </p>
+Investments are accepted in USDT (TRC20). After sending funds, you'll be taken to confirmation.          </p>
         </div>
 
         <div class="card">
-          <div class="step">ШАГ 3</div>
-          <h3>Подтверждение транзакции</h3>
+          <div class="step">STEP 3</div>
+          <h3>Transaction confirmation</h3>
           <p>
-            Вы указываете email для связи и Transaction Hash (TxID). Это позволяет зафиксировать инвестицию.
-          </p>
+You provide a contact email and Transaction Hash (TxID). This allows you to secure your investment.          </p>
         </div>
 
         <div class="card">
-          <div class="step">ШАГ 4</div>
+          <div class="step">STEP 4</div>
           <h3>Ручная проверка</h3>
           <p>
-            Команда NoctAI вручную подтверждает транзакцию и фиксирует долю инвестора.
-          </p>
+The NoctAI team manually confirms the transaction and locks in the investor's stake.          </p>
         </div>
       </div>
     </div>
@@ -596,45 +639,40 @@ function onProjectChange(v){
         <div class="card">
           <h3>Почему используется ручная проверка</h3>
           <p>
-            Ручная проверка снижает риски ошибок, защищает инвесторов и позволяет сохранять контроль
-            над структурой долей.
-          </p>
+Manual verification reduces the risk of errors, protects investors, and maintains control
+over the share structure.          </p>
         </div>
 
         <div class="card">
-          <h3>Сроки фиксации доли</h3>
+          <h3>Timeframe for fixing the share</h3>
           <p>
-            Подтверждение и фиксация доли происходят в течение 24 часов после отправки данных.
-          </p>
+Confirmation and fixation of the share occurs within 24 hours after sending the data.          </p>
         </div>
 
         <div class="card">
-          <h3>Крупные инвестиции</h3>
+          <h3>Large investments</h3>
           <p>
-            Инвестиции от крупных инвесторов рассматриваются индивидуально через прямой контакт с командой.
-          </p>
+Investments from major investors are considered individually through direct contact with the team.          </p>
         </div>
       </div>
     </div>
 
     <p class="footer-note">
-      NoctAI не является публичной инвестиционной офертой.
-      Все инвестиции осуществляются на основании индивидуального решения инвестора.
-    </p>
+NoctAI is not a public investment offer.
+All investments are made based on the individual decision of the investor.    </p>
   </div>
   
-  <footer class="site-footer">
+ <footer class="site-footer">
   <div class="footer-container">
     <div>
       <strong>NoctAI™</strong><br>
-      Платформа долевого участия в реальных проектах.<br>
+A platform for equity participation in real projects.<br>
       <span style="font-size:13px;color:#9aa3b2;">
-        Централизованное управление · Ручной допуск · Permission‑based access
-      </span>
+Centralized management · Manual access · Permission-based access      </span>
     </div>
     <div>
-      <a href="legal.html">Условия</a><br>
-      <a href="privacy.html">Политика конфиденциальности</a><br>
+      <a href="terms.html">Terms</a><br>
+      <a href="privacy.html">Privacy Policy</a><br>
       <a href="oversight_governance.html">Oversight &amp; Governance</a>
     </div>
     <div>

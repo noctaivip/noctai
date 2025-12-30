@@ -77,6 +77,56 @@ body{
   padding:8px 18px;
   border-radius:999px;
 }
+.lang-switch{
+  margin-left:28px;
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:8px;
+}
+
+.lang-switch a.active{
+  color:var(--gold);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+.lang-switch{
+  margin-left:28px;
+  padding:4px 10px;
+  border:1px solid rgba(201,162,77,0.35);
+  border-radius:999px;
+  background:rgba(201,162,77,0.06);
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.lang-switch a.active{
+  color:var(--gold);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
 
 .container{
   max-width:900px;
@@ -239,7 +289,7 @@ h1{
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Проект
+    Project
   </label>
   <select id="projectSelector"
     style="
@@ -262,14 +312,13 @@ h1{
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-    Калькулятор пересчитывается в зависимости от выбранного проекта.
-  </div>
+The calculator is recalculated depending on the selected project.  </div>
 </div>
-    <h2>Инвестиционный калькулятор</h2>
-    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
+    <h2>Investment calculator</h2>
+    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
 
     <div class="coverage-block">
-      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
+      <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -281,7 +330,7 @@ h1{
 
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Сумма инвестиций</h3>
+        <h3>Investment amount</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -292,20 +341,20 @@ h1{
 
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Оценка дохода</h3>
+        <h3>Income assessment</h3>
         <div class="calc-income">
-          <div>Доход / месяц</div>
+          <div>Income / month</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
 
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
@@ -364,67 +413,75 @@ function onProjectChange(v){
 }
 
 </script>
-
 <nav class="top-nav">
   <div class="nav-container">
-    <a href="index.html" class="logo">NoctAI™</a>
+    <a href="index-ru.html" class="logo">NoctAI™</a>
 
-    <div class="nav-links">
-      <a href="how_it_works.html">Как это работает</a>
-      <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
-      <a href="projects.html">Проекты</a>
-    </div>
+    <div class="nav-right">
+  <div class="nav-links">
+    <a href="how_it_works-ru.html">How it works</a>
+    <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
+    <a href="projects-ru.html">Projects</a>
+  </div>
+
+  <div class="lang-switch">
+    <a href="privacy.html" class="active">EN</a>
+	-
+    <a href="privacy-ru.html">RU</a>
+  </div>
+</div>
+
   </div>
 </nav>
 
 <div class="container">
-  <h1>Политика конфиденциальности</h1>
+  <h1>Privacy Policy</h1>
 
   <div class="section">
-    <h2>Общие положения</h2>
+    <h2>General Provisions</h2>
     <p>
-      NoctAI уважает конфиденциальность пользователей и обрабатывает персональные данные
-      исключительно в рамках ограниченного инвестиционного доступа и внутренней проверки.
+      NoctAI respects user privacy and processes personal data exclusively
+	  for limited investment access and internal verification purposes.
     </p>
   </div>
 
   <div class="section">
-    <h2>Сбор информации</h2>
+    <h2>Information collection</h2>
     <p>
-      Мы можем собирать email, данные транзакций (TXID), а также информацию,
-      предоставленную пользователем добровольно при запросе доступа или инвестиции.
+      We may collect email addresses, transaction data (TXID), and information
+	  voluntarily provided by the user when requesting access or investment.
     </p>
   </div>
 
   <div class="section">
-    <h2>Использование данных</h2>
+    <h2>Use of data</h2>
     <p>
-      Все данные используются исключительно для идентификации инвестора,
-      фиксации долей и соблюдения внутренних процедур контроля и ответственности.
+      All data is used solely for investor identification, shareholding, and
+	  compliance with internal control and accountability procedures.
     </p>
   </div>
 
   <div class="section">
-    <h2>Передача третьим лицам</h2>
+    <h2>Transfer to third parties</h2>
     <p>
-      Данные не передаются третьим лицам, за исключением случаев,
-      предусмотренных применимым законодательством или внутренними требованиями контроля.
+      Data is not transferred to third parties, except in cases required by
+	  applicable law or internal control requirements.
     </p>
   </div>
 
   <div class="section">
-    <h2>Безопасность</h2>
+    <h2>Safety</h2>
     <p>
-      Мы применяем административные и технические меры для защиты данных.
-      Доступ к информации ограничен и предоставляется по принципу необходимости.
+      We implement administrative and technical measures to protect data.
+	  Access to information is limited and provided on a need-to-know basis.
     </p>
   </div>
 
   <div class="section">
-    <h2>Отсутствие публичной оферты</h2>
+    <h2>Lack of a public offer</h2>
     <p>
-      Данный сайт и размещённая информация не являются публичной инвестиционной офертой.
-      Любое участие осуществляется на основании индивидуального решения инвестора.
+      This website and the information contained herein do not constitute a public investment offer.
+	  Any participation is based on the investor's individual decision.
     </p>
   </div>
 
@@ -440,17 +497,22 @@ function onProjectChange(v){
   <div class="footer-container">
     <div>
       <strong>NoctAI™</strong><br>
-      Платформа долевого участия в реальных проектах.<br>
-      Централизованное управление · Ручной допуск · Permission-based access
+A platform for equity participation in real projects.<br>
+      <span style="font-size:13px;color:#9aa3b2;">
+Centralized management · Manual access · Permission-based access      </span>
     </div>
     <div>
-      <a href="legal.html">Условия</a><br>
-      <a href="privacy.html">Политика конфиденциальности</a><br>
-      <a href="oversight_governance.html">Oversight & Governance</a>
+      <a href="terms.html">Terms</a><br>
+      <a href="privacy.html">Privacy Policy</a><br>
+      <a href="oversight_governance.html">Oversight &amp; Governance</a>
     </div>
     <div>
-      <a href="mailto:noctai.vip@proton.me">noctai.vip@proton.me</a><br>
-      Indicative information only. No public offering.<br>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
+        noctai.vip@proton.me
+      </a><br>
+      <span style="font-size:13px;">
+        Indicative information only. No public offering.
+      </span><br>
       © 2025 NoctAI™
     </div>
   </div>

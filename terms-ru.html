@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NOCTAI — Условия</title>
+
+<style>
+:root{
+  --bg:#0b0e11;
+  --panel:#0f1418;
+  --text:#e6e6e6;
+  --muted:#9aa0a6;
+  --line:#b89b5e;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  background:radial-gradient(circle at top,#12161b 0%,var(--bg) 55%);
+  color:var(--text);
+}
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 64px;
+  border-bottom:1px solid rgba(184,155,94,.25);
+}
+header .logo {
+  letter-spacing: 0.35em;
+  font-size: 13px;
+}
+nav a{
+  margin-left:28px;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-decoration:none;
+  color:var(--muted);
+  position:relative;
+}
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;bottom:-6px;
+  width:0;height:1px;
+  background:var(--line);
+  transition:.3s;
+}
+nav a:hover::after{width:100%}
+nav a:hover{color:var(--text)}
+.lang-switch{
+  margin-left:34px;
+  padding:4px 10px;
+  border:1px solid rgba(184,155,94,0.35);
+  border-radius:999px;
+  background:rgba(184,155,94,0.06);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.lang-switch a.active{
+  color:var(--line);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+.wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:110px 64px;
+}
+small{
+  letter-spacing:.18em;
+  font-size:11px;
+  color:var(--muted);
+}
+h1{
+  font-size:42px;
+  margin:18px 0 26px;
+}
+h2{
+  font-size:22px;
+  margin:40px 0 14px;
+}
+p{
+  color:var(--muted);
+  line-height:1.7;
+  max-width:860px;
+}
+hr{
+  border:none;
+  border-top:1px solid rgba(184,155,94,.35);
+  margin:70px 0;
+}
+.notice{
+  font-size:11px;
+  color:var(--muted);
+  font-style:italic;
+  margin-top:18px;
+  max-width:860px;
+}
+footer{
+  border-top:1px solid rgba(184,155,94,.25);
+  padding:28px 64px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  font-size:11px;
+  color:var(--muted);
+}
+footer .center{text-align:center}
+footer a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+footer a:hover{color:var(--text)}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index-ru.html" class="logo">NOCTAI</a>
+  <nav>
+  <a href="control-ru.html">ГЛАВНАЯ</a>
+  <a href="active-dossiers-ru.html">АКТИВНЫЕ ДОСЬЕ</a>
+  <a href="briefings-ru.html">БРИФИНГИ</a>
+  <a href="access-protocol-ru.html">ПРОТОКОЛ ДОСТУПА</a>
+  <a href="request-access-ru.html">ЗАПРОС ДОСТУПА</a>
+
+  <!-- LANGUAGE SWITCH -->
+  <span class="lang-switch">
+    <a href="terms-ru.html" class="active">RU</a>
+    ·
+    <a href="terms.html">EN</a>
+  </span>
+</nav>
+</header>
+
+<section class="wrap">
+
+  <small>УСЛОВИЯ УПРАВЛЕНИЯ И ИСПОЛЬЗОВАНИЯ</small>
+  <h1>Условия</h1>
+
+  <p>
+    Настоящие Условия регулируют доступ к платформе NOCTAI и её использование.
+    NOCTAI функционирует как частный слой стратегической инвестиционной аналитики.
+    Она не является публичным сервисом, маркетплейсом, фондом, брокером, консультантом
+    или механизмом привлечения инвестиций.
+  </p>
+
+  <hr>
+
+  <h2>1. Характер платформы</h2>
+  <p>
+    NOCTAI предоставляет структурированные аналитические сигналы и контекстные брифинги,
+    а также контролируемый доступ к отдельным инвестиционным досье.
+    Все материалы предоставляются исключительно в информационных и оценочных целях.
+  </p>
+
+  <p>
+    NOCTAI не предоставляет инвестиционные рекомендации, услуги по управлению портфелем,
+    брокерские услуги или размещение капитала.
+  </p>
+
+  <hr>
+
+  <h2>2. Доступ и допустимость</h2>
+  <p>
+    Доступ к NOCTAI является дискреционным и может быть предоставлен, ограничен или отозван
+    в любое время без предварительного уведомления.
+    Подача запроса на доступ не создаёт каких-либо обязательств
+    по ответу, раскрытию информации или взаимодействию.
+  </p>
+
+  <p>
+    NOCTAI оставляет за собой право определять допустимость доступа на основе внутренних
+    критериев квалификации, включая, но не ограничиваясь, полномочиями капитала,
+    юрисдикционной прозрачностью и стратегической релевантностью.
+  </p>
+
+  <hr>
+
+  <h2>3. Отсутствие предложения или оферты</h2>
+  <p>
+    Ничто на платформе NOCTAI не является предложением о продаже,
+    офертой на покупку или рекомендацией
+    в отношении каких-либо ценных бумаг, инструментов или сделок.
+  </p>
+
+  <p>
+    Любое участие в возможностях, упоминаемых в NOCTAI,
+    осуществляется исключительно через отдельные двусторонние соглашения,
+    заключаемые вне платформы.
+  </p>
+
+  <hr>
+
+  <h2>4. Конфиденциальность и ограничения использования</h2>
+  <p>
+    Все материалы, доступные через NOCTAI, являются конфиденциальными
+    если явно не указано иное.
+    Несанкционированное распространение, копирование или раскрытие
+    любого контента строго запрещено.
+  </p>
+
+  <p>
+    Обязательства по конфиденциальности могут сохраняться после прекращения доступа
+    и оформляться дополнительными соглашениями.
+  </p>
+
+  <hr>
+
+  <h2>5. Точность и прогнозные заявления</h2>
+  <p>
+    Информация, представленная в NOCTAI, может содержать прогнозные заявления,
+    структурные гипотезы и сценарные оценки.
+    Такая информация по своей природе является неопределённой и может изменяться.
+  </p>
+
+  <p>
+    NOCTAI не даёт каких-либо заверений или гарантий в отношении полноты,
+    точности или будущих результатов.
+  </p>
+
+  <hr>
+
+  <h2>6. Ограничение ответственности</h2>
+  <p>
+    В максимально допустимой степени, предусмотренной применимым законодательством,
+    NOCTAI не несёт ответственности за любые прямые, косвенные,
+    случайные или косвенные убытки, возникающие в результате
+    доступа к платформе или её использования.
+  </p>
+
+  <p>
+    Пользователи несут исключительную ответственность за свои собственные
+    инвестиционные решения, правовые оценки и комплексную проверку.
+  </p>
+
+  <hr>
+
+  <h2>7. Изменения</h2>
+  <p>
+    Настоящие Условия могут быть обновлены или изменены в любое время.
+    Продолжение доступа к NOCTAI означает принятие
+    текущей версии настоящих Условий.
+  </p>
+
+  <p class="notice">
+    Последнее обновление: 2025
+  </p>
+
+</section>
+
+<footer>
+  <div>
+    NOCTAI — частная платформа стратегической инвестиционной аналитики.<br/>
+    Контролируемое раскрытие. Публичных предложений нет.
+  </div>
+  <div class="center">
+    <a href="terms-ru.html">Условия</a> ·
+    <a href="private-privacy-ru.html">Конфиденциальность</a> ·
+    <a href="nda-framework-ru.html">NDA Фреймворк</a> ·
+    <a href="contact-ru.html">Контакты</a>
+  </div>
+  <div style="text-align:right;">
+    Статус системы: работает<br/>
+    © NOCTAI
+  </div>
+</footer>
+
+</body>
+</html>

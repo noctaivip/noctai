@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NOCTAI — Dossier</title>
+
+<style>
+:root{
+  --bg:#0b0e11;
+  --panel:#0f1418;
+  --text:#e6e6e6;
+  --muted:#9aa0a6;
+  --line:#b89b5e;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  background:radial-gradient(circle at top,#12161b 0%,var(--bg) 55%);
+  color:var(--text);
+}
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 64px;
+  border-bottom:1px solid rgba(184,155,94,.25);
+}
+header .logo {
+  letter-spacing: 0.35em;
+  font-size: 13px;
+}
+nav a{
+  margin-left:28px;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-decoration:none;
+  color:var(--muted);
+  position:relative;
+}
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;bottom:-6px;
+  width:0;height:1px;
+  background:var(--line);
+  transition:.3s;
+}
+nav a:hover::after{width:100%}
+nav a:hover{color:var(--text)}
+.wrap{
+  max-width:1200px;
+  margin:0 auto;
+  padding:110px 64px;
+}
+.lang-switch{
+  margin-left:34px;
+  padding:4px 10px;
+  border:1px solid rgba(184,155,94,0.35);
+  border-radius:999px;
+  background:rgba(184,155,94,0.06);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.lang-switch a.active{
+  color:var(--line);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+small{letter-spacing:.18em;font-size:11px;color:var(--muted)}
+h1{font-size:42px;margin:18px 0}
+.meta{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  margin:36px 0;
+}
+.meta div small{display:block;margin-bottom:6px}
+.line{height:1px;background:rgba(184,155,94,.35);margin:60px 0}
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+.box{
+  border:1px solid rgba(184,155,94,.35);
+  padding:22px;
+  background:linear-gradient(180deg,#10161c,#0c1014);
+}
+.box h3{margin:0 0 10px;font-size:13px;letter-spacing:.14em;color:var(--line)}
+.box p{margin:0;color:var(--muted);line-height:1.6}
+.protocol{
+  border:1px solid rgba(184,155,94,.45);
+  padding:28px;
+  background:linear-gradient(180deg,#10161c,#0c1014);
+}
+.protocol h3{margin:0 0 14px;font-size:13px;letter-spacing:.14em;color:var(--line)}
+.protocol ol{margin:0 0 18px;padding-left:18px;color:var(--muted)}
+.protocol li{margin-bottom:6px}
+.protocol a{
+  font-size:12px;
+  letter-spacing:.14em;
+  color:var(--text);
+  text-decoration:none;
+  position:relative;
+}
+.protocol a::after{
+  content:"";
+  position:absolute;
+  left:0;bottom:-6px;
+  width:0;height:1px;
+  background:var(--line);
+  transition:.3s;
+}
+.protocol a:hover::after{width:100%}
+footer{
+  border-top:1px solid rgba(184,155,94,.25);
+  padding:28px 64px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  font-size:11px;
+  color:var(--muted);
+}
+footer .center{text-align:center}
+footer a{color:var(--muted);text-decoration:none;margin:0 6px}
+footer a:hover{color:var(--text)}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index-ru.html" class="logo">NOCTAI</a>
+  <nav>
+  <a href="control-ru.html">ГЛАВНАЯ</a>
+  <a href="active-dossiers-ru.html">АКТИВНЫЕ ДОСЬЕ</a>
+  <a href="briefings-ru.html">БРИФИНГИ</a>
+  <a href="access-protocol-ru.html">ПРОТОКОЛ ДОСТУПА</a>
+  <a href="request-access-ru.html">ЗАПРОС ДОСТУПА</a>
+
+  <!-- LANGUAGE SWITCH -->
+  <span class="lang-switch">
+    <a href="dossier-ru.html" class="active">RU</a>
+    ·
+    <a href="dossier.html">EN</a>
+  </span>
+</nav>
+</header>
+
+<section class="wrap" id="content"></section>
+
+<footer>
+  <div>NOCTAI — частная платформа стратегической инвестиционной аналитики.<br/>Контролируемое раскрытие. Публичных предложений нет.</div>
+  <div class="center">
+    <a href="terms-ru.html">Terms</a> ·
+    <a href="private-privacy-ru.html">Privacy</a> ·
+    <a href="nda-framework-ru.html">NDA Framework</a> ·
+    <a href="contact-ru.html">Contact</a>
+  </div>
+  <div style="text-align:right;">Статус системы: работает<br/>© NOCTAI</div>
+</footer>
+
+<script>
+const dossiers = {
+
+"NCT-001":{
+  title:"Структурный арбитраж капитала — промышленная интеллектуальная собственность",
+  desc:"Структурирование с приоритетом патентов, использующее регуляторные задержки.",
+  capital:"До распределения",
+  disclosure:"Избирательно открыто",
+  ip:"Патентная заявка (PCT)",
+  owner:"Холдинговая структура NOCTAI",
+  problem:"Институциональный капитал неверно оценивает раннюю интеллектуальную собственность из-за регуляторных задержек.",
+  edge:"Патентно-ориентированное структурирование меняет традиционную последовательность рисков.",
+  timing:"Временная эксклюзивность в период подачи заявки.",
+  role:"Капитал фиксирует позицию, а не операционный масштаб."
+},
+
+"NCT-002":{
+  title:"Извлечение ценности из задержек энергетических сетей",
+  desc:"Градиент капитала, сформированный расхождением цен на энергию между юрисдикциями.",
+  capital:"До распределения",
+  disclosure:"Открыто",
+  ip:"Contractual structures",
+  owner:"NOCTAI Energy Desk",
+  problem:"Энергетические рынки очищаются медленнее, чем рынки капитала.",
+  edge:"Эксплуатация временных задержек между юрисдикциями.",
+  timing:"Окно задержки расчётов.",
+  role:"Позиционирование капитала."
+},
+
+"NCT-003":{
+  title:"Сжатие затрат на инференс ИИ",
+  desc:"Структурная неэффективность экономики уровня инференса.",
+  capital:"До распределения",
+  disclosure:"Избирательно открыто",
+  ip:"Оптимизационная интеллектуальная собственность",
+  owner:"Платформа NOCTAI",
+  problem:"Кривые затрат на инференс масштабируются нелинейно.",
+  edge:"Сжатие затрат до масштабирования.",
+  timing:"Окно до развёртывания.",
+  role:"Неразмывающий оптимизационный капитал."
+},
+
+"NCT-004":{
+  title:"Финансиализация прав на водные ресурсы",
+  desc:"Преобразование региональных прав на воду в финансовые инструменты.",
+  capital:"До распределения",
+  disclosure:"Ограничено",
+  ip:"Юридическое структурирование",
+  owner:"Региональная SPV-структура",
+  problem:"Водные активы лишены уровня абстракции.",
+  edge:"Ранняя финансиализация.",
+  timing:"Регуляторный переход.",
+  role:"Структурирование капитала."
+},
+
+"NCT-005":{
+  title:"Арбитраж скрытых логистических мощностей",
+  desc:"Раскрытие недоиспользуемых логистических мощностей.",
+  capital:"До распределения",
+  disclosure:"Открыто",
+  ip:"Операционное моделирование",
+  owner:"Сеть NOCTAI",
+  problem:"Простаивающие мощности скрыты в фрагментированных системах.",
+  edge:"Агрегация между сетями.",
+  timing:"До всплеска спроса.",
+  role:"Активирующий капитал."
+},
+
+"NCT-006":{
+  title:"Арбитраж потоков углеродных кредитов",
+  desc:"Временное несоответствие между эмиссией и ликвидностью вторичного рынка.",
+  capital:"До распределения",
+  disclosure:"Открыто",
+  ip:"Позиционирование в реестрах",
+  owner:"Климатическое подразделение NOCTAI",
+  problem:"Ликвидность отстаёт от регуляторной эмиссии.",
+  edge:"Контроль потоков.",
+  timing:"Циклы эмиссии.",
+  role:"Мостовой капитал."
+},
+
+"NCT-007":{
+  title:"Приоритетное структурирование поставок полупроводников",
+  desc:"До распределения positioning in constrained advanced-node supply.",
+  capital:"До распределения",
+  disclosure:"Под резервированием",
+  ip:"Контракты поставки",
+  owner:"Подразделение стратегического доступа NOCTAI",
+  problem:"Узкие места в поставках передовых техпроцессов.",
+  edge:"Приоритетное резервирование.",
+  timing:"До распределения фабрик.",
+  role:"Резервирующий капитал."
+}
+
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const d = dossiers[id];
+const c = document.getElementById("content");
+
+if(!d){
+  c.innerHTML = "<h1>Досье не найдено</h1>";
+}else{
+  c.innerHTML = `
+  <small>ИДЕНТИФИКАТОР ДОСЬЕ: ${id}</small>
+  <h1>${d.title}</h1>
+  <p style="color:var(--muted);max-width:720px">${d.desc}</p>
+
+  <div class="meta">
+    <div><small>Стадия капитала</small>${d.capital}</div>
+    <div><small>Окно раскрытия</small>${d.disclosure}</div>
+    <div><small>Статус IP</small>${d.ip}</div>
+    <div><small>Структура владения</small>${d.owner}</div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="grid">
+    <div class="box"><h3>АСИММЕТРИЯ ПРОБЛЕМЫ</h3><p>${d.problem}</p></div>
+    <div class="box"><h3>СТРУКТУРНОЕ ПРЕИМУЩЕСТВО</h3><p>${d.edge}</p></div>
+    <div class="box"><h3>ВРЕМЕННОЕ ОКНО</h3><p>${d.timing}</p></div>
+    <div class="box"><h3>РОЛЬ КАПИТАЛА</h3><p>${d.role}</p></div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="protocol">
+    <h3>ПРОТОКОЛ ДОСТУПА — NCT-AP-001</h3>
+    <ol>
+      <li>Идентификация и квалификация капитала</li>
+      <li>Подтверждение рамочного NDA</li>
+      <li>Ограниченные материалы раскрытия</li>
+      <li>Подтверждение участия</li>
+      <li>Досье обновляется или продолжается</li>
+    </ol>
+    <a href="request-access.html?id=${id}">
+  Request Dossier Access →
+</a>
+  </div>
+  `;
+}
+</script>
+
+</body>
+</html>

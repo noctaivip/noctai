@@ -395,7 +395,7 @@ border-radius:999px;
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -418,13 +418,14 @@ border-radius:999px;
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
 
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -436,7 +437,7 @@ The calculator is recalculated depending on the selected project.  </div>
 
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -447,20 +448,20 @@ The calculator is recalculated depending on the selected project.  </div>
 
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
 
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
@@ -525,15 +526,15 @@ function onProjectChange(v){
 
     <div class="nav-right">
   <div class="nav-links">
-    <a href="how_it_works-ru.html">How it works</a>
-    <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
-    <a href="projects-ru.html">Projects</a>
+    <a href="how_it_works-ru.html">Как это работает</a>
+    <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+    <a href="projects-ru.html">Проекты</a>
   </div>
 
   <div class="lang-switch">
-    <a href="projects.html" class="active">EN</a>
+    <a href="projects_ru.html" class="active">RU</a>
 	-
-    <a href="projects-ru.html">RU</a>
+    <a href="projects.html">EN</a>
   </div>
 </div>
 
@@ -543,32 +544,34 @@ function onProjectChange(v){
   <div class="container">
 
     <span class="badge">PROJECTS</span>
-    <h1>NoctAI platform projects</h1>
+    <h1>Проекты платформы NoctAI</h1>
     
 <p class="sub">
-  <strong>NoctAI is an investment platform with a phased project launch.</strong><br>
-Each project undergoes an individual expert assessment, including technological, legal, and market verification.<br><br>
-<strong>The project is opened for investment only after passing the patenting stage or the official consolidation of key technological solutions.</strong><br><br>
-Projects with <em>upcoming</em> status are at the stage of individual assessment, patent protection preparation, or structure finalization and are not open to investment until these stages are completed.<br><br>
-<strong>Investment access is granted selectively and can only be opened after completion of the relevant protective and structural procedures.</strong></p>
+  <strong>NoctAI — инвестиционная платформа с поэтапным запуском проектов.</strong><br>
+  Каждый проект проходит индивидуальную экспертную оценку, включая технологическую, юридическую и рыночную проверку.<br><br>
+  <strong>Открытие проекта для инвестиций осуществляется только после прохождения стадии патентования либо официального закрепления ключевых технологических решений.</strong><br><br>
+  Проекты со статусом <em>upcoming</em> находятся на этапе индивидуальной оценки, подготовки патентной защиты или финализации структуры и не открыты для инвестиций до завершения данных этапов.<br><br>
+  <strong>Инвестиционный доступ предоставляется выборочно и может быть открыт только после завершения соответствующих защитных и структурных процедур.</strong>
+</p>
 
 
     <!-- ACTIVE PROJECT -->
     <div class="section">
-      <h2>Active project</h2>
+      <h2>Активный проект</h2>
       <div class="grid">
         <div class="card">
           <span class="status">ACTIVE</span>
           <h3>AI Dispatcher + Marketplace</h3>
           <p>
-A technology platform for analytics and tracking in the US transport logistics sector.          </p>
+            Технологическая платформа для аналитики и трекинга в сфере транспортной логистики США.
+          </p>
           <div class="meta">
-            <div><strong>Round:</strong> $3,500,000</div>
-            <div><strong>Investor pool:</strong> 10% share</div>
-<div><strong>Minimum entry:</strong> $1 (USDT)</div>
-            <div><strong>Status:</strong> MVP / Early Growth</div>
+            <div><strong>Раунд:</strong> $3,500,000</div>
+            <div><strong>Инвесторский пул:</strong> 10% доли</div>
+            <div><strong>Минимальный вход:</strong> $1 (USDT)</div>
+            <div><strong>Статус:</strong> MVP / Early Growth</div>
           </div>
-          <a class="cta" href="index.html">Go to the project</a>
+          <a class="cta" href="index-ru.html">Перейти к проекту</a>
         </div>
       </div>
     </div>
@@ -577,16 +580,17 @@ A technology platform for analytics and tracking in the US transport logistics s
 
     <!-- UPCOMING PROJECTS -->
     <div class="section">
-      <h2>Future projects</h2>
+      <h2>Будущие проекты</h2>
       <div class="grid">
         <div class="card lock">
           <span class="status">UPCOMING</span>
           <h3>FinTech Infrastructure Project</h3>
           <p>
-Infrastructure project in the field of financial services.          </p>
+            Инфраструктурный проект в области финансовых сервисов.
+          </p>
           <div class="meta">
-            <div><strong>Status:</strong> Preparation</div>
-            <div><strong>Access:</strong> Soon</div>
+            <div><strong>Статус:</strong> Подготовка</div>
+            <div><strong>Доступ:</strong> Скоро</div>
           </div>
         </div>
 
@@ -594,10 +598,11 @@ Infrastructure project in the field of financial services.          </p>
           <span class="status">UPCOMING</span>
           <h3>Data Intelligence Platform</h3>
           <p>
-Platform for analytics and processing of industry data.          </p>
+            Платформа аналитики и обработки отраслевых данных.
+          </p>
           <div class="meta">
-            <div><strong>Status:</strong> Grade</div>
-            <div><strong>Access:</strong> Soon</div>
+            <div><strong>Статус:</strong> Оценка</div>
+            <div><strong>Доступ:</strong> Скоро</div>
           </div>
         </div>
       </div>
@@ -607,48 +612,51 @@ Platform for analytics and processing of industry data.          </p>
 
     <!-- INVITATION ONLY -->
     <div class="section">
-      <h2>Invitation-based projects</h2>
+      <h2>Проекты по приглашению</h2>
       <div class="grid">
         <div class="card lock">
           <span class="status">PRIVATE</span>
           <h3>Private Capital Project</h3>
           <p>
-Closed investment projects, available only by individual invitation.          </p>
+            Закрытые инвестиционные проекты, доступные только по индивидуальному приглашению.
+          </p>
           <div class="meta">
-            <div><strong>Access:</strong> Invitation Only</div>
-            <div><strong>Contact:</strong> Through the team</div>
+            <div><strong>Доступ:</strong> Invitation Only</div>
+            <div><strong>Контакт:</strong> Через команду</div>
           </div>
         </div>
       </div>
     </div>
 <p class="sub" style="margin-top:28px;">
-  Access to individual projects, early investment rounds, and closed
-  materials is provided within a separate Project Access framework.
+  Доступ к отдельным проектам, ранним инвестиционным раундам и закрытым материалам
+  осуществляется в рамках отдельного контура Project Access.
 </p>
 
 <p class="sub">
-  <a href="project_access.html" style="color:var(--gold); text-decoration:none;">
-Go to Project Access →  </a>
+  <a href="project_access-ru.html" style="color:var(--gold); text-decoration:none;">
+    Перейти к Project Access →
+  </a>
 </p>
 
     <p class="footer-note">
-      The information on this page does not constitute a public investment offer.
-	  Access to projects may be restricted.
+      Информация на странице не является публичной инвестиционной офертой.
+      Доступ к проектам может быть ограничен.
     </p>
 
   </div>
-<footer class="site-footer">
+  <footer class="site-footer">
   <div class="footer-container">
     <div>
       <strong>NoctAI™</strong><br>
-A platform for equity participation in real projects.<br>
+      Платформа долевого участия в реальных проектах.<br>
       <span style="font-size:13px;color:#9aa3b2;">
-Centralized management · Manual access · Permission-based access      </span>
+        Централизованное управление · Ручной допуск · Permission‑based access
+      </span>
     </div>
     <div>
-      <a href="terms.html">Terms</a><br>
-      <a href="privacy.html">Privacy Policy</a><br>
-      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+      <a href="terms-ru.html">Условия</a><br>
+      <a href="privacy-ru.html">Политика конфиденциальности</a><br>
+      <a href="oversight_governance-ru.html">Oversight &amp; Governance</a>
     </div>
     <div>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">

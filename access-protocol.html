@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>NOCTAI — Contact</title>
+<title>NOCTAI — Access Protocol</title>
 
 <style>
 :root{
@@ -13,13 +13,16 @@
   --muted:#9aa0a6;
   --line:#b89b5e;
 }
+
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
   background:radial-gradient(circle at top,#12161b 0%,var(--bg) 55%);
   color:var(--text);
 }
+
 header{
   display:flex;
   justify-content:space-between;
@@ -27,10 +30,12 @@ header{
   padding:22px 64px;
   border-bottom:1px solid rgba(184,155,94,.25);
 }
-header .logo {
-  letter-spacing: 0.35em;
-  font-size: 13px;
+
+.logo{
+  letter-spacing:.35em;
+  font-size:13px;
 }
+
 nav a{
   margin-left:28px;
   font-size:11px;
@@ -39,14 +44,18 @@ nav a{
   color:var(--muted);
   position:relative;
 }
+
 nav a::after{
   content:"";
   position:absolute;
-  left:0;bottom:-6px;
-  width:0;height:1px;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:1px;
   background:var(--line);
   transition:.3s;
 }
+
 nav a:hover::after{width:100%}
 nav a:hover{color:var(--text)}
 .lang-switch{
@@ -75,50 +84,64 @@ nav a:hover{color:var(--text)}
   color:var(--text);
 }
 .wrap{
-  max-width:1100px;
+  max-width:1200px;
   margin:0 auto;
   padding:110px 64px;
 }
+
 small{
   letter-spacing:.18em;
   font-size:11px;
   color:var(--muted);
 }
+
 h1{
   font-size:42px;
-  margin:18px 0 26px;
+  margin:18px 0 24px;
 }
-h2{
-  font-size:22px;
-  margin:40px 0 14px;
-}
+
 p{
   color:var(--muted);
   line-height:1.7;
-  max-width:860px;
+  max-width:760px;
 }
+
 hr{
   border:none;
   border-top:1px solid rgba(184,155,94,.35);
   margin:70px 0;
 }
-.box{
+
+.section{
+  max-width:900px;
+}
+
+.section h2{
+  font-size:22px;
+  margin-bottom:14px;
+}
+
+.protocol-box{
   border:1px solid rgba(184,155,94,.45);
   background:linear-gradient(180deg,#10161c,#0c1014);
-  padding:32px;
-  margin-top:26px;
+  padding:34px;
+  margin-top:30px;
 }
-.box ul{
+
+.protocol-box ol{
   margin:0;
-  padding-left:18px;
+  padding-left:20px;
+}
+
+.protocol-box li{
+  margin-bottom:12px;
   color:var(--muted);
 }
-.box li{
-  margin-bottom:10px;
-}
+
 .action{
-  margin-top:32px;
+  margin-top:26px;
 }
+
 .action a{
   font-size:12px;
   letter-spacing:.14em;
@@ -126,22 +149,19 @@ hr{
   text-decoration:none;
   position:relative;
 }
+
 .action a::after{
   content:"";
   position:absolute;
-  left:0;bottom:-6px;
-  width:0;height:1px;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:1px;
   background:var(--line);
   transition:.3s;
 }
+
 .action a:hover::after{width:100%}
-.notice{
-  font-size:11px;
-  color:var(--muted);
-  font-style:italic;
-  margin-top:18px;
-  max-width:860px;
-}
 
 footer{
   border-top:1px solid rgba(184,155,94,.25);
@@ -151,6 +171,7 @@ footer{
   font-size:11px;
   color:var(--muted);
 }
+
 footer .center{text-align:center}
 footer a{
   color:var(--muted);
@@ -158,23 +179,13 @@ footer a{
   margin:0 6px;
 }
 footer a:hover{color:var(--text)}
-.logo{
-  color:var(--gold);
-  font-weight:700;
-  letter-spacing:.04em;
-  text-decoration:none;
-}
-
-.logo:hover{
-  text-decoration:none;
-}
 </style>
 </head>
 
 <body>
 
 <header>
-  <a href="index.html" class="logo">NOCTAI</a>
+  <div class="logo">NOCTAI</div>
   <nav>
   <a href="control.html">HOME</a>
   <a href="active-dossiers.html">ACTIVE DOSSIERS</a>
@@ -184,69 +195,75 @@ footer a:hover{color:var(--text)}
 
   <!-- LANGUAGE SWITCH -->
   <span class="lang-switch">
-    <a href="contact.html" class="active">EN</a>
+    <a href="access-protocol.html" class="active">EN</a>
     ·
-    <a href="contact-ru.html">RU</a>
+    <a href="access_protocol-ru.html">RU</a>
   </span>
 </nav>
 </header>
 
 <section class="wrap">
-
-  <small>INSTITUTIONAL COMMUNICATION CHANNEL</small>
-  <h1>Contact</h1>
+  <small>ACCESS GOVERNANCE FRAMEWORK</small>
+  <h1>Access Protocol — NCT-AP-001</h1>
 
   <p>
-    NOCTAI maintains limited and purpose-specific communication channels.
-    Unsolicited outreach, intermediated inquiries, and general correspondence
-    are not monitored.
+    NOCTAI operates as a private strategic investment intelligence layer.
+    Access to information, structures, and opportunities is governed by
+    a controlled disclosure protocol designed to protect structural integrity,
+    capital priority, and jurisdictional positioning.
   </p>
 
   <hr>
 
-  <h2>Appropriate Use</h2>
-  <p>
-    Contact channels are reserved exclusively for matters related to
-    access governance, confidentiality frameworks, or active institutional
-    alignment.
-  </p>
-
-  <div class="box">
-    <ul>
-      <li>Access governance clarification</li>
-      <li>Confidentiality framework coordination</li>
-      <li>Jurisdictional or structural inquiries</li>
-    </ul>
+  <div class="section">
+    <h2>Purpose of the Protocol</h2>
+    <p>
+      This protocol defines how access to dossiers is evaluated, granted,
+      limited, or withdrawn. It exists to ensure that disclosure occurs only
+      when strategic alignment, capital qualification, and timing conditions
+      are satisfied.
+    </p>
   </div>
 
   <hr>
 
-  <h2>Communication Scope</h2>
-  <p>
-    NOCTAI does not engage in general discussions, preliminary pitching,
-    or advisory correspondence through public channels.
-  </p>
-
-  <p>
-    Messages that fall outside the defined scope may remain unanswered.
-  </p>
+  <div class="section">
+    <h2>Key Definitions</h2>
+    <p><strong>Disclosure Window</strong> — A temporary period during which limited information may be shared.</p>
+    <p><strong>Capital Stage</strong> — The current phase of structural capital positioning (pre-allocation, reservation, deployment).</p>
+    <p><strong>Reservation</strong> — A temporary priority hold granted to a qualified party.</p>
+    <p><strong>Rotation</strong> — The removal or reclassification of a dossier based on timing or structure changes.</p>
+  </div>
 
   <hr>
 
-  <h2>Secure Contact Channel</h2>
-  <p>
-    For matters that meet the criteria above, communication may be initiated
-    through the following channel.
-  </p>
+  <div class="section">
+    <h2>Access Sequence</h2>
+    <div class="protocol-box">
+      <ol>
+        <li>Identity and capital qualification review</li>
+        <li>NDA framework acknowledgement</li>
+        <li>Selective disclosure of non-sensitive materials</li>
+        <li>Participation confirmation or decline</li>
+        <li>Dossier proceeds, rotates, or closes</li>
+      </ol>
 
-  <div class="action">
-    <a href="mailto:contact@noctai.vip">Initiate Institutional Contact →</a>
+      <div class="action">
+        <a href="request-access.html">Request Access →</a>
+      </div>
+    </div>
   </div>
 
-  <p class="notice">
-    Response is discretionary.  
-    NOCTAI does not confirm receipt or provide timelines.
-  </p>
+  <hr>
+
+  <div class="section">
+    <h2>Important Notices</h2>
+    <p>
+      Access does not imply availability. Disclosure does not imply participation.
+      NOCTAI reserves the right to modify, close, or withdraw any dossier
+      without prior notice.
+    </p>
+  </div>
 
 </section>
 
@@ -255,12 +272,14 @@ footer a:hover{color:var(--text)}
     NOCTAI is a private strategic investment intelligence platform.<br/>
     Controlled disclosure. No public solicitation.
   </div>
+
   <div class="center">
     <a href="terms.html">Terms</a> ·
-    <a href="private-privacy.html">Privacy</a> ·
+    <a href="privacy.html">Privacy</a> ·
     <a href="nda-framework.html">NDA Framework</a> ·
     <a href="contact.html">Contact</a>
   </div>
+
   <div style="text-align:right;">
     System status: operational<br/>
     © NOCTAI
