@@ -1,49 +1,98 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Privacy Policy | NoctAI.VIP</title>
-
+<meta charset="UTF-8">
+<title>NoctAI,VIP — Shared participation platform</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 :root{
-  --bg:#050b16;
-  --panel:#071827;
-  --muted:#9fb1c6;
-  --text:#e6eef7;
-  --gold:#d6b15e;
-  --gold-soft:#f1d48a;
-  --border:rgba(214,177,94,.35);
+--bg:#0a0d12;
+--panel:#11161d;
+--text:#e8eaf0;
+--muted:#9aa3b2;
+--gold:#c9a24d;
+--gold-soft:#8f7a3a;
+--border:#1e2430;
 }
 *{box-sizing:border-box}
 body{
-  margin:0;
-  background:radial-gradient(1200px 600px at 50% -200px,#0b2238 0%,#050b16 55%);
-  color:var(--text);
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+background:radial-gradient(1200px 600px at 20% -10%,#111826 0%,var(--bg) 55%);
+color:var(--text);
+line-height:1.65;
 }
+header{padding:56px 20px;border-bottom:1px solid var(--border)}
+.container{max-width:1120px;margin:0 auto}
+h1{font-size:40px;margin:0 0 12px}
+h2{font-size:26px;margin:64px 0 18px}
+h3{font-size:18px;margin:0 0 10px}
+p{margin:0 0 14px;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:42px}
+.badge{
+display:inline-block;
+padding-left:14px;
+border:none;
+border-left:2px solid var(--gold-soft);
+border-radius:0;
+font-size:13px;
+color:var(--gold);
+margin-bottom:18px;
+letter-spacing:0.16em;
+text-transform:uppercase;
+opacity:0.85;
+}
+.cta-primary{
+display:inline-block;
+margin-top:24px;
+padding:15px 34px;
+border-radius:8px;
+background:linear-gradient(180deg,#e6c56f 0%,#c9a24d 100%);
+color:#0a0d12;
+text-decoration:none;
+font-weight:700
+}
+.cta-secondary{
+display:inline-block;
+margin-top:14px;
+padding:13px 28px;
+border-radius:8px;
+border:1px solid var(--gold-soft);
+color:var(--gold);
+text-decoration:none;
+background:rgba(201,162,77,.04)
+}
+.panel{
+background:linear-gradient(180deg,#131a24 0%,var(--panel) 100%);
+border:1px solid var(--gold-soft);
+border-radius:14px;
+padding:30px;
+box-shadow:0 0 0 1px rgba(201,162,77,.05) inset
+}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.calculator{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}
+.result{font-size:22px;font-weight:700;color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--gold)}
+footer{margin-top:96px;padding:36px 20px;border-top:1px solid var(--border);color:var(--muted);font-size:13px}
+@media(max-width:900px){.hero,.grid,.calculator{grid-template-columns:1fr}}
+</style>
+<style>
 .top-nav{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:rgba(10,13,18,0.85);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--border);
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(10,13,18,0.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
 }
 .nav-container{
-  max-width:1120px;
-  margin:0 auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 20px;
-}
-.nav-cta::after{
-  display:none !important;
-}
-.nav-cta:hover{
-  background:rgba(214,177,94,.08);
-  box-shadow:0 0 0 1px var(--gold-soft);
+max-width:1120px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
 }
 .logo{
   color:var(--gold);
@@ -57,25 +106,68 @@ body{
 }
 
 .nav-links a{
-  margin-left:28px;
-  text-decoration:none;
-  color:var(--text);
-  position:relative;
-  padding-bottom:4px;
+margin-left:28px;
+text-decoration:none;
+color:var(--text);
+position:relative;
+padding-bottom:4px;
 }
 .nav-links a::after{
-  content:"";
-  position:absolute;
-  left:0;bottom:0;
-  width:0;height:2px;
-  background:var(--gold);
-  transition:width .3s ease;
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:2px;
+background:var(--gold);
+transition:width 0.3s ease;
 }
-.nav-links a:hover::after{width:100%}
+.nav-links a:hover::after{
+width:100%;
+}
 .nav-cta{
-  border:1px solid var(--gold-soft);
-  padding:8px 18px;
-  border-radius:999px;
+border:1px solid var(--gold-soft);
+padding:8px 18px;
+border-radius:999px;
+}
+.site-footer{
+margin-top:100px;
+border-top:1px solid var(--border);
+background:#0a0d12;
+}
+.footer-container{
+max-width:1120px;
+margin:0 auto;
+padding:40px 20px;
+display:grid;
+  grid-template-columns: 1fr 0.8fr 0.8fr 1fr;
+  gap: 28px;
+  align-items: start;
+color:var(--muted);
+font-size:14px;
+}
+.footer-heading {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em; 
+  text-transform: uppercase;
+  color: var(--muted); 
+}
+.footer-container a{
+color:var(--gold);
+text-decoration:none;
+}
+.footer-container a:hover{
+text-decoration:underline;
+}
+.footer-right{
+  text-align:right;
+}
+@media(max-width:900px){
+.footer-container{grid-template-columns:1fr}
+.nav-links a{margin-left:16px}
 }
 .lang-switch{
   margin-left:28px;
@@ -128,67 +220,130 @@ body{
   color:var(--text);
 }
 
-.container{
-  max-width:900px;
-  margin:80px auto;
-  padding:0 20px;
+</style>
+<style>
+.cta-primary{
+transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
 }
-h1{
-  font-size:36px;
-  margin-bottom:18px;
+.cta-primary:hover{
+transform: translateY(-1px);
+box-shadow: 0 8px 22px rgba(201,162,77,0.25);
+filter: brightness(1.05);
 }
-.section{
-  margin-top:32px;
-  padding:26px;
-  border:1px solid var(--border);
-  border-radius:18px;
-  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));
+.cta-secondary{
+transition: box-shadow 0.25s ease, border-color 0.25s ease;
 }
-.section h2{
-  margin:0 0 10px;
-  font-size:18px;
-  color:var(--gold);
+.cta-secondary:hover{
+border-color: var(--gold);
+box-shadow: 0 0 0 1px rgba(201,162,77,0.35) inset;
 }
-.section p{
-  margin:0;
-  line-height:1.7;
-  color:var(--muted);
+</style>
+<style>
+.top-nav .nav-cta{
+text-decoration: none;
+transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
 }
-
-.site-footer{
-margin-top:100px;
-border-top:1px solid var(--border);
-background:#0a0d12;
+.top-nav .nav-cta:hover{
+text-decoration: none;
+transform: translateY(-1px);
+box-shadow: 0 8px 22px rgba(201,162,77,0.25);
+filter: brightness(1.05);
 }
-.footer-container{
-max-width:1120px;
-margin:0 auto;
-padding:40px 20px;
-display:grid;
-  grid-template-columns: 1fr 0.8fr 0.8fr 1fr;
-  gap: 28px;
-  align-items: start;
-color:var(--muted);
+.top-nav .nav-cta::after{
+display:none !important;
+}
+</style>
+<style>
+.platform-tag{
 font-size:14px;
+letter-spacing:0.08em;
+text-transform:uppercase;
+color:var(--muted);
+margin-bottom:14px;
 }
-.footer-heading {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.04em; 
-  text-transform: uppercase;
-  color: var(--muted); 
+.active-project{
+margin-top:10px;
 }
-.footer-container a{
+.project-label{
+display:inline-block;
+margin-bottom:6px;
+font-size:12px;
+letter-spacing:0.12em;
 color:var(--gold);
-text-decoration:none;
 }
-.footer-container a:hover{
-text-decoration:underline;
+</style>
+<style>
+.platform-badge{
+background: rgba(201,162,77,0.08);
+border-color: var(--gold);
+color: var(--gold);
+letter-spacing: 0.12em;
 }
-.footer-right{
-  text-align:right;
+</style>
+<style>
+.project-box{
+margin-bottom:18px;
+}
+.project-box .project-title{
+font-weight:600;
+margin-top:6px;
+}
+</style>
+<style>
+.shimmer{
+position:relative;
+overflow:hidden;
+}
+.shimmer::after{
+content:"";
+position:absolute;
+top:0;
+left:-150%;
+width:50%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent 0%,
+rgba(255,255,255,0.35) 50%,
+transparent 100%
+);
+opacity:0.4;
+animation:shimmer 8s ease-in-out infinite;
+}
+@keyframes shimmer{
+0%{left:-150%;}
+70%{left:-150%;}
+100%{left:150%;}
+}
+</style>
+<style>
+.manual-input-label{
+display:block;
+margin-top:14px;
+margin-bottom:6px;
+font-size:13px;
+color:var(--muted);
+}
+.manual-input{
+width:100%;
+padding:10px 12px;
+border-radius:8px;
+background:#0f141c;
+border:1px solid var(--border);
+color:var(--text);
+font-size:15px;
+}
+.manual-input:focus{
+outline:none;
+border-color:var(--gold);
+}
+</style>
+<style>
+.section-title{
+  margin-top:80px;
+  margin-bottom:28px;
+  font-size:30px;
+  font-weight:700;
 }
 </style>
 <style>
@@ -255,49 +410,20 @@ text-decoration:underline;
 }
 </style>
 <style>
-.calc-range{
-  width:100%;
-  height:6px;
-  accent-color:#d6b15e;
-}
-
-.calc-range::-webkit-slider-runnable-track{
-  height:6px;
-  background:#3a3f47;
-  border-radius:6px;
-}
-
-.calc-range::-webkit-slider-thumb{
-  -webkit-appearance:none;
-  appearance:none;
-  width:18px;
-  height:18px;
-  margin-top:-6px;
-  border-radius:50%;
-  background:#d6b15e;
-  border:2px solid #050b16;
-  cursor:pointer;
-}
-
-.calc-range::-moz-range-track{
-  height:6px;
-  background:#3a3f47;
-  border-radius:6px;
-}
-
-.calc-range::-moz-range-thumb{
-  width:18px;
-  height:18px;
-  border-radius:50%;
-  background:#d6b15e;
-  border:2px solid #050b16;
-  cursor:pointer;
+:root{
+  --bg:#050b16;
+  --panel:#071827;
+  --muted:#95a6b9;
+  --text:#e6eef7;
+  --gold:#d6b15e;
+  --gold-soft:#f1d48a;
+  --border:rgba(214,177,94,.35);
 }
 </style>
 </head>
-
 <body>
-<div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
+
+ <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
@@ -426,83 +552,110 @@ function onProjectChange(v){
 </script>
 <nav class="top-nav">
   <div class="nav-container">
-    <a href="index-ru.html" class="logo">NoctAI™</a>
+    <a href="index.html" class="logo">NoctAI™</a>
 
     <div class="nav-right">
   <div class="nav-links">
-    <a href="how_it_works-ru.html">How it works</a>
+    <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
-    <a href="projects-ru.html">Projects</a>
+    <a href="projects.html">Projects</a>
   </div>
 
   <div class="lang-switch">
-    <a href="privacy.html" class="active">EN</a>
+    <a href="data-processing.html" class="active">EN</a>
 	-
-    <a href="privacy-ru.html">RU</a>
+    <a href="data-processing-ru.html">RU</a>
   </div>
 </div>
 
   </div>
 </nav>
 
-<div class="container">
-  <h1>Privacy Policy</h1>
 
-  <div class="section">
-    <h2>General Provisions</h2>
-    <p>
-      NoctAI respects user privacy and processes personal data exclusively
-	  for limited investment access and internal verification purposes.
-    </p>
-  </div>
 
-  <div class="section">
-    <h2>Information collection</h2>
-    <p>
-      We may collect email addresses, transaction data (TXID), and information
-	  voluntarily provided by the user when requesting access or investment.
-    </p>
-  </div>
+<main class="container">
 
-  <div class="section">
-    <h2>Use of data</h2>
-    <p>
-      All data is used solely for investor identification, shareholding, and
-	  compliance with internal control and accountability procedures.
-    </p>
-  </div>
+<h2>Data Processing Notice</h2>
 
-  <div class="section">
-    <h2>Transfer to third parties</h2>
-    <p>
-      Data is not transferred to third parties, except in cases required by
-	  applicable law or internal control requirements.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Safety</h2>
-    <p>
-      We implement administrative and technical measures to protect data.
-	  Access to information is limited and provided on a need-to-know basis.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Lack of a public offer</h2>
-    <p>
-      This website and the information contained herein do not constitute a public investment offer.
-	  Any participation is based on the investor's individual decision.
-    </p>
-  </div>
-
-  <div class="section">
-    <p style="font-size:13px; color:var(--muted); font-style:italic;">
-      This policy applies exclusively to private, permission-based access and may be updated without prior public notice.
-    </p>
-  </div>
-
+<div class="panel">
+<p>
+This notice explains how limited user data is handled within the NoctAI platform.
+</p>
 </div>
+
+<br/>
+<h4>1. Scope of Data Collection</h4>
+<div class="panel">
+<p>
+NoctAI collects only the minimum information required to facilitate participation and operational communication. This may include:
+</p>
+<ul>
+<li>an email address provided by the user;</li>
+<li>transaction identifiers (TxID) submitted for verification purposes;</li>
+<li>technical metadata generated during platform interaction.</li>
+</ul>
+<p>
+No sensitive personal data or identity documents are requested or processed.
+</p>
+</div>
+
+<br/>
+<h4>2. Purpose of Processing</h4>
+<div class="panel">
+<p>
+The collected data is used solely for the following purposes:
+</p>
+<ul>
+<li>verification of submitted transactions;</li>
+<li>confirmation and fixation of participation records;</li>
+<li>communication related to platform activity and participation status.</li>
+</ul>
+<p>
+Data is not used for marketing, profiling, or unsolicited communications.
+</p>
+</div>
+
+<br/>
+<h4>3. Data Storage and Access</h4>
+<div class="panel">
+<p>
+User-provided data is stored in a controlled environment and accessed only by authorized personnel for operational purposes.
+</p>
+<p>
+NoctAI does not sell, rent, or disclose user data to third parties, except where required by applicable law.
+</p>
+</div>
+
+<br/>
+<h4>4. User Responsibility</h4>
+<div class="panel">
+<p>
+Users provide information voluntarily and confirm that the submitted data is accurate and relevant.
+</p>
+<p>
+NoctAI is not responsible for incorrect or incomplete information provided by users.
+</p>
+</div>
+
+<br/>
+<h4>5. No Data Guarantees</h4>
+<div class="panel">
+<p>
+While reasonable technical and organizational measures are applied, NoctAI does not guarantee absolute data security and shall not be held liable for circumstances beyond its reasonable control.
+</p>
+</div>
+
+<br/>
+<h4>6. Acknowledgement</h4>
+<div class="panel">
+<p>
+By submitting information through the platform, users acknowledge and accept the terms of this Data Processing Notice.
+</p>
+</div>
+
+</main>
+
+
 
 <footer class="site-footer">
   <div class="footer-container">
@@ -540,6 +693,9 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
+
+
 
 </body>
 </html>

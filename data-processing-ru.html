@@ -1,61 +1,47 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>What Is NOCTAI</title>
+<title>NoctAI,VIP — Платформа долевого участия</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 :root{
-  --bg:#050b16;
-  --panel:#071827;
-  --text:#e6eef7;
-  --muted:#9fb1c6;
-  --gold:#d6b15e;
-  --border:rgba(214,177,94,.35);
+--bg:#0a0d12;
+--panel:#11161d;
+--text:#e8eaf0;
+--muted:#9aa3b2;
+--gold:#c9a24d;
+--gold-soft:#8f7a3a;
+--border:#1e2430;
+}
 *{box-sizing:border-box}
 body{
-  margin:0;
-  background:radial-gradient(1200px 600px at 50% -200px,#0b2238 0%,#050b16 55%);
-  color:var(--text);
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+background:radial-gradient(1200px 600px at 20% -10%,#111826 0%,var(--bg) 55%);
+color:var(--text);
+line-height:1.65;
 }
 header{padding:56px 20px;border-bottom:1px solid var(--border)}
-
-.container{
-  max-width:960px;
-  margin:90px auto;
-  padding:0 20px;
-}
-h1{
-  font-size:36px;
-  margin-bottom:20px;
-}
-h2{
-  font-size:22px;
-  margin-top:50px;
-  margin-bottom:14px;
-}
-p{
-  color:var(--muted);
-  line-height:1.7;
-  margin-bottom:16px;
-}
-ul{
-  padding-left:18px;
-  color:var(--muted);
-}
-li{margin-bottom:8px}
-hr{
-  border:none;
-  border-top:1px solid var(--border);
-  margin:48px 0;
-}
-blockquote{
-  margin:40px 0;
-  padding-left:18px;
-  border-left:3px solid var(--gold);
-  color:var(--text);
-  font-size:18px;
+.container{max-width:1120px;margin:0 auto}
+h1{font-size:40px;margin:0 0 12px}
+h2{font-size:26px;margin:64px 0 18px}
+h3{font-size:18px;margin:0 0 10px}
+p{margin:0 0 14px;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:42px}
+.badge{
+display:inline-block;
+padding-left:14px;
+border:none;
+border-left:2px solid var(--gold-soft);
+border-radius:0;
+font-size:13px;
+color:var(--gold);
+margin-bottom:18px;
+letter-spacing:0.16em;
+text-transform:uppercase;
+opacity:0.85;
 }
 .cta-primary{
 display:inline-block;
@@ -90,6 +76,7 @@ box-shadow:0 0 0 1px rgba(201,162,77,.05) inset
 input[type=range]{width:100%;accent-color:var(--gold)}
 footer{margin-top:96px;padding:36px 20px;border-top:1px solid var(--border);color:var(--muted);font-size:13px}
 @media(max-width:900px){.hero,.grid,.calculator{grid-template-columns:1fr}}
+</style>
 <style>
 .top-nav{
 position:sticky;
@@ -434,15 +421,15 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
-</style>
 </head>
 <body>
-<div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
+
+ <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -465,13 +452,14 @@ border-color:var(--gold);
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
 
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -483,7 +471,7 @@ The calculator is recalculated depending on the selected project.  </div>
 
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -494,20 +482,20 @@ The calculator is recalculated depending on the selected project.  </div>
 
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
 
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
@@ -566,128 +554,133 @@ function onProjectChange(v){
 </script>
 <nav class="top-nav">
   <div class="nav-container">
-    <a href="index.html" class="logo">NoctAI™</a>
+    <a href="index-ru.html" class="logo">NoctAI™</a>
 
     <div class="nav-right">
   <div class="nav-links">
-    <a href="how_it_works.html">How it works</a>
-    <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
-    <a href="projects.html">Projects</a>
+    <a href="how_it_works-ru.html">Как это работает</a>
+    <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+    <a href="projects-ru.html">Проекты</a>
   </div>
 
   <div class="lang-switch">
-    <a href="platform_overview.html" class="active">EN</a>
+    <a href="data-processing-ru.html" class="active">RU</a>
 	-
-    <a href="platform_overview-ru.html">RU</a>
+    <a href="data-processing.html">EN</a>
   </div>
 </div>
 
   </div>
 </nav>
-<div class="container">
 
-<h1>What Is NOCTAI</h1>
 
-<p><strong>NOCTAI</strong> is a digital platform providing access to opportunities, projects, and analytical context beyond public markets.</p>
 
-<p>The platform is designed for people who are not looking for noise, marketing, or promises, but for a <strong>clear and structured environment for progress, growth, and participation</strong> — at their own level.</p>
+<main class="container">
 
-<p>NOCTAI is not an investment fund, a broker, or a public marketplace. It is an <strong>interaction environment</strong> in which opportunities are unlocked gradually, depending on readiness, profile, and level of participation.</p>
+<h2>Уведомление об обработке данных</h2>
 
-<hr>
-
-<h2>How the Platform Works</h2>
-
-<p>NOCTAI does not operate with a single, uniform entry point for everyone.</p>
-
-<p>The platform is built on the principle of <strong>access levels</strong>:</p>
-
-<ul>
-<li>a base level that is open to any user</li>
-<li>expanded capabilities that become available as one progresses within the system</li>
-<li>restricted sections reserved for participants with a verified profile</li>
-</ul>
-
-<p>This means that:</p>
-
-<ul>
-<li>anyone can start</li>
-<li>access is not purchased — it is confirmed</li>
-<li>each participant sees only the scope of information and opportunities that corresponds to their current status</li>
-</ul>
-
-<hr>
-
-<h2>What NOCTAI Provides</h2>
-
-<p>NOCTAI does not offer guarantees or promises. It provides the <strong>ability to operate within a well‑structured environment</strong>.</p>
-
-<ul>
-<li>analytical context and structured information</li>
-<li>an understanding of how private projects and closed markets function</li>
-<li>access to projects and interaction in a controlled format</li>
-<li>clear rules without chaos or random decision‑making</li>
-</ul>
-
-<p>For some, NOCTAI is an entry point and a learning environment.<br>
-For others, it is a working space and a selection tool.<br>
-For a third group, it is a closed interaction environment.</p>
-
-<hr>
-
-<h2>Platform Principle</h2>
-
-<p>NOCTAI does not divide people into “poor” and “wealthy.” The platform distinguishes <strong>levels of responsibility and access</strong>.</p>
-
-<ul>
-<li>status is not declared — it is formed through actions</li>
-<li>access is not sold — it is granted</li>
-<li>participation is possible only by adhering to the rules of the environment</li>
-</ul>
-
-<hr>
-
-<h2>Important to Understand</h2>
-
-<ul>
-<li>NOCTAI does not promise returns</li>
-<li>does not impose participation</li>
-<li>does not disclose everything at once</li>
-<li>does not operate under the public logic of “more is better”</li>
-</ul>
-
-<p>The platform is built for those who understand that <strong>access to opportunities always begins with trust and discipline</strong>.</p>
-
-<blockquote>
-NOCTAI is a platform where anyone can start,<br>
-but not everyone chooses to reach the next level.
-</blockquote>
-
+<div class="panel">
+<p>
+Настоящее уведомление объясняет, каким образом в рамках платформы NoctAI осуществляется обработка ограниченного объёма пользовательских данных.
+</p>
 </div>
+
+<br/>
+<h4>1. Объём собираемых данных</h4>
+<div class="panel">
+<p>
+NoctAI собирает исключительно минимальный объём информации, необходимый для обеспечения участия и операционного взаимодействия. Такая информация может включать:
+</p>
+<ul>
+<li>адрес электронной почты, предоставленный пользователем;</li>
+<li>идентификаторы транзакций (TxID), передаваемые для целей проверки;</li>
+<li>технические метаданные, формируемые в процессе взаимодействия с платформой.</li>
+</ul>
+<p>
+Чувствительные персональные данные и документы, удостоверяющие личность, не запрашиваются и не обрабатываются.
+</p>
+</div>
+
+<br/>
+<h4>2. Цели обработки</h4>
+<div class="panel">
+<p>
+Собранные данные используются исключительно для следующих целей:
+</p>
+<ul>
+<li>проверка предоставленных транзакций;</li>
+<li>подтверждение и фиксация факта участия;</li>
+<li>коммуникация, связанная с деятельностью платформы и статусом участия.</li>
+</ul>
+<p>
+Данные не используются в маркетинговых целях, для профилирования или рассылки нежелательных сообщений.
+</p>
+</div>
+
+<br/>
+<h4>3. Хранение данных и доступ</h4>
+<div class="panel">
+<p>
+Данные, предоставленные пользователями, хранятся в контролируемой среде и доступны исключительно уполномоченным лицам в операционных целях.
+</p>
+<p>
+NoctAI не продаёт, не передаёт в аренду и не раскрывает пользовательские данные третьим лицам, за исключением случаев, прямо предусмотренных применимым законодательством.
+</p>
+</div>
+
+<br/>
+<h4>4. Ответственность пользователя</h4>
+<div class="panel">
+<p>
+Пользователь предоставляет информацию добровольно и подтверждает, что переданные данные являются точными и актуальными.
+</p>
+<p>
+NoctAI не несёт ответственности за некорректную, неполную или недостоверную информацию, предоставленную пользователем.
+</p>
+</div>
+
+<br/>
+<h4>5. Отсутствие гарантий в отношении данных</h4>
+<div class="panel">
+<p>
+Несмотря на применение разумных технических и организационных мер, NoctAI не гарантирует абсолютную безопасность данных и не несёт ответственности за обстоятельства, находящиеся вне разумного контроля платформы.
+</p>
+</div>
+
+<br/>
+<h4>6. Подтверждение</h4>
+<div class="panel">
+<p>
+Передавая информацию через платформу, пользователь подтверждает, что ознакомился и принимает условия настоящего уведомления об обработке данных.
+</p>
+</div>
+
+</main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
   <strong>NoctAI™</strong><br>
 <span style="font-size:13px;color:#9aa3b2;">
-A platform for equity participation in real projects.
+Платформа долевого участия в реальных проектах.
 </span>
 
 </div>
     <div>
 <strong class="footer-heading">
-  LEGAL & GOVERNANCE
+  ЮРИДИКА И КОРПОРАТИВНОЕ УПРАВЛЕНИЕ
 </strong>
-      <a href="terms.html">Terms</a><br>
-      <a href="risk-disclosure.html">Risk Disclosure</a><br>
-      <a href="data-processing.html">Data Processing</a><br>
-	  <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Условия</a><br>
+      <a href="risk-disclosure.html">Раскрытие рисков</a><br>
+      <a href="data-processing.html">Обработка данных</a><br>
+	  <a href="privacy.html">Конфиденциальность</a>
     </div>
 	<div>
 <strong class="footer-heading">
-    Platform
+    ПЛАТФОРМА
   </strong>
-      <a href="overview.html">Platform Overview</a><br>
-      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+      <a href="overview.html">Обзор платформы</a><br>
+      <a href="oversight_governance.html">Надзор и корпоративное управление</a>
     </div>
 <div class="footer-right">
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener" style="color:var(--muted)">
@@ -700,5 +693,6 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 </body>
 </html>

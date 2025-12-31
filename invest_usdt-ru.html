@@ -274,27 +274,40 @@ border-radius:999px;
 </style>
 <style>
 .site-footer{
-  border-top:1px solid var(--border);
-  margin-top:80px;
-  padding:36px 20px;
+margin-top:100px;
+border-top:1px solid var(--border);
+background:#0a0d12;
 }
 .footer-container{
-  max-width:1120px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:1.2fr 1fr 1fr;
-  gap:28px;
-  color:var(--muted);
-  font-size:14px;
+max-width:1120px;
+margin:0 auto;
+padding:40px 20px;
+display:grid;
+  grid-template-columns: 1fr 0.8fr 0.8fr 1fr;
+  gap: 28px;
+  align-items: start;
+color:var(--muted);
+font-size:14px;
 }
-.site-footer a{
-  color:var(--gold);
-  text-decoration:none;
+.footer-heading {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em; 
+  text-transform: uppercase;
+  color: var(--muted); 
 }
-.site-footer a:hover{
-  text-decoration:underline;
+.footer-container a{
+color:var(--gold);
+text-decoration:none;
 }
-
+.footer-container a:hover{
+text-decoration:underline;
+}
+.footer-right{
+  text-align:right;
+}
 </style>
 
 
@@ -574,6 +587,11 @@ function onProjectChange(v){
     <p>Ваша доля: <strong><span id="eq">0.000003%</span></strong></p>
     <p>Доход при 50% рынка: <strong>$<span id="i50">16.67</span> / мес</strong></p>
     <p>Доход при 100% рынка: <strong>$<span id="i100">33.33</span> / мес</strong></p>
+	<br/>
+	<h2 style="margin-top:30px">Для крупных инвесторов</h2>
+    <p>Инвестиции от <strong>$300,000</strong> рассматриваются индивидуально.</p>
+    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Large%20Investment%20Inquiry&body=Здравствуйте,%0A%0AЯ%20хочу%20обсудить%20крупную%20инвестицию.%0A%0AСпасибо." style="color:var(--gold)">Связаться с командой</a></p>
+  
   </div>
 
   <div class="panel">
@@ -582,26 +600,40 @@ function onProjectChange(v){
     Это не криптоинвестиция, а форма фиксации долей.
   </p>
     <h2>Оплата USDT</h2>
-    <p><strong>Сеть:</strong> TRC20</p>
+	
+<label style="display:flex;gap:10px;cursor:pointer;font-size:13px;color:var(--muted)">
+  <input type="checkbox" id="riskAgree">
+  <span>
+    Я подтверждаю, что ознакомился с
+    <a href="terms-ru.html" target="_blank" style="color:var(--gold)">Условиями платформы</a>,
+    <a href="risk-disclosure-ru.html" target="_blank" style="color:var(--gold)">Описанием рисков</a>,
+	<a href="data-processing-ru.html" target="_blank" style="color:var(--gold)">Обработка данных</a>
+    и понимаю, что участие связано с финансовыми рисками
+    и не предполагает гарантированной доходности.
+  </span>
+</label>
+
     
-<p><strong>Адрес:</strong></p>
-<div class="address-box" onclick="copyAddress()">
-  <div class="address-text" id="usdtAddress">
-    TYzS8upYw57S5wqHkDDxhsxcwoWE7tYALU
+<div id="usdtAddressBlock" style="display:none">
+  <div class="address-box" id="walletBox">
+    <span class="address-text" id="walletAddress">
+      TyzS8upYw575SwqHkDDxhsxcwoWE7tYALU
+    </span>
   </div>
-  <svg class="copy-icon" viewBox="0 0 24 24">
-    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/>
-  </svg>
+      <p><strong>Сеть:</strong> TRC20</p>
+
+  <div class="copy-status" id="copyStatus">Адрес скопирован</div>
+
+  <a id="sendBtn"
+   class="cta-primary"
+   style="opacity:.5;pointer-events:none"
+   href="#"
+   onclick="openConfirm()">
+   Я отправил USDT
+</a>
+
 </div>
-<div class="copy-status" id="copyStatus">Адрес скопирован</div>
-
-    <p>После отправки средств нажмите кнопку ниже.</p>
-    <a class="cta-primary" href="#" onclick="openConfirm()">Я отправил USDT</a>
-
-    <h2 style="margin-top:30px">Для крупных инвесторов</h2>
-    <p>Инвестиции от <strong>$300,000</strong> рассматриваются индивидуально.</p>
-    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Large%20Investment%20Inquiry&body=Здравствуйте,%0A%0AЯ%20хочу%20обсудить%20крупную%20инвестицию.%0A%0AСпасибо." style="color:var(--gold)">Связаться с командой</a></p>
-  </div>
+   </div>
 
 </main>
 
@@ -629,25 +661,33 @@ function onProjectChange(v){
     </p>
   </div>
 </div>
-
-
 <footer class="site-footer">
   <div class="footer-container">
     <div>
-      <strong>NoctAI™</strong><br>
-      Платформа долевого участия в реальных проектах.<br>
-      <span style="font-size:13px;color:#9aa3b2;">
-        Централизованное управление · Ручной допуск · Permission‑based access
-      </span>
-    </div>
+  <strong>NoctAI™</strong><br>
+<span style="font-size:13px;color:#9aa3b2;">
+Платформа долевого участия в реальных проектах.
+</span>
+
+</div>
     <div>
-      <a href="terms-ru.html">Условия</a><br>
-      <a href="privacy-ru.html">Политика конфиденциальности</a><br>
-      <a href="oversight_governance-ru.html">Oversight &amp; Governance</a><br>
-      <a href="overview-ru.html">Обзор платформы</a>
+<strong class="footer-heading">
+  ЮРИДИКА И КОРПОРАТИВНОЕ УПРАВЛЕНИЕ
+</strong>
+      <a href="terms.html">Условия</a><br>
+      <a href="risk-disclosure.html">Раскрытие рисков</a><br>
+      <a href="data-processing.html">Обработка данных</a><br>
+	  <a href="privacy.html">Конфиденциальность</a>
     </div>
-    <div>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
+	<div>
+<strong class="footer-heading">
+    ПЛАТФОРМА
+  </strong>
+      <a href="overview.html">Обзор платформы</a><br>
+      <a href="oversight_governance.html">Надзор и корпоративное управление</a>
+    </div>
+<div class="footer-right">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener" style="color:var(--muted)">
         noctai.vip@proton.me
       </a><br>
       <span style="font-size:13px;">
@@ -780,7 +820,6 @@ window.open(gmailUrl, '_blank');
 
 
 
-
 <div id="onsiteConfirm" class="modal">
   <div class="panel" style="max-width:560px;margin:80px auto;text-align:center;position:relative">
 
@@ -815,18 +854,6 @@ function closeOnsiteConfirm(){
 }
 </script>
 
-
-<script>
-function copyAddress(){
-  const addr = document.getElementById('usdtAddress').innerText.trim();
-  navigator.clipboard.writeText(addr).then(()=>{
-    const s=document.getElementById('copyStatus');
-    s.style.display='block';
-    setTimeout(()=>{s.style.display='none';},2000);
-  });
-}
-</script>
-
 <script>
 if (!window.__calculatorModuleLoaded) {
   window.__calculatorModuleLoaded = true;
@@ -839,7 +866,39 @@ if (!window.__calculatorModuleLoaded) {
     });
 }
 </script>
+<script>
+const agree = document.getElementById('riskAgree');
+const addr = document.getElementById('usdtAddressBlock');
+const sendBtn = document.getElementById('sendBtn');
 
+agree.addEventListener('change', ()=>{
+  if(agree.checked){
+    addr.style.display = 'block';
+    sendBtn.style.opacity = '1';
+    sendBtn.style.pointerEvents = 'auto';
+  } else {
+    addr.style.display = 'none';
+    sendBtn.style.opacity = '.5';
+    sendBtn.style.pointerEvents = 'none';
+  }
+});
+const walletBox = document.getElementById('walletBox');
+const walletAddress = document.getElementById('walletAddress');
+const copyStatus = document.getElementById('copyStatus');
+
+if (walletBox && walletAddress) {
+  walletBox.addEventListener('click', () => {
+    navigator.clipboard.writeText(walletAddress.innerText.trim())
+      .then(() => {
+        copyStatus.style.display = 'block';
+        setTimeout(() => {
+          copyStatus.style.display = 'none';
+        }, 2000);
+      });
+  });
+}
+
+</script>
 </body>
 
 </html>

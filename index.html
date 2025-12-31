@@ -140,10 +140,20 @@ max-width:1120px;
 margin:0 auto;
 padding:40px 20px;
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
+  grid-template-columns: 1fr 0.8fr 0.8fr 1fr;
+  gap: 28px;
+  align-items: start;
 color:var(--muted);
 font-size:14px;
+}
+.footer-heading {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em; 
+  text-transform: uppercase;
+  color: var(--muted); 
 }
 .footer-container a{
 color:var(--gold);
@@ -151,6 +161,9 @@ text-decoration:none;
 }
 .footer-container a:hover{
 text-decoration:underline;
+}
+.footer-right{
+  text-align:right;
 }
 @media(max-width:900px){
 .footer-container{grid-template-columns:1fr}
@@ -644,6 +657,26 @@ Additionally, each nested <strong>$1</strong> provides
 through an open and public draw after achieving key indicators.</p>
 </div>
 
+<h2>Important to understand</h2>
+<div class="panel">
+<p>
+A minimum entry of $1 does not mean that each unit of participation is processed as a separate transaction.
+</p>
+<p>
+To optimize operational and network costs, participation may be <strong>aggregated within the platform</strong> 
+and executed as a single transactional action according to an established operational cycle.
+</p>
+<p>
+The platform does not encourage the fragmentation of participation into multiple micro-transactions.
+Transaction fees and technical costs are accounted for <strong>at the moment of actual transaction execution</strong> 
+and are not subsidized by the platform.
+</p>
+<p>
+As a result, participation is recorded at the level of commitments,
+while transactional execution is carried out <strong>in accordance with NOCTAI’s internal rules and procedures.</strong>
+</p>
+</div>
+
 <h2>Open drawing for a 3% share of the project</h2>
 <div class="panel">
 <p>After reaching <strong>50% of the American transport logistics market</strong>
@@ -664,19 +697,30 @@ We are holding a public drawing for a <strong>3% share of the project</strong>.<
 <footer class="site-footer">
   <div class="footer-container">
     <div>
-      <strong>NoctAI™</strong><br>
-A platform for equity participation in real projects.<br>
-      <span style="font-size:13px;color:#9aa3b2;">
-Centralized management · Manual access · Permission-based access      </span>
-    </div>
+  <strong>NoctAI™</strong><br>
+<span style="font-size:13px;color:#9aa3b2;">
+A platform for equity participation in real projects.
+</span>
+
+</div>
     <div>
+<strong class="footer-heading">
+  LEGAL & GOVERNANCE
+</strong>
       <a href="terms.html">Terms</a><br>
-      <a href="privacy.html">Privacy Policy</a><br>
-      <a href="oversight_governance.html">Oversight &amp; Governance</a><br>
-	  <a href="overview.html">Platform Overview</a>
+      <a href="risk-disclosure.html">Risk Disclosure</a><br>
+      <a href="data-processing.html">Data Processing</a><br>
+	  <a href="privacy.html">Privacy</a>
     </div>
-    <div>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
+	<div>
+<strong class="footer-heading">
+    Platform
+  </strong>
+      <a href="overview.html">Platform Overview</a><br>
+      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+    </div>
+<div class="footer-right">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener" style="color:var(--muted)">
         noctai.vip@proton.me
       </a><br>
       <span style="font-size:13px;">

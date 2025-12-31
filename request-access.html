@@ -8,10 +8,10 @@
 <style>
 :root{
   --bg:#0b0e11;
-  --panel:#0f1418;
   --text:#e6e6e6;
   --muted:#9aa0a6;
   --line:#b89b5e;
+  --max:1280px;
 }
 *{box-sizing:border-box}
 body{
@@ -27,9 +27,11 @@ header{
   padding:22px 64px;
   border-bottom:1px solid rgba(184,155,94,.25);
 }
-header .logo {
+header .logo{
   letter-spacing: 0.35em;
   font-size: 13px;
+  color: #e6e6e6;
+  text-decoration: none;
 }
 nav a{
   margin-left:28px;
@@ -160,36 +162,68 @@ hr{
   max-width:760px;
 }
 
-footer{
-  border-top:1px solid rgba(184,155,94,.25);
-  padding:28px 64px;
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  font-size:11px;
-  color:var(--muted);
+.site-footer {
+  border-top: 1px solid rgba(255, 200, 80, 0.15);
+  padding: 42px 0 32px;
 }
-footer .center{text-align:center}
-footer a{
-  color:var(--muted);
-  text-decoration:none;
-  margin:0 6px;
+.container {
+    max-width: 1200px; /* или твой размер */
+    margin: 0 auto;
+    padding: 0 24px;
 }
-footer a:hover{color:var(--text)}
-.primary-access-action {
-  display: inline-block;
-  margin-top: 16px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #e3c27a;
-  text-decoration: none;          /* КРИТИЧНО */
-  border-bottom: 1px solid rgba(227,194,122,0.35);
-  transition: color 0.2s ease, border-color 0.2s ease;
+.footer-grid {
+  max-width: var(--max);   
+  margin: 0 auto;
+  padding: 0 64px;    
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr 0.9fr 1fr;
+  gap: 22px;
+  align-items: flex-start;
 }
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+.footer-title {
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 8px;
+}
+.footer-links a {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+  color: rgba(255,255,255,0.85);
+}
+
+.footer-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.6);
+}
+
+.footer-meta {
+  text-align: right;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+.footer-meta a {
+  color: rgba(255,255,255,0.5);
+}
+
 
 .primary-access-action:hover {
   color: #f1d99a;
   border-bottom-color: rgba(241,217,154,0.8);
-  text-decoration: none;          /* КРИТИЧНО */
+  text-decoration: none;      
 }
 .primary-access-action::after {
   display: none !important;
@@ -227,7 +261,7 @@ footer a:hover{color:var(--text)}
   <a href="control.html">HOME</a>
   <a href="active-dossiers.html">ACTIVE DOSSIERS</a>
   <a href="briefings.html">BRIEFINGS</a>
-  <a href="access-protocol.html">ПРОТОКОЛ ДОСТУПА</a>
+  <a href="access-protocol.html">ACCESS PROTOCOL</a>
   <a href="request-access.html">REQUEST ACCESS</a>
 
   <span class="lang-switch">
@@ -330,22 +364,43 @@ No materials are shared, no discussions are initiated, and no commitments are ma
 </p>
 </section>
 
-<footer>
-  <div>
-    NOCTAI is a private strategic investment intelligence platform.<br/>
-    Controlled disclosure. No public solicitation.
-  </div>
-  <div class="center">
-  	<a href="overview.html">Platform Overview</a> ·
-    <a href="terms.html">Terms</a> ·
-    <a href="private-privacy.html">Privacy</a> ·
-    <a href="nda-framework.html">NDA Framework</a> ·
-    <a href="contact.html">Contact</a>
-  </div>
-  <div style="text-align:right;">
-    System status: operational<br/>
-    © NOCTAI
-  </div>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col footer-brand">
+      <div class="footer-title">NoctAI™</div>
+      <div class="footer-text">
+        Private strategic investment intelligence platform.<br>
+        Controlled disclosure. No public solicitation.
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">LEGAL & GOVERNANCE</div>
+      <div class="footer-links">
+        <a href="terms.html">Terms</a>
+        <a href="risk-disclosure.html">Risk Disclosure</a>
+        <a href="data-processing.html">Data Processing</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">PLATFORM</div>
+      <div class="footer-links">
+        <a href="overview.html">Platform Overview</a>
+        <a href="oversight_governance.html">Oversight & Governance</a>
+        <a href="nda-framework.html">NDA Framework</a>
+      </div>
+    </div>
+
+    <div class="footer-col footer-meta">
+      <div class="footer-text">System status: operational</div>
+      <div class="footer-text">
+        <a href="mailto:noctai.vip@proton.me">noctai.vip@proton.me</a>
+      </div>
+      <div class="footer-text">© 2025 NoctAI™</div>
+    </div>
+</div>
 </footer>
 <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">

@@ -124,7 +124,7 @@ h1{font-size:32px;margin-bottom:30px}
 .card h3{margin-top:0}
 .status{font-size:13px;color:#d4af37;margin-bottom:12px}
 .modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center}
-.modal-content{background:#0b1220;border:1px solid #3a2f1a;border-radius:16px;padding:32px;max-width:520px;width:90%;position:relative}
+.modal-content{background:#0b1220;border:1px solid #3a2f1a;border-radius:16px;padding:32px;max-width:760px;width:90%;position:relative}
 .close{position:absolute;top:16px;right:20px;font-size:20px;}
 .metric{margin:8px 0}
 footer{margin-top:40px;font-size:13px;color:#8a8f9c}
@@ -311,25 +311,39 @@ border-radius:999px;
 
 <style>
 .site-footer{
-  border-top:1px solid var(--border);
-  margin-top:80px;
-  padding:36px 20px;
+margin-top:100px;
+border-top:1px solid var(--border);
+background:#0a0d12;
 }
 .footer-container{
-  max-width:1120px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:1.2fr 1fr 1fr;
-  gap:28px;
-  color:var(--muted);
-  font-size:14px;
+max-width:1120px;
+margin:0 auto;
+padding:40px 20px;
+display:grid;
+  grid-template-columns: 1fr 0.8fr 0.8fr 1fr;
+  gap: 28px;
+  align-items: start;
+color:var(--muted);
+font-size:14px;
 }
-.site-footer a{
-  color:var(--gold);
-  text-decoration:none;
+.footer-heading {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em; 
+  text-transform: uppercase;
+  color: var(--muted); 
 }
-.site-footer a:hover{
-  text-decoration:underline;
+.footer-container a{
+color:var(--gold);
+text-decoration:none;
+}
+.footer-container a:hover{
+text-decoration:underline;
+}
+.footer-right{
+  text-align:right;
 }
 
 .project {
@@ -710,20 +724,30 @@ Private Projects не являются публичной инвестицион
 <footer class="site-footer">
   <div class="footer-container">
     <div>
-      <strong>NoctAI™</strong><br>
-      Платформа долевого участия в реальных проектах.<br>
-      <span style="font-size:13px;color:#9aa3b2;">
-        Централизованное управление · Ручной допуск · Permission‑based access
-      </span>
-    </div>
+  <strong>NoctAI™</strong><br>
+<span style="font-size:13px;color:#9aa3b2;">
+Платформа долевого участия в реальных проектах.
+</span>
+
+</div>
     <div>
-      <a href="terms-ru.html">Условия</a><br>
-      <a href="privacy-ru.html">Политика конфиденциальности</a><br>
-      <a href="oversight_governance-ru.html">Oversight &amp; Governance</a><br>
-      <a href="overview-ru.html">Обзор платформы</a>
+<strong class="footer-heading">
+  ЮРИДИКА И КОРПОРАТИВНОЕ УПРАВЛЕНИЕ
+</strong>
+      <a href="terms.html">Условия</a><br>
+      <a href="risk-disclosure.html">Раскрытие рисков</a><br>
+      <a href="data-processing.html">Обработка данных</a><br>
+	  <a href="privacy.html">Конфиденциальность</a>
     </div>
-    <div>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener">
+	<div>
+<strong class="footer-heading">
+    ПЛАТФОРМА
+  </strong>
+      <a href="overview.html">Обзор платформы</a><br>
+      <a href="oversight_governance.html">Надзор и корпоративное управление</a>
+    </div>
+<div class="footer-right">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener" style="color:var(--muted)">
         noctai.vip@proton.me
       </a><br>
       <span style="font-size:13px;">
@@ -746,42 +770,42 @@ let body=document.getElementById('modal-body');
 if(type==='logistics'){ body.innerHTML=`
 <h2>AI Dispatcher <span style="font-weight:400;color:#9ca3af">+ Marketplace</span></h2>
 
-<div class="metric"><b>Market Failure</b></div>
-<p>The US logistics market (~$940B annually) is structurally broken by broker dominance, fraud, double brokering, and lack of enforcement.</p>
+<div class="metric"><b>Рыночный сбой</b></div>
+<p>Рынок логистики США (≈ 940 млрд долларов в год) структурно дисфункционален из-за доминирования брокеров, мошенничества, двойного брокериджа и отсутствия эффективного принуждения к исполнению обязательств.</p>
 
-<div class="metric"><b>Core Breakthrough</b></div>
-<p>First broker-free logistics marketplace in the US built on a patented enforcement architecture that makes intermediary bypass technically impossible.</p>
+<div class="metric"><b>Ключевой прорыв</b></div>
+<p>Первая в США логистическая маркетплейс-платформа без брокеров, построенная на запатентованной архитектуре принудительного исполнения, которая делает технический обход посредников невозможным.</p>
 
-<div class="metric"><b>Why Now</b></div>
-<p>Market downturn (2023–2025), carrier bankruptcies, broker distrust, and regulatory pressure create a unique adoption window for a new national logistics standard.</p>
+<div class="metric"><b>Почему сейчас</b></div>
+<p>Рыночный спад (2023–2025), банкротства перевозчиков, утрата доверия к брокерам и усиление регуляторного давления формируют уникальное окно для принятия нового национального логистического стандарта.</p>
 
-<div class="metric"><b>Scale Signal</b></div>
-<p>Addressable market: ~1.2M active OTR trucks in the US. Even partial penetration produces infrastructure-scale economics.</p>
+<div class="metric"><b>Сигнал масштаба</b></div>
+<p>Доступный рынок — около 1,2 млн активных OTR-траков в США. Даже частичное проникновение обеспечивает экономику инфраструктурного масштаба.</p>
 
-<div class="metric"><b>Monetization Logic</b></div>
-<p>$180/month subscription per truck. Additional upside from marketplace and infrastructure modules (not included in base projections).</p>
+<div class="metric"><b>Логика монетизации</b></div>
+<p>Подписка — 180 долларов США в месяц за один трак. Дополнительный апсайд формируется за счёт маркетплейса и инфраструктурных модулей (не включены в базовые прогнозы).</p>
 
-<div class="metric"><b>Defensibility</b></div>
-<p>Protected by a patent covering device-level enforcement and platform exclusivity. Architecture is legally and technically non-replicable.</p>
+<div class="metric"><b>Защищённость</b></div>
+<p>Защита обеспечена патентом, покрывающим принудительное исполнение на уровне устройств и эксклюзивность платформы. Архитектура юридически и технически невоспроизводима.</p>
 
-<div class="metric"><b>Investment Framing</b></div>
-<p>Capital participation is structured individually. Allocation size, economics, and legal form are defined manually.</p>
+<div class="metric"><b>Инвестиционное структурирование</b></div>
+<p>Участие капитала структурируется индивидуально. Объём аллокации, экономика и юридическая форма определяются в ручном режиме.</p>
 `; }
 if(type==='data'){
 body.innerHTML=`
 <h2>Data Intelligence Asset</h2>
-<div class="metric"><b>Target ROI:</b> 18–24%</div>
-<div class="metric"><b>Capital Requirement:</b> Strategic only</div>
-<div class="metric"><b>Structure:</b> Equity / data-rights hybrid</div>
-<p>Closed analytical asset focused on sector-specific data extraction. Access limited to aligned investors.</p>`;
+<div class="metric"><b>Целевой ROI:</b> 18–24%</div>
+<div class="metric"><b>Требования к капиталу:</b> только стратегическое участие</div>
+<div class="metric"><b>Структура:</b> долевое участие / гибрид с правами на данные</div>
+<p>Закрытый аналитический актив, ориентированный на извлечение отраслевых данных. Доступ предоставляется исключительно инвесторам, соответствующим стратегическим критериям.</p>`;
 }
 if(type==='capital'){
 body.innerHTML=`
 <h2>Capital Structuring Vehicle</h2>
-<div class="metric"><b>Target ROI:</b> Deal-dependent</div>
-<div class="metric"><b>Capital Requirement:</b> By invitation</div>
-<div class="metric"><b>Structure:</b> SPV / bespoke mandate</div>
-<p>Private vehicle for structured capital deployment into non-public opportunities. Terms defined individually.</p>`;
+<div class="metric"><b>Целевой ROI:</b> зависит от конкретной сделки</div>
+<div class="metric"><b>Требования к капиталу:</b> по приглашению</div>
+<div class="metric"><b>Структура:</b> SPV / индивидуальный мандат
+<p>Частная инвестиционная структура для структурированного размещения капитала в непубличные возможности. Условия определяются индивидуально.</p>`;
 }
 document.getElementById('modal').style.display='flex';
 }

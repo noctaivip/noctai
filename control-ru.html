@@ -6,12 +6,12 @@
 <title>NOCTAI — Частная инвестиционная аналитика</title>
 
 <style>
-:root {
-  --bg: #0b0e11;
-  --panel: #0f1418;
-  --text: #e6e6e6;
-  --muted: #9aa0a6;
-  --line: #b89b5e; /* dark gold accent */
+:root{
+  --bg:#0b0e11;
+  --text:#e6e6e6;
+  --muted:#9aa0a6;
+  --line:#b89b5e;
+  --max:1280px;
 }
 
 * { box-sizing: border-box; }
@@ -31,9 +31,11 @@ header {
   border-bottom: 1px solid rgba(184,155,94,0.25);
 }
 
-header .logo {
+header .logo{
   letter-spacing: 0.35em;
   font-size: 13px;
+  color: #e6e6e6;
+  text-decoration: none;
 }
 
 nav a {
@@ -261,33 +263,63 @@ nav a:hover { color: var(--text); }
 
 .access a:hover::after { width: 100%; }
 
-footer {
-  border-top: 1px solid rgba(184,155,94,0.25);
-  padding: 28px 64px;
+.site-footer {
+  border-top: 1px solid rgba(255, 200, 80, 0.15);
+  padding: 42px 0 32px;
+}
+.container {
+    max-width: 1200px; /* или твой размер */
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.footer-grid {
+  max-width: var(--max);   
+  margin: 0 auto;
+  padding: 0 64px;    
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  font-size: 11px;
-  color: var(--muted);
+  grid-template-columns: 1.4fr 0.9fr 0.9fr 1fr;
+  gap: 22px;
+  align-items: flex-start;
 }
-
-footer .center {
-  text-align: center;
+.footer-col {
+  display: flex;
+  flex-direction: column;
 }
-
-footer a {
-  color: var(--muted);
+.footer-title {
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 8px;
+}
+.footer-links a {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.6);
   text-decoration: none;
-  margin: 0 6px;
 }
 
-footer a:hover { color: var(--text); }
-.logo{
-  color:var(--gold);
-  font-weight:700;
-  letter-spacing:.04em;
-  text-decoration:none;
+.footer-links a:hover {
+  opacity: 0.8;
+  color: rgba(255,255,255,0.85);
 }
+
+.footer-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.6);
+}
+
+.footer-meta {
+  text-align: right;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+.footer-meta a {
+  color: rgba(255,255,255,0.5);
+}
+
 
 .logo:hover{
   text-decoration:none;
@@ -375,17 +407,45 @@ footer a:hover { color: var(--text); }
   <p>Окна раскрытия закрываются без уведомления.</p>
   <a href="request-access-ru.html">Запросить доступ →</a>
 </section>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col footer-brand">
+      <div class="footer-title">NoctAI™</div>
+      <div class="footer-text">
+        Частная стратегическая инвестиционная<br>
+		аналитическая платформа.<br>
+        Контролируемое раскрытие. Публичное<br>
+		привлечение не осуществляется.
+      </div>
+    </div>
 
-<footer>
-  <div>NOCTAI — частная платформа стратегической инвестиционной аналитики.<br/>Контролируемое раскрытие. Публичных предложений нет.</div>
-   <div class="center">
-  	<a href="overview-ru.html">Platform Overview</a> ·
-    <a href="terms-ru.html">Terms</a> ·
-    <a href="private-privacy-ru.html">Privacy</a> ·
-    <a href="nda-framework-ru.html">NDA Framework</a> ·
-    <a href="contact-ru.html">Contact</a>
+    <div class="footer-col">
+      <div class="footer-title">ПРАВО И УПРАВЛЕНИЕ</div>
+      <div class="footer-links">
+        <a href="terms-ru.html">Условия</a>
+        <a href="risk-disclosure-ru.html">Раскрытие рисков</a>
+        <a href="data-processing-ru.html">Обработка данных</a>
+        <a href="privacy-ru.html">Конфиденциальность</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">ПЛАТФОРМА</div>
+      <div class="footer-links">
+        <a href="overview-ru.html">Обзор платформы</a>
+        <a href="oversight_governance-ru.html">Надзор и управление</a>
+        <a href="nda-framework-ru.html">Соглашение о конфиденциальности</a>
+      </div>
+    </div>
+
+    <div class="footer-col footer-meta">
+      <div class="footer-text">Статус системы: функционирует</div>
+      <div class="footer-text">
+        <a href="mailto:noctai.vip@proton.me">noctai.vip@proton.me</a>
+      </div>
+      <div class="footer-text">© 2025 NoctAI™</div>
+    </div>
   </div>
-  <div style="text-align:right;">Статус системы: работает<br/>Последний структурный обзор: август 2025<br/>© NOCTAI</div>
 </footer>
 
 </body>
