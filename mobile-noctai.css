@@ -11,7 +11,7 @@
   /* BASE */
   body{
     font-size:15px;
-    padding-bottom:96px;
+    padding-bottom:110px;
   }
 
   header{
@@ -125,7 +125,7 @@
     left:12px;
     right:12px;
     bottom:12px;
-    z-index:2500;
+    z-index:9999;
 
     padding:10px;
     background:rgba(8,12,18,0.88);
