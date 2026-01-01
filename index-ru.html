@@ -437,6 +437,24 @@ border-color:var(--gold);
   h3{
     font-size:16px;
   }
+  /* HERO TEXT NAV — MOBILE ONLY */
+  .hero-nav{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    margin:18px 0 22px;
+    font-size:13px;
+  }
+
+  .hero-nav a{
+    color:var(--muted);
+    text-decoration:none;
+    letter-spacing:0.04em;
+  }
+
+  .hero-nav a:hover{
+    color:var(--text);
+  }
 
   /* HEADER */
   header{
@@ -536,6 +554,10 @@ border-color:var(--gold);
   .footer-right{
     text-align:left;
   }
+}
+/* HERO TEXT NAV — DEFAULT (HIDDEN) */
+.hero-nav{
+  display:none;
 }
 
 
@@ -696,6 +718,12 @@ function onProjectChange(v){
 <div>
 <span class="badge platform-badge">ПЛАТФОРМА ДОЛЕВОГО УЧАСТИЯ В РЕАЛЬНЫХ ПРОЕКТАХ</span>
 <h1>NoctAI™</h1>
+<div class="hero-nav">
+  <a href="how_it_works-ru.html">Как это работает</a>
+  <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
+  <a href="projects-ru.html">Проекты</a>
+</div>
+
 <br/>
 <a class="cta-primary" href="invest_usdt-ru.html">Инвестировать (USDT)</a><br>
 <a
