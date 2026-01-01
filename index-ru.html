@@ -422,6 +422,138 @@ border-color:var(--gold);
   --gold-soft:#f1d48a;
   --border:rgba(214,177,94,.35);
 }
+/* =========================
+   MOBILE & TABLET ADAPTATION
+   ========================= */
+@media (max-width: 768px){
+
+  body{
+    font-size:15px;
+    line-height:1.6;
+  }
+
+  h1{
+    font-size:28px;
+    line-height:1.25;
+  }
+
+  h2{
+    font-size:22px;
+    margin-top:48px;
+  }
+
+  h3{
+    font-size:16px;
+  }
+
+  header{
+    padding:36px 16px;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .badge{
+    font-size:11px;
+    letter-spacing:0.12em;
+  }
+
+  .cta-primary,
+  .cta-secondary{
+    width:100%;
+    text-align:center;
+    padding:14px 18px;
+  }
+
+  .panel{
+    padding:22px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .calculator{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  /* NAV — ВАЖНО */
+  .nav-container{
+    padding:12px 16px;
+  }
+
+  .nav-links a{
+    margin-left:16px;
+    font-size:14px;
+  }
+
+  .lang-switch{
+    margin-left:12px;
+    font-size:11px;
+  }
+
+  footer{
+    padding:28px 16px;
+  }
+
+  .footer-container{
+    grid-template-columns:1fr;
+    gap:20px;
+    text-align:left;
+  }
+
+  .footer-right{
+    text-align:left;
+  }
+}
+
+  .nav-container{
+    padding:12px 16px;
+  }
+
+  .nav-links a{
+    margin-left:16px;
+    font-size:14px;
+  }
+
+  .lang-switch{
+    margin-left:16px;
+    font-size:11px;
+  }
+  /* HERO — MOBILE FIRST SCREEN */
+  .hero{
+    padding-top:28px;
+    padding-bottom:32px;
+    min-height:auto;
+  }
+
+  .hero h1{
+    margin-top:8px;
+    margin-bottom:14px;
+    max-width:100%;
+  }
+
+  .hero p{
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:22px;
+    max-width:100%;
+  }
+
+  .hero .cta-group{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .hero .cta-group a{
+    width:100%;
+  }
+
 </style>
 </head>
 <body>
