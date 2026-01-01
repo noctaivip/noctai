@@ -11,10 +11,12 @@
 :root{
   --bg:#050b16;
   --panel:#071827;
+  --muted:#95a6b9;
   --text:#e6eef7;
-  --muted:#9fb1c6;
   --gold:#d6b15e;
+  --gold-soft:#f1d48a;
   --border:rgba(214,177,94,.35);
+}
 *{box-sizing:border-box}
 body{
   margin:0;
@@ -426,18 +428,8 @@ border-color:var(--gold);
   margin-top:10px;
 }
 </style>
-<style>
-:root{
-  --bg:#050b16;
-  --panel:#071827;
-  --muted:#95a6b9;
-  --text:#e6eef7;
-  --gold:#d6b15e;
-  --gold-soft:#f1d48a;
-  --border:rgba(214,177,94,.35);
-}
 </style>
-</style>
+<link rel="stylesheet" href="mobile-noctai.css">
 </head>
 <body>
 <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
@@ -703,5 +695,11 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+<!-- Mobile Bottom Navigation -->
+<div class="mobile-bottom-nav">
+  <a href="how_it_works.html">Как это работает</a>
+  <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
+  <a href="projects.html">Проекты платформы</a>
+</div>
 </body>
 </html>
