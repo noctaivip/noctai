@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NoctAI.VIP — active-dossiers</title>
+<title>NoctAI.VIP — dossier</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="alternate" hreflang="en" href="https://noctai.vip/active-dossiers.html">
-<link rel="alternate" hreflang="ru" href="https://noctai.vip/active-dossiers-ru.html">
+<link rel="alternate" hreflang="en" href="https://noctai.vip/dossier.html">
+<link rel="alternate" hreflang="ru" href="https://noctai.vip/dossier-ru.html">
 
 <style>
 :root{
@@ -22,13 +22,12 @@ body{
   background:radial-gradient(circle at top,#12161b 0%,var(--bg) 55%);
   color:var(--text);
 }
-
 header{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:22px 64px;
-  border-bottom:1px solid rgba(184,155,94,.25)
+  border-bottom:1px solid rgba(184,155,94,.25);
 }
 header .logo{
   letter-spacing: 0.35em;
@@ -36,24 +35,21 @@ header .logo{
   color: #e6e6e6;
   text-decoration: none;
 }
-
 nav a{
   margin-left:28px;
   font-size:11px;
   letter-spacing:.12em;
   text-decoration:none;
   color:var(--muted);
-  position:relative
+  position:relative;
 }
 nav a::after{
   content:"";
   position:absolute;
-  left:0;
-  bottom:-6px;
-  width:0;
-  height:1px;
+  left:0;bottom:-6px;
+  width:0;height:1px;
   background:var(--line);
-  transition:.3s
+  transition:.3s;
 }
 nav a:hover::after{width:100%}
 nav a:hover{color:var(--text)}
@@ -82,101 +78,57 @@ nav a:hover{color:var(--text)}
 .lang-switch a:hover{
   color:var(--text);
 }
-.wrapper{
-  max-width:var(--max);
+.wrap{
+  max-width:1200px;
   margin:0 auto;
-  padding:100px 64px
+  padding:110px 64px;
 }
-
-small{
-  letter-spacing:.18em;
-  font-size:11px;
-  color:var(--muted)
-}
-h1{
-  font-size:44px;
-  margin:18px 0
-}
-.desc{
-  max-width:640px;
-  color:var(--muted);
-  line-height:1.6
-}
-
-.metrics{
+small{letter-spacing:.18em;font-size:11px;color:var(--muted)}
+h1{font-size:42px;margin:18px 0}
+.meta{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:40px;
-  margin:60px 0 40px;
-  font-size:12px
+  gap:24px;
+  margin:36px 0;
 }
-.metric span{
-  display:block;
-  color:var(--muted);
-  margin-top:6px
+.meta div small{display:block;margin-bottom:6px}
+.line{height:1px;background:rgba(184,155,94,.35);margin:60px 0}
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
 }
-
-.divider{
-  height:1px;
-  background:linear-gradient(
-    to right,
-    rgba(184,155,94,0),
-    rgba(184,155,94,.7),
-    rgba(184,155,94,0)
-  );
-  margin:60px 0
+.box{
+  border:1px solid rgba(184,155,94,.35);
+  padding:22px;
+  background:linear-gradient(180deg,#10161c,#0c1014);
 }
-
-.dossier{
+.box h3{margin:0 0 10px;font-size:13px;letter-spacing:.14em;color:var(--line)}
+.box p{margin:0;color:var(--muted);line-height:1.6}
+.protocol{
   border:1px solid rgba(184,155,94,.45);
-  padding:32px;
-  margin-bottom:28px;
-  background:linear-gradient(180deg,#10161c,#0c1014)
+  padding:28px;
+  background:linear-gradient(180deg,#10161c,#0c1014);
 }
-.dossier-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:14px
-}
-.dossier-id{
-  font-size:11px;
-  letter-spacing:.18em;
-  color:var(--muted)
-}
-.status{
-  font-size:11px;
-  letter-spacing:.14em;
-  color:var(--line)
-}
-.dossier h2{
-  margin:0 0 10px;
-  font-size:26px
-}
-.dossier p{
-  color:var(--muted);
-  max-width:720px;
-  line-height:1.6
-}
-.action a{
+.protocol h3{margin:0 0 14px;font-size:13px;letter-spacing:.14em;color:var(--line)}
+.protocol ol{margin:0 0 18px;padding-left:18px;color:var(--muted)}
+.protocol li{margin-bottom:6px}
+.protocol a{
   font-size:12px;
   letter-spacing:.14em;
   color:var(--text);
   text-decoration:none;
-  position:relative
+  position:relative;
 }
-.action a::after{
+.protocol a::after{
   content:"";
   position:absolute;
-  left:0;
-  bottom:-6px;
-  width:0;
-  height:1px;
+  left:0;bottom:-6px;
+  width:0;height:1px;
   background:var(--line);
-  transition:.3s
+  transition:.3s;
 }
-.action a:hover::after{width:100%}
-
+.protocol a:hover::after{width:100%}
 .site-footer {
   border-top: 1px solid rgba(255, 200, 80, 0.15);
   padding: 42px 0 32px;
@@ -234,7 +186,10 @@ h1{
   color: rgba(255,255,255,0.5);
 }
 
-.logo:hover{
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
   text-decoration:none;
 }
 </style>
@@ -252,103 +207,14 @@ h1{
   <a href="request-access.html">REQUEST ACCESS</a>
 
   <span class="lang-switch">
-    <a href="active-dossiers.html" class="active">EN</a>
+    <a href="dossier.html" class="active">EN</a>
     ·
-    <a href="active-dossiers-ru.html">RU</a>
+    <a href="dossier-ru.html">RU</a>
   </span>
 </nav>
 </header>
-<div class="investor-page">
 
-<div class="wrapper">
-<section class="investor-hero">
-  <small>STRATEGIC CAPITAL INTERFACE</small>
-  <h1>Active Dossiers</h1>
-  <p class="desc">
-    Controlled access to live investment situations. Dossiers rotate based on timing,
-    structure, and capital alignment.
-  </p>
-
-  <div class="metrics">
-    <div class="metric">Active Dossiers<span>6</span></div>
-    <div class="metric">Under Reservation<span>1</span></div>
-    <div class="metric">Disclosure Window<span>Open</span></div>
-    <div class="metric">Capital Stage<span>Pre-allocation</span></div>
-  </div>
-    </section>
-  <div class="divider"></div>
-    <section class="investor-content">
-  <div class="dossier">
-    <div class="dossier-head">
-      <div class="dossier-id">DOSSIER 0.0.1</div>
-      <div class="status">ACTIVE</div>
-    </div>
-    <h2>Structural Capital Arbitrage — Industrial IP</h2>
-    <p>Patent-first structuring exploiting regulatory latency.</p>
-    <div class="action"><a href="dossier.html?id=NCT-001">Open Dossier →</a></div>
-  </div>
-
-  <div class="dossier">
-    <div class="dossier-head">
-      <div class="dossier-id">DOSSIER 0.0.2</div>
-      <div class="status">ACTIVE</div>
-    </div>
-    <h2>Energy Grid Latency Capture</h2>
-    <p>Capital gradient created by jurisdictional energy pricing mismatch.</p>
-    <div class="action"><a href="dossier.html?id=NCT-002">Open Dossier →</a></div>
-  </div>
-
-  <div class="dossier">
-    <div class="dossier-head">
-      <div class="dossier-id">DOSSIER 0.0.3</div>
-      <div class="status">ACTIVE</div>
-    </div>
-    <h2>AI Inference Cost Compression</h2>
-    <p>Structural inefficiency in inference-layer economics.</p>
-    <div class="action"><a href="dossier.html?id=NCT-003">Open Dossier →</a></div>
-  </div>
-
-  <div class="dossier">
-    <div class="dossier-head">
-      <div class="dossier-id">DOSSIER 0.0.4</div>
-      <div class="status">ACTIVE</div>
-    </div>
-    <h2>Water Rights Financialization</h2>
-    <p>Conversion of regional water rights into financial instruments.</p>
-    <div class="action"><a href="dossier.html?id=NCT-004">Open Dossier →</a></div>
-  </div>
-
-  <div class="dossier">
-    <div class="dossier-head">
-      <div class="dossier-id">DOSSIER 0.0.5</div>
-      <div class="status">ACTIVE</div>
-    </div>
-    <h2>Logistics Dark Capacity Arbitrage</h2>
-    <p>Unlocking underutilized logistics capacity through structural mapping.</p>
-    <div class="action"><a href="dossier.html?id=NCT-005">Open Dossier →</a></div>
-  </div>
-
-  <div class="dossier">
-    <div class="dossier-head">
-      <div class="dossier-id">DOSSIER 0.0.6</div>
-      <div class="status">ACTIVE</div>
-    </div>
-    <h2>Carbon Credit Flow Arbitrage</h2>
-    <p>Temporal mismatch between regulatory issuance and secondary market liquidity.</p>
-    <div class="action"><a href="dossier.html?id=NCT-006">Open Dossier →</a></div>
-  </div>
-
-  <div class="dossier">
-    <div class="dossier-head">
-      <div class="dossier-id">DOSSIER 0.0.7</div>
-      <div class="status">UNDER RESERVATION</div>
-    </div>
-    <h2>Semiconductor Supply Priority Structuring</h2>
-    <p>Pre-allocation positioning within constrained advanced-node supply chains.</p>
-    <div class="action"><a href="dossier.html?id=NCT-007">View Status →</a></div>
-  </div>
-   </section>
-</div>
+<section class="wrap" id="content"></section>
 
 <footer class="site-footer">
   <div class="footer-grid">
@@ -388,6 +254,150 @@ h1{
     </div>
 </div>
 </footer>
+
+<script>
+const dossiers = {
+
+"NCT-001":{
+  title:"Structural Capital Arbitrage — Industrial IP",
+  desc:"Patent-first structuring exploiting regulatory latency.",
+  capital:"Pre-allocation",
+  disclosure:"Selectively Open",
+  ip:"Patent filing (PCT)",
+  owner:"NOCTAI Holding Structure",
+  problem:"Institutional capital misprices early-stage IP due to regulatory lag.",
+  edge:"Patent-first structuring reverses traditional risk sequence.",
+  timing:"Temporary exclusivity during filing window.",
+  role:"Capital secures position, not operational scale."
+},
+
+"NCT-002":{
+  title:"Energy Grid Latency Capture",
+  desc:"Capital gradient created by cross-border energy pricing mismatch.",
+  capital:"Pre-allocation",
+  disclosure:"Open",
+  ip:"Contractual structures",
+  owner:"NOCTAI Energy Desk",
+  problem:"Energy markets clear slower than capital markets.",
+  edge:"Latency exploitation across jurisdictions.",
+  timing:"Settlement lag window.",
+  role:"Positioning capital."
+},
+
+"NCT-003":{
+  title:"AI Inference Cost Compression",
+  desc:"Structural inefficiency in inference-layer economics.",
+  capital:"Pre-allocation",
+  disclosure:"Selectively Open",
+  ip:"Optimization IP",
+  owner:"NOCTAI Platform",
+  problem:"Inference cost curves scale non-linearly.",
+  edge:"Cost compression before scale.",
+  timing:"Pre-deployment window.",
+  role:"Non-dilutive optimization capital."
+},
+
+"NCT-004":{
+  title:"Water Rights Financialization",
+  desc:"Conversion of regional water rights into financial instruments.",
+  capital:"Pre-allocation",
+  disclosure:"Limited",
+  ip:"Legal structuring",
+  owner:"Regional SPV",
+  problem:"Water assets lack abstraction layer.",
+  edge:"Early financialization.",
+  timing:"Regulatory transition.",
+  role:"Structuring capital."
+},
+
+"NCT-005":{
+  title:"Logistics Dark Capacity Arbitrage",
+  desc:"Unlocking underutilized logistics capacity.",
+  capital:"Pre-allocation",
+  disclosure:"Open",
+  ip:"Operational mapping",
+  owner:"NOCTAI Network",
+  problem:"Idle capacity hidden in fragmented systems.",
+  edge:"Cross-network aggregation.",
+  timing:"Pre-demand surge.",
+  role:"Activation capital."
+},
+
+"NCT-006":{
+  title:"Carbon Credit Flow Arbitrage",
+  desc:"Temporal mismatch between issuance and secondary liquidity.",
+  capital:"Pre-allocation",
+  disclosure:"Open",
+  ip:"Registry positioning",
+  owner:"NOCTAI Climate Desk",
+  problem:"Liquidity lags regulatory issuance.",
+  edge:"Flow control.",
+  timing:"Issuance cycles.",
+  role:"Bridge capital."
+},
+
+"NCT-007":{
+  title:"Semiconductor Supply Priority Structuring",
+  desc:"Pre-allocation positioning in constrained advanced-node supply.",
+  capital:"Pre-allocation",
+  disclosure:"Under Reservation",
+  ip:"Supply contracts",
+  owner:"NOCTAI Strategic Access",
+  problem:"Advanced-node supply bottlenecks.",
+  edge:"Priority reservation.",
+  timing:"Pre-fab allocation.",
+  role:"Reservation capital."
+}
+
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const d = dossiers[id];
+const c = document.getElementById("content");
+
+if(!d){
+  c.innerHTML = "<h1>Dossier not found</h1>";
+}else{
+  c.innerHTML = `
+  <small>DOSSIER ID: ${id}</small>
+  <h1>${d.title}</h1>
+  <p style="color:var(--muted);max-width:720px">${d.desc}</p>
+
+  <div class="meta">
+    <div><small>Capital Stage</small>${d.capital}</div>
+    <div><small>Disclosure Window</small>${d.disclosure}</div>
+    <div><small>IP Status</small>${d.ip}</div>
+    <div><small>Ownership</small>${d.owner}</div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="grid">
+    <div class="box"><h3>PROBLEM ASYMMETRY</h3><p>${d.problem}</p></div>
+    <div class="box"><h3>STRUCTURAL EDGE</h3><p>${d.edge}</p></div>
+    <div class="box"><h3>TIMING WINDOW</h3><p>${d.timing}</p></div>
+    <div class="box"><h3>CAPITAL ROLE</h3><p>${d.role}</p></div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="protocol">
+    <h3>ACCESS PROTOCOL — NCT-AP-001</h3>
+    <ol>
+      <li>Identity & capital qualification</li>
+      <li>NDA framework acknowledgment</li>
+      <li>Limited disclosure materials</li>
+      <li>Participation confirmation</li>
+      <li>Dossier rotates or proceeds</li>
+    </ol>
+    <a href="request-access.html?id=${id}">
+  Request Dossier Access →
+</a>
+  </div>
+  `;
+}
+</script>
 <!-- Mobile Investor Bottom Navigation -->
 <div class="mobile-investor-nav">
   <a href="control-ru.html">Home</a>
