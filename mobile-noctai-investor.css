@@ -9,8 +9,6 @@
 
 @media (max-width:768px){
 
-  /* ================= BASE ================= */
-
   html, body{
     height:100%;
   }
@@ -20,6 +18,49 @@
     font-size:15px;
     padding-bottom:120px; /* место под нижние кнопки */
   }
+/* === FIX: DESKTOP GRIDS → MOBILE STACK === */
+
+.hero,
+.why{
+  grid-template-columns:1fr;
+  gap:36px;
+  padding:80px 18px 60px;
+}
+
+.process-grid{
+  grid-template-columns:1fr;
+  gap:28px;
+}
+.investor-hero{
+  padding-bottom:36px;
+}
+
+.investor-content{
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+
+.metrics{
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+  /* ================= FOOTER ================= */
+
+  footer.site-footer{
+    padding-bottom:calc(160px + env(safe-area-inset-bottom));
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:26px;
+    padding:0 18px;
+  }
+
+  .footer-meta{
+    text-align:left;
+  }
 
   /* ================= HEADER ================= */
 
@@ -27,12 +68,12 @@
     padding:16px 18px;
   }
 
-  /* скрываем desktop-пункты меню */
+  /* скрываем пункты desktop-меню */
   header nav > a{
     display:none;
   }
 
-  /* оставляем переключатель языка */
+  /* оставляем language switch */
   header nav .lang-switch,
   header nav .lang-switch a{
     display:inline-flex;
@@ -68,47 +109,7 @@
     line-height:1.7;
   }
 
-  /* ================= GRID FIXES (CONTROL / PROJECTS) ================= */
-
-  .hero,
-  .why{
-    grid-template-columns:1fr;
-    gap:36px;
-    padding:80px 18px 60px;
-  }
-
-  .process-grid{
-    grid-template-columns:1fr;
-    gap:28px;
-  }
-
-  .process,
-  .access{
-    padding-left:18px;
-    padding-right:18px;
-  }
-
-  .divider{
-    margin:36px 18px;
-  }
-
-  /* ================= FOOTER ================= */
-
-  footer.site-footer{
-    padding-bottom:calc(160px + env(safe-area-inset-bottom));
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-    gap:26px;
-    padding:0 18px;
-  }
-
-  .footer-meta{
-    text-align:left;
-  }
-
-  /* ================= BOTTOM INVESTOR NAV ================= */
+  /* ================= BOTTOM NAV ================= */
 
   .mobile-investor-nav{
     display:flex;
@@ -116,7 +117,7 @@
     left:12px;
     right:12px;
     bottom:12px;
-    z-index:9999; /* ВАЖНО: без опечаток */
+    z-index:o9999;
 
     gap:10px;
     padding:10px;
