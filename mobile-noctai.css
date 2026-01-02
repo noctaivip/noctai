@@ -161,6 +161,43 @@ body{
     right:12px;
     bottom:12px;
   }
+  /* 1. NDA modal = fullscreen mobile room */
+  #ndaModal{
+    align-items:stretch;
+    justify-content:stretch;
+  }
+
+  #ndaModal .modal-content{
+    width:100%;
+    height:100%;
+    max-width:none;
+    max-height:none;
+
+    border-radius:0;
+    padding:22px 18px 120px; /* место под жесты */
+    overflow-y:auto;
+  }
+
+  /* 2. Внутренний container не ломает ширину */
+  #ndaModal .container{
+    padding:0;
+    max-width:100%;
+  }
+
+  /* 3. Close всегда видна */
+  #ndaModal .close{
+    position:fixed;
+    top:14px;
+    right:16px;
+    z-index:100;
+    font-size:26px;
+  }
+
+  /* 4. Скрываем bottom-nav, пока открыт NDA */
+  body.modal-open .mobile-bottom-nav{
+    display:none !important;
+  }
+
 }
   /* ===========================
      MOBILE BOTTOM ACTION BAR
