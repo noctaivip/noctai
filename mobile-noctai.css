@@ -198,6 +198,42 @@ body{
     display:none !important;
   }
 
+  .projects{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .project{
+    padding:20px;
+    border-radius:18px;
+  }
+
+  .project h4{
+    font-size:18px;
+    line-height:1.3;
+  }
+
+  .project .status{
+    font-size:11px;
+    margin-bottom:12px;
+    letter-spacing:0.08em;
+  }
+
+  .project p{
+    font-size:14px;
+    line-height:1.65;
+  }
+
+  /* визуальный affordance “tap” */
+  .project::after{
+    content:"→";
+    position:absolute;
+    right:18px;
+    bottom:18px;
+    font-size:16px;
+    color:rgba(214,177,94,.6);
+  }
+
 }
   /* ===========================
      MOBILE BOTTOM ACTION BAR
