@@ -18,7 +18,15 @@
     font-size:15px;
     padding-bottom:120px; /* место под нижние кнопки */
   }
+/* даём место под fixed-nav */
+  body.page-access-protocol{
+    padding-bottom:160px;
+  }
 
+  /* дополнительно страхуем футер */
+  body.page-access-protocol .site-footer{
+    padding-bottom:120px;
+  }
   /* ================= FOOTER ================= */
 
   footer.site-footer{
