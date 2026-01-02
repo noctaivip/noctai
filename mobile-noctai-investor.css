@@ -1,76 +1,47 @@
-/* =================================================
-   CONTROL PAGE — MOBILE HARD FIX
-   ================================================= */
+/* ================= HEADER — MOBILE ================= */
 
-/* 1. ЖЁСТКАЯ БЛОКИРОВКА ГОРИЗОНТАЛИ */
-html, body{
-  overflow-x:hidden;
-  max-width:100%;
+header{
+  padding:16px 18px;
 }
 
-/* 2. HERO: 2 колонки → 1 */
-.hero{
-  grid-template-columns:1fr;
-  gap:36px;
-  padding:88px 18px 64px;
-  max-width:100%;
+/* полностью убираем desktop-меню */
+header nav *{
+  display:none !important;
 }
 
-/* убираем max-width у текста */
-.hero p{
-  max-width:100%;
+/* оставляем только язык */
+header nav .lang-switch,
+header nav .lang-switch *{
+  display:inline-flex !important;
 }
 
-/* 3. STATUS БЛОК */
-.status{
-  padding:22px 20px;
+header .logo{
+  font-size:12px;
+  letter-spacing:0.32em;
 }
 
-/* 4. WHY SECTION */
-.why{
-  grid-template-columns:1fr;
-  gap:36px;
-  padding:64px 18px;
-}
+/* ================= MOBILE INVESTOR NAV ================= */
 
-/* cards: 2 → 1 */
-.cards{
-  grid-template-columns:1fr;
-  gap:18px;
-}
-
-/* 5. PROCESS */
-.process{
-  padding:64px 18px;
-}
-
-.process-grid{
-  grid-template-columns:1fr;
-  gap:24px;
-}
-
-/* 6. ACCESS */
-.access{
-  padding:72px 18px 96px;
-}
-
-/* 7. DIVIDERS */
-.divider{
-  margin:36px 18px;
-}
-
-/* 8. FOOTER */
-.footer-grid{
-  grid-template-columns:1fr;
-  padding:0 18px;
-  gap:26px;
-}
-
-/* 9. MOBILE NAV — СТРАХОВКА */
 .mobile-investor-nav{
+  display:flex;
+  position:fixed;
+
   left:12px;
   right:12px;
   bottom:12px;
-  max-width:calc(100vw - 24px);
-  z-index:9999;
+
+  z-index:9999; /* ВАЖНО */
+
+  gap:10px;
+  padding:10px;
+
+  background:rgba(11,14,17,0.92);
+  backdrop-filter:blur(14px);
+
+  border:1px solid rgba(184,155,94,0.35);
+  border-radius:18px;
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.55),
+    inset 0 0 0 1px rgba(184,155,94,0.08);
 }
