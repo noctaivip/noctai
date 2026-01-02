@@ -290,30 +290,26 @@ body{
   }
 
   h1{
-    font-size:26px;
-    line-height:1.25;
+    font-size:26px !important;
+    line-height:1.25 !important;
   }
 
-  .lead{
-    font-size:14px;
-    line-height:1.6;
+  .panel{
+    padding:18px !important;
   }
 
-  .intelligence-content,
-  .article-body{
-    max-width:100%;
+  .container{
+    padding:0 16px !important;
   }
 
   .article-body{
-    font-size:15px;
-    line-height:1.8;
+    font-size:15px !important;
+    line-height:1.8 !important;
   }
 
   .article-body h3{
-    font-size:18px;
-    line-height:1.35;
-    margin-top:36px;
-    margin-bottom:14px;
+    font-size:18px !important;
+    margin-top:36px !important;
   }
 
   .article-body ul,
@@ -334,6 +330,15 @@ body{
 
   .article-body p + h3{
     margin-top:44px;
+  }
+
+
+  body .intelligence-content h1{
+    font-size:26px !important;
+  }
+
+  body .intelligence-content .panel{
+    padding:18px !important;
   }
 
 }
