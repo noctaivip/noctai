@@ -299,6 +299,43 @@ body{
     line-height:1.6;
   }
 
+  .intelligence-content,
+  .article-body{
+    max-width:100%;
+  }
+
+  .article-body{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  .article-body h3{
+    font-size:18px;
+    line-height:1.35;
+    margin-top:36px;
+    margin-bottom:14px;
+  }
+
+  .article-body ul,
+  .article-body ol{
+    padding-left:18px;
+    margin:18px 0;
+  }
+
+  .article-body li{
+    margin-bottom:10px;
+    line-height:1.7;
+  }
+
+  .panel.muted{
+    font-size:13px;
+    line-height:1.6;
+  }
+
+  .article-body p + h3{
+    margin-top:44px;
+  }
+
 }
   /* ===========================
      MOBILE BOTTOM ACTION BAR
