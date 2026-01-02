@@ -430,7 +430,18 @@ border-color:var(--gold);
 </style>
 </style>
 <link rel="stylesheet" href="mobile-noctai.css">
-</head>
+
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style></head>
 <body>
 <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
