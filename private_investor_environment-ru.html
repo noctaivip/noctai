@@ -717,9 +717,11 @@ function proceedNDA(){
 <script>
 function openNDA(){
   document.getElementById('ndaModal').style.display='flex';
+  document.body.classList.add('modal-open');
 }
 function closeNDA(){
   document.getElementById('ndaModal').style.display='none';
+  document.body.classList.remove('modal-open');
 }
 function proceed(){
   const cb = document.getElementById('agree');
