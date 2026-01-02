@@ -340,13 +340,6 @@ body{
   body .intelligence-content .panel{
     padding:18px !important;
   }
-
-  body .top-nav{
-    display:none;
-  }
-  body.intelligence-page .top-nav{
-    display:none;
-  }
 }
   /* ===========================
      MOBILE BOTTOM ACTION BAR
