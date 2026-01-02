@@ -118,7 +118,50 @@ body{
   .footer-right{
     text-align:left;
   }
+ /* 1. Запрещаем горизонтальный скролл */
+  html, body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
 
+  /* 2. Убираем ошибочный height */
+  body{
+    height:auto !important;
+    min-height:100%;
+    padding-bottom:160px; /* МЕСТО под нижнюю панель */
+  }
+
+  /* 3. Футер гарантированно выходит из-под кнопок */
+  footer,
+  .site-footer{
+    margin-bottom:160px;
+  }
+
+  /* 4. Все контейнеры не могут выходить за экран */
+  .container,
+  .panel,
+  .grid,
+  .hero,
+  .project-box,
+  .calc-modal{
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  /* 5. Карточки и панели */
+  .panel{
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  /* 6. Нижняя панель — строго поверх, но не ломает поток */
+  .mobile-bottom-nav{
+    left:12px;
+    right:12px;
+    bottom:12px;
+  }
+}
   /* ===========================
      MOBILE BOTTOM ACTION BAR
      =========================== */
