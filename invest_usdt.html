@@ -412,33 +412,6 @@ display:none;
   }
 }
 </style>
-<style>
-.qr-box{
-  margin-top:16px;
-  padding:14px;
-  border:1px solid var(--border);
-  border-radius:12px;
-  background:#0f141c;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-.qr-box img{
-  width:160px;
-  height:160px;
-  object-fit:contain;
-  background:#fff;
-  border-radius:10px;
-}
-
-.qr-label{
-  margin-top:10px;
-  font-size:12px;
-  color:var(--muted);
-  text-align:center;
-}
-</style>
 </head>
 
 <body>
@@ -622,16 +595,7 @@ This is not a crypto investment, but a form of fixing shares.  </p>
 	financial risks and does not imply guaranteed returns.
   </span>
 </label>
-<div class="qr-box">
-  <img
-  src="assets/qr/usdt-trc20.jpg"
-  alt="USDT TRC20 payment address QR code"
-  loading="lazy"
->
-  <div class="qr-label">
-    Scan with your phone to pay (USDT · TRC20)
-  </div>
-</div>
+<div id="usdtAddressBlock" style="display:none">
   <div class="address-box" id="walletBox">
     <span class="address-text" id="walletAddress">
       TYzS8upYw57S5wqHkDDxhsxcwoWE7tYALU
