@@ -221,9 +221,7 @@ text-decoration:underline;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
-
 <style>
 .cta-primary{
 transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
@@ -418,7 +416,6 @@ border-color:var(--gold);
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
@@ -426,8 +423,8 @@ border-color:var(--gold);
 }
 </style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -461,7 +458,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -472,7 +468,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -483,12 +478,10 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Оценка дохода</h3>
         <div class="calc-income">
@@ -497,12 +490,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -554,46 +547,39 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">Как это работает</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
     <a href="projects-ru.html">Проекты</a>
   </div>
-
   <div class="lang-switch">
     <a href="risk-disclosure-ru.html" class="active">RU</a>
 	-
     <a href="risk-disclosure.html">EN</a>
   </div>
 </div>
-
   </div>
 </nav>
 
 
 <main class="container">
-
 <h2>Раскрытие рисков</h2>
-
 <div class="panel">
 <p>
 Настоящий документ о раскрытии рисков предоставляется с целью обеспечения прозрачности и осознанного участия в рамках платформы NoctAI.
 Он предназначен для того, чтобы помочь участникам понять характер участия, связанные с ним риски и роль платформы.
 </p>
-
 <p>
 NoctAI <strong>не является инвестиционным фондом, брокером, финансовым консультантом или публичным маркетплейсом</strong>.
 Платформа функционирует как контролируемая цифровая среда, предоставляющая доступ к проектам, аналитическому контексту и структурированным механизмам участия.
 </p>
 </div>
-
 <br/>
 <h4>Характер участия</h4>
 <div class="panel">
@@ -601,12 +587,10 @@ NoctAI <strong>не является инвестиционным фондом, 
 Участие в проектах, представленных на платформе NoctAI, является добровольным и основано исключительно на самостоятельных решениях каждого пользователя.
 Все материалы, описания, сценарии и расчёты, представленные на платформе, предоставляются<strong>исключительно в информационных и контекстных целях</strong>.
 </p>
-
 <p>
 Они не являются инвестиционными рекомендациями, советами, предложениями или гарантиями какого-либо рода.
 </p>
 </div>
-
 <br/>
 <h4>Финансовые риски</h2>
 <div class="panel">
@@ -614,12 +598,10 @@ NoctAI <strong>не является инвестиционным фондом, 
 Участие в проектах связано с финансовыми рисками, включая возможность частичной или полной утраты распределённых средств.
 Прошлые результаты, прогнозные показатели или иллюстративные расчёты не гарантируют будущих результатов.
 </p>
-
 <p>
 Каждый участник самостоятельно и в полном объёме несёт ответственность за оценку своего финансового положения, уровня допустимого риска и целесообразности участия.
 </p>
 </div>
-
 <br/>
 <h4>Отсутствие гарантий</h2>
 <div class="panel">
@@ -628,31 +610,26 @@ NoctAI не предоставляет никаких гарантий в отн
 Любые показатели и значения, отображаемые на платформе, носят ориентировочный характер и могут существенно отличаться от фактических результатов.
 </p>
 </div>
-
 <br/>
 <h4>Использование USDT</h2>
 <div class="panel">
 <p>
 USDT используется на платформе исключительно в качестве <strong>расчётной единицы</strong>, эквивалентной доллару США, с целью технической фиксации стоимости.
 </p>
-
 <p>
 Использование USDT не является приглашением к торговле или спекуляциям с криптовалютами.
 </p>
 </div>
-
 <br/>
 <h4>Отсутствие фидуциарных или консультационных отношений</h2>
 <div class="panel">
 <p>
 Участие на платформе не создаёт фидуциарных, консультационных, партнёрских, агентских или доверительных отношений между NoctAI и участником.
 </p>
-
 <p>
 NoctAI не действует от имени участников и не принимает инвестиционные решения за них.
 </p>
 </div>
-
 <br/>
 <h4>Внешние и операционные факторы</h2>
 <div class="panel">
@@ -660,24 +637,21 @@ NoctAI не действует от имени участников и не пр
 Результаты проектов могут зависеть от рыночных условий, изменений в регулировании, операционных ограничений, технологических рисков и иных факторов, находящихся вне контроля платформы.
 </p>
 </div>
-
 <br/>
 <h4>Подтверждение и принятие условий</h2>
 <div class="panel">
 <p>
 Посещая платформу, знакомясь с материалами или принимая участие в любом проекте, вы подтверждаете, что прочитали, поняли и приняли настоящее раскрытие рисков.
 </p>
-
 <p>
 Вы также подтверждаете, что участие осуществляется <strong>добровольно и по собственному усмотрению</strong>.
 </p>
-
 <p>
 <strong>NoctAI не несёт ответственности за индивидуальные решения, результаты или убытки, возникающие в результате участия на платформе.</strong>
 </p>
 </div>
-
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -685,7 +659,6 @@ NoctAI не действует от имени участников и не пр
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -714,7 +687,7 @@ NoctAI не действует от имени участников и не пр
     </div>
   </div>
 </footer>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>

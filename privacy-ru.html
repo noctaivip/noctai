@@ -185,7 +185,6 @@ text-decoration:underline;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
 <style>
 .calc-overlay{
@@ -339,7 +338,6 @@ text-decoration:underline;
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -350,7 +348,6 @@ text-decoration:underline;
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -361,12 +358,10 @@ text-decoration:underline;
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Оценка дохода</h3>
         <div class="calc-income">
@@ -375,12 +370,12 @@ text-decoration:underline;
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -432,33 +427,28 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
 
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">Как это работает</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
     <a href="projects-ru.html">Проекты</a>
   </div>
-
   <div class="lang-switch">
     <a href="privacy-ru.html" class="active">RU</a>
 	-
     <a href="privacy.html">EN</a>
   </div>
 </div>
-
   </div>
 </nav>
 
 <div class="container">
   <h1>Политика конфиденциальности</h1>
-
   <div class="section">
     <h2>Общие положения</h2>
     <p>
@@ -466,7 +456,6 @@ function onProjectChange(v){
       исключительно в рамках ограниченного инвестиционного доступа и внутренней проверки.
     </p>
   </div>
-
   <div class="section">
     <h2>Сбор информации</h2>
     <p>
@@ -474,7 +463,6 @@ function onProjectChange(v){
       предоставленную пользователем добровольно при запросе доступа или инвестиции.
     </p>
   </div>
-
   <div class="section">
     <h2>Использование данных</h2>
     <p>
@@ -482,7 +470,6 @@ function onProjectChange(v){
       фиксации долей и соблюдения внутренних процедур контроля и ответственности.
     </p>
   </div>
-
   <div class="section">
     <h2>Передача третьим лицам</h2>
     <p>
@@ -490,7 +477,6 @@ function onProjectChange(v){
       предусмотренных применимым законодательством или внутренними требованиями контроля.
     </p>
   </div>
-
   <div class="section">
     <h2>Безопасность</h2>
     <p>
@@ -498,7 +484,6 @@ function onProjectChange(v){
       Доступ к информации ограничен и предоставляется по принципу необходимости.
     </p>
   </div>
-
   <div class="section">
     <h2>Отсутствие публичной оферты</h2>
     <p>
@@ -506,13 +491,12 @@ function onProjectChange(v){
       Любое участие осуществляется на основании индивидуального решения инвестора.
     </p>
   </div>
-
   <div class="section">
     <p style="font-size:13px; color:var(--muted); font-style:italic;">
 Данный документ применяется исключительно к частному доступу на основе разрешений и может быть обновлён без предварительного публичного уведомления.    </p>
   </div>
-
 </div>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -520,7 +504,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -549,7 +532,7 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>

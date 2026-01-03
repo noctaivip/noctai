@@ -55,7 +55,6 @@ h1 {
     color:#8b94a1;
 }
 </style>
-
 <style>
 .top-nav{
 position:sticky;
@@ -166,7 +165,6 @@ border-radius:999px;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
 <style>
 :root{
@@ -417,7 +415,6 @@ text-decoration:underline;
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
@@ -425,6 +422,7 @@ text-decoration:underline;
 }
 </style>
 </head>
+
 <body>
 <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -470,7 +468,6 @@ text-decoration:underline;
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -481,12 +478,10 @@ text-decoration:underline;
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Оценка дохода</h3>
         <div class="calc-income">
@@ -495,12 +490,12 @@ text-decoration:underline;
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -552,36 +547,30 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
 
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">Как это работает</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
     <a href="projects-ru.html">Проекты</a>
   </div>
-
   <div class="lang-switch">
     <a href="oversight_governance-ru.html" class="active">RU</a>
 	-
     <a href="oversight_governance.html">EN</a>
   </div>
 </div>
-
   </div>
 </nav>
 
 <div class="container">
-
 <h1>Надзор и управление</h1>
 <div class="subtitle">
 Контур ответственности и управления инвестиционной платформы NoctAI</div>
-
 <div class="section">
 <h2>Принцип управления</h2>
 <p>
@@ -591,7 +580,6 @@ function onProjectChange(v){
 Платформа не является маркетплейсом и не использует автоматизированные механизмы инвестиционного доступа.
 </p>
 </div>
-
 <div class="section">
 <h2>Цепочка принятия решений</h2>
 <p class="chain">
@@ -601,7 +589,6 @@ function onProjectChange(v){
 Ни один этап не может быть пропущен. Решения принимаются вручную и фиксируются внутри управляющей команды.
 </p>
 </div>
-
 <div class="section">
 <h2>Контроль инвестиционного доступа</h2>
 <p>
@@ -619,7 +606,6 @@ function onProjectChange(v){
     Перейти к Access Protocol →
   </a>
 </p>
-
 <div class="section">
 <h2>Отсутствие публичных лиц</h2>
 <p>
@@ -629,8 +615,6 @@ NoctAI — это инфраструктурная инвестиционная 
 Ответственность закреплена на уровне системы управления, процедур и решений, а не на уровне публичных персон.
 </p>
 </div>
-
-
 <div class="section">
 <h2>Ограничения и рамки управления</h2>
 <p>
@@ -641,13 +625,12 @@ NoctAI — это инфраструктурная инвестиционная 
 Ни один проект не может быть открыт для инвестиций вне утверждённой модели ответственности и защиты интересов инвесторов.
 </p>
 </div>
-
 <div class="footer-note">
 Данная страница фиксирует архитектуру ответственности и управления платформой.  
 Все инвестиционные условия определяются индивидуально.
 </div>
-
 </div>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -655,7 +638,6 @@ NoctAI — это инфраструктурная инвестиционная 
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -684,7 +666,7 @@ NoctAI — это инфраструктурная инвестиционная 
     </div>
   </div>
 </footer>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>

@@ -134,7 +134,6 @@ hr{
   font-size:13px;
 }
 </style>
-
 <style>
 h1 { color: #ffffff; }
 
@@ -257,7 +256,6 @@ border-radius:999px;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
 <style>
 .site-footer{
@@ -405,7 +403,6 @@ text-decoration:underline;
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
@@ -447,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -458,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -469,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -483,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -540,42 +533,35 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects-ru.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="projects.html" class="active">EN</a>
 	-
     <a href="projects-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
   <div class="container">
-
     <span class="badge">PROJECTS</span>
     <h1>NoctAI platform projects</h1>
-    
 <p class="sub">
   <strong>NoctAI is an investment platform with a phased project launch.</strong><br>
 Each project undergoes an individual expert assessment, including technological, legal, and market verification.<br><br>
 <strong>The project is opened for investment only after passing the patenting stage or the official consolidation of key technological solutions.</strong><br><br>
 Projects with <em>upcoming</em> status are at the stage of individual assessment, patent protection preparation, or structure finalization and are not open to investment until these stages are completed.<br><br>
 <strong>Investment access is granted selectively and can only be opened after completion of the relevant protective and structural procedures.</strong></p>
-
-
     <div class="section">
       <h2>Active project</h2>
       <div class="grid">
@@ -594,9 +580,7 @@ A technology platform for analytics and tracking in the US transport logistics s
         </div>
       </div>
     </div>
-
     <hr/>
-
     <div class="section">
       <h2>Future projects</h2>
       <div class="grid">
@@ -610,7 +594,6 @@ Infrastructure project in the field of financial services.          </p>
             <div><strong>Access:</strong> Soon</div>
           </div>
         </div>
-
         <div class="card lock">
           <span class="status">UPCOMING</span>
           <h3>Data Intelligence Platform</h3>
@@ -623,9 +606,7 @@ Platform for analytics and processing of industry data.          </p>
         </div>
       </div>
     </div>
-
     <hr/>
-
     <div class="section">
       <h2>Invitation-based projects</h2>
       <div class="grid">
@@ -645,18 +626,16 @@ Closed investment projects, available only by individual invitation.          </
   Access to individual projects, early investment rounds, and closed
   materials is provided within a separate Project Access framework.
 </p>
-
 <p class="sub">
   <a href="project_access.html" style="color:var(--gold); text-decoration:none;">
 Go to Project Access →  </a>
 </p>
-
     <p class="footer-note">
       The information on this page does not constitute a public investment offer.
 	  Access to projects may be restricted.
     </p>
-
   </div>
+  
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -664,7 +643,6 @@ Go to Project Access →  </a>
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -693,7 +671,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>

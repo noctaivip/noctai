@@ -221,7 +221,6 @@ text-decoration:underline;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
 <style>
 .cta-primary{
@@ -417,7 +416,6 @@ border-color:var(--gold);
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
@@ -425,8 +423,8 @@ border-color:var(--gold);
 }
 </style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -459,7 +457,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -470,7 +467,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -481,12 +477,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -495,12 +489,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -554,39 +548,32 @@ function onProjectChange(v){
 }
 
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="data-processing.html" class="active">EN</a>
 	-
     <a href="data-processing-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
-
-
 <main class="container">
-
 <h2>Data Processing Notice</h2>
-
 <div class="panel">
 <p>
 This notice explains how limited user data is handled within the NoctAI platform.
 </p>
 </div>
-
 <br/>
 <h4>1. Scope of Data Collection</h4>
 <div class="panel">
@@ -602,7 +589,6 @@ NoctAI collects only the minimum information required to facilitate participatio
 No sensitive personal data or identity documents are requested or processed.
 </p>
 </div>
-
 <br/>
 <h4>2. Purpose of Processing</h4>
 <div class="panel">
@@ -618,7 +604,6 @@ The collected data is used solely for the following purposes:
 Data is not used for marketing, profiling, or unsolicited communications.
 </p>
 </div>
-
 <br/>
 <h4>3. Data Storage and Access</h4>
 <div class="panel">
@@ -629,7 +614,6 @@ User-provided data is stored in a controlled environment and accessed only by au
 NoctAI does not sell, rent, or disclose user data to third parties, except where required by applicable law.
 </p>
 </div>
-
 <br/>
 <h4>4. User Responsibility</h4>
 <div class="panel">
@@ -640,7 +624,6 @@ Users provide information voluntarily and confirm that the submitted data is acc
 NoctAI is not responsible for incorrect or incomplete information provided by users.
 </p>
 </div>
-
 <br/>
 <h4>5. No Data Guarantees</h4>
 <div class="panel">
@@ -648,7 +631,6 @@ NoctAI is not responsible for incorrect or incomplete information provided by us
 While reasonable technical and organizational measures are applied, NoctAI does not guarantee absolute data security and shall not be held liable for circumstances beyond its reasonable control.
 </p>
 </div>
-
 <br/>
 <h4>6. Acknowledgement</h4>
 <div class="panel">
@@ -656,10 +638,7 @@ While reasonable technical and organizational measures are applied, NoctAI does 
 By submitting information through the platform, users acknowledge and accept the terms of this Data Processing Notice.
 </p>
 </div>
-
 </main>
-
-
 
 <footer class="site-footer">
   <div class="footer-container">
@@ -668,7 +647,6 @@ By submitting information through the platform, users acknowledge and accept the
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -697,14 +675,11 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="projects.html">Проекты платформы</a>
 </div>
-
-
-
 </body>
 </html>

@@ -145,7 +145,6 @@ hr{
   color: var(--text);
   font-weight: 700;
 }
-
 </style>
 <style>
 .top-nav{
@@ -257,7 +256,6 @@ border-radius:999px;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
 <style>
 .calc-overlay{
@@ -368,7 +366,6 @@ border-radius:999px;
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
@@ -410,7 +407,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -421,7 +417,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -432,12 +427,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -446,12 +439,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -503,38 +496,33 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects-ru.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="how_it_works.html" class="active">EN</a>
 	-
     <a href="how_it_works-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
 <div class="container">
-
   <span class="badge">HOW IT WORKS</span>
   <h1>How NoctAI's participation model works</h1>
   <p class="sub">
 NoctAI is a platform for equity participation in real infrastructure projects.
 Participation is recorded through manual verification, and investor shares are secured
 within a single ownership structure.  </p>
-
   <div class="section">
     <h2>Why does the minimum entry start at $1?</h2>
     <p class="sub">
@@ -562,7 +550,6 @@ and is subject to uniform distribution rules.        </p>
       </div>
     </div>
   </div>
-
   <div class="section">
     <h2>How does participation work with small capital</h2>
     <div class="grid">
@@ -586,7 +573,6 @@ and is associated with investment risks.        </p>
       </div>
     </div>
   </div>
-
   <div class="section">
     <h2>Why are settlements conducted in USDT</h2>
     <div class="grid">
@@ -609,7 +595,6 @@ additional calculation mechanisms.        </p>
       </div>
     </div>
   </div>
-
   <hr/>
 <p class="sub" style="margin-top:24px;">
 The process of participation and admission of investors is regulated internally
@@ -617,7 +602,6 @@ the platform's governance and responsibility framework.
   <a href="oversight_governance.html" style="color:var(--gold); text-decoration:none;">
 Learn more about Oversight and Governance →  </a>
 </p>
-
   <div class="section">
       <div class="grid">
         <div class="card">
@@ -626,21 +610,18 @@ Learn more about Oversight and Governance →  </a>
           <p>
 You select an active project on the platform and become familiar with the investment round parameters.          </p>
         </div>
-
         <div class="card">
           <div class="step">STEP 2</div>
           <h3>Sending USDT</h3>
           <p>
 Investments are accepted in USDT (TRC20). After sending funds, you'll be taken to confirmation.          </p>
         </div>
-
         <div class="card">
           <div class="step">STEP 3</div>
           <h3>Transaction confirmation</h3>
           <p>
 You provide a contact email and Transaction Hash (TxID). This allows you to secure your investment.          </p>
         </div>
-
         <div class="card">
           <div class="step">STEP 4</div>
           <h3>Ручная проверка</h3>
@@ -649,9 +630,7 @@ The NoctAI team manually confirms the transaction and locks in the investor's st
         </div>
       </div>
     </div>
-
     <hr/>
-
     <div class="section">
       <div class="grid">
         <div class="card">
@@ -660,13 +639,11 @@ The NoctAI team manually confirms the transaction and locks in the investor's st
 Manual verification reduces the risk of errors, protects investors, and maintains control
 over the share structure.          </p>
         </div>
-
         <div class="card">
           <h3>Timeframe for fixing the share</h3>
           <p>
 Confirmation and fixation of the share occurs within 24 hours after sending the data.          </p>
         </div>
-
         <div class="card">
           <h3>Large investments</h3>
           <p>
@@ -674,12 +651,11 @@ Investments from major investors are considered individually through direct cont
         </div>
       </div>
     </div>
-
     <p class="footer-note">
 NoctAI is not a public investment offer.
 All investments are made based on the individual decision of the investor.    </p>
   </div>
-  
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -687,7 +663,6 @@ All investments are made based on the individual decision of the investor.    </
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -716,7 +691,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>

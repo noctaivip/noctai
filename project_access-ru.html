@@ -225,7 +225,6 @@ border-radius:999px;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
 <style>
 .site-footer{
@@ -373,7 +372,6 @@ text-decoration:underline;
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
@@ -381,6 +379,7 @@ text-decoration:underline;
 }
 </style>
 </head>
+
 <body>
 <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -426,7 +425,6 @@ text-decoration:underline;
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -442,7 +440,6 @@ text-decoration:underline;
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Оценка дохода</h3>
         <div class="calc-income">
@@ -457,6 +454,7 @@ text-decoration:underline;
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -508,49 +506,41 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">Как это работает</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
     <a href="projects-ru.html">Проекты</a>
   </div>
-
   <div class="lang-switch">
     <a href="project_access_ru.html" class="active">RU</a>
 	-
     <a href="project_access.html">EN</a>
   </div>
 </div>
-
   </div>
 </nav>
 
   <div class="container">
   <span class="badge">PROJECT ACCESS</span>
-
   <h1>Доступ к проектам платформы</h1>
-
   <p class="sub">
     Project Access — это индивидуальный уровень допуска к отдельным инвестиционным проектам и закрытым раундам платформы NoctAI.
     Решение о предоставлении доступа принимается вручную и основывается на совокупном участии инвестора.
   </p>
-
   <p class="sub" style="margin-top:20px;">
     Публичные проекты и их текущие статусы представлены в разделе Projects.
   </p>
-
   <p class="sub">
     <a href="projects.html" style="color:var(--gold); text-decoration:none;">
       Перейти к Projects →
     </a>
   </p>
-
   <div class="section">
     <h2>Условия рассмотрения</h2>
     <p>
@@ -563,7 +553,6 @@ function onProjectChange(v){
       <li>платформа оставляет за собой право отказа без раскрытия причин</li>
     </ul>
   </div>
-
   <div class="section">
     <h2>Что предоставляет Project Access</h2>
     <ul>
@@ -572,22 +561,18 @@ function onProjectChange(v){
       <li>приватные обновления и материалы по проектам</li>
     </ul>
   </div>
-
   <div class="section">
     <h2>Запрос на Project Access</h2>
     <p>
       Для рассмотрения запроса укажите контактный email и Transaction Hash (TxID),
       подтверждающий ваше участие в проектах платформы.
     </p>
-
     <div class="form">
       <label>Email для связи</label>
       <input id="pa-email" type="email" placeholder="you@email.com"/>
-
       <label>TxID / Transaction Hash</label>
       <input id="pa-txid" type="text" placeholder="0x..."/>
     </div>
-
     <div style="margin-top:24px;text-align:center;">
       <button id="requestAccessBtn" type="button"
         style="background:linear-gradient(180deg,#f1d48a,#d6b15e);
@@ -603,11 +588,9 @@ function onProjectChange(v){
       </button>
     </div>
   </div>
-
   <p class="note">
     Все запросы рассматриваются вручную. В случае одобрения доступ предоставляется по указанному email.
   </p>
-
   <p class="footer-note">
     Project Access не является гарантией участия в закрытых проектах.
     Все инвестиционные решения принимаются индивидуально.
@@ -644,18 +627,14 @@ function onProjectChange(v){
       font-size:22px;
       cursor:pointer;
     ">×</button>
-
     <div style="color:#d6b15e;font-size:12px;letter-spacing:.12em;margin-bottom:10px;">
       ACCESS APPROVED
     </div>
-
     <h2 style="margin-top:0">Project Access предоставлен</h2>
-
     <p style="color:#9fb3c8">
       Ваш запрос на Project Access одобрен командой NoctAI.
       Доступ активирован и закреплён за вашим email.
     </p>
-
     <div style="
       margin-top:24px;
       border:1px solid rgba(214,177,94,.35);
@@ -669,7 +648,6 @@ function onProjectChange(v){
         <li>приватные обновления и материалы по проектам</li>
       </ul>
     </div>
-
     <div style="text-align:center;margin-top:28px">
       <button onclick="goPrivateProjects()" style="
         background:linear-gradient(180deg,#f1d48a,#d6b15e);
@@ -686,6 +664,7 @@ function onProjectChange(v){
     </div>
   </div>
 </div>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -693,7 +672,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -760,7 +738,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 });
 </script>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>

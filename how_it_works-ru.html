@@ -145,7 +145,6 @@ hr{
   color: var(--text);
   font-weight: 700;
 }
-
 </style>
 <style>
 .top-nav{
@@ -367,7 +366,6 @@ border-radius:999px;
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
@@ -421,7 +419,6 @@ border-radius:999px;
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -432,12 +429,10 @@ border-radius:999px;
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Оценка дохода</h3>
         <div class="calc-income">
@@ -446,12 +441,12 @@ border-radius:999px;
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -503,31 +498,27 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">Как это работает</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
     <a href="projects-ru.html">Проекты</a>
   </div>
-
   <div class="lang-switch">
     <a href="how_it_works-ru.html" class="active">RU</a>
 	-
     <a href="how_it_works.html">EN</a>
   </div>
 </div>
-
   </div>
 </nav>
 
 <div class="container">
-
   <span class="badge">HOW IT WORKS</span>
   <h1>Как устроена модель участия NoctAI</h1>
   <p class="sub">
@@ -535,7 +526,6 @@ function onProjectChange(v){
     Участие фиксируется через ручную проверку, а доли инвесторов закрепляются
     в рамках единой структуры владения.
   </p>
-
   <div class="section">
     <h2>Почему минимальный вход начинается от $1</h2>
     <p class="sub">
@@ -567,7 +557,6 @@ function onProjectChange(v){
       </div>
     </div>
   </div>
-
   <div class="section">
     <h2>Как работает участие при небольшом капитале</h2>
     <div class="grid">
@@ -594,7 +583,6 @@ function onProjectChange(v){
       </div>
     </div>
   </div>
-
   <div class="section">
     <h2>Почему расчёты ведутся в USDT</h2>
     <div class="grid">
@@ -620,7 +608,6 @@ function onProjectChange(v){
       </div>
     </div>
   </div>
-
   <hr/>
 <p class="sub" style="margin-top:24px;">
   Процесс участия и допуска инвесторов регулируется внутренним
@@ -629,7 +616,6 @@ function onProjectChange(v){
     Подробнее об Oversight & Governance →
   </a>
 </p>
-
   <div class="section">
       <div class="grid">
         <div class="card">
@@ -639,7 +625,6 @@ function onProjectChange(v){
             Вы выбираете активный проект на платформе и знакомитесь с параметрами инвестиционного раунда.
           </p>
         </div>
-
         <div class="card">
           <div class="step">ШАГ 2</div>
           <h3>Отправка USDT</h3>
@@ -647,7 +632,6 @@ function onProjectChange(v){
             Инвестиции принимаются в USDT (TRC20). После отправки средств вы переходите к подтверждению.
           </p>
         </div>
-
         <div class="card">
           <div class="step">ШАГ 3</div>
           <h3>Подтверждение транзакции</h3>
@@ -655,7 +639,6 @@ function onProjectChange(v){
             Вы указываете email для связи и Transaction Hash (TxID). Это позволяет зафиксировать инвестицию.
           </p>
         </div>
-
         <div class="card">
           <div class="step">ШАГ 4</div>
           <h3>Ручная проверка</h3>
@@ -665,9 +648,7 @@ function onProjectChange(v){
         </div>
       </div>
     </div>
-
     <hr/>
-
     <div class="section">
       <div class="grid">
         <div class="card">
@@ -677,14 +658,12 @@ function onProjectChange(v){
             над структурой долей.
           </p>
         </div>
-
         <div class="card">
           <h3>Сроки фиксации доли</h3>
           <p>
             Подтверждение и фиксация доли происходят в течение 24 часов после отправки данных.
           </p>
         </div>
-
         <div class="card">
           <h3>Крупные инвестиции</h3>
           <p>
@@ -693,7 +672,6 @@ function onProjectChange(v){
         </div>
       </div>
     </div>
-
     <p class="footer-note">
       NoctAI не является публичной инвестиционной офертой.
       Все инвестиции осуществляются на основании индивидуального решения инвестора.
@@ -707,7 +685,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -736,7 +713,7 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>

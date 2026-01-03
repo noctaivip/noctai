@@ -216,7 +216,6 @@ border-radius:999px;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
 <style>
 :root{
@@ -235,7 +234,6 @@ body{
   color:var(--text);
   font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
 }
-
 </style>
 <style>
 .site-footer{
@@ -383,7 +381,6 @@ text-decoration:underline;
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
@@ -391,6 +388,7 @@ text-decoration:underline;
 }
 </style>
 </head>
+
 <body>
 <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -425,7 +423,6 @@ text-decoration:underline;
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -436,7 +433,6 @@ text-decoration:underline;
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -447,12 +443,10 @@ text-decoration:underline;
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Оценка дохода</h3>
         <div class="calc-income">
@@ -461,12 +455,12 @@ text-decoration:underline;
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -518,45 +512,38 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
 
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">Как это работает</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
     <a href="projects-ru.html">Проекты</a>
   </div>
-
   <div class="lang-switch">
     <a href="private_investor_environment-ru.html" class="active">RU</a>
 	-
     <a href="private_investor_environment.html">EN</a>
   </div>
 </div>
-
   </div>
 </nav>
 
 <div class="container">
 <h2>Закрытая инвестиционная среда</h2>
-
 <div class="card">
 <p>
 Вы находитесь в закрытой инвестиционной среде <strong>NoctAI</strong>.
 Доступы, проекты и коммуникации управляются индивидуально.
 Ниже представлены активные и потенциальные инвестиционные контуры, доступ к которым предоставляется по индивидуальному мандату.
 </p>
-
 <p style="color:#9aa3b2;font-size:14px;max-width:760px;">
 Доступы в данной среде активируются поэтапно.
 Каждая зона имеет собственные условия, статус и требования конфиденциальности.
 </p>
-
 <div class="doors">
     <div class="door" onclick="openNDA()" style="cursor:pointer;">
         <div class="label">Дверь 1 — Частные проекты</div>
@@ -565,21 +552,17 @@ function onProjectChange(v){
 Доступ открывается после подтверждения NDA.
 </p>
 <div class="value-approved">Статус: Доступ после NDA</div>
-
     </div>
-
     <div class="door locked">
         <div class="label">Дверь 2 — Возможности совместных инвестиций</div>
         <p>Стратегические co-investment структуры с ограниченным числом участников. Параметры и тайминг определяются индивидуально.</p>
         <div class="value-pending">Статус: Ожидание</div>
     </div>
-
     <div class="door" onclick="silentDoor()" style="cursor:pointer;">
         <div class="label">Дверь 3 — Коммуникация с инвесторами</div>
         <p>Прямой канал связи с инвестиционной командой. Публичные обсуждения отсутствуют. Все взаимодействия подпадают под действие соглашения о неразглашении.</p>
         <div class="value-approved">Статус: Доступно</div>
     </div>
-
     <div class="door locked">
         <div class="label">Дверь 4 — Материалы для обработки данных</div>
         <p>Инвестиционные материалы предоставляются индивидуально. Никакие документы не размещаются в открытом доступе на платформе. Доступ предоставляется для каждого проекта отдельно.</p>
@@ -587,7 +570,7 @@ function onProjectChange(v){
     </div>
 </div>
 </div>
-
+</div>
 
 <footer class="site-footer">
   <div class="footer-container">
@@ -596,7 +579,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -625,13 +607,12 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="projects.html">Проекты платформы</a>
 </div>
-
 
 <script>
 function openRoomPanel(id){
@@ -646,22 +627,18 @@ function silentDoor(){
 }
 </script>
 
-
 <script>
 function projectProjection(){
     window.location.href = 'private_projects.html';
 }
 </script>
 
-
 <div class="modal" id="ndaModal" style="display:none;z-index:50;">
   <div class="modal-content" style="max-width:820px;">
     <div class="close" onclick="closeNDA()">×</div>
-
 <div class="container">
     <h1>Соглашение о неразглашении конфиденциальной информации для инвесторов.</h1>
     <p>На этой странице содержится конфиденциальная информация, касающаяся возможностей частных инвестиций, предоставляемых платформой NoctAI.</p>
-
     <div class="box">
         <p><strong>Получая доступ к этим материалам, вы подтверждаете и соглашаетесь со следующим:</strong></p>
         <ul>
@@ -670,7 +647,6 @@ function projectProjection(){
             <li>Данный материал не является публичным предложением об инвестировании.</li>
             <li>Все инвестиционные решения принимаются командой NoctAI индивидуально.</li>
         </ul>
-
 <div class="box">
 <p><strong>Дополнительные подтверждения:</strong></p>
 <ul>
@@ -680,8 +656,6 @@ function projectProjection(){
     <li>Вы подтверждаете, что доступ к этим материалам не создает никаких фидуциарных отношений.</li>
 </ul>
 </div>
-
-
     <div class="footer">
         <input type="checkbox" id="agree">
         <label for="agree">Я подтверждаю, что прочитал, понял и согласен с условиями настоящего Конфиденциального соглашения.</label>
@@ -711,8 +685,8 @@ function proceedNDA(){
     window.location.href = 'private_project-ru.html';
 }
 </script>
-
   </div>
+</div>
 </div>
 
 <script>
@@ -733,6 +707,5 @@ function proceed(){
   window.location.href = 'private_projects-ru.html';
 }
 </script>
-
 </body>
 </html>

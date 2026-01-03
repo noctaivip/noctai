@@ -134,7 +134,6 @@ hr{
   font-size:13px;
 }
 </style>
-
 <style>
 h1 { color: #ffffff; }
 
@@ -257,7 +256,6 @@ border-radius:999px;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
 <style>
 .site-footer{
@@ -405,7 +403,6 @@ text-decoration:underline;
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
@@ -448,7 +445,6 @@ text-decoration:underline;
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -459,7 +455,6 @@ text-decoration:underline;
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -470,12 +465,10 @@ text-decoration:underline;
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Оценка дохода</h3>
         <div class="calc-income">
@@ -484,12 +477,12 @@ text-decoration:underline;
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -541,34 +534,29 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">Как это работает</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор</a>
     <a href="projects-ru.html">Проекты</a>
   </div>
-
   <div class="lang-switch">
     <a href="projects_ru.html" class="active">RU</a>
 	-
     <a href="projects.html">EN</a>
   </div>
 </div>
-
   </div>
 </nav>
 
   <div class="container">
-
     <span class="badge">PROJECTS</span>
     <h1>Проекты платформы NoctAI</h1>
-    
 <p class="sub">
   <strong>NoctAI — инвестиционная платформа с поэтапным запуском проектов.</strong><br>
   Каждый проект проходит индивидуальную экспертную оценку, включая технологическую, юридическую и рыночную проверку.<br><br>
@@ -576,8 +564,6 @@ function onProjectChange(v){
   Проекты со статусом <em>upcoming</em> находятся на этапе индивидуальной оценки, подготовки патентной защиты или финализации структуры и не открыты для инвестиций до завершения данных этапов.<br><br>
   <strong>Инвестиционный доступ предоставляется выборочно и может быть открыт только после завершения соответствующих защитных и структурных процедур.</strong>
 </p>
-
-
     <div class="section">
       <h2>Активный проект</h2>
       <div class="grid">
@@ -597,9 +583,7 @@ function onProjectChange(v){
         </div>
       </div>
     </div>
-
     <hr/>
-
     <div class="section">
       <h2>Будущие проекты</h2>
       <div class="grid">
@@ -614,7 +598,6 @@ function onProjectChange(v){
             <div><strong>Доступ:</strong> Скоро</div>
           </div>
         </div>
-
         <div class="card lock">
           <span class="status">UPCOMING</span>
           <h3>Data Intelligence Platform</h3>
@@ -628,9 +611,7 @@ function onProjectChange(v){
         </div>
       </div>
     </div>
-
     <hr/>
-
     <div class="section">
       <h2>Проекты по приглашению</h2>
       <div class="grid">
@@ -651,19 +632,17 @@ function onProjectChange(v){
   Доступ к отдельным проектам, ранним инвестиционным раундам и закрытым материалам
   осуществляется в рамках отдельного контура Project Access.
 </p>
-
 <p class="sub">
   <a href="project_access-ru.html" style="color:var(--gold); text-decoration:none;">
     Перейти к Project Access →
   </a>
 </p>
-
     <p class="footer-note">
       Информация на странице не является публичной инвестиционной офертой.
       Доступ к проектам может быть ограничен.
     </p>
-
   </div>
+  
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -671,7 +650,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -700,7 +678,7 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>

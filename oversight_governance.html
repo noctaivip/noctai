@@ -55,7 +55,6 @@ h1 {
     color:#8b94a1;
 }
 </style>
-
 <style>
 .top-nav{
 position:sticky;
@@ -166,7 +165,6 @@ border-radius:999px;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
 <style>
 :root{
@@ -228,7 +226,6 @@ body{
   font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
 }
 </style>
-<!-- EXACT CALCULATOR CSS FROM index.html -->
 <style>
 .calc-overlay{
   position:fixed; inset:0; background:rgba(5,8,14,0.85);
@@ -338,7 +335,6 @@ body{
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
@@ -346,8 +342,8 @@ body{
 }
 </style>
 </head>
-<body>
 
+<body>
 <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -380,7 +376,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -391,7 +386,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -402,12 +396,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -416,12 +408,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -474,33 +466,29 @@ function onProjectChange(v){
   recalc();
 }
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects-ru.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="oversight_governance.html" class="active">EN</a>
 	-
     <a href="oversight_governance-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
 <div class="container">
-
 <h1>Oversight & Governance</h1>
 <div class="subtitle">
 NoctAI Investment Platform Responsibility and Governance Framework</div>
-
 <div class="section">
 <h2>Control principle</h2>
 <p>
@@ -508,7 +496,6 @@ The NoctAI platform is managed by a <strong>centralized investment team</strong>
 <p>
 The platform is not a marketplace and does not use automated investment access mechanisms.</p>
 </div>
-
 <div class="section">
 <h2>Decision-making chain</h2>
 <p class="chain">
@@ -516,7 +503,6 @@ Expertise → Legal Review → Patent/Protection → Structuring → Opening Acc
 <p>
 No stage can be skipped. Decisions are made manually and recorded within the management team.</p>
 </div>
-
 <div class="section">
 <h2>Investment access control</h2>
 <p>
@@ -531,7 +517,6 @@ Access may be <strong>restricted or revoked</strong> in case of non-compliance w
   <a href="access-protocol.html" style="color:#d4af37; text-decoration:none;">
 Go to Access Protocol →  </a>
 </p>
-
 <div class="section">
 <h2>Absence of public figures</h2>
 <p>
@@ -539,8 +524,6 @@ NoctAI is an infrastructure investment platform, not a personal brand or media p
 <p>
 Responsibility is fixed at the level of the management system, procedures and decisions, and not at the level of public figures.</p>
 </div>
-
-
 <div class="section">
 <h2>Limitations and boundaries of management</h2>
 <p>
@@ -549,13 +532,12 @@ risk levels and capital admission structure.</p>
 <p>
 No project can be opened for investment outside of an approved model of responsibility and protection of investors' interests.</p>
 </div>
-
 <div class="footer-note">
 This page outlines the platform's responsibility and governance architecture.
 All investment conditions are determined individually.
 </div>
-
 </div>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -563,7 +545,6 @@ All investment conditions are determined individually.
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -592,7 +573,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>

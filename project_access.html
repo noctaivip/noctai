@@ -225,7 +225,6 @@ border-radius:999px;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
 <style>
 .site-footer{
@@ -373,7 +372,6 @@ text-decoration:underline;
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
@@ -381,6 +379,7 @@ text-decoration:underline;
 }
 </style>
 </head>
+
 <body>
 <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -414,7 +413,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -425,7 +423,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -436,12 +433,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -450,12 +445,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -507,47 +502,39 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects-ru.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="project_access.html" class="active">EN</a>
 	-
     <a href="project_access-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
   <div class="container">
   <span class="badge">PROJECT ACCESS</span>
-
   <h1>Access to platform projects</h1>
-
   <p class="sub">
 Project Access is a customized level of access to specific investment projects and closed rounds on the NoctAI platform.
 The decision to grant access is made manually and is based on the investor's total participation.  </p>
-
   <p class="sub" style="margin-top:20px;">
 Public projects and their current statuses are presented in the Projects section.  </p>
-
   <p class="sub">
     <a href="projects.html" style="color:var(--gold); text-decoration:none;">
 Go to Projects →
     </a>
   </p>
-
   <div class="section">
     <h2>Conditions of consideration</h2>
     <p>
@@ -560,7 +547,6 @@ Requests for Project Access are considered with the combined participation of
       <li>The platform reserves the right to refuse without disclosing the reasons.</li>
     </ul>
   </div>
-
   <div class="section">
     <h2>What does Project Access provide</h2>
     <ul>
@@ -569,22 +555,18 @@ Requests for Project Access are considered with the combined participation of
       <li>private updates and materials on projects</li>
     </ul>
   </div>
-
   <div class="section">
     <h2>Request for Project Access</h2>
     <p>
       To review your request, please provide a contact email and Transaction
 	  Hash (TxID) confirming your participation in the platform's projects.
     </p>
-
     <div class="form">
       <label>Email for communication</label>
       <input id="pa-email" type="email" placeholder="you@email.com"/>
-
       <label>TxID / Transaction Hash</label>
       <input id="pa-txid" type="text" placeholder="0x..."/>
     </div>
-
     <div style="margin-top:24px;text-align:center;">
       <button id="requestAccessBtn" type="button"
         style="background:linear-gradient(180deg,#f1d48a,#d6b15e);
@@ -600,10 +582,8 @@ Request Project Access
       </button>
     </div>
   </div>
-
   <p class="note">
 All requests are reviewed manually. If approved, access is granted via the email address provided.  </p>
-
   <p class="footer-note">
 Project Access does not guarantee participation in closed projects.
 All investment decisions are made individually.  </p>
@@ -643,13 +623,10 @@ All investment decisions are made individually.  </p>
     <div style="color:#d6b15e;font-size:12px;letter-spacing:.12em;margin-bottom:10px;">
       ACCESS APPROVED
     </div>
-
     <h2 style="margin-top:0">Project Access предоставлен</h2>
-
     <p style="color:#9fb3c8">
 Your request for Project Access has been approved by the NoctAI team.
 Access has been activated and assigned to your email.    </p>
-
     <div style="
       margin-top:24px;
       border:1px solid rgba(214,177,94,.35);
@@ -663,7 +640,6 @@ Access has been activated and assigned to your email.    </p>
         <li>private updates and materials on projects</li>
       </ul>
     </div>
-
     <div style="text-align:center;margin-top:28px">
       <button onclick="goPrivateProjects()" style="
         background:linear-gradient(180deg,#f1d48a,#d6b15e);
@@ -680,6 +656,7 @@ Go to Private Projects
     </div>
   </div>
 </div>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -687,7 +664,6 @@ Go to Private Projects
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -754,7 +730,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 });
 </script>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>

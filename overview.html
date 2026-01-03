@@ -95,6 +95,7 @@ box-shadow:0 0 0 1px rgba(201,162,77,.05) inset
 input[type=range]{width:100%;accent-color:var(--gold)}
 footer{margin-top:96px;padding:36px 20px;border-top:1px solid var(--border);color:var(--muted);font-size:13px}
 @media(max-width:900px){.hero,.grid,.calculator{grid-template-columns:1fr}}
+</style>
 <style>
 .top-nav{
 position:sticky;
@@ -237,9 +238,7 @@ text-decoration:underline;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
-
 <style>
 .cta-primary{
 transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
@@ -428,20 +427,20 @@ border-color:var(--gold);
   margin-top:10px;
 }
 </style>
-</style>
 <link rel="stylesheet" href="mobile-noctai.css">
 
 <style>
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
   }
 }
-</style></head>
+</style>
+</head>
+
 <body>
 <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -475,7 +474,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -486,7 +484,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -497,12 +494,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -511,12 +506,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -568,108 +563,81 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="overview.html" class="active">EN</a>
 	-
     <a href="overview-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
+
 <div class="container">
-
 <h1>What Is NOCTAI</h1>
-
 <p><strong>NOCTAI</strong> is a digital platform providing access to opportunities, projects, and analytical context beyond public markets.</p>
-
 <p>The platform is designed for people who are not looking for noise, marketing, or promises, but for a <strong>clear and structured environment for progress, growth, and participation</strong> — at their own level.</p>
-
 <p>NOCTAI is not an investment fund, a broker, or a public marketplace. It is an <strong>interaction environment</strong> in which opportunities are unlocked gradually, depending on readiness, profile, and level of participation.</p>
-
 <hr>
-
 <h2>How the Platform Works</h2>
-
 <p>NOCTAI does not operate with a single, uniform entry point for everyone.</p>
-
 <p>The platform is built on the principle of <strong>access levels</strong>:</p>
-
 <ul>
 <li>a base level that is open to any user</li>
 <li>expanded capabilities that become available as one progresses within the system</li>
 <li>restricted sections reserved for participants with a verified profile</li>
 </ul>
-
 <p>This means that:</p>
-
 <ul>
 <li>anyone can start</li>
 <li>access is not purchased — it is confirmed</li>
 <li>each participant sees only the scope of information and opportunities that corresponds to their current status</li>
 </ul>
-
 <hr>
-
 <h2>What NOCTAI Provides</h2>
-
 <p>NOCTAI does not offer guarantees or promises. It provides the <strong>ability to operate within a well‑structured environment</strong>.</p>
-
 <ul>
 <li>analytical context and structured information</li>
 <li>an understanding of how private projects and closed markets function</li>
 <li>access to projects and interaction in a controlled format</li>
 <li>clear rules without chaos or random decision‑making</li>
 </ul>
-
 <p>For some, NOCTAI is an entry point and a learning environment.<br>
 For others, it is a working space and a selection tool.<br>
 For a third group, it is a closed interaction environment.</p>
-
 <hr>
-
 <h2>Platform Principle</h2>
-
 <p>NOCTAI does not divide people into “poor” and “wealthy.” The platform distinguishes <strong>levels of responsibility and access</strong>.</p>
-
 <ul>
 <li>status is not declared — it is formed through actions</li>
 <li>access is not sold — it is granted</li>
 <li>participation is possible only by adhering to the rules of the environment</li>
 </ul>
-
 <hr>
-
 <h2>Important to Understand</h2>
-
 <ul>
 <li>NOCTAI does not promise returns</li>
 <li>does not impose participation</li>
 <li>does not disclose everything at once</li>
 <li>does not operate under the public logic of “more is better”</li>
 </ul>
-
 <p>The platform is built for those who understand that <strong>access to opportunities always begins with trust and discipline</strong>.</p>
-
 <blockquote>
 NOCTAI is a platform where anyone can start,<br>
 but not everyone chooses to reach the next level.
 </blockquote>
-
 </div>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -677,7 +645,6 @@ but not everyone chooses to reach the next level.
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -706,7 +673,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
