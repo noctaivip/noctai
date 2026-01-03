@@ -86,7 +86,6 @@ padding:32px 0;color:var(--muted);font-size:13px;
 }
 @media(max-width:900px){.grid{grid-template-columns:1fr}}
 </style>
-
 <style>
 .modal{
 display:none;
@@ -101,8 +100,6 @@ max-width:520px;
 margin:80px auto;
 }
 </style>
-
-
 <style>
 .cta-gmail{
 display:inline-block;
@@ -119,8 +116,6 @@ margin-top:10px;
 filter:brightness(1.05);
 }
 </style>
-
-
 <style>
 .gmail-link{
 display:inline-block;
@@ -133,8 +128,6 @@ text-decoration:none;
 text-decoration:underline;
 }
 </style>
-
-
 <style>
 .modal-close{
 position:absolute;
@@ -261,7 +254,6 @@ border-radius:999px;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
 <style>
 :root{
@@ -306,8 +298,6 @@ text-decoration:underline;
   text-align:right;
 }
 </style>
-
-
 <style>
 .address-box{
 margin-top:8px;
@@ -347,7 +337,6 @@ color:var(--gold);
 display:none;
 }
 </style>
-
 <style>
 .calc-overlay{
   position:fixed; inset:0; background:rgba(5,8,14,0.85);
@@ -417,11 +406,37 @@ display:none;
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
   }
+}
+</style>
+<style>
+.qr-box{
+  margin-top:16px;
+  padding:14px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#0f141c;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.qr-box img{
+  width:160px;
+  height:160px;
+  object-fit:contain;
+  background:#fff;
+  border-radius:10px;
+}
+
+.qr-label{
+  margin-top:10px;
+  font-size:12px;
+  color:var(--muted);
+  text-align:center;
 }
 </style>
 </head>
@@ -454,12 +469,12 @@ display:none;
       Private Projects — Invitation Only
     </option>
   </select>
+  
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
 The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -470,7 +485,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -481,12 +495,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -495,12 +507,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -552,46 +564,40 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects-ru.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="invest_usdt.html" class="active">EN</a>
 	-
     <a href="invest_usdt-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
-
 
 <header class="container">
 <br/><br/>
   <h1>Investing in Active Project #001</h1>
   <p><strong>AI Dispatcher + Marketplace</strong></p>
-<p>Investments are accepted in <strong>USDT</strong>. The minimum deposit is <strong>$1</strong>.</p></header>
+<p>Investments are accepted in <strong>USDT</strong>. The minimum deposit is <strong>$1</strong>.</p>
+</header>
 
 <main class="container grid">
-
   <div class="panel">
 <h2>Choosing an investment amount</h2>
     <input type="range" id="inv" min="1" max="300000" value="10" oninput="calc()">
     <p class="result">$<span id="invv">10</span></p>
-
 <label>Enter the amount manually</label>
     <input type="number" id="invInput" min="1" step="1" value="10" class="manual-input" oninput="syncFromInput()">
-
 <p>Your share: <strong><span id="eq">0.000003%</span></strong></p>
 <p>Income at 50% of the market: <strong>$<span id="i50">16.67</span> / month</strong></p>
 <p>Income at 100% of the market: <strong>$<span id="i100">33.33</span> / month</strong></p>
@@ -599,15 +605,12 @@ function onProjectChange(v){
 <h2 style="margin-top:30px">For strategic investors</h2>
     <p>Investments from <strong>$300,000</strong> are reviewed individually.</p>
     <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Large%20Investment%20Inquiry&body=Здравствуйте,%0A%0AЯ%20хочу%20обсудить%20крупную%20инвестицию.%0A%0AСпасибо." style="color:var(--gold)">Contact the team</a></p>
- 
   </div>
-
   <div class="panel">
   <p style="font-size:13px;color:var(--muted);margin-bottom:10px">
 USDT is used as a unit of account, equivalent to the US dollar.
 This is not a crypto investment, but a form of fixing shares.  </p>
     <h2>Payment in USDT</h2>
-   
 <label style="display:flex;gap:10px;cursor:pointer;font-size:13px;color:var(--muted)">
   <input type="checkbox" id="riskAgree">
   <span>
@@ -619,8 +622,16 @@ This is not a crypto investment, but a form of fixing shares.  </p>
 	financial risks and does not imply guaranteed returns.
   </span>
 </label>
-
-<div id="usdtAddressBlock" style="display:none">
+<div class="qr-box">
+  <img
+  src="assets/qr/usdt-trc20.jpg"
+  alt="USDT TRC20 payment address QR code"
+  loading="lazy"
+>
+  <div class="qr-label">
+    Scan with your phone to pay (USDT · TRC20)
+  </div>
+</div>
   <div class="address-box" id="walletBox">
     <span class="address-text" id="walletAddress">
       TYzS8upYw57S5wqHkDDxhsxcwoWE7tYALU
@@ -645,7 +656,6 @@ This is not a crypto investment, but a form of fixing shares.  </p>
   </div>
 </div>
  </div>
-
 </main>
 
 <div id="confirmModal" class="modal">
@@ -653,20 +663,15 @@ This is not a crypto investment, but a form of fixing shares.  </p>
     <button class="modal-close" onclick="closeConfirm()">×</button>
     <h2>Investment confirmation</h2>
     <p>We manually confirm transactions and record the investor's share.</p>
-
     <label>Email for communication</label>
     <input type="email" id="cEmail" class="manual-input" placeholder="you@email.com">
-
     <label style="margin-top:12px">TxID / Transaction Hash</label>
     <input type="text" id="cTx" class="manual-input" placeholder="0x...">
-
     <label style="margin-top:12px">Amount</label>
     <input type="text" id="cAmount" class="manual-input" readonly>
-
     <div style="margin-top:20px;display:flex;justify-content:center">
       <a class="cta-primary" href="#" onclick="sendConfirm()">Confirm investment</a>
     </div>
-
     <p style="margin-top:14px;font-size:13px">
 Confirmation and fixation of the share - within 24 hours.    </p>
   </div>
@@ -679,7 +684,6 @@ Confirmation and fixation of the share - within 24 hours.    </p>
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -708,6 +712,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <script>
 function syncFromInput(){
   let v=Number(invInput.value);
@@ -725,7 +730,6 @@ function calc(){
 }
 calc();
 </script>
-
 <script>
 function sendConfirm(){
   if(!cEmail.value || !cTx.value){
@@ -762,8 +766,6 @@ const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1' + '&to=' + encodeU
 window.open(gmailUrl, '_blank');
 }
 </script>
-
-
 <script>
 function openConfirm(){
   document.getElementById('cAmount').value = invv.innerText + " USDT";
@@ -789,7 +791,6 @@ window.open(gmailUrl, '_blank');
   closeConfirm();
 }
 </script>
-
 <script>
 function sendConfirm(){
   if(!cEmail.value || !cTx.value){
@@ -827,17 +828,11 @@ window.open(gmailUrl, '_blank');
 }
 </script>
 
-
-
-
 <div id="onsiteConfirm" class="modal">
   <div class="panel" style="max-width:560px;margin:80px auto;text-align:center;position:relative">
-
 <button class="modal-close" onclick="closeOnsiteConfirm()">×</button>
-
     <h2>$1EXIT™ — Investment Confirmation</h2>
     <p style="margin-bottom:18px">The investment has been recorded and sent for manual verification..</p>
-
     <div class="panel" style="text-align:left">
       <p><strong>Project</strong><br>AI Dispatcher + Marketplace</p>
       <p><strong>Investor Email</strong><br><span id="cEmailView"></span></p>
@@ -845,25 +840,20 @@ window.open(gmailUrl, '_blank');
       <p><strong>TxID</strong><br><span id="cTxView"></span></p>
       <p><strong>Status</strong><br>Submitted for manual verification</p>
     </div>
-
     <div style="margin-top:24px;display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap">
       <a class="cta-primary" href="#" onclick="copyConfirm()">Copy data</a>
       <a class="gmail-link" href="#" onclick="sendViaGmail()">Send via Gmail</a>
     </div>
-
     <p style="margin-top:14px;font-size:13px">
 Confirmation and fixation of the share - within 24 hours.    </p>
   </div>
 </div>
-
 
 <script>
 function closeOnsiteConfirm(){
   document.getElementById('onsiteConfirm').style.display = 'none';
 }
 </script>
-
-
 <script>
 function copyAddress(){
   const addr = document.getElementById('usdtAddress').innerText.trim();
@@ -909,14 +899,12 @@ if (walletBox && walletAddress) {
       });
   });
 }
-
 </script>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="projects.html">Проекты платформы</a>
 </div>
 </body>
-
 </html>
