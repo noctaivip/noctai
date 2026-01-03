@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_013-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,9 +396,21 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
+
 <body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -433,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -444,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -460,7 +469,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -469,12 +477,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -524,30 +532,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_013.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_013-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -559,57 +562,40 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 013<br/>The Sovereign Decision Framework</h3>
-
 <p>In the world of ordinary people, decisions are reactions. In the world of the ultra-wealthy, decisions are <strong>architecture</strong>. They do not simply decide — they design outcomes before action.</p>
-
 <h3>1. Decisions as Systems, Not Moments</h3>
 <p><strong>Key phrases:</strong> decision architecture, elite choice engineering, systemic thinking</p>
 <p>Decisions are built as systems with inputs, filters, predictive models, consequence mapping, redundancy, and time horizons.</p>
-
 <h3>2. Asymmetric Advantage — Tilting the Scale</h3>
 <p><strong>Key phrases:</strong> asymmetry design, unfair advantage creation</p>
 <p>Downside is capped while upside remains open and exponential.</p>
-
 <h3>3. Predictive Confidence — Seeing Outcomes Early</h3>
 <p><strong>Key phrases:</strong> elite forecasting, scenario modeling</p>
 <p>Pattern recognition, geopolitical models, and adviser triangulation create early certainty.</p>
-
 <h3>4. Strategic Non-Action</h3>
 <p><strong>Key phrases:</strong> calculated patience, timing advantage</p>
 <p>Delay is used to expose variables and weaken opponents.</p>
-
 <h3>5. Constraint Elimination</h3>
 <p><strong>Key phrases:</strong> friction removal, structural optimization</p>
 <p>Regulatory, operational, and capital constraints are engineered away.</p>
-
 <h3>6. Reversibility Filter</h3>
 <p><strong>Key phrases:</strong> reversible pathways, irreversible commitments</p>
 <p>Fast decisions where reversible. Slow, surgical decisions where permanent.</p>
-
 <h3>7. Multi-Layer Decision Stacking</h3>
 <p><strong>Key phrases:</strong> layered strategy models</p>
 <p>Tactical, operational, strategic, and sovereign levels run in parallel.</p>
-
 <h3>8. Delegated Intelligence</h3>
 <p><strong>Key phrases:</strong> decision support networks</p>
 <p>Information is delegated. Judgment is not.</p>
-
 <h3>9. Decision Immunity</h3>
 <p><strong>Key phrases:</strong> downside minimization, strategic insurance</p>
 <p>Exits are pre-negotiated and failure modes engineered out.</p>
-
 <h3>Conclusion — Designing Reality</h3>
 <p>The ultra-wealthy design decision ecosystems that make outcomes predictable and control inevitable.</p>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -619,6 +605,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -626,7 +613,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -655,6 +641,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

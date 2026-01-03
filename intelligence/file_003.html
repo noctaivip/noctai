@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_003-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,8 +396,19 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,35 +531,29 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_003.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_003-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
-
 <section class="panel">
   <div class="badge">INTELLIGENCE BRIEFING</div>
   <h1>Intelligence File 003</h1>
@@ -561,59 +561,32 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 003<br/>The Infrastructure of Power: How the Ultra-Wealthy Engineer Stability, Control, and Influence Across Multiple Systems</h3>
-
 <p>In the world of ultra-wealth, nothing is accidental. A fortune may be created through entrepreneurship — but <strong>power, stability, and continuity must be engineered</strong>. This document reveals the frameworks wealthy individuals rely on to secure their capital, shape influence, and ensure multi-generational dominance.</p>
-
 <h3>1. Strategic Positioning — Why the Wealthy Always Stand on the “Right Side of Reality”</h3>
-
 <p><strong>Key phrases:</strong> strategic positioning, macro intelligence, billionaire foresight, elite decision systems</p>
-
 <p>Ultra-wealthy individuals do not make decisions from the present. They operate from the <strong>future</strong> — from scenarios most people will only understand years later. They use private forecasting systems, geopolitical scanning tools, macro-scenario modeling, sector-specific intelligence, personal analysts and off-market data sources. This enables positioning capital, companies, and influence <strong>before</strong> global shifts become visible.</p>
-
 <h3>2. Structural Security — Wealth Protected Through Architecture, Not Secrecy</h3>
-
 <p><strong>Key phrases:</strong> multi-layer asset protection, UHNW structures, sovereign safeguarding, wealth architecture</p>
-
 <p>The wealthy do not hide. They <strong>design structures that cannot be broken</strong>. Geographic diversification, layered entities, legal buffers, inheritance mechanisms, trusts, and insurance shields transform wealth into a <strong>structural system</strong>, not a personal vulnerability.</p>
-
 <h3>3. Information Sovereignty — Controlling the Information Environment</h3>
-
 <p><strong>Key phrases:</strong> information sovereignty, private data ecosystems, elite secrecy engineering</p>
-
 <p>Information is power — and uncontrolled information is risk. The elite build private communication systems, encrypted environments, personal data silos, custom AI filters, controlled information intake, and analyst verification layers. Clarity becomes execution advantage.</p>
-
 <h3>4. Authority Networks — Influence Built Through Strategic Human Architecture</h3>
-
 <p><strong>Key phrases:</strong> elite networks, power alliances, influence architecture, strategic allies</p>
-
 <p>Power is not about connections, but alignment. The ultra-wealthy cultivate allies whose success is linked to their own — across politics, finance, industry, and media. This creates a <strong>persistent influence field</strong>, not a social graph.</p>
-
 <h3>5. Private Mobility — Logistics as a Form of Power</h3>
-
 <p><strong>Key phrases:</strong> sovereign mobility systems, UHNW travel security, global continuity logistics</p>
-
 <p>Mobility equals continuity. Private routes, sovereign access, evacuation planning, diplomatic pathways, and real-time risk intelligence allow operations to continue regardless of borders, crises, or public system failures.</p>
-
 <h3>6. Emotional Governance — Internal Stability as a Strategic Weapon</h3>
-
 <p><strong>Key phrases:</strong> elite psychology, emotional governance, decision clarity, executive composure</p>
-
 <p>Emotional instability destroys capital. The elite engineer internal discipline through advisory councils, structured decision systems, composure training, and psychological clarity frameworks. Calm becomes a competitive edge.</p>
-
 <h3>7. Multi-Horizon Legacy — Power That Continues Beyond One Lifetime</h3>
-
 <p><strong>Key phrases:</strong> dynastic design, generational architecture, succession frameworks, legacy engineering</p>
-
 <p>True wealth is measured by endurance. Dynastic systems include long-term trusts, governance frameworks, family constitutions, perpetual vehicles, and institutions designed to operate for decades — even centuries.</p>
-
 <h3>Conclusion — Power Must Be Engineered</h3>
-
 <p>The elite do not rely on chance. They design systems that secure intelligence, mobility, protection, influence, and legacy. This is the infrastructure of power — and the foundation of every enduring dynasty.</p>
-
 </div>
 </section>
 
@@ -623,7 +596,6 @@ function onProjectChange(v){
   Prepared for analytical reference only.  
   Not an offer. Not a recommendation.
 </section>
-
 </main>
 
 <footer class="site-footer">
@@ -633,7 +605,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -662,6 +633,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

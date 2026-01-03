@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_008-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
   <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_008.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_008-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -561,57 +562,40 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 008<br/>The Strategic Invisibility Protocol: How the Ultra-Wealthy Operate, Invest, and Expand Power Without Being Detected or Interfered With</h3>
-
 <p>For most people, wealth means visibility. For the ultra-wealthy, visibility is a <strong>liability</strong>. Power is strongest when it is invisible. This document outlines how elites engineer invisibility to move capital, influence markets, and shape outcomes without attention or interference.</p>
-
 <h3>1. Identity Layering — Legal Invisibility With Full Control</h3>
 <p><strong>Key phrases:</strong> identity shielding, multi-entity ownership, UHNW privacy structures</p>
 <p>Assets are controlled through layered holding companies, trustees, nominee structures, and jurisdictional segmentation — fully operational without direct attribution.</p>
-
 <h3>2. Capital Masking — Moving Money Without Signaling Intent</h3>
 <p><strong>Key phrases:</strong> masked capital flows, silent co-investments</p>
 <p>Capital is deployed through indirect participation, private agents, sovereign channels, and multi-layer routing that conceals scale and strategy.</p>
-
 <h3>3. Strategic Camouflage — Appearing Smaller Than Reality</h3>
 <p><strong>Key phrases:</strong> perception control, low-profile strategy</p>
 <p>Low visibility reduces legal, political, and social exposure while preserving leverage.</p>
-
 <h3>4. Invisible Mobility — Movement Without Footprints</h3>
 <p><strong>Key phrases:</strong> discreet mobility, sovereign travel privileges</p>
 <p>Elite mobility relies on private corridors, shell registrations, diplomatic routing, and off-record logistics.</p>
-
 <h3>5. Information Silence — Eliminating Data Leakage</h3>
 <p><strong>Key phrases:</strong> data minimization, private digital ecosystems</p>
 <p>Compartmentalized communication, encrypted devices, and cybersecurity operators remove exploitable data.</p>
-
 <h3>6. Influence Through Proxies</h3>
 <p><strong>Key phrases:</strong> proxy influence networks, indirect power</p>
 <p>Negotiation and execution occur through intermediaries, preserving deniability.</p>
-
 <h3>7. Invisible Deals — Off-Market Opportunity Control</h3>
 <p><strong>Key phrases:</strong> off-market opportunities, private sourcing</p>
 <p>Private placements and sovereign deals remove competition and timing risk.</p>
-
 <h3>8. The Philosophy of Invisibility</h3>
 <p><strong>Key phrases:</strong> strategic anonymity, elite psychology</p>
 <p>Exposure limits freedom. Invisibility preserves mobility, leverage, and autonomy.</p>
-
 <h3>9. Dynastic Invisibility — Privacy Across Generations</h3>
 <p><strong>Key phrases:</strong> generational privacy, dynastic anonymity</p>
 <p>Governance structures maintain control while shielding heirs indefinitely.</p>
-
 <h3>Conclusion — Invisibility as Sovereignty</h3>
 <p>Invisibility is engineered freedom. It protects assets, preserves agency, and enables action without interference.</p>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -621,6 +605,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -628,7 +613,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -657,6 +641,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

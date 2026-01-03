@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_041-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_041.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_041-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -560,27 +561,16 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 041<br/>The Exit Without Exiting Model — How Ultra-Wealthy Investors Monetize Control While Remaining Structurally Inside the Asset</h3>
-
 <p>Most investors equate value realization with selling. Ultra-wealthy investors understand that selling is often the weakest form of exit.</p>
-
 <p>True sophistication lies in extracting liquidity while preserving control, influence, and future optionality.</p>
-
 <h3>Why Traditional Exits Are Suboptimal</h3>
-
 <p>Selling introduces reinvestment risk, tax friction, loss of asymmetry, and dependence on market timing. Once sold, future advantage collapses.</p>
-
 <h3>Control Compounds, Liquidity Does Not</h3>
-
 <p>Liquidity is temporary. Control compounds through governance, information access, and strategic positioning.</p>
-
 <h3>What Exit Without Exiting Means</h3>
-
 <p>This model monetizes specific dimensions of value while preserving the asset itself.</p>
-
 <ul>
 <li>partial liquidity events</li>
 <li>recapitalizations</li>
@@ -588,40 +578,21 @@ function onProjectChange(v){
 <li>minority stake sales with control retention</li>
 <li>preferred layers above common equity</li>
 </ul>
-
 <h3>Quiet Liquidity Extraction</h3>
-
 <p>Elite investors avoid headline exits and use dividend recaps, preferred issuances, asset-level financing, and internal restructurings.</p>
-
 <h3>Time as a Force Multiplier</h3>
-
 <p>Value is realized incrementally. Risk declines while control compounds and market timing becomes irrelevant.</p>
-
 <h3>Preserving Asymmetry</h3>
-
 <p>Remaining embedded preserves upside, governance leverage, information advantage, and crisis optionality.</p>
-
 <h3>The Liquidity Fallacy</h3>
-
 <p>Success is not cashing out. Success is never being forced to choose between liquidity and control.</p>
-
 <h3>Why This Matters Now</h3>
-
 <p>Volatile valuations, regulatory scrutiny, and limited reinvestment opportunities favor structural monetization over clean exits.</p>
-
 <h3>Conclusion — Teach Assets to Pay</h3>
-
 <p>The most powerful investors teach assets to generate liquidity while they stay in control.</p>
-
 <p>Selling ends the story. Structural monetization lets it continue — on their terms.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -631,6 +602,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -638,7 +610,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -667,6 +638,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

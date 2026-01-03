@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_004-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
   <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_004.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_004-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -561,64 +562,34 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 004<br/>The Sovereign Advantage: How the Ultra‑Wealthy Build Autonomy, Leverage Nations, and Operate Beyond Traditional Constraints</h3>
-
 <p>At the highest levels of wealth, money stops being the ultimate asset. It becomes an <strong>environment</strong> — a structural force that shapes reality. Once an individual reaches sufficient scale, the central question shifts from “how do I grow wealth?” to “how do I operate beyond the limits of any single system?” This document outlines the strategic architecture the ultra‑wealthy use to create autonomy, sovereignty, and long‑term power.</p>
-
 <h3>1. Sovereign Optionality — Choosing the Environment Instead of Being Defined by It</h3>
-
 <p><strong>Key phrases:</strong> sovereign strategy, jurisdictional diversification, global optionality, UHNW mobility framework</p>
-
 <p>For most people, a country is a boundary. For the ultra‑wealthy, a country is a <strong>choice</strong>. They engineer optionality through multiple citizenships and residencies, legal rights across continents, multi‑jurisdictional corporate structures, decentralization of personal and business risk, and access to infrastructure in multiple sovereign regions.</p>
-
 <h3>2. Nation‑Level Leverage — Why Governments Cooperate With Billionaires</h3>
-
 <p><strong>Key phrases:</strong> sovereign partnerships, state‑level leverage, economic diplomacy, elite influence channels</p>
-
 <p>Ultra‑wealthy individuals are economic ecosystems that nations compete to attract. Governments offer negotiated tax regimes, customized residency and citizenship, access to sovereign investment programs, priority in strategic national projects, and direct dialogue with policymakers.</p>
-
 <h3>3. Strategic Privacy — Visibility as a Controlled Asset</h3>
-
 <p><strong>Key phrases:</strong> privacy engineering, elite anonymity, information risk control, identity shielding</p>
-
 <p>The most powerful individuals are rarely visible. They treat privacy as a discipline: minimal digital footprints, encrypted communication ecosystems, private ownership layers, controlled exposure, and zero public vulnerability points.</p>
-
 <h3>4. Capital Sovereignty — Wealth That Functions Without Human Presence</h3>
-
 <p><strong>Key phrases:</strong> autonomous capital structures, multi‑layer wealth engines, dynastic investment systems</p>
-
 <p>The ultra‑wealthy engineer capital systems that run independently: automated trusts, perpetual vehicles, private foundations, and capital engines designed for 50–100 years.</p>
-
 <h3>5. Diplomatic Positioning — Access No Corporation Can Buy</h3>
-
 <p><strong>Key phrases:</strong> UHNW diplomacy, geopolitical access, elite negotiations, national influence strategy</p>
-
 <p>True influence is built in sovereign corridors. Billionaires cultivate relationships with ministries, sovereign funds, invitation‑only channels, and strategic philanthropy.</p>
-
 <h3>6. Contingency Architecture — Systems Designed to Survive Anything</h3>
-
 <p><strong>Key phrases:</strong> crisis engineering, resilience architecture, emergency mobility, ultra‑secure logistics</p>
-
 <p>The ultra‑wealthy prepare for scenarios others only understand in hindsight: relocation paths, backup infrastructure, redundant liquidity, and risk‑mapped safe zones.</p>
-
 <h3>7. Philosophical Sovereignty — The Psychology That Separates the Rich From the Powerful</h3>
-
 <p><strong>Key phrases:</strong> sovereign mindset, elite psychology, long‑horizon thinking, personal governance</p>
-
 <p>Powerful individuals operate as parallel systems — designing environments, thinking in decades, eliminating emotional interference, and deciding from principle.</p>
-
 <h3>Conclusion — Sovereignty Is the Final Form of Wealth</h3>
-
 <p>Sovereignty is wealth as structure, power, and freedom. It is the final stage of ultra‑wealth.</p>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -628,6 +599,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -635,7 +607,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -663,6 +634,7 @@ A platform for equity participation in real projects.
       © 2025 NoctAI™
     </div>
   </div>
+  
 </footer>
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>

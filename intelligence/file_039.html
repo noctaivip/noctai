@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_039-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -461,7 +469,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +477,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +532,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_039.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_039-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -560,35 +562,22 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 039<br/>The Risk Absorption Hierarchy — How Ultra-Wealthy Investors Position Themselves So Others Carry the Losses</h3>
-
 <p>Most investors think about risk in terms of volatility. Ultra-wealthy investors think about risk in terms of <strong>who absorbs it</strong>.</p>
-
 <p>Risk never disappears. It is assigned. Structures determine where losses land when stress arrives.</p>
-
 <h3>Risk Is a Structural Outcome</h3>
-
 <p>Two investors can hold exposure to the same asset and experience radically different outcomes. The difference is not timing — it is position.</p>
-
 <h3>Someone Always Pays First</h3>
-
 <p>Every capital structure contains an explicit or implicit loss hierarchy. Elite investors map this hierarchy before committing capital.</p>
-
 <ul>
 <li>who absorbs losses first</li>
 <li>who lacks exit flexibility</li>
 <li>who is politically, legally, or reputationally constrained</li>
 </ul>
-
 <h3>Natural Risk Absorbers</h3>
-
 <p>Common equity, leveraged operators, junior creditors, and retail participants are structurally positioned to absorb losses.</p>
-
 <h3>How Risk Is Quietly Shifted</h3>
-
 <ul>
 <li>seniority in the capital stack</li>
 <li>collateral with behavioral triggers</li>
@@ -596,32 +585,17 @@ function onProjectChange(v){
 <li>covenants activating under stress</li>
 <li>conversion mechanics that improve position in downturns</li>
 </ul>
-
 <h3>When Yield Signals Hidden Risk</h3>
-
 <p>High yield often compensates for risk others refuse to hold. Elite investors treat yield as a diagnostic signal, not a promise.</p>
-
 <h3>Equal Exposure, Unequal Outcomes</h3>
-
 <p>Risk is asymmetric by design. Those who understand the hierarchy experience smaller drawdowns and faster recovery.</p>
-
 <h3>Engineering Risk Asymmetry</h3>
-
 <p>Ultra‑wealthy investors do not eliminate risk — they relocate it through structure, governance, and counterparty design.</p>
-
 <h3>Conclusion — Risk Is About Who Pays</h3>
-
 <p>Markets do not punish everyone equally. They punish those positioned to absorb losses.</p>
-
 <p>Hierarchy decides survival.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -631,6 +605,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -638,7 +613,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -666,6 +640,7 @@ A platform for equity participation in real projects.
       © 2025 NoctAI™
     </div>
   </div>
+  
 </footer>
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>

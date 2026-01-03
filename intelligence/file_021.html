@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_021-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
   <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_021.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_021-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -560,19 +561,13 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 021<br/>The Influence Preservation Blueprint: How the Ultra-Wealthy Maintain Power, Stability, and Strategic Control in an Age of Global Volatility</h3>
-
 <p>We have entered a century defined by instability: geopolitical fragmentation, AI-driven disruption, institutional decay, social polarization, and rising currency and regulatory risk. In this environment, wealth alone is no longer sufficient.</p>
-
 <p>The ultra-wealthy now optimize for something more fundamental: <strong>influence preservation</strong> — maintaining decision-making power, privileged access, and strategic control even when surrounding systems destabilize.</p>
-
 <h3>1. Influence as the Highest Asset Class</h3>
 <p><strong>Key phrases:</strong> influence capital, strategic permanence, elite positioning</p>
 <p>Money moves markets. Influence moves civilizations. Influence secures priority access, regulatory flexibility, crisis protection, and geopolitical optionality.</p>
-
 <h3>2. The Three Pillars of Influence Preservation</h3>
 <p>Elite families protect influence across:</p>
 <ul>
@@ -580,45 +575,31 @@ function onProjectChange(v){
 <li><strong>Relational influence</strong> — trusted advisors, allies, and intelligence networks.</li>
 <li><strong>Perceptual influence</strong> — narrative, reputation, and legitimacy control.</li>
 </ul>
-
 <h3>3. Early Threat Detection</h3>
 <p><strong>Key phrases:</strong> early-warning systems, volatility forecasting</p>
 <p>Private intelligence monitors regulation, geopolitics, social sentiment, cyber exposure, and alliance integrity.</p>
-
 <h3>4. Influence Insurance</h3>
 <p><strong>Key phrases:</strong> redundancy frameworks, continuity engineering</p>
 <p>Multiple jurisdictions, parallel political channels, diversified banking, narrative backups, and proxy actors ensure continuity.</p>
-
 <h3>5. Silent Influence Channels</h3>
 <p><strong>Key phrases:</strong> low-visibility power, private alliances</p>
 <p>Think tanks, councils, philanthropy, and sovereign institutions enable outcome shaping without exposure.</p>
-
 <h3>6. The Advisor Matrix</h3>
 <p><strong>Key phrases:</strong> trusted-circle engineering</p>
 <p>Advisors are selected for stress behavior, incentive alignment, discretion, judgment, and resistance to groupthink.</p>
-
 <h3>7. The Reputation Fortress</h3>
 <p><strong>Key phrases:</strong> reputation defense, narrative control</p>
 <p>Continuous monitoring, rapid response, curated visibility, and long-term trust building protect leverage.</p>
-
 <h3>8. Influence Scaling</h3>
 <p><strong>Key phrases:</strong> leverage amplification, networked power</p>
 <p>Cross-border alliances, institutional anchoring, and ownership of strategic choke points expand reach.</p>
-
 <h3>9. Influence Succession</h3>
 <p><strong>Key phrases:</strong> dynastic continuity</p>
 <p>Successors are trained in diplomacy, crisis management, discretion, and alliance stewardship.</p>
-
 <h3>Conclusion — Influence Outlasts Wealth</h3>
 <p>Markets change. Systems decay. Properly engineered influence survives and compounds.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -628,6 +609,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -635,7 +617,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -664,6 +645,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

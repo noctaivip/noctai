@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_027-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_027.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_027-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -560,43 +561,28 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 027<br/>The Reconstruction Principle — Why the Ultra-Wealthy Rebuild the System Instead of Competing Within It</h3>
-
 <p>Most market participants attempt to win inside existing systems. Ultra-wealthy actors operate differently: they reconstruct the system itself around their strategic interests.</p>
-
 <p>This is the Reconstruction Principle — the discipline of reshaping environments, incentives, infrastructures, and power architectures rather than adapting to those designed by others.</p>
-
 <h3>The Wealthy Do Not Compete — They Reconstruct</h3>
-
 <p>Average investors react to markets, regulation, and volatility. Billionaires redesign entry conditions, ownership logic, and control layers so competition becomes irrelevant.</p>
-
 <ul>
 <li>If a market becomes unprofitable, they alter the entry conditions.</li>
 <li>If an industry crowds, they consolidate it structurally.</li>
 <li>If risk increases, they transfer it elsewhere.</li>
 <li>If regulation tightens, they influence or redefine the regulatory framework.</li>
 </ul>
-
 <h3>The Three Arenas of Reconstruction</h3>
-
 <p><strong>1. Institutional Reconstruction</strong><br>
 They shape or create the rule‑setting bodies — councils, boards, standards committees, and alliances.</p>
-
 <p><strong>2. Structural Reconstruction</strong><br>
 They redesign ownership, governance, and capital flow architectures to create anti‑fragile systems.</p>
-
 <p><strong>3. Informational Reconstruction</strong><br>
 They operate private intelligence ecosystems providing asymmetry unavailable to public actors.</p>
-
 <h3>The Investor’s Structural Disadvantage</h3>
-
 <p>Any investor operating inside conditions they do not control remains structurally exposed. Reconstruction eliminates dependence by creating a proprietary environment.</p>
-
 <h3>Reconstruction in Real Capital Deployment</h3>
-
 <ul>
 <li>Building infrastructure others must use.</li>
 <li>Controlling gateways and chokepoints.</li>
@@ -604,24 +590,13 @@ They operate private intelligence ecosystems providing asymmetry unavailable to 
 <li>Expanding influence during volatility.</li>
 <li>Separating visible ownership from protected core control.</li>
 </ul>
-
 <h3>Why Reconstruction Now Matters More Than Ever</h3>
-
 <p>Accelerating crises, regulatory pressure, and behavioral mapping reward those who control systems rather than respond to them.</p>
-
 <h3>Conclusion — Power Follows Reconstruction</h3>
-
 <p>Elite actors do not manage assets — they manage the reality in which assets exist.</p>
-
 <p><strong>Do not adapt. Do not compete. Reconstruct.</strong></p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -631,6 +606,7 @@ They operate private intelligence ecosystems providing asymmetry unavailable to 
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -638,7 +614,6 @@ They operate private intelligence ecosystems providing asymmetry unavailable to 
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -667,6 +642,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

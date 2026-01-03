@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_033-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
   <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_033.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_033-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -560,36 +561,23 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 033<br/>The Jurisdictional Arbitrage Matrix — How Ultra-Wealthy Investors Use Legal Geography to Multiply Control, Reduce Risk, and Preserve Capital</h3>
-
 <p>Most investors treat geography as a backdrop. Ultra-wealthy investors treat it as a strategic instrument.</p>
-
 <p>Where capital is held, governed, taxed, and protected often matters more than the underlying asset. Jurisdiction is not a location — it is a risk profile.</p>
-
 <h3>Why Jurisdiction Is a First-Order Decision</h3>
-
 <p>Jurisdiction determines asset security, contract enforceability, capital mobility, tax exposure, and long-term survivability. A strong asset placed in a weak jurisdiction becomes fragile by default.</p>
-
 <h3>The Reality of Legal Systems</h3>
-
 <p>Legal systems are not neutral. Some prioritize state authority, others prioritize private property and contract rights. Ultra-wealthy families map these differences with precision.</p>
-
 <h3>What Jurisdictional Arbitrage Really Means</h3>
-
 <p>Jurisdictional arbitrage aligns each function of wealth with the legal environment best suited to protect it.</p>
-
 <ul>
 <li>Operations in efficient jurisdictions</li>
 <li>Holdings in stable jurisdictions</li>
 <li>Intellectual property in contract-protective jurisdictions</li>
 <li>Liquidity in politically neutral jurisdictions</li>
 </ul>
-
 <h3>The Five Dimensions Elite Investors Evaluate</h3>
-
 <ul>
 <li>Legal enforceability</li>
 <li>Political stability</li>
@@ -597,32 +585,17 @@ function onProjectChange(v){
 <li>Capital mobility</li>
 <li>Succession continuity</li>
 </ul>
-
 <h3>The Risk of Single-Jurisdiction Wealth</h3>
-
 <p>Concentrating operations, holdings, and liquidity inside one legal system creates a single point of failure. Ultra-wealthy families fragment jurisdictional exposure to eliminate this risk.</p>
-
 <h3>How This Framework Is Applied</h3>
-
 <p>Multi-layer holding entities, cross-border trusts, diversified banking, neutral arbitration venues, and residency optionality form resilient capital architectures.</p>
-
 <h3>Why This Matters Now</h3>
-
 <p>Geopolitical tension, regulatory expansion, and financial weaponization have turned jurisdictional intelligence into a survival skill.</p>
-
 <h3>Conclusion — Geography Is Strategy</h3>
-
 <p>Wealth is legal and structural, not merely financial. Ultra-wealthy investors design systems where jurisdiction itself becomes an asset.</p>
-
 <p>If capital must exist somewhere, it should exist where it is strongest.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -632,6 +605,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -639,7 +613,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -668,6 +641,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

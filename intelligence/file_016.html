@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_016-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,9 +396,21 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
+
 <body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -433,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -444,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -455,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -469,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -524,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_016.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_016-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -559,57 +561,40 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 016<br/>The Silent Power Index: How the Ultra-Wealthy Measure Invisible Influence, Predict Shifts in Control, and Position Ahead of Power Transitions</h3>
-
 <p>Most people measure wealth in capital. The ultra-wealthy measure <strong>power density</strong> — the concentration of invisible influence across institutions, networks, markets, and information channels.</p>
-
 <h3>1. Power Is Distributed, Not Held</h3>
 <p><strong>Key phrases:</strong> distributed influence, power nodes, institutional leverage</p>
 <p>Real power exists in nodes, veto points, and informal influence channels rather than formal titles.</p>
-
 <h3>2. The Silent Power Index</h3>
 <p><strong>Key phrases:</strong> influence mapping, power cartography</p>
 <p>The Index measures durability, alignment, private alliances, and effective veto capacity — not visibility.</p>
-
 <h3>3. Asymmetric Influence Mapping</h3>
 <p><strong>Key phrases:</strong> indirect leverage, asymmetric positioning</p>
 <p>Small, low-risk moves can generate disproportionate impact when aligned with power bottlenecks.</p>
-
 <h3>4. Indirect Control Architecture</h3>
 <p><strong>Key phrases:</strong> delegated authority, decision funnels</p>
 <p>Influence flows through advisors, intermediaries, media vectors, and institutional operators.</p>
-
 <h3>5. Predicting Power Transitions</h3>
 <p><strong>Key phrases:</strong> geopolitical forecasting, instability signals</p>
 <p>Elite actors detect transitions through defections, narrative shifts, alliance realignment, and capital withdrawal patterns.</p>
-
 <h3>6. Institutional Sentiment Analysis</h3>
 <p><strong>Key phrases:</strong> sentiment mapping, agenda drift</p>
 <p>Regulatory tone, judicial posture, military signaling, and academic pressure reveal future policy direction.</p>
-
 <h3>7. Influence Liquidity</h3>
 <p><strong>Key phrases:</strong> influence velocity, convertibility</p>
 <p>Some influence moves instantly; other forms require decades. Positioning accounts for both.</p>
-
 <h3>8. Power Counterweights</h3>
 <p><strong>Key phrases:</strong> strategic counterweights, influence hedging</p>
 <p>Parallel alliances, legal insulation, narrative shields, and redundant financial networks neutralize threats.</p>
-
 <h3>9. Long-Horizon Power Mapping</h3>
 <p><strong>Key phrases:</strong> intergenerational positioning, horizon scanning</p>
 <p>Demographics, technology, ideology, ecology, and capital consolidation are tracked decades ahead.</p>
-
 <h3>Conclusion — Power as Architecture</h3>
 <p>Money buys access. Access buys influence. Influence buys optionality. Optionality buys resilience. Resilience buys continuity.</p>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -619,6 +604,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -626,7 +612,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -655,6 +640,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

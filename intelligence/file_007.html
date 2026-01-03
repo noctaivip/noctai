@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_007-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
   <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,33 +531,27 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_007.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_007-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -561,57 +561,40 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 007<br/>The Influence Lattice: How Ultra-Wealthy Individuals Build Power Structures That Shape Markets, Decisions, and Outcomes Without Direct Control</h3>
-
 <p>The wealthiest individuals do not dominate through capital alone. They dominate through <strong>influence</strong>, engineered across markets, institutions, and power centers. True influence is not visibility — it is outcome control without exposure.</p>
-
 <h3>1. The Invisible Network Principle — Influence Without Exposure</h3>
 <p><strong>Key phrases:</strong> invisible networks, indirect power, UHNW strategic presence</p>
 <p>Powerful individuals operate behind the table, using intermediaries, private advisors, and regional operators to shape outcomes with deniability.</p>
-
 <h3>2. Institutional Influence — Embedding Power in Structures</h3>
 <p><strong>Key phrases:</strong> institutional leverage, policy influence, structural power</p>
 <p>Influence is embedded into think tanks, policy councils, universities, and sovereign advisory layers that outlast individuals.</p>
-
 <h3>3. Capital as a Signaling Device</h3>
 <p><strong>Key phrases:</strong> strategic capital placement, influence capital</p>
 <p>Capital signals alignment, unlocks access, shapes policy direction, and functions as private diplomacy.</p>
-
 <h3>4. Elite Access Channels</h3>
 <p><strong>Key phrases:</strong> private access networks, elite briefings</p>
 <p>Closed-door intelligence, exclusive deal flow, and sovereign briefings create leverage unavailable to the public.</p>
-
 <h3>5. Market Influence — Steering Without Ownership</h3>
 <p><strong>Key phrases:</strong> market-shaping strategies, sector influence</p>
 <p>Early positioning, regulatory influence, and control of chokepoints steer industries quietly.</p>
-
 <h3>6. Influence Through Scarcity</h3>
 <p><strong>Key phrases:</strong> controlled access, elite scarcity</p>
 <p>Limited reachability increases perceived power and strategic value.</p>
-
 <h3>7. Influence Through Philanthropy</h3>
 <p><strong>Key phrases:</strong> strategic philanthropy, soft power</p>
 <p>Philanthropy unlocks access, reputation authority, and sovereign relationships.</p>
-
 <h3>8. Influence Through People</h3>
 <p><strong>Key phrases:</strong> human leverage systems, personal think tanks</p>
 <p>Private analysts and strategists think, filter, and act on behalf of the principal.</p>
-
 <h3>9. Dynastic Influence</h3>
 <p><strong>Key phrases:</strong> intergenerational influence, dynastic strategy</p>
 <p>Influence is engineered to persist across generations through institutions and alliances.</p>
-
 <h3>Conclusion — Influence as an Asset Class</h3>
 <p>Influence now outranks capital. It shapes environments, moves decisions, directs markets, and survives its creator.</p>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -621,6 +604,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -628,7 +612,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -657,6 +640,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

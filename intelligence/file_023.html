@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_023-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
   <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_023.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_023-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -561,53 +562,35 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 023<br/>The Power Vector Doctrine: How Ultra-Wealthy Families Expand Strategic Influence Without Visibility, Exposure, or Risk</h3>
-
 <p>Most actors attempt to increase capital. Ultra-wealthy families increase the <strong>power vector</strong> — the ability to shape outcomes so systems naturally move in their favor.</p>
-
 <p>Capital only performs when embedded into a force architecture: intelligence, access, insulation from risk, private alliances, technological leverage, and control over decision-making nodes.</p>
-
 <h3>1. Power Vector ≠ Influence ≠ Capital</h3>
 <p><strong>Key phrases:</strong> directional power, outcome engineering, elite asymmetry</p>
 <p>Influence is being heard. Power is changing rules. The power vector directs systems without attribution.</p>
-
 <h3>2. Asymmetric Leverage Nodes</h3>
 <p><strong>Key phrases:</strong> leverage nodes, silent pivots</p>
 <p>Quiet positions inside councils, infrastructure choke points, standard-setting bodies, and private briefings form invisible pressure networks.</p>
-
 <h3>3. The Intelligence Halo</h3>
 <p><strong>Key phrases:</strong> privileged foresight, pre-event mapping</p>
 <p>Elite intelligence halos deliver early insight into intent, not just events.</p>
-
 <h3>4. Zero-Visibility Influence</h3>
 <p><strong>Key phrases:</strong> invisible authority, proxy execution</p>
 <p>Multi-layer ownership, intermediaries, and unattributed participation eliminate exposure.</p>
-
 <h3>5. Strategic Dependency Networks</h3>
 <p><strong>Key phrases:</strong> dependency architecture, irreplaceability</p>
 <p>Institutions rely on resources, standards, or access controlled by the family — creating power without dominance.</p>
-
 <h3>6. Crisis Advantage Protocol</h3>
 <p><strong>Key phrases:</strong> volatility harvesting, crisis leverage</p>
 <p>During crises, leverage expands, access widens, and strategic assets become attainable.</p>
-
 <h3>7. Power Succession Engineering</h3>
 <p><strong>Key phrases:</strong> strategic literacy, dynastic force transfer</p>
 <p>Successors inherit force architecture and decision literacy — not just assets.</p>
-
 <h3>Conclusion — Power Moves First</h3>
 <p>Wealth follows power. Power compounds silently and exponentially.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -617,6 +600,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -624,7 +608,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -653,6 +636,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

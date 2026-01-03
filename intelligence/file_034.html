@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_034-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,9 +396,21 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
+
 <body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -433,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -444,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -455,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -469,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -524,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_024.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_024-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -559,67 +561,39 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 034<br/>The Decision Latency Advantage — How Ultra-Wealthy Investors Win by Making Fewer, Slower, but Structurally Superior Decisions</h3>
-
 <p>Most investors believe speed is an advantage. Ultra-wealthy investors understand that latency, when engineered correctly, is power.</p>
-
 <p>Decision latency is not hesitation. It is the discipline of delaying irreversible commitment while accelerating preparation, intelligence, and positioning.</p>
-
 <h3>Why Speed Destroys Capital</h3>
-
 <p>Fast decisions lock capital into rigid structures, eliminate optionality, and amplify errors. The majority of permanent losses occur not because ideas were wrong, but because commitment came too early.</p>
-
 <h3>Preparation Without Commitment</h3>
-
 <p>Elite investors prepare aggressively while staying uncommitted: entities are structured, advisors aligned, capital reserved, and scenarios mapped — all without triggering exposure.</p>
-
 <p>From the outside this appears passive. Internally it is dominance.</p>
-
 <h3>The Three Phases of Elite Decision-Making</h3>
-
 <ul>
 <li><strong>Structural readiness</strong> without obligation</li>
 <li><strong>Information compression</strong> under stress</li>
 <li><strong>Irreversible commitment</strong> only when downside is capped</li>
 </ul>
-
 <h3>Why Latency Shifts Power</h3>
-
 <p>While others rush, valuations compress, leverage shifts, and counterparties lose alternatives. When commitment finally occurs, terms are dictated — not negotiated.</p>
-
 <h3>The Speed Trap</h3>
-
 <p>Speed feels powerful. Latency is powerful. Before capital is deployed, power is maximal.</p>
-
 <h3>Latency in Practice</h3>
-
 <ul>
 <li>non-binding terms</li>
 <li>staged commitments</li>
 <li>options without obligation</li>
 <li>delayed closings with asymmetric penalties</li>
 </ul>
-
 <h3>Why This Matters in Volatile Markets</h3>
-
 <p>Volatility punishes rigidity and rewards patience. Ultra-wealthy investors allow uncertainty to mature opportunities before acting.</p>
-
 <h3>Conclusion — Power Exists Before the Decision</h3>
-
 <p>The most powerful moment in investing is not action, but the moment just before action.</p>
-
 <p>Those who master decision latency do not chase outcomes — they make them inevitable.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -629,6 +603,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -636,7 +611,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -665,6 +639,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

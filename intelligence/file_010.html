@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_010-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,21 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
 <body>
-
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +443,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +453,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +463,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +475,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +530,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_010.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_010-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -561,57 +561,40 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 010<br/>The Information Dominance Framework: How the Ultra-Wealthy Control Data, Predict Outcomes, and Influence the Future Before It Happens</h3>
-
 <p>At the highest levels of wealth, information is not consumed — <strong>it is weaponized</strong>. The ultra-wealthy treat information as an early-warning system, a predictive engine, and a lever for shaping markets and decisions long before events become visible.</p>
-
 <h3>1. Information Sovereignty — Owning the Flow</h3>
 <p><strong>Key phrases:</strong> information sovereignty, private data ecosystems, UHNW intelligence systems</p>
 <p>Private analyst networks, geopolitical briefings, proprietary research teams, and AI-driven forecasting engines replace public news entirely.</p>
-
 <h3>2. Multi-Layer Intelligence — A 360° Reality Model</h3>
 <p><strong>Key phrases:</strong> fused intelligence architecture, cross-domain insight</p>
 <p>Financial, geopolitical, technological, regulatory, and behavioral intelligence is fused into a single predictive framework.</p>
-
 <h3>3. Predictive Positioning — Acting Before Trends Exist</h3>
 <p><strong>Key phrases:</strong> early-signal detection, future-mapping</p>
 <p>Pattern-recognition systems and sovereign forecasts enable full positioning before public awareness.</p>
-
 <h3>4. Controlled Asymmetry — Turning Private Insight Into Leverage</h3>
 <p><strong>Key phrases:</strong> information asymmetry, privileged insight</p>
 <p>Private flows, regulatory pre-signals, and confidential deal structures create timing and negotiation power.</p>
-
 <h3>5. Information Filters — Eliminating Noise</h3>
 <p><strong>Key phrases:</strong> signal filtration, elite attention systems</p>
 <p>Personal analysts, AI filters, and intelligence chiefs ensure only signal reaches decision-makers.</p>
-
 <h3>6. Intellectual Leverage — Owning Insight Producers</h3>
 <p><strong>Key phrases:</strong> elite advisory networks, intellectual leverage</p>
 <p>Futurists, scientists, strategists, and ex-intelligence officers form private idea engines.</p>
-
 <h3>7. Information Shielding — Denying Access to Others</h3>
 <p><strong>Key phrases:</strong> UHNW data protection, privacy intelligence</p>
 <p>Encryption, compartmentalization, and legal barriers protect personal and structural data.</p>
-
 <h3>8. Narrative Influence — Shaping Interpretation</h3>
 <p><strong>Key phrases:</strong> narrative architecture, perception control</p>
 <p>Targeted media, private briefings, and strategic partnerships shape how events are understood.</p>
-
 <h3>9. Crisis Advantage — Winning When Others Panic</h3>
 <p><strong>Key phrases:</strong> crisis arbitrage, information-driven action</p>
 <p>Early signals enable asset acquisition and influence expansion during instability.</p>
-
 <h3>Conclusion — Information as Power Multiplier</h3>
 <p>Information dominance multiplies capital, networks, and influence — enabling future control before arrival.</p>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -621,6 +604,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -628,7 +612,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -656,6 +639,7 @@ A platform for equity participation in real projects.
       © 2025 NoctAI™
     </div>
   </div>
+  
 </footer>
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>

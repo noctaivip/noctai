@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_036-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,10 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
-<link rel="stylesheet" href="/mobile-noctai.css">
-</head>
-<body>
 
+<link rel="stylesheet" href="/mobile-noctai.css">
+
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
+</head>
+
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -433,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -444,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -455,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -469,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -524,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_036.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_036-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -559,37 +561,23 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 036<br/>The Liquidity Illusion Framework — Why Ultra-Wealthy Investors Treat “Cash Availability” as a Strategic Variable, Not a Safety Net</h3>
-
 <p>Most investors equate liquidity with safety. Ultra-wealthy investors understand that liquidity is often an illusion.</p>
-
 <p>Cash availability during stable conditions says little about capital mobility under stress. True liquidity is defined by the ability to reposition capital precisely when conditions deteriorate.</p>
-
 <h3>Why Apparent Liquidity Disappears Under Pressure</h3>
-
 <p>During systemic stress, banks protect balance sheets, credit lines freeze, settlement windows narrow, and capital controls appear. Liquidity that seemed abundant vanishes exactly when it is needed.</p>
-
 <h3>Liquidity Is Structural, Not Monetary</h3>
-
 <p>Holding cash does not guarantee mobility. Liquidity depends on jurisdiction, counterparties, legal terms, currencies, settlement systems, and access permissions.</p>
-
 <h3>The Three Layers of Real Liquidity</h3>
-
 <ul>
 <li>Instrument liquidity under stress</li>
 <li>Counterparty behavior during crises</li>
 <li>Jurisdictional freedom of movement</li>
 </ul>
-
 <h3>The Risk of Liquidity Concentration</h3>
-
 <p>Concentrating cash in a single bank, currency, or legal system creates hidden fragility. Ultra-wealthy families fragment liquidity to eliminate single points of failure.</p>
-
 <h3>How Elite Investors Engineer Liquidity Resilience</h3>
-
 <ul>
 <li>multiple banking relationships</li>
 <li>staggered access structures</li>
@@ -597,28 +585,15 @@ function onProjectChange(v){
 <li>redundant payment rails</li>
 <li>crisis-tested currencies</li>
 </ul>
-
 <h3>Liquidity as Strategic Power</h3>
-
 <p>Those who planned move during crises while others negotiate access. Liquidity enables early acquisition, obligation fulfillment, and asymmetric positioning.</p>
-
 <h3>Access vs. Control</h3>
-
 <p>Access can be revoked. Control must be designed. Elite investors ensure capital movement does not require permission when it matters most.</p>
-
 <h3>Conclusion — Structure Determines Who Can Move</h3>
-
 <p>Cash today does not equal mobility tomorrow. Liquidity is engineered through structure.</p>
-
 <p>When liquidity matters most, only those who designed for stress retain freedom of action.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -628,6 +603,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -635,7 +611,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -663,6 +638,7 @@ A platform for equity participation in real projects.
       © 2025 NoctAI™
     </div>
   </div>
+  
 </footer>
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>

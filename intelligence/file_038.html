@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_038-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,9 +396,21 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
+
 <body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -433,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -444,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -455,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -469,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -524,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_038.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_038-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -559,69 +561,38 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 038<br/>The Optionality Engineering Principle — How Ultra-Wealthy Investors Design Portfolios That Improve When Conditions Change</h3>
-
 <p>Most investors try to predict the future. Ultra-wealthy investors design optionality.</p>
-
 <p>Prediction is fragile. Structure is resilient. Elite investors build portfolios that do not depend on being right, but improve when uncertainty increases.</p>
-
 <h3>Why Forecast-Based Investing Fails at Scale</h3>
-
 <p>As capital grows, small prediction errors become expensive. Markets are not stable systems, and reliance on forecasts creates fragility.</p>
-
 <h3>Optionality Is More Valuable Than Accuracy</h3>
-
 <p>Optionality is the right to act without obligation. It compounds over time, while accuracy decays.</p>
-
 <ul>
 <li>reversible decisions</li>
 <li>asymmetric payoffs</li>
 <li>capped downside</li>
 <li>open-ended upside</li>
 </ul>
-
 <h3>Optionality in Real Portfolios</h3>
-
 <p>In practice, optionality appears as staged deployment, minority stakes with expansion rights, convertible structures, and embedded control triggers.</p>
-
 <h3>Volatility as a Strategic Asset</h3>
-
 <p>Rigid portfolios are damaged by volatility. Optional portfolios exploit it.</p>
-
 <p>Ultra-wealthy investors allow volatility to create clarity and reposition capital accordingly.</p>
-
 <h3>The Cost of Over-Optimization</h3>
-
 <p>Excessive efficiency removes flexibility. Elite investors tolerate idle capacity and redundancy to preserve freedom of action.</p>
-
 <h3>Optionality vs. Diversification</h3>
-
 <p>Diversification spreads risk. Optionality converts risk into opportunity by embedding multiple future paths within each position.</p>
-
 <h3>Engineering Optionality at Entry</h3>
-
 <p>Optionality must be negotiated upfront through expansion rights, conversion mechanics, governance escalation clauses, and liquidity triggers.</p>
-
 <h3>Why Optionality Matters Today</h3>
-
 <p>Technological disruption, geopolitical fragmentation, regulatory volatility, and shifting monetary regimes reward flexible structures.</p>
-
 <h3>Conclusion — Structure Over Prediction</h3>
-
 <p>You do not need to predict the future if your structure improves when the future changes.</p>
-
 <p>Ultra-wealthy investors design systems that respond, not forecasts that fail.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -631,6 +602,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -638,7 +610,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -667,6 +638,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

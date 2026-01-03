@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_032-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -461,7 +469,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +477,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +532,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_032.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_032-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -560,80 +562,48 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 032<br/>The Capital Stack Intelligence Framework — How Ultra-Wealthy Investors Read Risk, Control, and Opportunity Before They Invest a Dollar</h3>
-
 <p>Most investors evaluate opportunities by looking at returns. Sophisticated investors look at risk. Ultra-wealthy investors go deeper — they analyze the capital stack.</p>
-
 <p>The capital stack is not accounting theory. It is a practical intelligence framework that reveals who controls outcomes, who absorbs losses, and who benefits from stress long before it appears.</p>
-
 <h3>Why the Capital Stack Matters More Than the Business</h3>
-
 <p>A business can be exceptional and still be a poor investment. Returns do not depend on ideas — they depend on position.</p>
-
 <p>The capital stack determines who gets paid first, who controls decisions under pressure, and who survives when assumptions fail.</p>
-
 <h3>What the Capital Stack Really Represents</h3>
-
 <p>Beyond labels like debt or equity, elite investors analyze enforcement power, covenant control, and cash-flow priority.</p>
-
 <ul>
 <li>Who controls cash during stress?</li>
 <li>Who can force restructuring?</li>
 <li>Who converts downside into ownership?</li>
 </ul>
-
 <h3>Returns Are Engineered at Entry</h3>
-
 <p>Ultra-wealthy investors focus on entry structure, not exit price. Structure survives volatility, delays, and market freezes.</p>
-
 <p>This is why they favor senior, preferred, or structured positions that remain profitable even under mediocre outcomes.</p>
-
 <h3>Reducing Risk Without Reducing Opportunity</h3>
-
 <p>Elite investors design positions that earn yield in normal times, gain control during stress, and convert volatility into leverage.</p>
-
 <p>They do not bet on perfection. They position for inevitability.</p>
-
 <h3>Common Capital Stack Errors</h3>
-
 <ul>
 <li>Chasing equity without control</li>
 <li>Ignoring covenant power</li>
 <li>Confusing valuation with positioning</li>
 <li>Underestimating senior structures</li>
 </ul>
-
 <h3>Questions Elite Investors Always Ask</h3>
-
 <ul>
 <li>What happens if revenue drops sharply?</li>
 <li>Who controls cash if covenants are breached?</li>
 <li>Does my position improve during distress?</li>
 <li>Is downside capped by structure or hope?</li>
 </ul>
-
 <h3>Why This Framework Matters Now</h3>
-
 <p>In an environment of higher rates, tighter liquidity, and geopolitical uncertainty, structure matters more than projections.</p>
-
 <p>Ultra-wealthy investors are moving up the stack — quietly positioning for control, resilience, and optionality.</p>
-
 <h3>Conclusion — Wealth Is Built by Position, Not Prediction</h3>
-
 <p>The capital stack is a map of power. Those who understand where they sit when things go wrong do not need perfect timing or perfect forecasts.</p>
-
 <p>They rely on structure. And structure decides outcomes.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -643,6 +613,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -650,7 +621,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -679,6 +649,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

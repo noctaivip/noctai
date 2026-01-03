@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_009-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,33 +531,27 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_009.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_009-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -561,61 +561,43 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 009<br/>The Resilience Architecture: How the Ultra‑Wealthy Build Systems That Survive Crises, Protect Capital, and Expand Power in Times of Global Instability</h3>
-
 <p>For ordinary people, crises destroy wealth. For the ultra‑wealthy, crises <strong>transfer</strong> wealth. The difference is resilience architecture — systems designed not just to survive instability, but to expand power through it.</p>
-
 <h3>1. Structural Diversification — Beyond Assets, Into Systems</h3>
 <p><strong>Key phrases:</strong> multi-system diversification, structural risk separation</p>
 <p>The wealthy diversify banking, jurisdictions, currencies, supply chains, legal exposure, and information systems so collapse in one layer never stops the whole architecture.</p>
-
 <h3>2. Sovereign Positioning — Insulation From Domestic Risk</h3>
 <p><strong>Key phrases:</strong> multi-passport resilience, sovereign arbitrage</p>
 <p>Multiple residencies, passports, and sovereign relationships make geography optional and safety engineered.</p>
-
 <h3>3. Anti‑Fragile Capital — Growing Through Volatility</h3>
 <p><strong>Key phrases:</strong> crisis-growth assets, anti-fragile portfolios</p>
 <p>Distressed acquisitions, essential industries, and asymmetric investments accelerate returns during downturns.</p>
-
 <h3>4. Strategic Redundancy — Fail-Safe Architecture</h3>
 <p><strong>Key phrases:</strong> redundancy engineering, continuity planning</p>
 <p>Backups exist for liquidity, operations, communications, transport, custody, and infrastructure.</p>
-
 <h3>5. Private Intelligence — Early Threat Detection</h3>
 <p><strong>Key phrases:</strong> geopolitical intelligence, risk forecasting</p>
 <p>Private analysts and intelligence systems identify threats years before public awareness.</p>
-
 <h3>6. Long‑Term Safe Havens — Physical and Capital Shelters</h3>
 <p><strong>Key phrases:</strong> long-horizon security, strategic shelters</p>
 <p>Stable real estate, hardened data vaults, precious reserves, and off-grid assets anchor continuity.</p>
-
 <h3>7. Operational Independence — Systems Without the Founder</h3>
 <p><strong>Key phrases:</strong> executive autonomy, succession resilience</p>
 <p>Autonomous teams, AI processes, and governance councils remove single-point failure.</p>
-
 <h3>8. Liquidity‑on‑Demand — Capital When Markets Freeze</h3>
 <p><strong>Key phrases:</strong> liquidity engineering, crisis credit access</p>
 <p>Private credit lines, sovereign windows, and liquid alternatives ensure action under stress.</p>
-
 <h3>9. Narrative Control — Reducing Conflict Through Perception</h3>
 <p><strong>Key phrases:</strong> narrative architecture, reputational insulation</p>
 <p>Strategic silence, curated visibility, and controlled media interaction protect leverage.</p>
-
 <h3>10. Dynasty Engineering — Trans‑Generational Resilience</h3>
 <p><strong>Key phrases:</strong> dynastic continuity, family governance</p>
 <p>Family constitutions, legacy education, and long-horizon capital engines preserve power beyond lifetimes.</p>
-
 <h3>Conclusion — Resilience Is the New Wealth</h3>
 <p>Resilience — engineered globally and structurally — protects capital and expands power when others fail.</p>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -625,6 +607,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -632,7 +615,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -661,6 +643,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

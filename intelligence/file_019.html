@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_019-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,9 +396,21 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
+
 <body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -433,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -444,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -455,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -469,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -522,32 +529,26 @@ function recalc(){
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
-
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_019.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_019-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -559,55 +560,37 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 019<br/>The Trust Architecture: How the Ultra-Wealthy Identify Credibility, Filter Advisors, and Protect Themselves From Invisible Risk</h3>
-
 <p>For billionaires, trust is not emotion — it is infrastructure. Money is rarely lost because of markets; it is lost because of people: misaligned advisors, hidden incentives, and security failures.</p>
-
 <h3>1. The Credibility Ladder — Ranking Everyone They Work With</h3>
 <p><strong>Key phrases:</strong> credibility scoring, elite due diligence, trust index</p>
 <p>Five levels are assessed: claims, evidence, alignment, accountability, and structural trust.</p>
-
 <h3>2. The Asymmetric Trust Filter</h3>
 <p><strong>Key phrases:</strong> advisor screening, risk filtration</p>
 <p>Red flags include overpromising, resistance to audits, urgency pressure, unclear fees, and inability to explain risk.</p>
-
 <h3>3. Proof-of-Competence</h3>
 <p><strong>Key phrases:</strong> capability proof, repeatable performance</p>
 <p>Processes, benchmarks, third-party verification, and redundancy matter more than charisma.</p>
-
 <h3>4. Security as a Trust Multiplier</h3>
 <p><strong>Key phrases:</strong> operational safety, confidentiality guarantees</p>
 <p>Data protection, access control, fraud prevention, and continuity planning are mandatory.</p>
-
 <h3>5. Reputation as Currency</h3>
 <p><strong>Key phrases:</strong> reputation capital, signal quality</p>
 <p>Consistency across time and crises determines credibility.</p>
-
 <h3>6. Exclusivity Signals</h3>
 <p><strong>Key phrases:</strong> scarcity credibility, controlled access</p>
 <p>Limited capacity and selective engagement signal discipline and confidence.</p>
-
 <h3>7. Radical Transparency</h3>
 <p><strong>Key phrases:</strong> honest disclosure, vulnerability trust</p>
 <p>Clear boundaries, known limits, and explicit risks build trust.</p>
-
 <h3>8. Scaling Trust Institutionally</h3>
 <p><strong>Key phrases:</strong> institutional trust, system-backed reliability</p>
 <p>Platforms and processes must survive personnel changes.</p>
-
 <h3>Conclusion — Trust as the Highest Luxury</h3>
 <p>The ultra-wealthy buy certainty, safety, and credibility — not promises.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -617,6 +600,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -624,7 +608,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -653,6 +636,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

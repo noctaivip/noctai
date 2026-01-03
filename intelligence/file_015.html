@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_015-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,9 +396,21 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
+
 <body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -433,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -444,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -455,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -469,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -524,32 +531,28 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_015.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_015-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
+
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
   <div class="badge">INTELLIGENCE BRIEFING</div>
@@ -558,61 +561,43 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 015<br/>The Family Office Playbook: Preserving and Deploying Generational Wealth in an Uncertain World</h3>
-
 <p>For the ultra-wealthy, wealth is not an event — it is a legacy program. A family office is not administration; it is a long-horizon operating system for preserving capital, deploying opportunity, and translating private wealth into durable influence.</p>
-
 <h3>1. Multi-Dimensional Objective Definition</h3>
 <p><strong>Key phrases:</strong> family office mission, governance charter, intergenerational objectives</p>
 <p>Elite family offices codify objectives across preservation, growth, influence, risk tolerance, and legacy education through formal governance charters.</p>
-
 <h3>2. Tiered Governance and Decision Rights</h3>
 <p><strong>Key phrases:</strong> governance ladder, investment committee, family council</p>
 <p>Decision authority is layered: Tactical, Operational, Strategic, and Constitutional — with explicit veto and escalation rules.</p>
-
 <h3>3. Asset Architecture by Purpose</h3>
 <p><strong>Key phrases:</strong> purpose-driven allocation, risk buckets</p>
 <p>Capital is allocated by function: protection, income, growth, optionality, and influence — each with its own liquidity and risk profile.</p>
-
 <h3>4. Direct Investing Advantage</h3>
 <p><strong>Key phrases:</strong> direct deals, co-investment networks</p>
 <p>Origination engines, sovereign relationships, and internal diligence reduce fees and increase strategic control.</p>
-
 <h3>5. Operational Excellence</h3>
 <p><strong>Key phrases:</strong> consolidated reporting, custody integrity</p>
 <p>Family offices operate as mission-critical institutions with centralized treasury, secure custody, and cybersecurity governance.</p>
-
 <h3>6. Cross-Border Structuring</h3>
 <p><strong>Key phrases:</strong> trusts, SPVs, residency planning</p>
 <p>Modular, multi-jurisdictional legal structures adapt to regulatory change while preserving flexibility.</p>
-
 <h3>7. Talent and Next-Generation Leadership</h3>
 <p><strong>Key phrases:</strong> succession planning, education pipelines</p>
 <p>Competency thresholds, rotation programs, and leadership grooming preserve continuity beyond founders.</p>
-
 <h3>8. Risk Frameworks and Tail Protection</h3>
 <p><strong>Key phrases:</strong> tail hedging, scenario planning</p>
 <p>Stress tests, hedges, liquidity buffers, and crisis playbooks convert uncertainty into advantage.</p>
-
 <h3>9. Philanthropy as Strategic Capital</h3>
 <p><strong>Key phrases:</strong> catalytic philanthropy, reputation governance</p>
 <p>Philanthropy builds influence networks and reputational insulation.</p>
-
 <h3>10. Time Discipline and Continuous Review</h3>
 <p><strong>Key phrases:</strong> KPI dashboards, long-horizon planning</p>
 <p>Structured review cycles align execution with multi-decade objectives.</p>
-
 <h3>Conclusion — The Family Office as an Operating System</h3>
 <p>A modern family office is a governance engine, origination platform, and risk shelter engineered for generational endurance.</p>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -622,6 +607,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -629,7 +615,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -658,6 +643,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

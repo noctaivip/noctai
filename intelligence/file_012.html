@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_012-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_012.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_012-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -561,59 +562,41 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 012<br/>The Access Monopoly Blueprint</h3>
-
 <p>Among the ultra-wealthy, money is not the primary advantage. <strong>Access is.</strong></p>
-
 <p>This file explains how elites engineer access monopolies — invisible structures that determine who participates, who benefits, and who is excluded.</p>
-
 <h3>1. Access as Currency — The Real Power Layer</h3>
 <p><strong>Key phrases:</strong> access economy, elite gatekeeping, private opportunity flow</p>
 <p>Those who control access control deal flow, influence, intelligence, partnerships, and opportunity distribution.</p>
-
 <h3>2. Gatekeeping Architecture — Controlling Entry</h3>
 <p><strong>Key phrases:</strong> gatekeeper advantage, strategic inclusion</p>
 <p>Invitation-only networks, vetted memberships, private councils, and inner-circle boards restrict participation based on alignment and long-term value.</p>
-
 <h3>3. Opportunity Flow Control — Private Markets</h3>
 <p><strong>Key phrases:</strong> exclusive deal flow, shadow opportunity markets</p>
 <p>The highest-value opportunities never reach public markets. They circulate through sovereign and family-office channels.</p>
-
 <h3>4. The Social Graph of Power</h3>
 <p><strong>Key phrases:</strong> relational capital, influence mapping</p>
 <p>Power is mapped through people, not assets — connectors, brokers, and decision nodes.</p>
-
 <h3>5. The Silent Network</h3>
 <p><strong>Key phrases:</strong> invisible alliances, private influence web</p>
 <p>These networks have no public footprint and operate on trust, reciprocity, and long memory.</p>
-
 <h3>6. Leveraging Scarcity</h3>
 <p><strong>Key phrases:</strong> scarcity engineering, exclusivity mechanics</p>
 <p>Restricted access increases value, leverage, and demand.</p>
-
 <h3>7. Strategic Reciprocity</h3>
 <p><strong>Key phrases:</strong> access bargaining, elite reciprocity</p>
 <p>Access is exchanged for influence, intelligence, protection, and power.</p>
-
 <h3>8. Multi-Layer Protection</h3>
 <p><strong>Key phrases:</strong> access protection systems, privacy frameworks</p>
 <p>Confidentiality layers, intermediaries, and information silos secure monopolies.</p>
-
 <h3>9. Access Multipliers</h3>
 <p><strong>Key phrases:</strong> network compounding, influence loops</p>
 <p>Controlled entry creates exponential expansion of reach and authority.</p>
-
 <h3>Conclusion — Access as Sovereign Power</h3>
 <p>The wealthy do not chase opportunity. They control access to it — creating self-reinforcing, generational dominance.</p>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -623,6 +606,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -630,7 +614,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -659,6 +642,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

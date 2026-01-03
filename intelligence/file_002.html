@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_002-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,23 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
-</head>
-<body>
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
+</head>
+
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -445,7 +456,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +466,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +478,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,33 +533,27 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_002.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_002-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -561,20 +563,13 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 002<br/>The Architecture of Power: How Wealthy Individuals Build Influence, Protect Capital, and Stay Ahead of Global Shifts</h3>
-
 <p>In the circles of ultra–high–net–worth individuals, the conversation about wealth has long moved beyond accumulation. For those who operate at the top — founders, investors, sovereign clients, family offices — the true currency is <strong>control, access, intelligence, influence, and foresight</strong>.</p>
-
 <p>The elite do not search for easy answers. They seek <strong>architecture</strong> — systems and intelligence frameworks that preserve power across crises and generations.</p>
-
 <h3>1. Strategic Intelligence — What the Wealthy Want to Know First</h3>
-
 <p><strong>Key SEO phrases:</strong> private intelligence system, strategic foresight, geopolitical analysis, global macro trends, UHNW intelligence tools</p>
-
 <p>Money without intelligence is vulnerable. Wealth without foresight is temporary. The wealthy look for early-warning data, geopolitical shifts, currency risks, regulatory changes, and private insights unavailable to the public.</p>
-
 <ul>
 <li>geopolitical risk mapping</li>
 <li>macro trend forecasting</li>
@@ -582,13 +577,9 @@ function onProjectChange(v){
 <li>AI-based predictive analysis</li>
 <li>private advisory networks</li>
 </ul>
-
 <h3>2. Capital Preservation — The First Priority of the Elite</h3>
-
 <p><strong>Key SEO phrases:</strong> asset protection strategies, wealth preservation, multi-jurisdictional structures, private banking</p>
-
 <p>Contrary to myths, the wealthy are not obsessed with “making more money.” Their main objective is to <strong>protect what is already built</strong>.</p>
-
 <ul>
 <li>international holding structures</li>
 <li>sovereign–friendly jurisdictions</li>
@@ -596,13 +587,9 @@ function onProjectChange(v){
 <li>currency hedging</li>
 <li>off–market asset classes</li>
 </ul>
-
 <h3>3. Access — The Most Rare Commodity</h3>
-
 <p><strong>Key SEO phrases:</strong> exclusive deal flow, private equity access, UHNW networks, off-market opportunities</p>
-
 <p>Access beats money. The wealthy seek:</p>
-
 <ul>
 <li>exclusive pre-IPO rounds</li>
 <li>private equity placements</li>
@@ -610,56 +597,37 @@ function onProjectChange(v){
 <li>non-public luxury assets</li>
 <li>global strategic partnerships</li>
 </ul>
-
 <h3>4. Systems That Multiply Time</h3>
-
 <p><strong>Key SEO phrases:</strong> executive automation, AI decision systems, remote infrastructure, scalable business models</p>
-
 <p>At the top, time eclipses money in value. The rich invest in:</p>
-
 <ul>
 <li>AI-driven business systems</li>
 <li>remote operational architecture</li>
 <li>teams that execute autonomously</li>
 <li>transparent control dashboards</li>
 </ul>
-
 <h3>5. Global Positioning — Freedom Through Optionality</h3>
-
 <p><strong>Key SEO phrases:</strong> international expansion, US entry strategy, sovereign partnerships, cross-border structures</p>
-
 <p>The elite establish influence across multiple jurisdictions to secure:</p>
-
 <ul>
 <li>regulatory stability</li>
 <li>talent access</li>
 <li>capital mobility</li>
 <li>global opportunity flow</li>
 </ul>
-
 <h3>6. Influence — The Highest Stage of Wealth</h3>
-
 <p><strong>Key SEO phrases:</strong> influence networks, power strategy, elite positioning, reputation architecture</p>
-
 <p>Money without influence is limited. The wealthy cultivate:</p>
-
 <ul>
 <li>elite networks</li>
 <li>strategic reputations</li>
 <li>decision-maker alliances</li>
 <li>control over narrative and positioning</li>
 </ul>
-
 <h3>Conclusion</h3>
-
 <p>This article is crafted for founders, investors, sovereign-profile clients, and decision-makers who operate above ordinary business levels. If your objectives are influence, preservation, global reach, and long-term power — NoctAI Intelligence provides the architecture.</p>
 </div>
-
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -669,6 +637,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -676,7 +645,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -705,6 +673,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

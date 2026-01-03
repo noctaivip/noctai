@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_040-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
   <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -461,7 +469,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +477,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +532,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_040.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_040-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -560,35 +562,20 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 040<br/>The Time-Asymmetry Strategy — How Ultra-Wealthy Investors Use Time Horizons as a Competitive Weapon</h3>
-
 <p>Most investors assume time is neutral. Ultra-wealthy investors understand that time is asymmetric.</p>
-
 <p>Capital markets reward those who operate on different time horizons than everyone else. Patience, duration, and endurance become structural advantages.</p>
-
 <h3>Why Time Is Not Equal</h3>
-
 <p>Short-horizon capital is forced to react. Long-horizon capital is free to wait.</p>
-
 <p>Redemption cycles, leverage covenants, performance benchmarks, and political pressure compress time for most participants. Elite investors design capital that escapes these constraints.</p>
-
 <h3>Who Can Wait Longest Controls the Outcome</h3>
-
 <p>Markets eventually converge toward fundamentals, but not on predictable schedules. Those forced to exit early absorb volatility.</p>
-
 <p>Ultra-wealthy investors ask one question: who is forced to act before me?</p>
-
 <h3>Time Asymmetry vs. Market Timing</h3>
-
 <p>Market timing predicts when something will happen. Time asymmetry succeeds regardless of when it happens.</p>
-
 <p>Endurance replaces precision.</p>
-
 <h3>Hidden Leverage of Long Time Horizons</h3>
-
 <ul>
 <li>surviving drawdowns without forced selling</li>
 <li>renegotiating terms during stress</li>
@@ -596,15 +583,10 @@ function onProjectChange(v){
 <li>accumulating assets quietly</li>
 <li>compounding optionality</li>
 </ul>
-
 <h3>Who Suffers Time Pressure</h3>
-
 <p>Leveraged funds, public vehicles, politically exposed entities, and managers with career risk are structurally short-term.</p>
-
 <p>Elite investors position opposite them.</p>
-
 <h3>Engineering Time Advantage</h3>
-
 <ul>
 <li>permanent or evergreen capital</li>
 <li>no redemption obligations</li>
@@ -612,24 +594,13 @@ function onProjectChange(v){
 <li>patient co-investment vehicles</li>
 <li>liquidity reserved for endurance</li>
 </ul>
-
 <h3>Why Time Asymmetry Matters Now</h3>
-
 <p>Algorithmic trading, instant news, regulatory reactions, and political volatility compress decision-making. Long-horizon capital escapes this pressure.</p>
-
 <h3>Conclusion — Time Is the Ultimate Advantage</h3>
-
 <p>Capital that can wait eventually dictates terms.</p>
-
 <p>Ultra-wealthy investors design structures that outlast cycles.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -639,6 +610,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -646,7 +618,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -675,6 +646,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

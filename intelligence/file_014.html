@@ -8,7 +8,16 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_014-ru.html">
 
 <style>
-
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,9 +406,21 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
+
 <body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -433,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -444,7 +464,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -455,12 +474,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -469,12 +486,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -524,30 +541,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_014.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_014-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -559,57 +571,40 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 014<br/>The Invisible Leverage Protocol: How the Ultra-Wealthy Multiply Power Without Spending Capital or Taking Direct Risk</h3>
-
 <p>Among the ultra-wealthy, the ultimate weapon is not money, networks, or influence. It is <strong>invisible leverage</strong> — the ability to shape outcomes without direct action, exposure, or capital deployment.</p>
-
 <h3>1. Leverage as the Core Currency of Power</h3>
 <p><strong>Key phrases:</strong> strategic leverage, non-capital influence, elite amplification</p>
 <p>Invisible leverage operates through people, decisions, structures, and incentives the principal does not directly control.</p>
-
 <h3>2. The Three Layers of Billionaire Leverage</h3>
 <p><strong>Key phrases:</strong> structural leverage, network leverage, invisible leverage</p>
 <p>Assets, access, and unseen influence nodes operate simultaneously to compound power.</p>
-
 <h3>3. Influence Through Proxies</h3>
 <p><strong>Key phrases:</strong> proxy operators, indirect authority</p>
 <p>Executives, advisors, and intermediaries execute strategy while shielding the principal.</p>
-
 <h3>4. Opportunity Gravity</h3>
 <p><strong>Key phrases:</strong> inbound deal flow, elite positioning</p>
 <p>At scale, opportunities move toward credibility, not effort.</p>
-
 <h3>5. Delegated Decision Webs</h3>
 <p><strong>Key phrases:</strong> validation clusters, decision insulation</p>
 <p>Insight is distributed; judgment remains centralized.</p>
-
 <h3>6. Risk Transfer Architecture</h3>
 <p><strong>Key phrases:</strong> downside outsourcing, asymmetric exposure</p>
 <p>Legal, financial, and structural layers retain upside while transferring risk.</p>
-
 <h3>7. Influence Without Force</h3>
 <p><strong>Key phrases:</strong> soft control, behavioral steering</p>
 <p>Framing, incentives, and selective information guide outcomes.</p>
-
 <h3>8. Indirect Ownership</h3>
 <p><strong>Key phrases:</strong> shadow equity, dependency leverage</p>
 <p>Control exists without formal ownership.</p>
-
 <h3>9. Compounding Leverage Networks</h3>
 <p><strong>Key phrases:</strong> exponential influence, network multiplication</p>
 <p>Each node multiplies reach, power, and opportunity.</p>
-
 <h3>Conclusion — Leverage as Sovereignty</h3>
 <p>Invisible leverage enables control without exposure, profit without friction, and power without visible action.</p>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -619,6 +614,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -626,7 +622,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -655,6 +650,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

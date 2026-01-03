@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_006-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,33 +531,27 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_006.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_006-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -561,53 +561,37 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 006<br/>The Control Paradox: How the Ultra-Wealthy Architect Environments That Guarantee Outcomes, Reduce Chaos, and Create Unfair Strategic Advantage</h3>
-
 <p>At the highest levels of wealth, the goal is no longer to win more deals or accumulate more assets. The real objective is <strong>to control the environment so effectively that success becomes predictable</strong>. Ultra-wealthy individuals engineer systems where randomness, chaos, and external influence are minimized.</p>
-
 <h3>1. Control of Environment — Designing the World Instead of Reacting to It</h3>
 <p><strong>Key phrases:</strong> environment design, elite strategic control, UHNW life architecture</p>
 <p>The wealthy shape surroundings with precision: curated inner circles, zero-noise spaces, performance-focused infrastructure, and frictionless environments.</p>
-
 <h3>2. Control of Attention — The Most Valuable Asset</h3>
 <p><strong>Key phrases:</strong> attention strategy, elite focus systems, cognitive leverage</p>
 <p>Attention is protected through strict filters, cognitive gatekeepers, controlled media exposure, and curated intelligence feeds.</p>
-
 <h3>3. Control of Time — Operating Outside the Traditional Calendar</h3>
 <p><strong>Key phrases:</strong> time leverage, elite scheduling systems</p>
 <p>The rich eliminate low-value decisions, remove themselves from operations, and deploy AI and teams for parallel execution.</p>
-
 <h3>4. Control of Information — Building a Private Reality</h3>
 <p><strong>Key phrases:</strong> private intelligence networks, information asymmetry</p>
 <p>Private information ecosystems provide early warnings, geopolitical signals, and exclusive insight.</p>
-
 <h3>5. Control of People — Curating Human Leverage</h3>
 <p><strong>Key phrases:</strong> strategic network design, elite personnel architecture</p>
 <p>They curate advisory boards, operators, and partners whose incentives align precisely.</p>
-
 <h3>6. Control of Risk — Eliminating Downside First</h3>
 <p><strong>Key phrases:</strong> risk architecture, downside control</p>
 <p>Scenario modeling, diversification, legal buffers, and contingency architecture limit downside.</p>
-
 <h3>7. Control of Opportunity — Moving Before the Market</h3>
 <p><strong>Key phrases:</strong> early entry strategy, opportunity scanning</p>
 <p>Elite systems detect signals early and capture opportunity before competitors.</p>
-
 <h3>8. Control of Legacy — Engineering Continuity</h3>
 <p><strong>Key phrases:</strong> legacy systems, dynastic resilience</p>
 <p>Family constitutions, governance frameworks, and generational engines preserve control.</p>
-
 <h3>Conclusion — Control Is the Final Stage of Wealth</h3>
 <p>At the top, control over environment, attention, time, information, people, risk, opportunity, and legacy eliminates chaos and compounds advantage.</p>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -617,6 +601,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -624,7 +609,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -653,6 +637,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

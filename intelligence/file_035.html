@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_035-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +531,24 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_035.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_035-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -560,25 +560,15 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 035<br/>The Counterparty Intelligence Doctrine — How Ultra-Wealthy Investors Evaluate Who They Are Really Dealing With Before Capital Is Deployed</h3>
-
 <p>Most investors analyze assets. Ultra-wealthy investors analyze counterparties.</p>
-
 <p>The greatest risk in any transaction is rarely the market or the structure — it is the behavior of the party on the other side when pressure appears.</p>
-
 <h3>Why Counterparty Risk Is Systematically Underestimated</h3>
-
 <p>Counterparties are often judged by reputation, branding, or historical success. Elite investors treat counterparties as systems that react predictably to incentives, stress, and survival pressure.</p>
-
 <h3>Every Counterparty Has a Breaking Hierarchy</h3>
-
 <p>Under stress, counterparties protect themselves first, then core stakeholders, and only then partners. Modeling this hierarchy before stress appears determines real outcomes.</p>
-
 <h3>The Five Dimensions of Counterparty Intelligence</h3>
-
 <ul>
 <li>Incentive alignment under stress scenarios</li>
 <li>Balance sheet reality beyond public disclosures</li>
@@ -586,15 +576,10 @@ function onProjectChange(v){
 <li>Optionality asymmetry in exit conditions</li>
 <li>Historical behavior under pressure</li>
 </ul>
-
 <h3>Why Counterparty Intelligence Beats Asset Analysis</h3>
-
 <p>Assets do not renegotiate. Counterparties do.</p>
-
 <p>Most investment failures occur when counterparties delay execution, externalize losses, or exploit structural asymmetry.</p>
-
 <h3>How Ultra-Wealthy Investors Neutralize Counterparty Risk</h3>
-
 <ul>
 <li>behavior-linked collateralization</li>
 <li>step-in rights under predefined triggers</li>
@@ -602,28 +587,15 @@ function onProjectChange(v){
 <li>asymmetric penalties for non-performance</li>
 <li>redundant counterparties</li>
 </ul>
-
 <h3>Reputation vs. Reliability</h3>
-
 <p>Reputation is narrative. Reliability is structural. Elite investors design transactions that function even when trust fails.</p>
-
 <h3>Why This Doctrine Matters Now</h3>
-
 <p>Liquidity pressure, geopolitical fragmentation, and regulatory uncertainty amplify counterparty risk. Those unprepared absorb losses created by others.</p>
-
 <h3>Conclusion — The Other Side Decides Outcomes</h3>
-
 <p>Markets fluctuate and assets cycle, but counterparties determine real-world results.</p>
-
 <p>Those who evaluate counterparties before deploying capital preserve control when others are still analyzing projections.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -633,6 +605,7 @@ function onProjectChange(v){
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -640,7 +613,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -669,6 +641,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>

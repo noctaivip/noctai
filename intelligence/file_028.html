@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_028-ru.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -434,7 +444,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -445,7 +454,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -456,12 +464,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -470,12 +476,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,30 +531,25 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="/intelligence/file_028.html" class="active">EN</a>
 	-
     <a href="/intelligence-ru/file_028-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
@@ -560,50 +561,32 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 028<br/>The Perimeter Principle — How Ultra-Wealthy Families Build Invisible Shields That Protect Wealth Before Threats Even Appear</h3>
-
 <p>Most investors respond to risk after it becomes visible. Ultra-wealthy families operate differently: they design protection long before risk is identifiable.</p>
-
 <p>This approach is known as the <strong>Perimeter Principle</strong> — extending defensive, informational, and structural boundaries far beyond the assets themselves so threats never reach the core.</p>
-
 <h3>1. Distance as the Ultimate Defense</h3>
 <p><strong>Key phrases:</strong> threat distancing, strategic insulation</p>
 <p>Risk becomes dangerous only when it approaches too closely. Distance creates time, optionality, and leverage.</p>
-
 <h3>2. The Three Rings of the Perimeter</h3>
 <p><strong>Ring One — Information</strong><br>
 Private intelligence, early-signal analytics, and geopolitical modeling detect pressure years ahead.</p>
-
 <p><strong>Ring Two — Structure</strong><br>
 Multi-jurisdictional entities, trusts, and custody layers absorb shocks without exposing the core.</p>
-
 <p><strong>Ring Three — Influence</strong><br>
 Alliances, advisory roles, and policy proximity stabilize the environment proactively.</p>
-
 <h3>3. Time Expansion as Strategic Advantage</h3>
 <p><strong>Key phrases:</strong> reaction-time arbitrage</p>
 <p>Wide perimeters slow threats and accelerate elite response.</p>
-
 <h3>4. Eliminating Forced Decisions</h3>
 <p><strong>Key phrases:</strong> liquidity redundancy, optionality preservation</p>
 <p>No urgency means no mistakes. Capital moves before pressure appears.</p>
-
 <h3>5. Why Crises Rarely Touch the Ultra-Wealthy</h3>
 <p>Crises do not disappear — they simply never get close enough to matter.</p>
-
 <h3>Conclusion — Protect the Space, Not Just the Asset</h3>
 <p>Ultra-wealthy families protect the environment around wealth. That space is where resilience becomes dominance.</p>
-
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -613,6 +596,7 @@ Alliances, advisory roles, and policy proximity stabilize the environment proact
   Not an offer. Not a recommendation.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -620,7 +604,6 @@ Alliances, advisory roles, and policy proximity stabilize the environment proact
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -649,6 +632,7 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works.html">How it works</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>
