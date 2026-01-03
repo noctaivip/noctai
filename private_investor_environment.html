@@ -49,17 +49,11 @@ p{line-height:1.6;color:#cbd5e1;}
     padding:20px;
     background:rgba(10,14,22,.9);
 }
-.footer{
-    text-align:center;
-    color:#64748b;
-    font-size:13px;
-    margin-top:40px;
-}
+
 
 .modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:10}
 .modal-content{background:#0b1220;border:1px solid rgba(212,175,55,.4);border-radius:16px;padding:32px;max-width:560px;width:90%;position:relative}
 .close{position:absolute;top:14px;right:18px;font-size:22px;cursor:pointer}
-
 
 .room-panel{
   position:fixed;
@@ -83,7 +77,6 @@ p{line-height:1.6;color:#cbd5e1;}
   font-size:14px;
 }
 
-
 .door.locked{
     cursor:default;
     opacity:0.55;
@@ -91,7 +84,6 @@ p{line-height:1.6;color:#cbd5e1;}
 .door.locked:hover{
     box-shadow:none;
 }
-
 
 #ndaModal button{
     background: linear-gradient(180deg, #e6c56f 0%, #c9a24d 100%);
@@ -114,7 +106,6 @@ p{line-height:1.6;color:#cbd5e1;}
     transform: translateY(-1px);
     box-shadow: 0 14px 36px rgba(201,162,77,.45);
 }
-
 </style>
 <style>
 .top-nav{
@@ -226,7 +217,6 @@ border-radius:999px;
 .lang-switch a:hover{
   color:var(--text);
 }
-
 </style>
 <style>
 :root{
@@ -245,7 +235,6 @@ body{
   color:var(--text);
   font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
 }
-
 </style>
 <style>
 .site-footer{
@@ -387,14 +376,12 @@ text-decoration:underline;
   cursor:pointer;
 }
 </style>
-</style>
 <link rel="stylesheet" href="mobile-noctai.css">
 
 <style>
 .mobile-bottom-nav {
   display: none;
 }
-
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
@@ -402,6 +389,7 @@ text-decoration:underline;
 }
 </style>
 </head>
+
 <body>
 <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -435,7 +423,6 @@ The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Investment calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -446,7 +433,6 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Investment amount</h3>
@@ -457,12 +443,10 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Income assessment</h3>
         <div class="calc-income">
@@ -471,12 +455,12 @@ The calculator is recalculated depending on the selected project.  </div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -528,63 +512,53 @@ function recalc(){
 function onProjectChange(v){
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
-
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects-ru.html">Projects</a>
   </div>
-
   <div class="lang-switch">
     <a href="private_investor_environment.html" class="active">EN</a>
 	-
     <a href="private_investor_environment-ru.html">RU</a>
   </div>
 </div>
-
   </div>
 </nav>
 
 <div class="container">
 <h2>Private Investor Environment</h2>
-
 <div class="card">
 <p>
 You are in the closed investment environment of <strong>NoctAI</strong>.
 Access, projects and communications are managed individually.
 Below are the active and potential investment contours that are accessible through an individual mandate.</p>
-
 <p style="color:#9aa3b2;font-size:14px;max-width:760px;">
 Access in this environment is activated in stages.
 Each zone has its own terms, status, and privacy requirements.</p>
-
 <div class="doors">
     <div class="door" onclick="openNDA()" style="cursor:pointer;">
 <div class="label">Door 1 — Private Projects</div><p>
 Closed investment projects with an individual structure.
 Access is granted after NDA confirmation.</p>
 <div class="value-approved">Status: Access after NDA</div>
-
     </div>
-
     <div class="door locked">
         <div class="label">Door 2 - Co-investment Opportunities</div>
 <p>Strategic co-investment structures with a limited number of participants. Parameters and timing are determined individually.</p>
         <div class="value-pending">Status: Pending</div>
     </div>
-
     <div class="door" onclick="silentDoor()" style="cursor:pointer;">
         <div class="label">Door 3 – Communication with Investors</div>
 <p>Direct communication with the investment team. No public discussions. All interactions are subject to a non-disclosure agreement.</p>
         <div class="value-approved">Status: Available</div>
     </div>
-
     <div class="door locked">
         <div class="label">Door 4 - Data Processing Materials</div>
 <p>Investment materials are provided individually. No documents are publicly available on the platform. Access is granted for each project separately.</p>
@@ -593,7 +567,6 @@ Access is granted after NDA confirmation.</p>
 </div>
 </div>
 
-
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -601,7 +574,6 @@ Access is granted after NDA confirmation.</p>
 <span style="font-size:13px;color:#9aa3b2;">
 A platform for equity participation in real projects.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -630,13 +602,12 @@ A platform for equity participation in real projects.
     </div>
   </div>
 </footer>
-<!-- Mobile Bottom Navigation -->
+
 <div class="mobile-bottom-nav">
   <a href="how_it_works.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="projects.html">Проекты платформы</a>
 </div>
-
 
 <script>
 function openRoomPanel(id){
@@ -651,22 +622,18 @@ function silentDoor(){
 }
 </script>
 
-
 <script>
 function projectProjection(){
     window.location.href = 'private_projects.html';
 }
 </script>
 
-
 <div class="modal" id="ndaModal" style="display:none;z-index:50;">
   <div class="modal-content" style="max-width:820px;">
     <div class="close" onclick="closeNDA()">×</div>
-
 <div class="container">
     <h1>Non-disclosure agreement for investors.</h1>
     <p>This page contains confidential information regarding private investment opportunities provided by the NoctAI platform.</p>
-
     <div class="box">
         <p><strong>By accessing these materials, you acknowledge and agree to the following:</strong></p>
         <ul>
@@ -675,7 +642,6 @@ function projectProjection(){
             <li>This material does not constitute a public offer of investment.</li>
             <li>All investment decisions are made individually by the NoctAI team.</li>
         </ul>
-
 <div class="box">
 <p><strong>Additional confirmations:</strong></p>
 <ul>
@@ -685,13 +651,10 @@ function projectProjection(){
     <li>You acknowledge that access to these materials does not create any fiduciary relationship.</li>
 </ul>
 </div>
-
-
     <div class="footer">
         <input type="checkbox" id="agree">
         <label for="agree">I confirm that I have read, understood and agree to the terms of this Confidential Agreement.</label>
     </div>
-
     <div style="margin-top:28px;">
         <button id="proceedBtn" onclick="proceed()" disabled>Proceed to Private Materials</button>
     </div>
@@ -716,8 +679,8 @@ function proceedNDA(){
     window.location.href = 'private_project.html';
 }
 </script>
-
   </div>
+</div>
 </div>
 
 <script>
@@ -738,6 +701,5 @@ function proceed(){
   window.location.href = 'private_projects.html';
 }
 </script>
-
 </body>
 </html>
