@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_040.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,17 +396,28 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
-  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
+<body>
+ <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -430,13 +440,13 @@ border-color:var(--gold);
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -445,10 +455,9 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -456,26 +465,25 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -541,9 +547,9 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_040-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_040.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
@@ -556,36 +562,20 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 040<br/>Стратегия временной асимметрии — как ультрасостоятельные инвесторы используют временные горизонты как конкурентное оружие</h3>
-
 <p>Большинство инвесторов считают время нейтральным фактором. Ультрасостоятельные инвесторы понимают, что время <strong>асимметрично</strong>.</p>
-
 <p>Рынки капитала вознаграждают тех, кто действует в других временных горизонтах, чем большинство. Терпение, длительность и выносливость превращаются в структурное преимущество.</p>
-
 <h3>Почему время не равно для всех</h3>
-
 <p>Капитал с коротким горизонтом вынужден реагировать. Капитал с длинным горизонтом может ждать.</p>
-
 <p>Циклы выкупа, ковенанты левериджа, бенчмарки доходности и политическое давление сжимают время для большинства участников. Элитные инвесторы проектируют капитал, свободный от этих ограничений.</p>
-
 <h3>Кто может ждать дольше — тот контролирует исход</h3>
-
 <p>Рынки со временем сходятся к фундаментальным значениям, но не по предсказуемому расписанию. Те, кто вынужден выходить раньше, поглощают волатильность.</p>
-
 <p>Ультрасостоятельные инвесторы задают один вопрос: <em>кто вынужден действовать раньше меня?</em></p>
-
 <h3>Временная асимметрия против тайминга рынка</h3>
-
 <p>Тайминг рынка пытается угадать момент. Временная асимметрия выигрывает независимо от момента.</p>
-
 <p>Выносливость заменяет точность.</p>
-
 <h3>Скрытый рычаг длинных горизонтов</h3>
-
 <ul>
 <li>переживание просадок без вынужденных продаж</li>
 <li>пересмотр условий в стрессовых ситуациях</li>
@@ -593,15 +583,10 @@ function onProjectChange(v){
 <li>тихое накопление активов</li>
 <li>компаундирование опциональности</li>
 </ul>
-
 <h3>Кто страдает от временного давления</h3>
-
 <p>Фонды с левериджем, публичные структуры, политически уязвимые организации и менеджеры с карьерным риском структурно привязаны к короткому горизонту.</p>
-
 <p>Элитные инвесторы занимают противоположную сторону.</p>
-
 <h3>Инженерия временного преимущества</h3>
-
 <ul>
 <li>постоянный или «вечнозелёный» капитал</li>
 <li>отсутствие обязательств по выкупу</li>
@@ -609,25 +594,14 @@ function onProjectChange(v){
 <li>терпеливые ко-инвестиционные структуры</li>
 <li>ликвидность, зарезервированная для выносливости</li>
 </ul>
-
 <h3>Почему временная асимметрия особенно важна сейчас</h3>
-
 <p>Алгоритмическая торговля, мгновенные новости, регуляторные реакции и политическая волатильность сжимают время принятия решений. Длинный горизонт освобождает от этого давления.</p>
-
 <h3>Заключение — время есть абсолютное преимущество</h3>
-
 <p>Капитал, способный ждать, со временем начинает диктовать условия.</p>
-
 <p>Ультрасостоятельные инвесторы проектируют структуры, которые переживают циклы.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -637,6 +611,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -644,7 +619,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -672,12 +646,12 @@ function onProjectChange(v){
       © 2025 NoctAI™
     </div>
   </div>
+  
 </footer>
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

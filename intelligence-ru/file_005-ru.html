@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_005.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,12 +465,10 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Оценка дохода</h3>
         <div class="calc-income">
@@ -471,12 +477,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +532,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -549,7 +553,6 @@ function onProjectChange(v){
   </div>
 </nav>
 
-
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
   <div class="badge">INTELLIGENCE BRIEFING</div>
@@ -558,53 +561,35 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 005<br/>Принцип скорости: как ультрасостоятельные используют темп, доступ и стратегический тайминг, чтобы забирать возможности раньше всех</h3>
-
 <p>В мире экстремального капитала деньги перестают быть главным преимуществом. <strong>Главное преимущество — скорость.</strong> Скорость доступа, исполнения, принятия решений, получения разведданных и позиционирования до того, как остальной мир осознаёт происходящее.</p>
-
 <h3>1. Скорость информации — первая переменная власти</h3>
 <p><strong>Ключевые направления:</strong> элитные потоки разведки, быстрые системы принятия решений, закрытый доступ к данным, информационное преимущество UHNW</p>
 <p>Ультрасостоятельные не ждут публичных новостей. Они опираются на частных аналитиков, AI‑системы ранних сигналов, суверенные источники, прямые каналы с основателями и внебиржевые массивы данных.</p>
-
 <h3>2. Скорость капитала — движение денег быстрее рынка</h3>
 <p><strong>Ключевые направления:</strong> мгновенное размещение, динамическая ликвидность, оперативное развертывание капитала UHNW</p>
 <p>Элитные структуры обеспечивают немедленную трансграничную ликвидность, заранее подготовленные пулы капитала и частные кредитные линии, устраняющие любые задержки.</p>
-
 <h3>3. Скорость возможностей — вход до того, как дверь становится видимой</h3>
 <p><strong>Ключевые направления:</strong> допубличный доступ, закрытый поток сделок, раннее позиционирование</p>
 <p>Самые быстрые получают доступ до того, как активы становятся публичными — в момент, когда исход уже вероятностно неизбежен, но ещё не считается «безопасным».</p>
-
 <h3>4. Скорость решений — устранение когнитивного трения</h3>
 <p><strong>Ключевые направления:</strong> фрикционно‑свободные решения, управленческая ясность, матрицы риска</p>
 <p>Предварительно согласованные рамки, компактные экспертные группы и red‑team‑проверки устраняют колебания и задержки.</p>
-
 <h3>5. Скорость исполнения — власть принадлежит первому действующему</h3>
 <p><strong>Ключевые направления:</strong> операционная немедленность, модели быстрого исполнения</p>
 <p>Команды, юридическая готовность и AI‑рабочие процессы проектируются для немедленного действия без фазы разгона.</p>
-
 <h3>6. Скорость сетей — влияние, движущееся быстрее репутации</h3>
 <p><strong>Ключевые направления:</strong> ускорение элитных сетей, влияние по требованию</p>
 <p>Сети быстрого реагирования способны мобилизовать капитал, экспертизу и рычаги влияния в течение часов, а не месяцев.</p>
-
 <h3>7. Скорость наследия — опережающее построение поколенческой власти</h3>
 <p><strong>Ключевые направления:</strong> династическое ускорение, межпоколенческие системы</p>
 <p>Скорость накапливается через поколения за счёт раннего внедрения управления, дисциплины и структур с длинным горизонтом.</p>
-
 <h3>Заключение — скорость как главный разделитель</h3>
 <p>На вершине иерархии именно скорость определяет доминирование. Ультрасостоятельные встраивают её в каждую систему, которой они управляют.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -614,6 +599,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -621,7 +607,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -649,12 +634,12 @@ function onProjectChange(v){
       © 2025 NoctAI™
     </div>
   </div>
+  
 </footer>
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

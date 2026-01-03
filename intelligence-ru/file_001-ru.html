@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_001.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,12 +465,10 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Оценка дохода</h3>
         <div class="calc-income">
@@ -471,12 +477,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +532,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -549,7 +553,6 @@ function onProjectChange(v){
   </div>
 </nav>
 
-
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
   <div class="badge">INTELLIGENCE BRIEFING</div>
@@ -558,15 +561,10 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 001<br/>Долгосрочная стратегия капитала: как ультрасостоятельные лица защищают активы, усиливают влияние и получают доступ к закрытым возможностям</h3>
-
 <p>В мире, где рынки меняются быстрее, чем большинство компаний способны адаптироваться, влиятельные и состоятельные лица ищут не информацию как таковую, а <strong>устойчивые стратегические преимущества</strong>. Их интерес сосредоточен на защите капитала, глобальной мобильности, закрытых инвестициях, частном доступе к сделкам и системах, которые экономят время, а не поглощают его.</p>
-
 <p>Владельцы ультравысокого капитала, семейные офисы, инвесторы и предприниматели высшего уровня, как правило, концентрируются на следующих направлениях:</p>
-
 <ul>
 <li><strong>Сохранение капитала и защита активов</strong></li>
 <li><strong>Доходные инвестиции с контролируемым риском</strong></li>
@@ -576,15 +574,10 @@ function onProjectChange(v){
 <li><strong>Операционная эффективность и автоматизация</strong></li>
 <li><strong>Масштабирование бизнеса без личного участия владельца</strong></li>
 </ul>
-
 <p>Данный материал описывает ключевые подходы, которые имеют практическое значение при управлении значительным капиталом.</p>
-
 <h3>1. Как миллиардеры защищают состояние в условиях глобальной нестабильности</h3>
-
 <p><strong>Ключевые направления:</strong> сохранение капитала, защита активов, глобальная диверсификация рисков, семейные офисы, антикризисные инвестиции.</p>
-
 <p>Для ультрасостоятельных лиц рост капитала вторичен по отношению к <strong>контролю уязвимостей и долгосрочных рисков</strong>. Крупное состояние неизбежно привлекает:</p>
-
 <ul>
 <li>политическое давление</li>
 <li>рыночную волатильность</li>
@@ -592,9 +585,7 @@ function onProjectChange(v){
 <li>геополитические конфликты</li>
 <li>юридические риски</li>
 </ul>
-
 <p>Для нейтрализации этих факторов используются:</p>
-
 <ul>
 <li>мультиюрисдикционные структуры владения</li>
 <li>частные трасты и международные холдинги</li>
@@ -602,15 +593,10 @@ function onProjectChange(v){
 <li>частные сделки, не зависящие от публичных рынков</li>
 <li>банковские отношения в США, Швейцарии, Сингапуре и ОАЭ</li>
 </ul>
-
 <p><strong>Базовый принцип:</strong> ни одно государство или институт не должно иметь полного контроля над всем капиталом.</p>
-
 <h3>2. Куда инвестируют ультрабогатые в среднесрочной перспективе</h3>
-
 <p><strong>Ключевые направления:</strong> частные инвестиции, private equity, private credit, альтернативные активы.</p>
-
 <p>Наиболее обеспеченные инвесторы размещают капитал в сегментах, недоступных массовому рынку:</p>
-
 <ul>
 <li><strong>Private Equity</strong> — доли в быстрорастущих компаниях до выхода на биржу</li>
 <li><strong>Private Credit</strong> — прямое кредитование бизнеса под обеспечение</li>
@@ -618,13 +604,9 @@ function onProjectChange(v){
 <li><strong>AI‑инфраструктура и вычислительные мощности</strong> — долгосрочный структурный тренд</li>
 <li><strong>Коммерческая недвижимость класса A</strong> — защитные активы с контролем</li>
 </ul>
-
 <p>Ценность этих активов формируется за счёт <strong>структуры и контроля</strong>, а не спекуляций.</p>
-
 <h3>3. Почему состоятельные люди ищут партнёров, а не просто услуги</h3>
-
 <p>Для лиц, принимающих решения, важна <strong>реализация без шума</strong>. Они выбирают партнёров, которые:</p>
-
 <ul>
 <li>работают быстро и конфиденциально</li>
 <li>решают сложные задачи с минимальным вовлечением клиента</li>
@@ -632,24 +614,17 @@ function onProjectChange(v){
 <li>открывают доступ к закрытым сетям и возможностям</li>
 <li>управляют сложностью без создания хаоса</li>
 </ul>
-
 <p>Основная ценность для UHNW‑клиентов — это стратегическая ясность, экономия времени и предсказуемость.</p>
-
 <h3>4. Масштабирование бизнеса: реальные приоритеты предпринимателей высшего уровня</h3>
-
 <ul>
 <li>выход на рынок США без потери контроля</li>
 <li>рост без операционного хаоса</li>
 <li>команды, способные работать автономно</li>
 <li>системы, исключающие зависимость от владельца</li>
 </ul>
-
 <p>Их цель — не зарабатывать больше, а <strong>убрать себя из ежедневной операционной нагрузки</strong>.</p>
-
 <h3>5. Системы, работающие без владельца</h3>
-
 <p>По мере роста доходов <strong>время становится самым дефицитным ресурсом</strong>. Поэтому инвестиции направляются в:</p>
-
 <ul>
 <li>автоматизированные процессы</li>
 <li>удалённо управляемые операции</li>
@@ -657,28 +632,18 @@ function onProjectChange(v){
 <li>масштабируемые структуры</li>
 <li>самоуправляемые команды</li>
 </ul>
-
 <h3>6. Что объединяет всех влиятельных и состоятельных людей</h3>
-
 <p>Независимо от отрасли, ключевыми являются три элемента:</p>
-
 <ol>
 <li><strong>Доступ</strong> — к закрытым сетям и возможностям</li>
 <li><strong>Информационное преимущество</strong> — данные, влияющие на реальные решения</li>
 <li><strong>Скорость</strong> — время ценнее капитала</li>
 </ol>
-
 <h3>Заключение</h3>
-
 <p>Этот материал предназначен для инвесторов, предпринимателей и руководителей, управляющих значительными активами и долгосрочным влиянием. Он задаёт рамку мышления, а не предлагает инвестиционные рекомендации.</p>
-
 </div>
 </div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -688,6 +653,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -695,7 +661,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -724,6 +689,7 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>

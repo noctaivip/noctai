@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_034.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_034-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_034.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,69 +562,40 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 034<br/>Преимущество задержки решения — как ультрасостоятельные инвесторы выигрывают, принимая меньше, медленнее, но структурно более сильных решений</h3>
-
 <p>Большинство инвесторов считают скорость преимуществом. Ультрасостоятельные понимают иное: <strong>грамотно спроектированная задержка</strong> — это форма власти.</p>
-
 <p>Задержка решения — это не нерешительность. Это дисциплина откладывать необратимые обязательства, одновременно ускоряя подготовку, разведку, структурирование и позиционирование.</p>
-
 <h3>Почему скорость уничтожает капитал</h3>
-
 <p>Быстрые решения фиксируют капитал в жёстких конструкциях, убирают опциональность и усиливают ошибки. Большинство необратимых потерь возникает не потому, что идея была неверной, а потому что обязательство было принято слишком рано.</p>
-
 <h3>Подготовка без обязательств</h3>
-
 <p>Элитные инвесторы действуют агрессивно на уровне подготовки, оставаясь формально незафиксированными: структуры готовы, консультанты выровнены, капитал зарезервирован, сценарии смоделированы — без экспозиции и обязательств.</p>
-
 <p>Снаружи это выглядит как пассивность. Внутри — это доминирование.</p>
-
 <h3>Три фазы элитного принятия решений</h3>
-
 <ul>
 <li><strong>Структурная готовность</strong> без обязательств</li>
 <li><strong>Сжатие информации</strong> под давлением</li>
 <li><strong>Необратимое решение</strong> только при ограниченном даунсайде</li>
 </ul>
-
 <h3>Почему задержка смещает баланс силы</h3>
-
 <p>Пока другие спешат, оценки сжимаются, рычаги переходят, альтернативы у контрагентов исчезают. Когда решение принимается, условия уже диктуются, а не обсуждаются.</p>
-
 <h3>Ловушка скорости</h3>
-
 <p>Скорость создаёт ощущение контроля. Задержка создаёт реальный контроль. До размещения капитала власть максимальна.</p>
-
 <h3>Задержка на практике</h3>
-
 <ul>
 <li>необязывающие условия</li>
 <li>поэтапные обязательства</li>
 <li>опционы без обязанности исполнения</li>
 <li>отложенные закрытия с асимметричными санкциями</li>
 </ul>
-
 <h3>Почему это критично в волатильных рынках</h3>
-
 <p>Волатильность наказывает жёсткость и вознаграждает терпение. Ультрасостоятельные позволяют неопределённости «созреть», прежде чем действовать.</p>
-
 <h3>Заключение — власть существует до решения</h3>
-
 <p>Самый сильный момент в инвестировании — не действие, а мгновение перед ним.</p>
-
 <p>Те, кто владеет задержкой решений, не гонятся за исходами — они делают их неизбежными.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -630,6 +605,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -637,7 +613,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -666,11 +641,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

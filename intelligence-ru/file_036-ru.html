@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_036.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_036-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_036.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,38 +562,23 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 036<br/>Фреймворк иллюзии ликвидности — почему ультрасостоятельные инвесторы рассматривают «доступность кэша» как стратегическую переменную, а не как подушку безопасности</h3>
-
 <p>Большинство инвесторов приравнивают ликвидность к безопасности. Ультрасостоятельные инвесторы понимают: в реальности ликвидность часто является <strong>иллюзией</strong>.</p>
-
 <p>Наличие кэша в стабильные периоды почти ничего не говорит о способности перемещать капитал в условиях стресса. Истинная ликвидность определяется возможностью точно и своевременно перераспределять капитал именно тогда, когда условия начинают ухудшаться.</p>
-
 <h3>Почему видимая ликвидность исчезает под давлением</h3>
-
 <p>Во время системных кризисов банки защищают балансы, кредитные линии замораживаются, окна расчётов сужаются, вводятся валютные и капитальные ограничения. Ликвидность, которая казалась избыточной, исчезает ровно в тот момент, когда она критически необходима.</p>
-
 <h3>Ликвидность — это структура, а не деньги</h3>
-
 <p>Простое владение кэшем не гарантирует мобильности. Ликвидность определяется юрисдикцией, контрагентами, правовыми условиями, валютами, расчётными системами и режимами доступа.</p>
-
 <h3>Три слоя реальной ликвидности</h3>
-
 <ul>
 <li>ликвидность инструментов в условиях стресса</li>
 <li>поведение контрагентов во время кризисов</li>
 <li>юрисдикционная свобода движения капитала</li>
 </ul>
-
 <h3>Риск концентрации ликвидности</h3>
-
 <p>Сосредоточение кэша в одном банке, валюте или правовой системе создаёт скрытую хрупкость. Ультрасостоятельные семьи фрагментируют ликвидность, устраняя единичные точки отказа.</p>
-
 <h3>Как элитные инвесторы проектируют устойчивую ликвидность</h3>
-
 <ul>
 <li>несколько банковских контуров</li>
 <li>ступенчатые уровни доступа</li>
@@ -597,33 +586,15 @@ function onProjectChange(v){
 <li>резервные платёжные рельсы</li>
 <li>валюты, проверенные кризисами</li>
 </ul>
-
 <h3>Ликвидность как стратегическая сила</h3>
-
 <p>Те, кто подготовился заранее, действуют в кризисах, пока остальные договариваются о доступе. Ликвидность позволяет ранние приобретения, выполнение обязательств и асимметричное позиционирование.</p>
-
 <h3>Доступ против контроля</h3>
-
 <p>Доступ может быть отозван. Контроль должен быть спроектирован. Элитные инвесторы обеспечивают перемещение капитала без необходимости получать разрешения именно тогда, когда это наиболее важно.</p>
-
 <h3>Заключение — структура определяет, кто способен двигаться</h3>
-
 <p>Кэш сегодня не равен мобильности завтра. Ликвидность создаётся архитектурой.</p>
-
 <p>В моменты максимального напряжения свободу действия сохраняют только те, кто проектировал системы под стресс.</p>
-
 </div>
-
 </section>
-
-<section class="panel muted">
-  <strong>Intelligence Context</strong><br>
-  This document forms part of the NoctAI Intelligence Layer.  
-  Prepared for analytical reference only.  
-  Not an offer. Not a recommendation.
-</section>
-
-</main>
 
 <section class="panel muted">
   <strong>Intelligence Контекст</strong><br>
@@ -632,6 +603,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -639,7 +611,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -668,11 +639,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_016.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_016-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_016.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,61 +562,41 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 016<br/>Индекс тихой власти: как ультрасостоятельные измеряют невидимое влияние, предсказывают сдвиги контроля и занимают позиции до переходов власти</h3>
-
 <p>Большинство измеряет богатство в деньгах. Ультрасостоятельные измеряют <strong>плотность власти</strong> — концентрацию невидимого влияния в институтах, сетях, рынках и информационных каналах.</p>
-
 <h3>1. Власть распределена, а не принадлежит</h3>
 <p><strong>Ключевые направления:</strong> распределённое влияние, узлы власти, институциональные рычаги</p>
 <p>Реальная власть находится в точках вето, неформальных каналах и узлах принятия решений, а не в официальных должностях.</p>
-
 <h3>2. Индекс тихой власти</h3>
 <p><strong>Ключевые направления:</strong> картография влияния, измерение власти</p>
 <p>Индекс оценивает устойчивость, выравнивание интересов, частные альянсы и фактическую способность блокировать решения — а не публичную видимость.</p>
-
 <h3>3. Картирование асимметричного влияния</h3>
 <p><strong>Ключевые направления:</strong> косвенные рычаги, асимметричное позиционирование</p>
 <p>Небольшие, низкорисковые действия создают непропорциональный эффект, если они направлены в узкие места системы.</p>
-
 <h3>4. Архитектура косвенного контроля</h3>
 <p><strong>Ключевые направления:</strong> делегированная власть, воронки решений</p>
 <p>Влияние проходит через советников, посредников, медиавекторы и институциональных операторов.</p>
-
 <h3>5. Прогнозирование переходов власти</h3>
 <p><strong>Ключевые направления:</strong> геополитическое прогнозирование, сигналы нестабильности</p>
 <p>Элита выявляет переходы по дефекциям, смене нарратива, перераспределению альянсов и оттоку капитала.</p>
-
 <h3>6. Анализ институциональных настроений</h3>
 <p><strong>Ключевые направления:</strong> картирование настроений, дрейф повестки</p>
 <p>Регуляторный тон, судебные сигналы, военные индикаторы и академическое давление раскрывают будущие направления политики.</p>
-
 <h3>7. Ликвидность влияния</h3>
 <p><strong>Ключевые направления:</strong> скорость влияния, конвертируемость</p>
 <p>Одни формы влияния перемещаются мгновенно, другие требуют десятилетий. Позиционирование учитывает оба типа.</p>
-
 <h3>8. Контрбалансы власти</h3>
 <p><strong>Ключевые направления:</strong> стратегические противовесы, хеджирование влияния</p>
 <p>Параллельные альянсы, правовая изоляция, нарративные экраны и резервные финансовые сети нейтрализуют угрозы.</p>
-
 <h3>9. Долгосрочное картирование власти</h3>
 <p><strong>Ключевые направления:</strong> межпоколенческое позиционирование, сканирование горизонтов</p>
 <p>Демография, технологии, идеологии, экология и концентрация капитала отслеживаются на десятилетия вперёд.</p>
-
 <h3>Заключение — власть как архитектура</h3>
 <p>Деньги покупают доступ. Доступ создаёт влияние. Влияние даёт опциональность. Опциональность обеспечивает устойчивость. Устойчивость создаёт непрерывность.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -622,6 +606,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -629,7 +614,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -658,11 +642,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

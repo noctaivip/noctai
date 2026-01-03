@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_021.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_021-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_021.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,20 +562,13 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 021<br/>Чертёж сохранения влияния: как ультрасостоятельные удерживают власть, стабильность и стратегический контроль в эпоху глобальной нестабильности</h3>
-
 <p>Мы вступили в век нестабильности: геополитическая фрагментация, ИИ‑дезинтеграция, эрозия институтов, социальная поляризация, валютные и регуляторные риски. В этих условиях одного капитала уже недостаточно.</p>
-
 <p>Ультрасостоятельные оптимизируют более фундаментальный актив — <strong>сохранение влияния</strong>: способность удерживать контроль над решениями, доступом и стратегическими исходами даже тогда, когда окружающие системы дестабилизируются.</p>
-
 <h3>1. Влияние как высший класс активов</h3>
 <p><strong>Ключевые направления:</strong> капитал влияния, стратегическая устойчивость, элитное позиционирование</p>
 <p>Деньги двигают рынки. Влияние двигает цивилизации. Оно обеспечивает приоритетный доступ, регуляторную гибкость, защиту в кризисах и геополитическую опциональность.</p>
-
 <h3>2. Три опоры сохранения влияния</h3>
 <p>Элитные семьи защищают влияние одновременно на трёх уровнях:</p>
 <ul>
@@ -579,40 +576,30 @@ function onProjectChange(v){
 <li><strong>Реляционное влияние</strong> — доверенные советники, альянсы и разведывательные сети.</li>
 <li><strong>Перцептивное влияние</strong> — контроль нарратива, репутации и легитимности.</li>
 </ul>
-
 <h3>3. Раннее обнаружение угроз</h3>
 <p><strong>Ключевые направления:</strong> системы раннего предупреждения, прогнозирование волатильности</p>
 <p>Частная разведка отслеживает регуляторные сигналы, геополитику, социальные настроения, киберэкспозиции и прочность альянсов.</p>
-
 <h3>4. Страхование влияния</h3>
 <p><strong>Ключевые направления:</strong> избыточные контуры, инженерия непрерывности</p>
 <p>Мультиюрисдикционность, параллельные политические каналы, диверсифицированный банкинг, резервные нарративы и прокси‑структуры обеспечивают устойчивость.</p>
-
 <h3>5. Тихие каналы влияния</h3>
 <p><strong>Ключевые направления:</strong> низковидимая власть, закрытые альянсы</p>
 <p>Аналитические центры, советы, филантропия и суверенные институты позволяют формировать исходы без публичной экспозиции.</p>
-
 <h3>6. Матрица советников</h3>
 <p><strong>Ключевые направления:</strong> инженерия доверенного круга</p>
 <p>Советники отбираются по поведению под стрессом, совпадению стимулов, суждению, дискретности и устойчивости к групповому мышлению.</p>
-
 <h3>7. Репутационная крепость</h3>
 <p><strong>Ключевые направления:</strong> защита репутации, контроль интерпретаций</p>
 <p>Постоянный мониторинг, быстрые ответы, курируемая видимость и долгосрочное доверие сохраняют рычаги влияния.</p>
-
 <h3>8. Масштабирование влияния</h3>
 <p><strong>Ключевые направления:</strong> усиление рычагов, сетевая власть</p>
 <p>Трансграничные альянсы, институциональное закрепление и контроль стратегических узких мест расширяют охват.</p>
-
 <h3>9. Наследование влияния</h3>
 <p><strong>Ключевые направления:</strong> династическая непрерывность</p>
 <p>Наследников обучают дипломатии, управлению кризисами, дискретности и хранению альянсов.</p>
-
 <h3>Заключение — влияние переживает богатство</h3>
 <p>Рынки меняются. Системы разрушаются. Грамотно спроектированное влияние сохраняется и накапливается.</p>
-
 </div>
-
 </section>
 
 <section class="panel muted">
@@ -622,6 +609,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -629,7 +617,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -658,11 +645,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

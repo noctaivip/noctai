@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_012.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_012-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_012.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,61 +562,42 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 012<br/>Чертёж монополии доступа: как ультрасостоятельные получают власть через контролируемый вход</h3>
-
 <p>В среде ультравысокого капитала деньги перестают быть главным преимуществом. <strong>Главный ресурс — доступ.</strong></p>
-
 <p>Этот документ объясняет, как элита выстраивает монополии доступа — невидимые структуры, определяющие, кто допускается к возможностям, кто извлекает выгоду и кто навсегда остаётся за пределами системы.</p>
-
 <h3>1. Доступ как валюта — подлинный слой власти</h3>
 <p><strong>Ключевые направления:</strong> экономика доступа, элитный гейткипинг, закрытые потоки возможностей</p>
 <p>Тот, кто контролирует доступ, управляет сделками, влиянием, разведкой, партнёрствами и распределением возможностей.</p>
-
 <h3>2. Архитектура допуска — контроль входа</h3>
 <p><strong>Ключевые направления:</strong> преимущество гейткипера, стратегическое включение</p>
 <p>Сети по приглашениям, проверенное членство, закрытые советы и внутренние круги допускают участие только при полном совпадении интересов и долгосрочной ценности.</p>
-
 <h3>3. Контроль потока возможностей — частные рынки</h3>
 <p><strong>Ключевые направления:</strong> эксклюзивный поток сделок, теневые рынки возможностей</p>
 <p>Самые ценные возможности никогда не выходят на публичный рынок. Они циркулируют внутри суверенных каналов и семейных офисов.</p>
-
 <h3>4. Социальный граф власти</h3>
 <p><strong>Ключевые направления:</strong> реляционный капитал, картирование влияния</p>
 <p>Власть отображается через людей, а не активы — через связующих игроков, брокеров и узлы принятия решений.</p>
-
 <h3>5. Тихая сеть</h3>
 <p><strong>Ключевые направления:</strong> невидимые альянсы, приватная сеть влияния</p>
 <p>Эти сети не имеют публичного следа и работают на доверии, взаимности и долгой памяти.</p>
-
 <h3>6. Использование дефицита</h3>
 <p><strong>Ключевые направления:</strong> инженерия дефицита, механика эксклюзивности</p>
 <p>Ограниченный доступ повышает ценность, усиливает рычаги и формирует спрос.</p>
-
 <h3>7. Стратегическая взаимность</h3>
 <p><strong>Ключевые направления:</strong> торг доступом, элитная взаимность</p>
 <p>Доступ обменивается на влияние, разведданные, защиту и власть.</p>
-
 <h3>8. Многоуровневая защита</h3>
 <p><strong>Ключевые направления:</strong> системы защиты доступа, фреймворки приватности</p>
 <p>Слои конфиденциальности, посредники и информационные силосы защищают монополии.</p>
-
 <h3>9. Мультипликаторы доступа</h3>
 <p><strong>Ключевые направления:</strong> сетевое наращивание, петли влияния</p>
 <p>Контролируемый вход создаёт экспоненциальное расширение охвата и авторитета.</p>
-
 <h3>Заключение — доступ как суверенная власть</h3>
 <p>Состоятельные не гонятся за возможностями. Они контролируют доступ к ним, создавая самоподдерживающееся доминирование на поколенческих горизонтах.</p>
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -622,6 +607,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -629,7 +615,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -658,11 +643,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

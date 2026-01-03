@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_041.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,17 +396,28 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -430,13 +440,13 @@ border-color:var(--gold);
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -445,10 +455,9 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -456,26 +465,25 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -541,9 +547,9 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_041-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_041.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
@@ -556,28 +562,16 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 041<br/>Модель выхода без выхода — как ультрасостоятельные инвесторы извлекают ликвидность, оставаясь структурно внутри актива</h3>
-
 <p>Большинство инвесторов приравнивают фиксацию стоимости к продаже. Ультрасостоятельные инвесторы понимают, что продажа зачастую является самой слабой формой выхода.</p>
-
 <p>Истинная зрелость заключается в способности извлекать ликвидность, сохраняя контроль, влияние и будущую опциональность.</p>
-
 <h3>Почему классические выходы неэффективны</h3>
-
 <p>Продажа создаёт риск реинвестирования, налоговое трение, потерю асимметрии и зависимость от рыночного тайминга. После продажи будущее преимущество исчезает.</p>
-
 <h3>Контроль компаундируется, ликвидность — нет</h3>
-
 <p>Ликвидность носит временный характер. Контроль накапливается через управление, доступ к информации и стратегическое позиционирование.</p>
-
 <h3>Что означает «выход без выхода»</h3>
-
 <p>Данная модель монетизирует отдельные измерения стоимости, не разрушая сам актив.</p>
-
 <ul>
 <li>частичные события ликвидности</li>
 <li>рекапитализации</li>
@@ -585,50 +579,24 @@ function onProjectChange(v){
 <li>продажа миноритарных долей с сохранением контроля</li>
 <li>привилегированные уровни над обыкновенным капиталом</li>
 </ul>
-
 <h3>Тихое извлечение ликвидности</h3>
-
 <p>Элитные инвесторы избегают публичных выходов и используют дивидендные рекапы, выпуск привилегированных инструментов, финансирование на уровне активов и внутренние реструктуризации.</p>
-
 <h3>Время как мультипликатор силы</h3>
-
 <p>Стоимость реализуется постепенно. Риск снижается, контроль усиливается, а рыночный тайминг теряет значение.</p>
-
 <h3>Сохранение асимметрии</h3>
-
 <p>Оставаясь внутри структуры, инвестор сохраняет апсайд, управленческий рычаг, информационное преимущество и кризисную опциональность.</p>
-
 <h3>Иллюзия ликвидности</h3>
-
 <p>Успех — это не «выйти в кэш». Успех — никогда не оказываться перед выбором между ликвидностью и контролем.</p>
-
 <h3>Почему это особенно важно сейчас</h3>
-
 <p>Волатильные оценки, регуляторное давление и ограниченные возможности реинвестирования делают структурную монетизацию более предпочтительной, чем чистый выход.</p>
-
 <h3>Заключение — научите активы платить</h3>
-
 <p>Самые сильные инвесторы учат активы генерировать ликвидность, оставаясь под их контролем.</p>
-
 <p>Продажа завершает историю. Структурная монетизация позволяет ей продолжаться — на собственных условиях.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
-<section class="panel muted">
-  <strong>Intelligence Context</strong><br>
-  This document forms part of the NoctAI Intelligence Layer.  
-  Prepared for analytical reference only.  
-  Not an offer. Not a recommendation.
-</section>
-</main>
 <section class="panel muted">
   <strong>Intelligence Контекст</strong><br>
 Данный документ является частью интеллектуального уровня NoctAI.
@@ -636,6 +604,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -643,7 +612,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -672,11 +640,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

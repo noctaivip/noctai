@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_038.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,9 +547,9 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_038-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_038.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
@@ -557,71 +562,39 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 038<br/>Принцип инженерии опциональности — как ультрасостоятельные инвесторы проектируют портфели, которые улучшаются при изменении условий</h3>
-
 <p>Большинство инвесторов пытаются предсказать будущее. Ультрасостоятельные инвесторы проектируют <strong>опциональность</strong>.</p>
-
 <p>Прогнозирование хрупко. Структура устойчива. Элитные инвесторы строят портфели, которые не зависят от того, окажутся ли они правы, а выигрывают по мере роста неопределённости.</p>
-
 <h3>Почему инвестиции, основанные на прогнозах, ломаются в масштабе</h3>
-
 <p>По мере роста капитала даже небольшие ошибки прогнозирования становятся дорогими. Рынки не являются стабильными системами, и зависимость от прогнозов создаёт структурную хрупкость.</p>
-
 <h3>Опциональность ценнее точности</h3>
-
 <p>Опциональность — это право действовать без обязательства. Она компаундируется со временем, тогда как точность прогнозов деградирует.</p>
-
 <ul>
 <li>обратимые решения</li>
 <li>асимметричные выплаты</li>
 <li>ограниченный даунсайд</li>
 <li>неограниченный апсайд</li>
 </ul>
-
 <h3>Опциональность в реальных портфелях</h3>
-
 <p>На практике опциональность проявляется через поэтапное размещение капитала, миноритарные доли с правами расширения, конвертируемые структуры и встроенные триггеры контроля.</p>
-
 <h3>Волатильность как стратегический актив</h3>
-
 <p>Жёсткие портфели страдают от волатильности. Опциональные портфели используют её.</p>
-
 <p>Ультрасостоятельные инвесторы позволяют волатильности создавать ясность и перераспределяют капитал соответствующим образом.</p>
-
 <h3>Цена чрезмерной оптимизации</h3>
-
 <p>Избыточная эффективность уничтожает гибкость. Элитные инвесторы допускают простаивающие ресурсы и избыточность, чтобы сохранить свободу действий.</p>
-
 <h3>Опциональность против диверсификации</h3>
-
 <p>Диверсификация распределяет риск. Опциональность превращает риск в возможность, встраивая несколько будущих сценариев в каждую позицию.</p>
-
 <h3>Инженерия опциональности на входе</h3>
-
 <p>Опциональность должна быть заложена заранее — через права расширения, механики конверсии, эскалационные положения управления и триггеры ликвидности.</p>
-
 <h3>Почему опциональность важна сегодня</h3>
-
 <p>Технологические сдвиги, геополитическая фрагментация, регуляторная волатильность и изменения монетарных режимов вознаграждают гибкие структуры.</p>
-
 <h3>Заключение — структура важнее прогноза</h3>
-
 <p>Вам не нужно предсказывать будущее, если ваша структура улучшается при изменении будущего.</p>
-
 <p>Ультрасостоятельные инвесторы проектируют системы реакции, а не прогнозы, которые ломаются.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -631,6 +604,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -638,7 +612,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -667,11 +640,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

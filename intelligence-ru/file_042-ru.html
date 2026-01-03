@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_042.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,17 +396,28 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -430,13 +440,13 @@ border-color:var(--gold);
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -445,10 +455,9 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -456,26 +465,25 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -541,9 +547,9 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_042-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_042.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
@@ -556,66 +562,36 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 042<br/>Двигатель информационной асимметрии — как ультрасостоятельные инвесторы превращают превосходство контекста, а не скорости, в устойчивое преимущество</h3>
-
 <p>Большинство инвесторов охотятся за информацией. Ультрасостоятельные инвесторы строят <strong>контекст</strong>.</p>
-
 <p>Рынки выигрываются не теми, кто первым получает данные, а теми, кто понимает их значение ещё до того, как другие осознают, как эти данные интерпретировать.</p>
-
 <h3>Почему избыток информации ухудшает решения</h3>
-
 <p>Информационная перегрузка усиливает шум, нарративные искажения, ложную точность и реактивное поведение. Элитные инвесторы потребляют меньше данных — но исключительно структурно значимых.</p>
-
 <h3>Контекст важнее контента</h3>
-
 <p>Контекст позволяет мгновенно классифицировать информацию: сигнал или шум, структурное или временное, обратимое или необратимое.</p>
-
 <h3>Как выглядит современная информационная асимметрия</h3>
-
 <p>Настоящая асимметрия возникает из позиции, а не из секретности. Элитные инвесторы находятся ближе к процессам принятия решений, чем к публичным объявлениям.</p>
-
 <h3>Три слоя двигателя асимметрии</h3>
-
 <ul>
 <li>структурная близость через участие в управлении и финансировании</li>
 <li>видимость стимулов, позволяющая предсказывать поведение до исходов</li>
 <li>временное преимущество участия в формировании, а не реакции</li>
 </ul>
-
 <h3>Почему скорость — ложное преимущество</h3>
-
 <p>Скорость усиливает ошибки при отсутствии контекста. Ультрасостоятельные инвесторы ждут интерпретационной ясности, а не гонятся за заголовками.</p>
-
 <h3>Доступ против понимания</h3>
-
 <p>Доступ без фреймворков создаёт хрупкость. Элитные инвесторы концентрируются на том, почему информация важна и кто вынужден действовать.</p>
-
 <h3>Законное построение асимметрии</h3>
-
 <p>Права раскрытия, участие в управлении, финансовые ковенанты и долгосрочное доверие создают этичный доступ и превосходящий контекст.</p>
-
 <h3>Почему это особенно важно на сложных рынках</h3>
-
 <p>Многоуровневое регулирование, геополитическое вмешательство и отложенные последствия делают сырые данные вводящими в заблуждение. Контекст стабилизирует суждение.</p>
-
 <h3>Заключение — контекст как абсолютное преимущество</h3>
-
 <p>Элитные инвесторы не гонятся за новостями. Они проектируют позиции, которые рано раскрывают реальность.</p>
-
 <p>На рынках, управляемых шумом, именно контекст определяет преимущество.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -625,6 +601,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -632,7 +609,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -661,11 +637,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

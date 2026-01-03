@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_037.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_037-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_037.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,42 +562,25 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 037<br/>Парадокс управленческого контроля — почему ультрасостоятельные инвесторы стремятся к влиянию без видимости и контролю без формального владения</h3>
-
 <p>Большинство инвесторов приравнивают контроль к владению. Ультрасостоятельные понимают, что это предположение всё чаще является ошибочным.</p>
-
 <p>В современных капитальных системах видимое владение привлекает внимание регуляторов, юридические риски и политическое давление, тогда как реальная власть действует тихо — через механизмы корпоративного управления, встроенные глубоко в правовые и операционные структуры.</p>
-
 <h3>Почему владение стало уязвимостью</h3>
-
 <p>Сегодня владение означает повышенное регулирование, судебную экспозицию, репутационные риски и публичную ответственность. По мере того как системы становятся более прозрачными и агрессивными, элитные инвесторы сознательно отделяют экономический интерес от видимого контроля.</p>
-
 <h3>Контроль осуществляется через правила, а не через активы</h3>
-
 <p>Активы не принимают решений в стрессовых ситуациях. Исходы определяются правилами управления — тем, кто может блокировать решения, менять стратегию или перехватывать контроль при ухудшении условий.</p>
-
 <h3>Три слоя невидимого контроля</h3>
-
 <ul>
 <li><strong>Структурное управление</strong>, зашитое в юридические документы и акционерные соглашения</li>
 <li><strong>Информационное управление</strong> через асимметрию доступа, отчётности и тайминга</li>
 <li><strong>Кризисное управление</strong>, автоматически активирующееся при заранее заданных стресс‑сценариях</li>
 </ul>
-
 <h3>Миноритарное владение — мажоритарная власть</h3>
-
 <p>Влияние масштабируется через точки рычага, а не через процент владения. Небольшие доли, усиленные правом вето, зарезервированными вопросами и отрицательным контролем, способны доминировать над исходами.</p>
-
 <h3>Юридический титул против реальной власти</h3>
-
 <p>Многие инвесторы владеют активами, которыми не могут управлять в критический момент. Ультрасостоятельные проектируют управление так, чтобы оно работало именно во время реструктуризаций, неплатёжеспособности или политического вмешательства.</p>
-
 <h3>Управление на практике</h3>
-
 <ul>
 <li>специальные права голосования</li>
 <li>зарезервированные управленческие решения</li>
@@ -601,25 +588,14 @@ function onProjectChange(v){
 <li>асимметрия в советах директоров</li>
 <li>ковенанты по информации и отчётности</li>
 </ul>
-
 <h3>Почему управление переживает владение</h3>
-
 <p>Владение может быть размыто, продано или ограничено регулированием. Управленческие конструкции переживают циклы, реструктуризации и смену лидеров.</p>
-
 <h3>Заключение — контроль без шума</h3>
-
 <p>Самый эффективный контроль — невидимый. Ультрасостоятельные инвесторы формируют исходы, не демонстрируя доминирования.</p>
-
 <p>Владение привлекает внимание. Управление формирует реальность.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -629,6 +605,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -636,7 +613,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -665,11 +641,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

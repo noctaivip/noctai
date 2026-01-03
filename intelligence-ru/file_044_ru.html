@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_043.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,17 +396,28 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -430,13 +440,13 @@ border-color:var(--gold);
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -445,10 +455,9 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -456,26 +465,25 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -541,9 +547,9 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_044-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_044.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
@@ -556,92 +562,59 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 044<br/>Архитектура доверия — как ультрасостоятельные инвесторы создают системы, которым доверяют без публичной репутации</h3>
-
 <p>Для большинства людей доверие формируется через публичность, узнаваемость и репутационные сигналы. 
 Ультрасостоятельные инвесторы действуют иначе: они проектируют <strong>архитектуру доверия</strong>, в которой решения принимаются без необходимости веры, симпатии или известности.</p>
-
 <p>На высших уровнях капитала доверие перестаёт быть эмоцией. Оно становится <em>инженерной характеристикой системы</em>.</p>
-
 <h3>Почему репутация — хрупкий фундамент</h3>
-
 <p>Репутация субъективна, запаздывает и легко разрушается внешними нарративами. 
 Она зависит от медиа, восприятия и интерпретаций — факторов, которые инвестор не контролирует.</p>
-
 <p>Элитный капитал исходит из простого правила: если системе требуется доверие к личности, такая система структурно уязвима.</p>
-
 <h3>Доверие через структуру, а не через обещания</h3>
-
 <p>Подлинное доверие возникает тогда, когда стимулы встроены непосредственно в архитектуру. 
 Контрагенты действуют корректно не потому, что «хотят», а потому что <strong>система не оставляет альтернатив</strong>.</p>
-
 <ul>
 <li>асимметричное распределение рисков</li>
 <li>автоматические триггеры управления</li>
 <li>прозрачность критически важных метрик</li>
 <li>минимизация возможностей злоупотреблений</li>
 </ul>
-
 <h3>Принцип недоверия по умолчанию</h3>
-
 <p>Ультрасостоятельные инвесторы не проектируют системы, предполагая добросовестность. 
 Они исходят из рационального эгоизма всех сторон.</p>
-
 <p>Именно этот подход, парадоксальным образом, создаёт наивысший уровень устойчивости.</p>
-
 <h3>Где формируется институциональное доверие</h3>
-
 <p>Доверие не рождается в переговорах. Оно формируется в:</p>
-
 <ul>
 <li>юридических документах</li>
 <li>механизмах контроля денежных потоков</li>
 <li>структуре прав и ограничений</li>
 <li>иерархии принятия решений</li>
 </ul>
-
 <h3>Контроль важнее избыточной прозрачности</h3>
-
 <p>Прозрачность без контроля создаёт иллюзию безопасности. 
 Контроль без избыточной прозрачности создаёт реальную защиту.</p>
-
 <h3>Почему доверие плохо масштабируется</h3>
-
 <p>Личное доверие не масштабируется. 
 Структурное доверие масштабируется без участия личности.</p>
-
 <p>Именно поэтому институциональный капитал выбирает архитектуру, а не характеры.</p>
-
 <h3>Архитектура доверия в капитальных структурах</h3>
-
 <ul>
 <li>приоритетные права и старшинство</li>
 <li>механизмы ограничения ликвидности</li>
 <li>автоматическое перераспределение контроля</li>
 <li>заранее заданные сценарии кризисного управления</li>
 </ul>
-
 <h3>Доверие как конкурентное преимущество</h3>
-
 <p>Когда структура внушает доверие, сделки совершаются быстрее, тише и вне публичного рынка.</p>
-
 <p>Ультрасостоятельные инвесторы получают доступ не потому, что их знают, а потому что <strong>их системы безопасны</strong>.</p>
-
 <h3>Заключение — доверие проектируется</h3>
-
 <p>На высших уровнях капитала доверие — это не про людей. Это про архитектуру.</p>
-
 <p>Те, кто проектирует доверие, получают доступ к сделкам, которые никогда не становятся публичными.</p>
-
 </div>
-
 </div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -651,6 +624,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -658,7 +632,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -687,11 +660,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

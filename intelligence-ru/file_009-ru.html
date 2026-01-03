@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_009.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,12 +465,10 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
-
       <div class="calc-panel">
         <h3>Оценка дохода</h3>
         <div class="calc-income">
@@ -471,12 +477,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +532,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -549,7 +553,6 @@ function onProjectChange(v){
   </div>
 </nav>
 
-
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
   <div class="badge">INTELLIGENCE BRIEFING</div>
@@ -558,65 +561,44 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 009<br/>Архитектура устойчивости: как ультрасостоятельные создают системы, переживающие кризисы, защищающие капитал и усиливающие власть в периоды глобальной нестабильности</h3>
-
 <p>Для большинства людей кризисы разрушают капитал. Для ультрасостоятельных кризисы <strong>перераспределяют</strong> его. Разница заключается в архитектуре устойчивости — системах, спроектированных не просто для выживания, а для усиления позиций в условиях нестабильности.</p>
-
 <h3>1. Структурная диверсификация — выход за рамки активов</h3>
 <p><strong>Ключевые направления:</strong> многоуровневая диверсификация, разделение системных рисков</p>
 <p>Капитал, банки, юрисдикции, валюты, цепочки поставок, правовые контуры и информационные системы разделяются так, чтобы сбой одного уровня не нарушал работу всей архитектуры.</p>
-
 <h3>2. Суверенное позиционирование — защита от локальных рисков</h3>
 <p><strong>Ключевые направления:</strong> мультигражданство, суверенный арбитраж</p>
 <p>Несколько резидентств, паспортов и отношений с государствами делают географию опциональной, а безопасность — спроектированной.</p>
-
 <h3>3. Антихрупкий капитал — рост через волатильность</h3>
 <p><strong>Ключевые направления:</strong> кризисные активы, антихрупкие портфели</p>
 <p>Проблемные приобретения, базовые отрасли и асимметричные инвестиции позволяют ускорять рост именно в периоды спадов.</p>
-
 <h3>4. Стратегическая избыточность — отказоустойчивая архитектура</h3>
 <p><strong>Ключевые направления:</strong> инженерия резервов, непрерывность операций</p>
 <p>Резервы предусмотрены для ликвидности, операций, коммуникаций, транспорта, хранения активов и инфраструктуры.</p>
-
 <h3>5. Частная разведка — раннее выявление угроз</h3>
 <p><strong>Ключевые направления:</strong> геополитическая разведка, прогнозирование рисков</p>
 <p>Частные аналитики и системы разведки выявляют угрозы за годы до их осознания публичным пространством.</p>
-
 <h3>6. Долгосрочные убежища — физические и капитальные</h3>
 <p><strong>Ключевые направления:</strong> безопасность длинного горизонта, стратегические укрытия</p>
 <p>Стабильная недвижимость, защищённые хранилища данных, резервные активы и автономные системы обеспечивают непрерывность.</p>
-
 <h3>7. Операционная автономия — системы без основателя</h3>
 <p><strong>Ключевые направления:</strong> автономное управление, устойчивость преемственности</p>
 <p>Команды, AI-процессы и управленческие советы устраняют точки единичного отказа.</p>
-
 <h3>8. Ликвидность по требованию — капитал в момент заморозки рынков</h3>
 <p><strong>Ключевые направления:</strong> инженерия ликвидности, кризисный доступ к кредиту</p>
 <p>Частные кредитные линии, суверенные окна и ликвидные альтернативы позволяют действовать под давлением.</p>
-
 <h3>9. Контроль нарратива — снижение конфликтов через восприятие</h3>
 <p><strong>Ключевые направления:</strong> архитектура нарратива, репутационная защита</p>
 <p>Стратегическая тишина, управляемая видимость и контролируемое взаимодействие с медиа сохраняют рычаги влияния.</p>
-
 <h3>10. Династическое проектирование — устойчивость через поколения</h3>
 <p><strong>Ключевые направления:</strong> преемственность, семейное управление</p>
 <p>Семейные конституции, образование наследников и капитальные системы с длинным горизонтом сохраняют власть за пределами одной жизни.</p>
-
 <h3>Заключение — устойчивость как новая форма богатства</h3>
 <p>Глобально и структурно спроектированная устойчивость защищает капитал и усиливает власть тогда, когда другие теряют позиции.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -626,6 +608,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -633,7 +616,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -662,11 +644,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

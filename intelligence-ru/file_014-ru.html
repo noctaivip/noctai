@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_014.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_014-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_014.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,59 +562,41 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 014<br/>Протокол невидимого рычага: как ультрасостоятельные умножают власть, не тратя капитал и не принимая прямых рисков</h3>
-
 <p>В среде ультрасостоятельных высшим инструментом является не капитал, не связи и даже не формальное влияние. Настоящим оружием становится <strong>невидимый рычаг</strong> — способность формировать исходы без прямого участия, публичной экспозиции и размещения собственного капитала.</p>
-
 <h3>1. Рычаг как базовая валюта власти</h3>
 <p><strong>Ключевые направления:</strong> стратегический рычаг, влияние без капитала, элитное усиление</p>
 <p>Невидимый рычаг действует через людей, решения, структуры и стимулы, которые принципал напрямую не контролирует, но архитектурно направляет.</p>
-
 <h3>2. Три слоя рычага миллиардера</h3>
 <p><strong>Ключевые направления:</strong> структурный рычаг, сетевой рычаг, невидимое влияние</p>
 <p>Активы, доступ и невидимые узлы влияния работают синхронно, многократно усиливая контроль.</p>
-
 <h3>3. Влияние через прокси</h3>
 <p><strong>Ключевые направления:</strong> прокси-операторы, косвенная власть</p>
 <p>Исполнительные директора, советники и посредники реализуют стратегию, экранируя принципала от ответственности и риска.</p>
-
 <h3>4. Гравитация возможностей</h3>
 <p><strong>Ключевые направления:</strong> входящий поток сделок, элитное позиционирование</p>
 <p>На масштабе возможности притягиваются к доверию и репутации, а не к усилиям.</p>
-
 <h3>5. Делегированные сети решений</h3>
 <p><strong>Ключевые направления:</strong> кластеры валидации, изоляция решений</p>
 <p>Инсайт распределяется, но финальное суждение всегда остаётся централизованным.</p>
-
 <h3>6. Архитектура переноса риска</h3>
 <p><strong>Ключевые направления:</strong> аутсорсинг даунсайда, асимметричная экспозиция</p>
 <p>Юридические, финансовые и структурные слои удерживают апсайд, перекладывая риск на другие стороны.</p>
-
 <h3>7. Влияние без давления</h3>
 <p><strong>Ключевые направления:</strong> мягкий контроль, поведенческое направление</p>
 <p>Фрейминг, стимулы и селективная информация управляют поведением без принуждения.</p>
-
 <h3>8. Косвенное владение</h3>
 <p><strong>Ключевые направления:</strong> теневая доля, рычаг зависимости</p>
 <p>Контроль сохраняется даже при отсутствии формального владения.</p>
-
 <h3>9. Сети компаундированного рычага</h3>
 <p><strong>Ключевые направления:</strong> экспоненциальное влияние, умножение сетей</p>
 <p>Каждый узел усиливает охват, власть и поток возможностей.</p>
-
 <h3>Заключение — рычаг как суверенность</h3>
 <p>Невидимый рычаг обеспечивает контроль без экспозиции, прибыль без трения и власть без прямого действия.</p>
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -620,6 +606,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -627,7 +614,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -656,11 +642,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

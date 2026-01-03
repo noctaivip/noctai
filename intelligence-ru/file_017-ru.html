@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_017.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -549,7 +554,6 @@ function onProjectChange(v){
   </div>
 </nav>
 
-
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
   <div class="badge">INTELLIGENCE BRIEFING</div>
@@ -558,61 +562,41 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 017<br/>Плейбук суверенного преимущества: как ультрасостоятельные действуют как микрогосударства, обеспечивая свободу, мобильность и геополитическую устойчивость</h3>
-
 <p>На уровне миллиардов капитал приобретает суверенную природу — он становится переносимой формой геополитической силы. Элитные семьи выстраивают автономные системы, функционируя как микрогосударства в сферах мобильности, регулирования, разведки и изоляции рисков.</p>
-
 <h3>1. Суверенное мышление — ментальная модель 0,0001%</h3>
 <p><strong>Ключевые направления:</strong> суверенный майндсет, геополитическая независимость, портативная автономия</p>
 <p>Ультрасостоятельные воспринимают себя как самостоятельные юрисдикции с правом выбора законов, альянсов и территорий.</p>
-
 <h3>2. Многоюрисдикционная архитектура идентичности</h3>
 <p><strong>Ключевые направления:</strong> диверсификация идентичности, стратегическое гражданство, арбитраж резидентности</p>
 <p>Паспорта, ВНЖ, визы и юридические оболочки распределяются для минимизации политических и географических рисков.</p>
-
 <h3>3. Юрисдикционное распределение капитала</h3>
 <p><strong>Ключевые направления:</strong> трансграничная оптимизация, суверенное картирование активов</p>
 <p>Активы размещаются с учётом силы защиты, договорных сетей, валютной устойчивости и судебной экспозиции.</p>
-
 <h3>4. Суверенные системы мобильности</h3>
 <p><strong>Ключевые направления:</strong> суверенная мобильность, экстренная эвакуация, глобальный доступ</p>
 <p>Частная авиация, планы эвакуации, безопасные зоны, медицинская экстракция и безграничный банкинг обеспечивают непрерывность.</p>
-
 <h3>5. Дипломатический след — влияние без должности</h3>
 <p><strong>Ключевые направления:</strong> мягкая дипломатия, стратегическая филантропия, переговорные каналы</p>
 <p>Влияние формируется через советы, фонды и филантропические механизмы без публичной политической экспозиции.</p>
-
 <h3>6. Информационный суверенитет</h3>
 <p><strong>Ключевые направления:</strong> частные разведывательные сети, системы раннего предупреждения</p>
 <p>Частные аналитические инфраструктуры выявляют геополитические, кибер- и регуляторные сдвиги задолго до их проявления.</p>
-
 <h3>7. Регуляторный арбитраж</h3>
 <p><strong>Ключевые направления:</strong> правовая асимметрия, мобильность права, структурная оптимизация</p>
 <p>Персональные, операционные и капитальные уровни разделяются между правовыми системами, устраняя точки давления.</p>
-
 <h3>8. Инфраструктура устойчивости</h3>
 <p><strong>Ключевые направления:</strong> антихрупкие системы, суверенная избыточность</p>
 <p>Избыточность закладывается в транспорт, данные, ликвидность, медицину и правовую защиту.</p>
-
 <h3>9. Суверенный горизонт — взгляд на 20–50 лет вперёд</h3>
 <p><strong>Ключевые направления:</strong> макрогеополитическое картирование, цивилизационные тренды</p>
 <p>Энергетика, управление ИИ, демография, торговые блоки и фрагментация отслеживаются на десятилетия вперёд.</p>
-
 <h3>Заключение — богатство временно, суверенность постоянна</h3>
 <p>Капитал может быть ограничен или изъят. Суверенная опциональность, однажды спроектированная, остаётся недосягаемой.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -622,6 +606,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -629,7 +614,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -658,11 +642,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_033.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_033-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_033.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,37 +562,23 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 033<br/>Матрица юрисдикционного арбитража — как ультрасостоятельные инвесторы используют правовую географию для усиления контроля, снижения рисков и сохранения капитала</h3>
-
 <p>Большинство инвесторов воспринимают географию как фон. Ультрасостоятельные рассматривают её как <strong>стратегический инструмент</strong>.</p>
-
 <p>Где капитал размещён, регулируется, облагается налогами и защищён, зачастую важнее самого актива. Юрисдикция — это не точка на карте, а <strong>профиль риска</strong>.</p>
-
 <h3>Почему юрисдикция — решение первого порядка</h3>
-
 <p>Юрисдикция определяет защищённость активов, исполнимость контрактов, мобильность капитала, налоговую нагрузку и долгосрочную устойчивость. Сильный актив, помещённый в слабую юрисдикцию, по умолчанию становится хрупким.</p>
-
 <h3>Реальность правовых систем</h3>
-
 <p>Правовые системы не нейтральны. Одни отдают приоритет государству, другие — частной собственности и договорному праву. Ультрасостоятельные семьи картируют эти различия с хирургической точностью.</p>
-
 <h3>Что на самом деле означает юрисдикционный арбитраж</h3>
-
 <p>Юрисдикционный арбитраж — это выравнивание каждой функции капитала с той правовой средой, которая лучше всего её защищает.</p>
-
 <ul>
 <li>Операции — в эффективных юрисдикциях</li>
 <li>Холдинги — в стабильных юрисдикциях</li>
 <li>Интеллектуальная собственность — в юрисдикциях с сильной защитой контрактов</li>
 <li>Ликвидность — в политически нейтральных юрисдикциях</li>
 </ul>
-
 <h3>Пять измерений, которые оценивает элита</h3>
-
 <ul>
 <li>Исполнимость права</li>
 <li>Политическая стабильность</li>
@@ -596,27 +586,16 @@ function onProjectChange(v){
 <li>Мобильность капитала</li>
 <li>Непрерывность наследования</li>
 </ul>
-
 <h3>Риск концентрации в одной юрисдикции</h3>
-
 <p>Сосредоточение операций, владения и ликвидности в одной правовой системе создаёт единую точку отказа. Ультрасостоятельные семьи фрагментируют юрисдикционную экспозицию, чтобы устранить этот риск.</p>
-
 <h3>Как применяется этот фреймворк</h3>
-
 <p>Многоуровневые холдинговые структуры, трансграничные трасты, диверсифицированный банкинг, нейтральные арбитражные площадки и опциональность резидентности формируют устойчивую архитектуру капитала.</p>
-
 <h3>Почему это критично именно сейчас</h3>
-
 <p>Геополитическая напряжённость, расширение регулирования и финансовая инструментализация превратили юрисдикционную разведку в навык выживания.</p>
-
 <h3>Заключение — география есть стратегия</h3>
-
 <p>Богатство — это юридическая и структурная категория, а не только финансовая. Ультрасостоятельные проектируют системы, в которых сама юрисдикция становится активом.</p>
-
 <p>Если капитал должен где‑то существовать, он должен существовать там, где он сильнее всего.</p>
-
 </div>
-
 </section>
 
 <section class="panel muted">
@@ -626,6 +605,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -633,7 +613,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -662,11 +641,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

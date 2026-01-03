@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_029.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_029-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_029.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,30 +562,17 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 029<br/>Доктрина опциональности — почему ультрасостоятельные никогда не оптимизируют доходность, а сохраняют свободу выбора</h3>
-
 <p>Большинство инвесторов обучены оптимизировать доходность. Ультрасостоятельные семьи оптимизируют не доход, а <strong>опциональность</strong>.</p>
-
 <p>Доходность — это результат. Опциональность — это контроль над результатами.</p>
-
 <p>Именно это различие объясняет, почему одни инвесторы добиваются краткосрочного успеха и исчезают, а другие накапливают власть, влияние и капитал десятилетиями — независимо от рыночных циклов.</p>
-
 <h3>Скрытая цена оптимизации</h3>
-
 <p>Оптимизация выглядит рационально: максимальная эффективность, минимальные издержки, высокая загрузка капитала.</p>
-
 <p>Но у оптимизации есть невидимая цена — <strong>хрупкость</strong>.</p>
-
 <p>Сильно оптимизированные системы работают только при определённых предпосылках. Когда меняются регулирование, ликвидность, геополитика или технологии, такие конструкции ломаются быстрее гибких.</p>
-
 <h3>Что на самом деле означает опциональность</h3>
-
 <p>Опциональность — это не классическая диверсификация. Это способность действовать решительно при изменении условий — без принуждения, спешки и блокировок.</p>
-
 <ul>
 <li>несколько выходов вместо одной «идеальной» точки входа;</li>
 <li>капитал, способный быстро перемещаться;</li>
@@ -589,56 +580,31 @@ function onProjectChange(v){
 <li>активы, устойчивые к разным режимам;</li>
 <li>структуры, допускающие обратимость без штрафов.</li>
 </ul>
-
 <p>Состоятельные семьи не делают ставку на одно будущее. Они готовятся к нескольким сценариям одновременно.</p>
-
 <h3>Почему опциональность сильнее прогнозирования</h3>
-
 <p>Прогнозирование предполагает стабильность. История доказывает обратное.</p>
-
 <p>Рынки ломаются. Государства вмешиваются. Технологии переворачивают отрасли. Нарративы меняются.</p>
-
 <p>Инвестор с опциональностью выживает при любом режиме.</p>
-
 <h3>Три опоры опциональности</h3>
-
 <p><strong>1. Капитальная опциональность</strong><br>
 Ликвидность — это скрытая сила. Резервы позволяют действовать во время кризисов и принудительных распродаж.</p>
-
 <p><strong>2. Структурная опциональность</strong><br>
 Владение, юрисдикции и управление строятся модульно и допускают разворот.</p>
-
 <p><strong>3. Стратегическая опциональность</strong><br>
 Альянсы между отраслями и идеологиями позволяют менять позицию без изоляции.</p>
-
 <h3>Ловушка «я был прав, но застрял»</h3>
-
 <p>Многие инвесторы оказываются правы — и всё равно теряют.</p>
-
 <p>Они оптимизируют доходность, но убирают выходы. Когда условия меняются, они защищаются вместо того, чтобы адаптироваться.</p>
-
 <p>Ультрасостоятельные проектируют портфели так, чтобы ошибка была переживаемой, а правота — масштабируемой.</p>
-
 <h3>Почему опциональность накапливается</h3>
-
 <p>Доходность колеблется. Опциональность компаундируется.</p>
-
 <p>Каждый кризис перераспределяет активы от жёстких структур к гибким.</p>
-
 <h3>Заключение — сохраняйте выбор</h3>
-
 <p>Вам не нужно быть идеально правым. Вам нужно иметь возможность двигаться.</p>
-
 <p>Опциональность обеспечивает выживание — и доминирование.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -648,6 +614,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -655,7 +622,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -684,11 +650,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

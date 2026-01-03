@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_039.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,17 +396,28 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -430,13 +440,13 @@ border-color:var(--gold);
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -445,10 +455,9 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -456,26 +465,25 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -541,9 +547,9 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_039-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_039.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
@@ -556,36 +562,22 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 039<br/>Иерархия поглощения риска — как ультрасостоятельные инвесторы выстраивают позиции так, чтобы убытки несли другие</h3>
-
 <p>Большинство инвесторов думают о риске в терминах волатильности. Ультрасостоятельные инвесторы мыслят иначе — они думают о том, <strong>кто именно поглощает риск</strong>.</p>
-
 <p>Риск никогда не исчезает. Он распределяется. Именно структура определяет, на чьей стороне окажутся убытки в момент стресса.</p>
-
 <h3>Риск — это структурный результат</h3>
-
 <p>Два инвестора могут иметь экспозицию к одному и тому же активу и получить диаметрально противоположные результаты. Разница заключается не во времени входа, а в позиции внутри структуры.</p>
-
 <h3>Кто‑то всегда платит первым</h3>
-
 <p>В каждой капитальной конструкции существует явная или скрытая иерархия убытков. Элитные инвесторы картируют эту иерархию до размещения капитала.</p>
-
 <ul>
 <li>кто принимает убытки первым</li>
 <li>кто не обладает гибкостью выхода</li>
 <li>кто ограничен политически, юридически или репутационно</li>
 </ul>
-
 <h3>Естественные поглотители риска</h3>
-
 <p>Обычные акции, операторы с высоким левериджем, младшие кредиторы и розничные участники по умолчанию расположены так, чтобы принимать на себя основной удар.</p>
-
 <h3>Как риск тихо смещается</h3>
-
 <ul>
 <li>старшинство в капитальном стеке</li>
 <li>обеспечение с поведенческими триггерами</li>
@@ -593,33 +585,18 @@ function onProjectChange(v){
 <li>ковенанты, активирующиеся при стрессе</li>
 <li>механизмы конверсии, улучшающие позицию в кризис</li>
 </ul>
-
 <h3>Когда доходность сигнализирует скрытый риск</h3>
-
 <p>Высокая доходность часто является компенсацией за риск, который другие не готовы держать. Элитные инвесторы рассматривают доходность как диагностический сигнал, а не как обещание.</p>
-
 <h3>Одинаковая экспозиция — разные исходы</h3>
-
 <p>Риск по своей природе асимметричен. Те, кто понимает иерархию, переживают меньшие просадки и восстанавливаются быстрее.</p>
-
 <h3>Инженерия асимметрии риска</h3>
-
 <p>Ультрасостоятельные инвесторы не устраняют риск — они <strong>перемещают</strong> его через структуру, управление и дизайн контрагентов.</p>
-
 <h3>Заключение — риск всегда платит кто‑то</h3>
-
 <p>Рынки не наказывают всех одинаково. Они наказывают тех, кто структурно расположен для поглощения убытков.</p>
-
 <p>Иерархия определяет выживание.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -629,6 +606,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -636,7 +614,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -665,11 +642,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

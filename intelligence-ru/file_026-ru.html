@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_026.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_026-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_026.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,49 +562,34 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 026<br/>Матрица стратегической непрозрачности: почему ультрасостоятельные семьи используют управляемую неопределённость для защиты власти, устранения предсказуемости и нейтрализации угроз</h3>
-
 <p>В XXI веке власть разрушается не из‑за нехватки ресурсов. Она разрушается из‑за <strong>предсказуемости</strong>. Всё, что можно спрогнозировать, можно отрегулировать, опередить, ограничить или атаковать.</p>
-
 <p>Поэтому ультрасостоятельные семьи выстраивают формализованный фреймворк — <strong>Матрицу стратегической непрозрачности</strong>. Это дисциплинированная система управления видимостью, сигналами намерений и поведенческими паттернами, предназначенная для устранения стратегической предсказуемости.</p>
-
 <h3>1. Предсказуемость как структурная уязвимость</h3>
 <p><strong>Ключевые направления:</strong> уязвимость паттернов, поведенческое прогнозирование, риск экспозиции</p>
 <p>Как только институты или оппоненты способны смоделировать поведение, они получают возможность вмешательства, фронт‑раннинга, регулирования или нейтрализации.</p>
-
 <h3>2. Три домена непрозрачности</h3>
 <p><strong>Ключевые направления:</strong> операционная неопределённость, намеренная неоднозначность, позиционная непрозрачность</p>
 <p>Элита поддерживает непрозрачность одновременно в действиях, истинных намерениях и реальных возможностях — раскрывая лишь то, что необходимо для выравнивания интересов.</p>
-
 <h3>3. Системы контролируемого раскрытия</h3>
 <p><strong>Ключевые направления:</strong> точечная сигнализация, калибровка нарратива</p>
 <p>Избирательная прозрачность предотвращает подозрения, сохраняя рычаги влияния. Каждое раскрытие является осознанным.</p>
-
 <h3>4. Непрозрачность в переговорах</h3>
 <p><strong>Ключевые направления:</strong> туман рычага, нарушение ожиданий</p>
 <p>Неопределённость управляет темпом, фреймингом и пространством возможных исходов переговоров.</p>
-
 <h3>5. Инфраструктура непрозрачности</h3>
 <p><strong>Ключевые направления:</strong> компартментализация, информационные файрволы</p>
 <p>Многоуровневые сущности, сегментированный доступ советников и распределение по юрисдикциям препятствуют внешнему картированию.</p>
-
 <h3>6. Протоколы анти‑картирования</h3>
 <p><strong>Ключевые направления:</strong> разрушение паттернов, поведенческий шум</p>
 <p>Декой‑структуры, вариативные прокси и смещение таймингов ломают предиктивные модели.</p>
-
 <h3>7. Стратегическая непрозрачность в эпоху враждебной прозрачности</h3>
 <p><strong>Ключевые направления:</strong> вооружённая прозрачность, информационная война</p>
 <p>В эпоху, когда видимость используется как оружие, непрозрачность сохраняет свободу манёвра.</p>
-
 <h3>Заключение — неопределённость как стратегический актив</h3>
 <p>Непрозрачность — это не секретность. Это инженерная непредсказуемость, которая защищает власть и сохраняет стратегическую опциональность.</p>
-
 </div>
-
 </section>
 
 <section class="panel muted">
@@ -610,6 +599,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -617,7 +607,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -646,11 +635,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

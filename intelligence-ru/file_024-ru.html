@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_024.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_024-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_024.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,49 +562,34 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 024<br/>Доктрина тихих активов: как ультрасостоятельные выстраивают структуры богатства, работающие без видимости, экспозиции и уязвимости</h3>
-
 <p>Обычные инвесторы накапливают активы. Ультрасостоятельные семьи накапливают <strong>тишину</strong> — структуры владения, которые генерируют доход, влияние и устойчивость, не раскрывая, кто стоит за ними.</p>
-
 <p>В мире регуляторной непредсказуемости, политической турбулентности, тотальной прозрачности данных и геополитического напряжения видимое богатство становится уязвимостью. Тихое богатство превращается в <strong>стратегическое преимущество</strong>.</p>
-
 <h3>1. Тихие активы против традиционных активов</h3>
 <p><strong>Ключевые направления:</strong> невидимое владение, структурная маскировка, нулевая экспозиция</p>
 <p>Тихие активы обходят публичные реестры, разделяют владение и контроль, устраняют таргетирование и сохраняют устойчивость при институциональных сбоях.</p>
-
 <h3>2. Архитектура разорванного владения</h3>
 <p><strong>Ключевые направления:</strong> многоуровневые структуры, косвенный контроль</p>
 <p>Мультиюрисдикционные трасты, низковидимые холдинги, фидуциарные слои управления и правовое разделение ослабляют внешние векторы атаки.</p>
-
 <h3>3. Сверхвидимость как реальный риск</h3>
 <p><strong>Ключевые направления:</strong> риск экспозиции, уязвимость нарратива</p>
 <p>Видимость притягивает регуляторов, юристов, активистов, фронтраннинг рынка и репутационные искажения.</p>
-
 <h3>4. Технологический слой: AI‑экранирование</h3>
 <p><strong>Ключевые направления:</strong> AI‑картирование рисков, криптографическая маскировка</p>
 <p>Автоматическая реструктуризация, обнаружение экспозиции и цифровые системы тишины сохраняют невидимость.</p>
-
 <h3>5. Зоны тишины активов</h3>
 <p><strong>Ключевые направления:</strong> юрисдикционная изоляция, отделение от враждебной среды</p>
 <p>Невовлечённые и низковидимые экосистемы разрывают связь активов с агрессивными внешними контурами.</p>
-
 <h3>6. Кризисный иммунитет по дизайну</h3>
 <p><strong>Ключевые направления:</strong> антихрупкое позиционирование</p>
 <p>Во время кризисов тихие активы расширяются, пока внимание сосредоточено на видимых игроках.</p>
-
 <h3>7. Династическая непрерывность</h3>
 <p><strong>Ключевые направления:</strong> структурная грамотность, межпоколенческая дискретность</p>
 <p>Наследники получают операционную тишину, понимание угроз и управление альянсами — а не просто капитал.</p>
-
 <h3>Заключение — видимое богатство уязвимо</h3>
 <p>Тихие активы функционируют без разрешений, переживают системные сбои и масштабируются без давления. Это инженерия невидимости.</p>
-
 </div>
-
 </section>
 
 <section class="panel muted">
@@ -610,6 +599,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -617,7 +607,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -646,11 +635,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

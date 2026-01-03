@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_015.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_015-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_015.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,63 +562,44 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 015<br/>Плейбук семейного офиса: как ультрасостоятельные сохраняют, разворачивают и передают капитал через поколения в нестабильном мире</h3>
-
 <p>Для ультрасостоятельных капитал — это не событие, а <strong>долгосрочная программа</strong>. Семейный офис — не административная структура, а операционная система длинного горизонта, предназначенная для сохранения активов, развёртывания возможностей и трансформации частного богатства в устойчивое влияние.</p>
-
 <h3>1. Многомерная постановка целей</h3>
 <p><strong>Ключевые направления:</strong> миссия семейного офиса, устав управления, межпоколенческие цели</p>
 <p>Элитные семейные офисы формализуют цели по сохранению, росту, влиянию, допустимому риску и образовательному наследию через управленческие хартии.</p>
-
 <h3>2. Иерархия управления и прав принятия решений</h3>
 <p><strong>Ключевые направления:</strong> лестница управления, инвестиционный комитет, семейный совет</p>
 <p>Полномочия распределяются по уровням: тактическому, операционному, стратегическому и конституционному — с заранее определёнными правилами вето и эскалации.</p>
-
 <h3>3. Архитектура активов по назначению</h3>
 <p><strong>Ключевые направления:</strong> целевая аллокация, корзины риска</p>
 <p>Капитал распределяется по функциям: защита, доход, рост, опциональность и влияние — каждая с собственным профилем ликвидности и риска.</p>
-
 <h3>4. Преимущество прямых инвестиций</h3>
 <p><strong>Ключевые направления:</strong> прямые сделки, сети ко-инвестирования</p>
 <p>Собственные механизмы происхождения сделок, суверенные отношения и внутренняя экспертиза снижают издержки и усиливают контроль.</p>
-
 <h3>5. Операционное совершенство</h3>
 <p><strong>Ключевые направления:</strong> консолидированная отчётность, надёжность хранения</p>
 <p>Семейные офисы функционируют как критически важные институты с централизованным казначейством, защищённым хранением и киберуправлением.</p>
-
 <h3>6. Трансграничное структурирование</h3>
 <p><strong>Ключевые направления:</strong> трасты, SPV, резидентное планирование</p>
 <p>Модульные мультиюрисдикционные правовые конструкции адаптируются к регуляторным изменениям, сохраняя гибкость.</p>
-
 <h3>7. Таланты и лидерство следующего поколения</h3>
 <p><strong>Ключевые направления:</strong> преемственность, образовательные траектории</p>
 <p>Порог компетенций, ротации и целенаправленное развитие лидеров обеспечивают непрерывность после основателей.</p>
-
 <h3>8. Фреймворки риска и защита хвостовых событий</h3>
 <p><strong>Ключевые направления:</strong> хеджирование хвостов, сценарное планирование</p>
 <p>Стресс‑тесты, защитные конструкции, буферы ликвидности и кризисные протоколы превращают неопределённость в преимущество.</p>
-
 <h3>9. Филантропия как стратегический капитал</h3>
 <p><strong>Ключевые направления:</strong> каталитическая филантропия, управление репутацией</p>
 <p>Филантропия формирует сети влияния и репутационную защиту на суверенном уровне.</p>
-
 <h3>10. Дисциплина времени и постоянный пересмотр</h3>
 <p><strong>Ключевые направления:</strong> KPI‑панели, планирование длинного горизонта</p>
 <p>Регулярные циклы пересмотра синхронизируют исполнение с целями на десятилетия вперёд.</p>
-
 <h3>Заключение — семейный офис как операционная система</h3>
 <p>Современный семейный офис — это управленческий двигатель, платформа происхождения сделок и защитный контур, спроектированный для династической выносливости.</p>
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -624,6 +609,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -631,7 +617,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -660,11 +645,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

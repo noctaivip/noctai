@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<title>NoctAI.VIP — Intelligence File 043</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_043-ru.html">
-<link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_043.html">
-
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,17 +387,28 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
   <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
+    Проект
   </label>
   <select id="projectSelector"
     style="
@@ -430,13 +431,13 @@ border-color:var(--gold);
     </option>
   </select>
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
 </div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
     <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
         <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
         <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
@@ -445,10 +446,9 @@ The calculator is recalculated depending on the selected project.  </div>
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
        min="1"
@@ -456,26 +456,25 @@ The calculator is recalculated depending on the selected project.  </div>
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
       </div>
 
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Оценка дохода</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Доход / месяц</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -525,12 +524,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -541,9 +538,9 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_043-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_043.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
@@ -556,26 +553,15 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 043<br/>Карта хрупкости капитала — как ультрасостоятельные инвесторы выявляют точки, где богатство незаметно ломается задолго до того, как кризисы становятся видимыми</h3>
-
 <p>Большинство инвесторов анализируют доходность. Ультрасостоятельные инвесторы анализируют <strong>хрупкость</strong>.</p>
-
 <p>Капитал почти никогда не разрушается одним событием. Он ломается в слабых местах задолго до того, как кризисы становятся очевидными.</p>
-
 <h3>Кризисы выявляют, а не создают</h3>
-
 <p>Потери в периоды спада почти всегда происходят из заранее существующих слабостей: несоответствия тайминга левериджа, юридической концентрации, зависимости от ликвидности, уязвимости контрагентов и пробелов в управлении.</p>
-
 <h3>Капитал ломается в своей самой слабой точке</h3>
-
 <p>У каждого портфеля есть ограничивающий фактор, который доминирует над исходами в условиях стресса. Элитные инвесторы выявляют этот фактор до ухудшения условий.</p>
-
 <h3>Пять измерений хрупкости</h3>
-
 <ul>
 <li>хрупкость левериджа, вызванная несоответствием сроков</li>
 <li>хрупкость ликвидности, зависящая от разрешённого доступа</li>
@@ -583,37 +569,20 @@ function onProjectChange(v){
 <li>хрупкость контрагента при асимметричных сбоях</li>
 <li>хрупкость управления при параличе решений</li>
 </ul>
-
 <h3>Почему хрупкость кластеризуется</h3>
-
 <p>Уязвимости усиливают друг друга. Давление на ликвидность обнажает слабость контрагентов, леверидж ускоряет отказ, а пробелы в управлении мешают реакции.</p>
-
 <h3>Как реагируют элитные инвесторы</h3>
-
 <p>Ультрасостоятельные инвесторы перестраивают позиции вокруг хрупкости через рефинансирование, юридическую релокацию, фрагментацию ликвидности, управленческие триггеры и повышение старшинства.</p>
-
 <h3>Стабильность — не сила</h3>
-
 <p>Периоды спокойствия маскируют слабости. Элитные инвесторы мысленно и структурно моделируют стресс до его наступления.</p>
-
 <h3>Картирование хрупкости против прогнозирования</h3>
-
 <p>Прогнозы предполагают непрерывность. Картирование хрупкости предполагает разрыв. Предотвращение катастрофических потерь важнее оптимизации доходности.</p>
-
 <h3>Заключение — разрушение начинается тихо</h3>
-
 <p>К моменту, когда кризисы становятся видимыми, реальный ущерб уже нанесён.</p>
-
 <p>Ультрасостоятельные инвесторы рано выявляют хрупкость и проектируют системы вокруг неё. Когда рынки ломаются, их капитал — нет.</p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -623,6 +592,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -630,7 +600,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -658,12 +627,12 @@ function onProjectChange(v){
       © 2025 NoctAI™
     </div>
   </div>
+  
 </footer>
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_023.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_023-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_023.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,59 +562,35 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 023<br/>Доктрина вектора власти: как ультрасостоятельные семьи расширяют стратегическое влияние без видимости, экспозиции и прямого риска</h3>
-
 <p>Большинство игроков стремятся наращивать капитал. Ультрасостоятельные семьи усиливают <strong>вектор власти</strong> — способность направлять системы так, чтобы исходы естественным образом складывались в их пользу.</p>
-
 <p>Капитал начинает работать только тогда, когда он встроен в архитектуру силы: разведку, доступ, изоляцию от рисков, приватные альянсы, технологические рычаги и контроль над узлами принятия решений.</p>
-
 <h3>1. Вектор власти ≠ влияние ≠ капитал</h3>
 <p><strong>Ключевые направления:</strong> направленная власть, инженерия исходов, элитная асимметрия</p>
 <p>Влияние — это быть услышанным. Власть — это менять правила. Вектор власти направляет системы без атрибуции и публичного присутствия.</p>
-
 <h3>2. Асимметричные узлы рычага</h3>
 <p><strong>Ключевые направления:</strong> узлы рычага, тихие точки поворота</p>
 <p>Незаметные позиции в советах, инфраструктурных узких местах, органах стандартизации и закрытых брифингах формируют невидимые сети давления.</p>
-
 <h3>3. Разведывательный ореол</h3>
 <p><strong>Ключевые направления:</strong> привилегированное предвидение, картирование до событий</p>
 <p>Элитный разведывательный ореол даёт понимание намерений до того, как они превращаются в события.</p>
-
 <h3>4. Влияние нулевой видимости</h3>
 <p><strong>Ключевые направления:</strong> невидимая власть, прокси-исполнение</p>
 <p>Многоуровневое владение, посредники и неатрибутированное участие устраняют экспозицию.</p>
-
 <h3>5. Сети стратегической зависимости</h3>
 <p><strong>Ключевые направления:</strong> архитектура зависимости, незаменимость</p>
 <p>Институты становятся зависимыми от ресурсов, стандартов или доступа, контролируемых семьёй — формируя власть без доминирования.</p>
-
 <h3>6. Протокол кризисного преимущества</h3>
 <p><strong>Ключевые направления:</strong> извлечение волатильности, рычаг кризиса</p>
 <p>Во время кризисов рычаги расширяются, доступ открывается, а стратегические активы становятся достижимыми.</p>
-
 <h3>7. Инженерия преемственности власти</h3>
 <p><strong>Ключевые направления:</strong> стратегическая грамотность, передача династической силы</p>
 <p>Наследники получают не только активы, но и архитектуру силы и культуру принятия решений.</p>
-
 <h3>Заключение — власть движется первой</h3>
 <p>Богатство следует за властью. Власть накапливается тихо, экспоненциально и раньше капитала.</p>
-
 </div>
-
 </section>
-
-<section class="panel muted">
-  <strong>Intelligence Context</strong><br>
-  This document forms part of the NoctAI Intelligence Layer.  
-  Prepared for analytical reference only.  
-  Not an offer. Not a recommendation.
-</section>
-
-</main>
 
 <section class="panel muted">
   <strong>Intelligence Контекст</strong><br>
@@ -619,6 +599,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -626,7 +607,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -655,11 +635,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

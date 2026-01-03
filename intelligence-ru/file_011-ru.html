@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_011.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_011-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_011.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,59 +562,41 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
 <h3>INTELLIGENCE FILE 011<br/>Невидимая матрица рисков: как ультрасостоятельные выявляют скрытые угрозы, нейтрализуют их на ранней стадии и превращают в стратегические преимущества</h3>
-
 <p>Разница между миллионером и миллиардером заключается не в удаче, а в <strong>восприятии риска</strong>. Большинство видит риск лишь тогда, когда он становится очевидным. Ультрасостоятельные обнаруживают его в момент формирования и используют как источник преимущества.</p>
-
 <h3>1. Оптика скрытых рисков — слабые сигналы до заголовков</h3>
 <p><strong>Ключевые направления:</strong> раннее выявление рисков, модели элитного предвидения</p>
 <p>Слабые сигналы в цепочках поставок, геополитике, регулировании, технологиях и потоках капитала отслеживаются за годы до их осознания публичным пространством.</p>
-
 <h3>2. Асимметричный риск — ограниченный даунсайд, неограниченный апсайд</h3>
 <p><strong>Ключевые направления:</strong> асимметричная экспозиция, окна рычажных возможностей</p>
 <p>Элитные структуры выбирают позиции, в которых потенциальные потери ограничены, а потенциал роста многократно превышает риск.</p>
-
 <h3>3. Контррисковая архитектура — системы, которые не разрушаются</h3>
 <p><strong>Ключевые направления:</strong> системная изоляция, многоуровневые защитные контуры</p>
 <p>Разделение юрисдикций, изоляция активов, резервирование и суверенные буферы предотвращают каскадные сбои.</p>
-
 <h3>4. Картирование стратегических уязвимостей</h3>
 <p><strong>Ключевые направления:</strong> диагностика уязвимостей, проактивное смягчение</p>
 <p>Живые карты отслеживают правовые, ликвидные, кибернетические, политические, операционные и репутационные риски.</p>
-
 <h3>5. Тайминг кризиса — действия, пока остальные замирают</h3>
 <p><strong>Ключевые направления:</strong> преимущество волатильности, кризисный тайминг</p>
 <p>Ликвидность и авторитет разворачиваются на пике страха для закрепления активов и влияния.</p>
-
 <h3>6. Частная разведка рисков</h3>
 <p><strong>Ключевые направления:</strong> частные разведывательные подразделения, AI‑движки рисков</p>
 <p>Геополитические аналитики, киберкоманды и прогнозные системы формируют ранние предупреждения.</p>
-
 <h3>7. Психологический иммунитет</h3>
 <p><strong>Ключевые направления:</strong> элитная психология решений, фреймворки самообладания</p>
 <p>Формализованные протоколы принятия решений устраняют эмоциональные искажения под давлением.</p>
-
 <h3>8. Конверсия риска — превращение угроз в топливо</h3>
 <p><strong>Ключевые направления:</strong> инверсия угроз, кризисный арбитраж</p>
 <p>Ослабленные конкуренты и неверно оценённые активы преобразуются в долгосрочную власть.</p>
-
 <h3>9. Межпоколенческое планирование рисков</h3>
 <p><strong>Ключевые направления:</strong> династическая устойчивость, преемственность наследия</p>
 <p>Семейное управление и архитектуры преемственности сохраняют контроль на горизонтах столетий.</p>
-
 <h3>Заключение — риск как мультипликатор власти</h3>
 <p>Риск, будучи правильно расшифрован и спроектирован, умножает капитал, влияние и непрерывность.</p>
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -620,6 +606,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -627,7 +614,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -656,11 +642,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>

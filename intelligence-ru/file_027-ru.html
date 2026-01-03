@@ -8,7 +8,6 @@
 <link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_027.html">
 
 <style>
-
 *{box-sizing:border-box}
 body{
 margin:0;
@@ -397,11 +396,22 @@ border-color:var(--gold);
   --border:rgba(214,177,94,.35);
 }
 </style>
+
 <link rel="stylesheet" href="/mobile-noctai.css">
 
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
 </head>
-<body>
 
+<body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
@@ -435,7 +445,6 @@ border-color:var(--gold);
 </div>
     <h2>Инвестиционный калькулятор</h2>
     <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
-
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -446,7 +455,6 @@ border-color:var(--gold);
         <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
       </div>
     </div>
-
     <div class="calc-grid">
       <div class="calc-panel">
         <h3>Сумма инвестиций</h3>
@@ -457,7 +465,6 @@ border-color:var(--gold);
        value="1000"
        id="m_invRange"
        oninput="syncFromRange()">
-
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
         <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
         <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.006667%</span></div>
@@ -471,12 +478,12 @@ border-color:var(--gold);
         </div>
       </div>
     </div>
-
     <div class="calc-footer">
       <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
     </div>
 	</div>
   </div>
+  
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -526,12 +533,10 @@ function recalc(){
 }
 
 function onProjectChange(v){
-  // пока используется единая экономика (Active Project #001)
-  // архитектура готова для подключения других проектов
   recalc();
 }
-
 </script>
+
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -542,13 +547,12 @@ function onProjectChange(v){
       <a href="projects-ru.html">Проекты</a>
     </div>
 	<div class="lang-switch">
-	    <a href="/intelligence-ru/file_027-ru.html">RU</a>
+	    <a href="/intelligence-ru/file_017-ru.html">RU</a>
 	-
-	    <a href="/intelligence/file_027.html" class="active">EN</a>
+	    <a href="/intelligence/file_017.html" class="active">EN</a>
   </div>
   </div>
 </nav>
-
 
 <main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
 <section class="panel">
@@ -558,44 +562,28 @@ function onProjectChange(v){
 </section>
 
 <section class="panel intelligence-content">
-
-
 <div class="article-body">
-
 <h3>INTELLIGENCE FILE 027<br/>Принцип реконструкции — почему ультрасостоятельные перестраивают систему, а не конкурируют внутри неё</h3>
-
 <p>Большинство участников рынка пытаются победить внутри существующих систем. Ультрасостоятельные действуют иначе: они <strong>перестраивают саму систему</strong> под свои стратегические интересы.</p>
-
 <p>Это и есть принцип реконструкции — дисциплина изменения среды, стимулов, инфраструктур и архитектур власти вместо адаптации к правилам, созданным другими.</p>
-
 <h3>Состоятельные не конкурируют — они реконструируют</h3>
-
 <p>Обычные инвесторы реагируют на рынки, регулирование и волатильность. Миллиардеры перепроектируют условия входа, логику владения и контуры контроля так, что конкуренция теряет смысл.</p>
-
 <ul>
 <li>Если рынок становится нерентабельным — они меняют условия доступа.</li>
 <li>Если отрасль перегружена — они структурно консолидируют её.</li>
 <li>Если риски растут — они переносят их в другие контуры.</li>
 <li>Если регулирование ужесточается — они влияют на него или переопределяют рамки.</li>
 </ul>
-
 <h3>Три арены реконструкции</h3>
-
 <p><strong>1. Институциональная реконструкция</strong><br>
 Формирование или создание органов, задающих правила: советы, комитеты стандартов, альянсы и закрытые коалиции.</p>
-
 <p><strong>2. Структурная реконструкция</strong><br>
 Перепроектирование владения, управления и потоков капитала для создания антихрупких систем.</p>
-
 <p><strong>3. Информационная реконструкция</strong><br>
 Частные разведывательные экосистемы, создающие асимметрию, недоступную публичным игрокам.</p>
-
 <h3>Структурное неравенство инвестора</h3>
-
 <p>Любой инвестор, действующий в условиях, которые он не контролирует, остаётся уязвимым. Реконструкция устраняет зависимость, создавая собственную среду.</p>
-
 <h3>Реконструкция в реальном размещении капитала</h3>
-
 <ul>
 <li>Создание инфраструктуры, которой вынуждены пользоваться другие.</li>
 <li>Контроль входных ворот и узких мест.</li>
@@ -603,25 +591,14 @@ function onProjectChange(v){
 <li>Расширение влияния в периоды волатильности.</li>
 <li>Отделение видимого владения от защищённого ядра контроля.</li>
 </ul>
-
 <h3>Почему реконструкция сегодня критична</h3>
-
 <p>Ускоряющиеся кризисы, регуляторное давление и поведенческое моделирование вознаграждают тех, кто контролирует системы, а не реагирует на них.</p>
-
 <h3>Заключение — власть следует за реконструкцией</h3>
-
 <p>Элитные акторы управляют не активами — они управляют реальностью, в которой активы существуют.</p>
-
 <p><strong>Не адаптируйся. Не конкурируй. Реконструируй.</strong></p>
-
 </div>
 </div>
-</div>
-</div>
-</div>
-
 <div style="height:40px;"></div>
-   
 </section>
 
 <section class="panel muted">
@@ -631,6 +608,7 @@ function onProjectChange(v){
 Не является предложением. Не является рекомендацией.
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -638,7 +616,6 @@ function onProjectChange(v){
 <span style="font-size:13px;color:#9aa3b2;">
 Платформа долевого участия в реальных проектах.
 </span>
-
 </div>
     <div>
 <strong class="footer-heading">
@@ -667,11 +644,11 @@ function onProjectChange(v){
     </div>
   </div>
 </footer>
+
 <div class="mobile-bottom-nav">
   <a href="/how_it_works-ru.html">Как это работает</a>
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="/projects-ru.html">Проекты платформы</a>
 </div>
-
 </body>
 </html>
