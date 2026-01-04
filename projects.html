@@ -412,7 +412,7 @@ text-decoration:underline;
 </head>
 
 <body>
-<div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
+ <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
     <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
 <div style="margin:-6px 0 18px 0;">
@@ -459,7 +459,7 @@ The calculator is recalculated depending on the selected project.  </div>
         <h3>Investment amount</h3>
         <input type="range"
        class="calc-range"
-       min="1"
+       min="10"
        max="300000"
        value="1000"
        id="m_invRange"
@@ -514,7 +514,7 @@ function syncFromRange(){
 function syncFromInput(){
   let v = Number(q('m_invInput').value);
   if (isNaN(v)) return;
-  if (v < 1) v = 1;
+  if (v < 0) v = 0;
   if (v > MAX) v = MAX;
   q('m_invInput').value = v;
   q('m_invRange').value = v;
@@ -524,8 +524,9 @@ function syncFromInput(){
 function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
-  q('m_invShare').innerText = ((v / 3000000) * 20).toFixed(6) + '%';
-  const baseIncome = 54000000 * (coverage / 50);
+  q('m_invShare').innerText = ((v / 3500000) * 100).toFixed(6) + '%';
+  const INVESTOR_MONTHLY_50 = 5400000;
+  const baseIncome = INVESTOR_MONTHLY_50 * (coverage / 50);
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
@@ -573,7 +574,7 @@ A technology platform for analytics and tracking in the US transport logistics s
           <div class="meta">
             <div><strong>Round:</strong> $3,500,000</div>
             <div><strong>Investor pool:</strong> 10% share</div>
-<div><strong>Minimum entry:</strong> $1 (USDT)</div>
+<div><strong>Minimum entry:</strong> $10 (USDT)</div>
             <div><strong>Status:</strong> MVP / Early Growth</div>
           </div>
           <a class="cta" href="index.html">Go to the project</a>

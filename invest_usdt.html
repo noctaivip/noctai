@@ -80,6 +80,17 @@ padding:14px 30px;border-radius:8px;
 background:linear-gradient(180deg,#e6c56f 0%,#c9a24d 100%);
 color:#0a0d12;text-decoration:none;font-weight:700;
 }
+.manual-input.error {
+  border-color: #ff5a5a;
+  box-shadow: 0 0 0 2px rgba(255, 90, 90, 0.25);
+}
+.input-error-text {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #ff5a5a;
+  display: none;
+}
+
 footer{
 margin-top:80px;border-top:1px solid var(--border);
 padding:32px 0;color:var(--muted);font-size:13px;
@@ -414,138 +425,12 @@ display:none;
 </style>
 </head>
 
-<body>
- <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
-  <div class="calc-modal">
-    <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
-<div style="margin:-6px 0 18px 0;">
-  <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
-    Project
-  </label>
-  <select id="projectSelector"
-    style="
-      width:100%;
-      padding:12px 14px;
-      border-radius:10px;
-      background:#0b0f16;
-      border:1px solid #c9a44c;
-      color:#f1d48a;
-      font-size:15px;
-      font-weight:600;
-    "
-    onchange="onProjectChange(this.value)"
-  >
-    <option value="p001" selected>
-      Active Project #001 — AI Dispatcher + Marketplace (Logistics)
-    </option>
-    <option value="private" disabled>
-      Private Projects — Invitation Only
-    </option>
-  </select>
-  
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">
-The calculator is recalculated depending on the selected project.  </div>
-</div>
-    <h2>Investment calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
-    <div class="coverage-block">
-      <div class="coverage-title">When covering the trucking business in the USA</div>
-      <div class="coverage-buttons">
-        <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
-        <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
-        <button data-p="50" class="active" onclick="setCoverageCalc(50)">50%</button>
-        <button data-p="70" onclick="setCoverageCalc(70)">70%</button>
-        <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
-      </div>
-    </div>
-    <div class="calc-grid">
-      <div class="calc-panel">
-        <h3>Investment amount</h3>
-        <input type="range"
-       class="calc-range"
-       min="1"
-       max="300000"
-       value="1000"
-       id="m_invRange"
-       oninput="syncFromRange()">
-        <div class="calc-value">$<span id="m_invValue">1,000</span></div>
-        <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
-        <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
-      </div>
-      <div class="calc-panel">
-        <h3>Income assessment</h3>
-        <div class="calc-income">
-          <div>Income / month</div>
-          <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="calc-footer">
-      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Close</button>
-    </div>
-	</div>
-  </div>
-  
-  <script>
-let coverage = 50;
-const MAX = 300000;
-
-function q(id){ return document.getElementById(id); }
-
-function openInvestmentCalc(){
-  q('investmentCalcOverlay').style.display = 'flex';
-  recalc();
-}
-function closeInvestmentCalc(){
-  q('investmentCalcOverlay').style.display = 'none';
-}
-
-function setCoverageCalc(p){
-  coverage = p;
-  document.querySelectorAll('.coverage-buttons button')
-    .forEach(b => b.classList.remove('active'));
-  document.querySelector('.coverage-buttons button[data-p="'+p+'"]')
-    .classList.add('active');
-  recalc();
-}
-
-function syncFromRange(){
-  const v = Number(q('m_invRange').value);
-  q('m_invInput').value = v;
-  recalc();
-}
-
-function syncFromInput(){
-  let v = Number(q('m_invInput').value);
-  if (isNaN(v)) return;
-  if (v < 1) v = 1;
-  if (v > MAX) v = MAX;
-  q('m_invInput').value = v;
-  q('m_invRange').value = v;
-  recalc();
-}
-
-function recalc(){
-  const v = Number(q('m_invRange').value);
-  q('m_invValue').innerText = v.toLocaleString();
-  q('m_invShare').innerText = ((v / 3000000) * 20).toFixed(6) + '%';
-  const baseIncome = 54000000 * (coverage / 50);
-  q('m_incomeValue').innerText =
-    (baseIncome * (v / 3500000)).toFixed(2);
-}
-
-function onProjectChange(v){
-  recalc();
-}
-</script>
-
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
     <div class="nav-right">
   <div class="nav-links">
     <a href="how_it_works-ru.html">How it works</a>
-    <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
     <a href="projects-ru.html">Projects</a>
   </div>
   <div class="lang-switch">
@@ -561,16 +446,26 @@ function onProjectChange(v){
 <br/><br/>
   <h1>Investing in Active Project #001</h1>
   <p><strong>AI Dispatcher + Marketplace</strong></p>
-<p>Investments are accepted in <strong>USDT</strong>. The minimum deposit is <strong>$1</strong>.</p>
+<p>Investments are accepted in <strong>USDT</strong>. The minimum deposit is <strong>$10</strong>.</p>
 </header>
 
 <main class="container grid">
   <div class="panel">
 <h2>Choosing an investment amount</h2>
-    <input type="range" id="inv" min="1" max="300000" value="10" oninput="calc()">
+    <input type="range" id="inv" min="10" max="300000" value="1000" oninput="calc()">
     <p class="result">$<span id="invv">10</span></p>
 <label>Enter the amount manually</label>
-    <input type="number" id="invInput" min="1" step="1" value="10" class="manual-input" oninput="syncFromInput()">
+    <input type="number"
+       id="invInput"
+       min="10"
+       step="1"
+       value="1000"
+       class="manual-input"
+       oninput="syncFromInput()">
+
+<div id="invError" class="input-error-text">
+  Minimum investment amount is $10
+</div>
 <p>Your share: <strong><span id="eq">0.000003%</span></strong></p>
 <p>Income at 50% of the market: <strong>$<span id="i50">16.67</span> / month</strong></p>
 <p>Income at 100% of the market: <strong>$<span id="i100">33.33</span> / month</strong></p>
@@ -678,22 +573,41 @@ A platform for equity participation in real projects.
 </footer>
 
 <script>
+const INVESTOR_POOL = 3500000;
+const MONTHLY_50 = 5400000;
+const MONTHLY_100 = 10800000;
+
 function syncFromInput(){
-  let v=Number(invInput.value);
-  if(v<1) v=1;
-  inv.value=v;
+  const v = Number(invInput.value);
+  const error = document.getElementById('invError');
+
+  if (isNaN(v) || v < 10) {
+    invInput.classList.add('error');
+    error.style.display = 'block';
+    return; 
+  }
+
+  invInput.classList.remove('error');
+  error.style.display = 'none';
+
+  inv.value = v;
   calc();
 }
+
 function calc(){
-  let v=Number(inv.value);
-  invv.innerText=v.toLocaleString();
-  invInput.value=v;
-  eq.innerText=((v/3500000)*10).toFixed(6)+"%";
-  i50.innerText=(5000000*(v/3500000)).toFixed(2);
-  i100.innerText=(10000000*(v/3500000)).toFixed(2);
+  let v = Number(inv.value);
+
+  if (v < 10) return;
+
+  invv.innerText = v.toLocaleString();
+  invInput.value = v;
+
+  eq.innerText = ((v / INVESTOR_POOL) * 100).toFixed(6) + "%";
+  i50.innerText = (MONTHLY_50 * (v / INVESTOR_POOL)).toFixed(2);
+  i100.innerText = (MONTHLY_100 * (v / INVESTOR_POOL)).toFixed(2);
 }
-calc();
 </script>
+
 <script>
 function sendConfirm(){
   if(!cEmail.value || !cTx.value){
@@ -795,7 +709,7 @@ window.open(gmailUrl, '_blank');
 <div id="onsiteConfirm" class="modal">
   <div class="panel" style="max-width:560px;margin:80px auto;text-align:center;position:relative">
 <button class="modal-close" onclick="closeOnsiteConfirm()">×</button>
-    <h2>$1EXIT™ — Investment Confirmation</h2>
+    <h2>NoctAI™ — Investment Confirmation</h2>
     <p style="margin-bottom:18px">The investment has been recorded and sent for manual verification..</p>
     <div class="panel" style="text-align:left">
       <p><strong>Project</strong><br>AI Dispatcher + Marketplace</p>

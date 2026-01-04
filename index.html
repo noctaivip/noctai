@@ -472,7 +472,7 @@ The calculator is recalculated depending on the selected project.  </div>
         <h3>Investment amount</h3>
         <input type="range"
        class="calc-range"
-       min="1"
+       min="10"
        max="300000"
        value="1000"
        id="m_invRange"
@@ -527,7 +527,7 @@ function syncFromRange(){
 function syncFromInput(){
   let v = Number(q('m_invInput').value);
   if (isNaN(v)) return;
-  if (v < 1) v = 1;
+  if (v < 0) v = 0;
   if (v > MAX) v = MAX;
   q('m_invInput').value = v;
   q('m_invRange').value = v;
@@ -537,8 +537,9 @@ function syncFromInput(){
 function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
-  q('m_invShare').innerText = ((v / 3000000) * 20).toFixed(6) + '%';
-  const baseIncome = 54000000 * (coverage / 50);
+  q('m_invShare').innerText = ((v / 3500000) * 100).toFixed(6) + '%';
+  const INVESTOR_MONTHLY_50 = 5400000;
+  const baseIncome = INVESTOR_MONTHLY_50 * (coverage / 50);
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
@@ -590,7 +591,7 @@ Investments from $300,000 - contact the team</a>
 <p>
 • Round: <strong>$3,500,000</strong><br>
 • Investor pool: <strong>10% of shares</strong><br>
-• Minimum entry: <strong>$1</strong><br>
+• Minimum entry: <strong>$10</strong><br>
 • Currency: <strong>USDT</strong>
 </p>
 </div>
@@ -636,17 +637,21 @@ Learn more about the responsibility framework →  </a>
 <div class="panel"><h3>Investor Income</h3>
 <p>10% of business income → <strong>$5,400,000 / month</strong></p></div>
 </div>
-<h2>Why Investments Start at $1</h2>
+<h2>Why Investments Start at $10</h2>
 <div class="panel">
 <p>
-We set the minimum entry at <strong>$1</strong> because not everyone has the opportunity
+We set the minimum entry at <strong>$10</strong> because not everyone has the opportunity
 invest large sums. Even the smallest amount should give a person
 <strong>real participation</strong> in the project.
 </p>
 <p>
-Each invested <strong>$1</strong> forms a <strong>proportional micro-share in the project</strong>
-(approximately <strong>0.000002857% of shares</strong>) and gives the right to participate
+Each invested <strong>$10</strong> forms a <strong>proportional micro-share in the project</strong>
+(approximately <strong>0.000286% of shares</strong>) and gives the right to participate
 in distributing income as the business grows.</p>
+<p>
+To evaluate participation parameters, an investment <strong>calculator</strong> is available on this page, allowing users to estimate their 
+share in the project as well as indicative minimum monthly income under different market coverage scenarios (50%, 70%, and 100%).
+</p>
 <p>
 Additionally, each nested <strong>$1</strong> provides
 <strong>1 chance</strong> to receive <strong>1% share of the project</strong>
@@ -655,7 +660,7 @@ through an open and public draw after achieving key indicators.</p>
 <h2>Important to understand</h2>
 <div class="panel">
 <p>
-A minimum entry of $1 does not mean that each unit of participation is processed as a separate transaction.
+A minimum entry of $10 does not mean that each unit of participation is processed as a separate transaction.
 </p>
 <p>
 To optimize operational and network costs, participation may be <strong>aggregated within the platform</strong> 

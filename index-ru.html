@@ -473,7 +473,7 @@ border-color:var(--gold);
         <h3>Сумма инвестиций</h3>
         <input type="range"
        class="calc-range"
-       min="1"
+       min="10"
        max="300000"
        value="1000"
        id="m_invRange"
@@ -528,7 +528,7 @@ function syncFromRange(){
 function syncFromInput(){
   let v = Number(q('m_invInput').value);
   if (isNaN(v)) return;
-  if (v < 1) v = 1;
+  if (v < 0) v = 0;
   if (v > MAX) v = MAX;
   q('m_invInput').value = v;
   q('m_invRange').value = v;
@@ -538,8 +538,9 @@ function syncFromInput(){
 function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
-  q('m_invShare').innerText = ((v / 3000000) * 20).toFixed(6) + '%';
-  const baseIncome = 54000000 * (coverage / 50);
+  q('m_invShare').innerText = ((v / 3500000) * 100).toFixed(6) + '%';
+  const INVESTOR_MONTHLY_50 = 5400000;
+  const baseIncome = INVESTOR_MONTHLY_50 * (coverage / 50);
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
@@ -592,7 +593,7 @@ function onProjectChange(v){
 <p>
 • Раунд: <strong>$3,500,000</strong><br>
 • Инвесторский пул: <strong>10% акций</strong><br>
-• Минимальный вход: <strong>$1</strong><br>
+• Минимальный вход: <strong>$10</strong><br>
 • Валюта: <strong>USDT</strong>
 </p>
 </div>
@@ -646,17 +647,21 @@ function onProjectChange(v){
 <div class="panel"><h3>Доход инвесторов</h3>
 <p>10% дохода бизнеса → <strong>$5,400,000 / месяц</strong></p></div>
 </div>
-<h2>Почему инвестиции начинаются от $1</h2>
+<h2>Почему инвестиции начинаются от $10</h2>
 <div class="panel">
 <p>
-Мы установили минимальный вход от <strong>$1</strong>, потому что не у всех есть возможность
+Мы установили минимальный вход от <strong>$10</strong>, потому что не у всех есть возможность
 инвестировать крупные суммы. Даже минимальная сумма должна давать человеку
 <strong>реальное участие</strong> в проекте.
 </p>
 <p>
-Каждый вложенный <strong>$1</strong> формирует <strong>пропорциональную микродолю в проекте</strong>
-(примерно <strong>0.000002857% акций</strong>) и даёт право участвовать
+Каждые вложенные <strong>$10</strong> формируют <strong>пропорциональную микродолю в проекте</strong>
+(примерно <strong>0.000286% акций</strong>) и даёт право участвовать
 в распределении дохода по мере роста бизнеса.
+</p>
+<p>
+Для оценки параметров участия на странице доступен инвестиционный <strong>калькулятор</strong>, позволяющий рассчитать долю в проекте, 
+а также ориентировочный минимальный месячный доход при различных сценариях рыночного охвата (50%, 70% и 100%).
 </p>
 <p>
 Дополнительно каждый вложенный <strong>$1</strong> предоставляет
@@ -667,7 +672,7 @@ function onProjectChange(v){
 <h2>Важно понимать</h2>
 <div class="panel">
 <p>
-Минимальный вход от $1 не означает, что каждая единица участия проводится как отдельная транзакция.
+Минимальный вход от $10 не означает, что каждая единица участия проводится как отдельная транзакция.
 </p>
 <p>
 Для оптимизации операционных и сетевых издержек участие может <strong>агрегироваться внутри платформы </strong>
