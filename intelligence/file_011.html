@@ -459,7 +459,7 @@ The calculator is recalculated depending on the selected project.  </div>
         <h3>Investment amount</h3>
         <input type="range"
        class="calc-range"
-       min="1"
+       min="10"
        max="300000"
        value="1000"
        id="m_invRange"
@@ -514,7 +514,7 @@ function syncFromRange(){
 function syncFromInput(){
   let v = Number(q('m_invInput').value);
   if (isNaN(v)) return;
-  if (v < 1) v = 1;
+  if (v < 0) v = 0;
   if (v > MAX) v = MAX;
   q('m_invInput').value = v;
   q('m_invRange').value = v;
@@ -524,8 +524,9 @@ function syncFromInput(){
 function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
-  q('m_invShare').innerText = ((v / 3000000) * 20).toFixed(6) + '%';
-  const baseIncome = 54000000 * (coverage / 50);
+  q('m_invShare').innerText = ((v / 3500000) * 100).toFixed(6) + '%';
+  const INVESTOR_MONTHLY_50 = 5400000;
+  const baseIncome = INVESTOR_MONTHLY_50 * (coverage / 50);
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
@@ -537,12 +538,12 @@ function onProjectChange(v){
 
 <nav class="top-nav">
   <div class="nav-container">
-    <a href="index.html" class="logo">NoctAI™</a>
+    <a href="/" class="logo">NoctAI™</a>
     <div class="nav-right">
   <div class="nav-links">
-    <a href="how_it_works.html">How it works</a>
+    <a href="/how_it_works.html">How it works</a>
     <a href="#calc" onclick="openInvestmentCalc(); return false;">Calculator</a>
-    <a href="projects.html">Projects</a>
+    <a href="/projects.html">Projects</a>
   </div>
   <div class="lang-switch">
     <a href="/intelligence/file_011.html" class="active">EN</a>
@@ -617,17 +618,17 @@ A platform for equity participation in real projects.
 <strong class="footer-heading">
   LEGAL & GOVERNANCE
 </strong>
-      <a href="terms.html">Terms</a><br>
-      <a href="risk-disclosure.html">Risk Disclosure</a><br>
-      <a href="data-processing.html">Data Processing</a><br>
-	  <a href="privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a><br>
+      <a href="/risk-disclosure.html">Risk Disclosure</a><br>
+      <a href="/data-processing.html">Data Processing</a><br>
+	  <a href="/privacy.html">Privacy</a>
     </div>
 	<div>
 <strong class="footer-heading">
     Platform
   </strong>
-      <a href="overview.html">Platform Overview</a><br>
-      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+      <a href="/overview.html">Platform Overview</a><br>
+      <a href="/oversight_governance.html">Oversight &amp; Governance</a>
     </div>
 <div class="footer-right">
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noctai.vip%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT" target="_blank" rel="noopener" style="color:var(--muted)">
