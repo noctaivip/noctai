@@ -505,16 +505,28 @@ display:none;
       TYzS8upYw57S5wqHkDDxhsxcwoWE7tYALU
     </span>
   </div>
-      <p><strong>Сеть:</strong> TRC20</p>
+  <p><strong>Сеть:</strong> TRC20</p>
   <div class="copy-status" id="copyStatus">Адрес скопирован</div>
-  <a id="sendBtn"
-   class="cta-primary"
-   style="opacity:.5;pointer-events:none"
-   href="#"
-   onclick="openConfirm()">
-   Я отправил USDT
-</a>
+  <div style="display:flex;align-items:center;gap:24px;margin-top:18px">
+    <div id="qrBox" style="display:none">
+      <img
+        src="assets/qr/usdt-trc20.jpg"
+        alt="USDT TRC20 QR"
+        style="width:140px;height:140px;border-radius:12px;border:1px solid var(--border)">
+      <div style="margin-top:6px;font-size:12px;color:var(--muted);text-align:center">
+        QR код кошелька
+      </div>
+    </div>
+	 <a id="sendBtn"
+       class="cta-primary"
+       style="opacity:.5;pointer-events:none"
+       href="#"
+       onclick="openConfirm()">
+       Я отправил USDT
+    </a>
+  </div>
 </div>
+
 <div id="noUsdtHelp" style="margin-top:18px;padding-top:14px;border-top:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.6">
   <strong style="color:var(--text)">Нет USDT?</strong><br>
   Вы можете создать криптокошелёк и пополнить его банковской картой через сторонний сервис
@@ -760,17 +772,20 @@ const agree = document.getElementById('riskAgree');
 const addr = document.getElementById('usdtAddressBlock');
 const sendBtn = document.getElementById('sendBtn');
 const noUsdtHelp = document.getElementById('noUsdtHelp');
+const qrBox = document.getElementById('qrBox');
 
 agree.addEventListener('change', ()=>{
   if(agree.checked){
     addr.style.display = 'block';
     sendBtn.style.opacity = '1';
     sendBtn.style.pointerEvents = 'auto';
+    if(qrBox) qrBox.style.display = 'block';
     if(noUsdtHelp) noUsdtHelp.style.display = 'none';
   } else {
     addr.style.display = 'none';
     sendBtn.style.opacity = '.5';
     sendBtn.style.pointerEvents = 'none';
+    if(qrBox) qrBox.style.display = 'none';
     if(noUsdtHelp) noUsdtHelp.style.display = 'block';
   }
 });
