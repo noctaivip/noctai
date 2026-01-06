@@ -422,8 +422,55 @@ border-color:var(--gold);
   }
 }
 </style>
+<style>
+/* Clickable project card enhancement */
+.project-card-link {
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
 
+.project-card-link .panel {
+  cursor:pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.project-card-link .panel:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow:
+    0 12px 34px rgba(201,162,77,0.18),
+    0 0 0 1px rgba(201,162,77,0.25) inset;
+}
+
+.project-cta {
+  margin-top:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:13px;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+
+.project-cta span {
+  color:var(--muted);
+  letter-spacing:normal;
+  text-transform:none;
+}
+
+.project-arrow {
+  font-size:18px;
+  line-height:1;
+}
+
+</style>
 </head>
+
 <body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -573,28 +620,39 @@ function onProjectChange(v){
 <span class="badge platform-badge">A platform for shared participation in real projects</span>
 <h1>NoctAI™</h1>
 <br/>
-<a class="cta-primary" href="invest_usdt.html">Invest (USDT)</a><br>
-<a
-  class="cta-secondary"
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=AI-Dispatcher-Investments%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%0A%0A%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D1%81%D0%BE%20%D0%BC%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%83%20%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85%20%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%86%D0%B8%D0%B9.%0A%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%BE%D1%82%20%24300%2C000.%0A%0A%D0%A1%20%D1%83%D0%B2%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%2C"
-  target="_blank"
-  rel="noopener"
->
-Investments from $300,000 - contact the team</a>
+<h3 style="margin-top:0;">Логика Распределения Капитала</h3>
+  <p>
+    На платформе размещаются исключительно проекты, прошедшие внутреннюю экспертизу
+    и согласившиеся с едиными условиями участия платформы,
+    включая публичные механизмы распределения долей.
+  </p>
+  <p>
+    Условия участия индивидуальны для каждого проекта
+    и раскрываются на его отдельной странице.
+  </p>
 </div>
-<div class="panel">
-<div class="project-box">
-  <span class="project-label">Active Project #001</span>
-  <div class="project-title">AI Dispatcher + Marketplace</div>
-</div>
+
+<a href="project_001_ai-dispatcher.html" class="project-card-link">
+  <div class="panel shimmer">
+    <div class="project-box">
+      <span class="project-label">Active Project #001</span>
+      <div class="project-title">AI Dispatcher + Marketplace</div>
+    </div>
 <h3>Key parameters of the round</h3>
 <p>
 • Round: <strong>$3,500,000</strong><br>
 • Investor pool: <strong>10% of shares</strong><br>
 • Minimum entry: <strong>$10</strong><br>
-• Currency: <strong>USDT</strong>
+• Currency: <strong>USDT</strong><br>
+• Equity Allocation: <strong>3% of the project</strong>
 </p>
-</div>
+
+    <div class="project-cta">
+      <span>Project Investment Parameters</span>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
+</a>
 </div>
 </header>
 
@@ -611,23 +669,7 @@ Other projects will be presented <strong>only after the completion of patent reg
 which ensures legal and technological security of investments
 before providing access to investors.</p>
 </div>
-<h2>Progress of work and execution</h2>
-<div class="panel">
-  <p>
-    NoctAI maintains a <strong>public execution log</strong>,
-    that records completed milestones, ongoing work,
-    and confirmed infrastructure actions across its projects.
-  </p>
-  <p>
-    <strong>Only completed or actively executed work</strong> is published. 
-	Plans, assumptions, or hypotheses without actual execution are not disclosed.
-  </p>
-  <p>
-    <a href="worklog.html" style="color:var(--gold);text-decoration:underline;">
-      View the execution log →
-    </a>
-  </p>
-</div>
+
 <h2>Responsibility Outline</h2>
 <div class="panel">
 <p>
@@ -646,14 +688,22 @@ in case of non-compliance with the platform conditions.</p>
 Learn more about the responsibility framework →  </a>
 </p>
 </div>
-<h2 class="section-title">How income is generated</h2><div class="grid">
+
+<h2 class="section-title">How income is generated</h2>
+<div class="panel">
+Example: AI Dispatcher + Marketplace project
+<div class="grid">
 <div class="panel"><h3>Attracting Investment</h3>
 <p>$3,500,000 is being raised in exchange for <strong>10% of the project's share</strong>.</p></div>
 <div class="panel"><h3>Business Income</h3>
 <p>50% of the US logistics market → <strong>$54,000,000 / month</strong></p></div>
 <div class="panel"><h3>Investor Income</h3>
-<p>10% of business income → <strong>$5,400,000 / month</strong></p></div>
+<p>10% of business income → <strong>$5,400,000 / month</strong></p>
 </div>
+</div>
+</div>
+
+
 <h2>Why Investments Start at $10</h2>
 <div class="panel">
 <p>
@@ -674,6 +724,7 @@ Additionally, each nested <strong>$1</strong> provides
 <strong>1 chance</strong> to receive <strong>1% share of the project</strong>
 through an open and public draw after achieving key indicators.</p>
 </div>
+
 <h2>Important to understand</h2>
 <div class="panel">
 <p>
@@ -693,17 +744,18 @@ As a result, participation is recorded at the level of commitments,
 while transactional execution is carried out <strong>in accordance with NOCTAI’s internal rules and procedures.</strong>
 </p>
 </div>
+
 <h2>Open drawing for a 3% share of the project</h2>
 <div class="panel">
-<p>After reaching <strong>50% of the American transport logistics market</strong>
-We are holding a public drawing for a <strong>3% share of the project</strong>.</p>
-<p><strong>$1 = 1 chance.</strong> $100 = 100 chances. $1,000 = 1,000 chances.</p>
-<p>Up to 3 winners. Maximum 1% per participant. Everything is open and public.</p>
+<p>Each project on the platform provides for a public <strong>allocation of 3% of the project’s equity</strong> among platform participants.</p>
+<p>The allocation mechanism is uniform across all projects and ensures an equal opportunity of participation for each investor.</p>
+<p>All terms and parameters are defined on the relevant project page and are implemented in a transparent and public manner.</p>
 </div>
 <div class="anchor">
-<h2>For strategic investors</h2>
-<p>Investments from <strong>$300,000</strong> are considered individually.</p>
-<p>The round is capped at 10% stake. Anchor terms, SPV, and strategic partnerships are possible.</p>
+<h2>Control and Governance</h2>
+<p>All projects and investments on the platform are subject to centralized management by NoctAI.</p>
+<p>The platform oversees project structures, key implementation milestones, and compliance with the established participation terms.</p>
+<p>If you are a venture or strategic investor considering participation exceeding 50% of the investment pool, an individual engagement format may be arranged.</p>
 <a class="cta-secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=AI-Dispatcher-Investments%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%0A%0A%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D1%81%D0%BE%20%D0%BC%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%83%20%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85%20%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%86%D0%B8%D0%B9.%0A%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%BE%D1%82%20%24300%2C000.%0A%0A%D0%A1%20%D1%83%D0%B2%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%2C" target="_blank" rel="noopener">Contact directly</a>
 </div>
 </main>

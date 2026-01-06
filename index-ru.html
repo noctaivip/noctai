@@ -422,6 +422,53 @@ border-color:var(--gold);
   }
 }
 </style>
+<style>
+/* Clickable project card enhancement */
+.project-card-link {
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
+
+.project-card-link .panel {
+  cursor:pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.project-card-link .panel:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow:
+    0 12px 34px rgba(201,162,77,0.18),
+    0 0 0 1px rgba(201,162,77,0.25) inset;
+}
+
+.project-cta {
+  margin-top:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:13px;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+
+.project-cta span {
+  color:var(--muted);
+  letter-spacing:normal;
+  text-transform:none;
+}
+
+.project-arrow {
+  font-size:18px;
+  line-height:1;
+}
+
+</style>
 </head>
 
 <body>
@@ -574,29 +621,38 @@ function onProjectChange(v){
 <span class="badge platform-badge">ПЛАТФОРМА ДОЛЕВОГО УЧАСТИЯ В РЕАЛЬНЫХ ПРОЕКТАХ</span>
 <h1>NoctAI™</h1>
 <br/>
-<a class="cta-primary" href="invest_usdt-ru.html">Инвестировать (USDT)</a><br>
-<a
-  class="cta-secondary"
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=AI-Dispatcher-Investments%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%0A%0A%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D1%81%D0%BE%20%D0%BC%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%83%20%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85%20%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%86%D0%B8%D0%B9.%0A%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%BE%D1%82%20%24300%2C000.%0A%0A%D0%A1%20%D1%83%D0%B2%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%2C"
-  target="_blank"
-  rel="noopener"
->
-  Инвестиции от $300,000 — связаться с командой
+  <h3 style="margin-top:0;">Логика Распределения Капитала</h3>
+  <p>
+    На платформе размещаются исключительно проекты, прошедшие внутреннюю экспертизу
+    и согласившиеся с едиными условиями участия платформы,
+    включая публичные механизмы распределения долей.
+  </p>
+  <p>
+    Условия участия индивидуальны для каждого проекта
+    и раскрываются на его отдельной странице.
+  </p>
+</div>
+
+<a href="project_001_ai-dispatcher-ru.html" class="project-card-link">
+  <div class="panel shimmer">
+    <div class="project-box">
+      <span class="project-label">Активный проект #001</span>
+      <div class="project-title">AI Dispatcher + Marketplace</div>
+    </div>
+    <h3>Ключевые параметры раунда</h3>
+    <p>
+      • Раунд: <strong>$3,500,000</strong><br>
+      • Инвесторский пул: <strong>10% акций</strong><br>
+      • Минимальный вход: <strong>$10</strong><br>
+      • Валюта: <strong>USDT</strong><br>
+      • Розыгрыш: <strong>3% доли проекта</strong>
+    </p>
+    <div class="project-cta">
+      <span>Инвестиционные Параметры Проекта</span>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
 </a>
-</div>
-<div class="panel">
-<div class="project-box">
-  <span class="project-label">Active Project #001</span>
-  <div class="project-title">AI Dispatcher + Marketplace</div>
-</div>
-<h3>Ключевые параметры раунда</h3>
-<p>
-• Раунд: <strong>$3,500,000</strong><br>
-• Инвесторский пул: <strong>10% акций</strong><br>
-• Минимальный вход: <strong>$10</strong><br>
-• Валюта: <strong>USDT</strong>
-</p>
-</div>
 </div>
 </header>
 
@@ -616,23 +672,7 @@ function onProjectChange(v){
 до предоставления доступа инвесторам.
 </p>
 </div>
-<h2>Ход работ и исполнение</h2>
-<div class="panel">
-  <p>
-    Платформа NoctAI ведёт <strong>публичный журнал исполнения</strong>,
-    в котором фиксируются реализованные этапы,
-    текущие работы и подтверждённые инфраструктурные действия по проектам.
-  </p>
-  <p>
-    Публикуются <strong>только завершённые или активные работы</strong>.
-    Планы и гипотезы без фактического исполнения не размещаются.
-  </p>
-  <p>
-    <a href="worklog-ru.html" style="color:var(--gold);text-decoration:underline;">
-      Перейти к журналу выполненных работ →
-    </a>
-  </p>
-</div>
+
 <h2>Контур ответственности</h2>
 <div class="panel">
 <p>
@@ -655,15 +695,21 @@ function onProjectChange(v){
   </a>
 </p>
 </div>
+
 <h2 class="section-title">Как формируется доход</h2>
+<div class="panel">
+Пример: проект AI Dispatcher + Marketplace
 <div class="grid">
 <div class="panel"><h3>Привлечение инвестиций</h3>
 <p>$3,500,000 привлекаются в обмен на <strong>10% доли</strong> проекта.</p></div>
 <div class="panel"><h3>Доход бизнеса</h3>
 <p>50% рынка логистики США → <strong>$54,000,000 / месяц</strong></p></div>
 <div class="panel"><h3>Доход инвесторов</h3>
-<p>10% дохода бизнеса → <strong>$5,400,000 / месяц</strong></p></div>
+<p>10% дохода бизнеса → <strong>$5,400,000 / месяц</strong></p>
 </div>
+</div>
+</div>
+
 <h2>Почему инвестиции начинаются от $10</h2>
 <div class="panel">
 <p>
@@ -672,8 +718,7 @@ function onProjectChange(v){
 <strong>реальное участие</strong> в проекте.
 </p>
 <p>
-Каждые вложенные <strong>$10</strong> формируют <strong>пропорциональную микродолю в проекте</strong>
-(примерно <strong>0.000286% акций</strong>) и даёт право участвовать
+Каждые вложенные <strong>$10</strong> формируют <strong>пропорциональную микродолю в проекте</strong> и даёт право участвовать
 в распределении дохода по мере роста бизнеса.
 </p>
 <p>
@@ -686,6 +731,7 @@ function onProjectChange(v){
 через открытый и публичный розыгрыш после достижения ключевых показателей.
 </p>
 </div>
+
 <h2>Важно понимать</h2>
 <div class="panel">
 <p>
@@ -704,19 +750,21 @@ function onProjectChange(v){
 <strong>в соответствии с внутренними правилами и процедурами NOCTAI.</strong>
 </p>
 </div>
+
 <h2>Открытый розыгрыш 3% доли проекта</h2>
 <div class="panel">
-<p>После достижения <strong>50% рынка американской транспортной логистики</strong>
-мы проводим публичный розыгрыш <strong>3% доли проекта</strong>.</p>
-<p><strong>$1 = 1 шанс.</strong> $100 = 100 шансов. $1,000 = 1,000 шансов.</p>
-<p>До 3 победителей. Максимум 1% на одного участника. Всё проходит открыто и публично.</p>
+<p>Каждый проект на платформе предусматривает публичное <strong>распределение 3% доли проекта</strong> среди участников платформы.</p>
+<p>Механизм распределения единый для всех проектов и обеспечивает равный шанс участия для каждого инвестора.</p>
+<p>Все условия и параметры фиксируются на странице соответствующего проекта и реализуются прозрачно и публично.</p>
 </div>
 <div class="anchor">
-<h2>Для стратегических инвесторов</h2>
-<p>Инвестиции от <strong>$300,000</strong> рассматриваются индивидуально.</p>
-<p>Раунд ограничен 10% доли. Возможны якорные условия, SPV и стратегическое партнёрство.</p>
+<h2>Контроль и управление</h2>
+<p>Все проекты и инвестиции на платформе находятся под централизованным управлением NoctAI.</p>
+<p>Платформа осуществляет контроль за структурой проектов, ключевыми этапами реализации и соблюдением установленных условий участия.</p>
+<p>Если вы являетесь венчурным или стратегическим инвестором и рассматриваете участие в проекте с объёмом более 50% инвестиционного пула, возможен индивидуальный формат взаимодействия.</p>
 <a class="cta-secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=AI-Dispatcher-Investments%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%0A%0A%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D1%81%D0%BE%20%D0%BC%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%83%20%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85%20%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%86%D0%B8%D0%B9.%0A%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%BE%D1%82%20%24300%2C000.%0A%0A%D0%A1%20%D1%83%D0%B2%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%2C" target="_blank" rel="noopener">Contact directly</a>
 </div>
+
 </main>
 
 <footer class="site-footer">
