@@ -585,6 +585,35 @@ border-color:var(--gold);
     </div>
 	</div>
   </div>
+  <div id="presentationModal" style="
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100vw; height:100vh;
+  background:#0b0f14;
+  z-index:9999;
+">
+
+  <!-- КНОПКА ЗАКРЫТИЯ -->
+  <button onclick="closePresentation()" style="
+    position:absolute;
+    top:20px;
+    right:20px;
+    z-index:10000;
+    background:#111;
+    color:#fff;
+    border:none;
+    font-size:24px;
+    cursor:pointer;
+  ">✕</button>
+
+  <!-- PDF -->
+  <iframe
+    src="/presentations/project-001-ru.pdf#view=FitH&zoom=page-width&toolbar=0&navpanes=0"
+    style="width:100%; height:100%; border:none;">
+  </iframe>
+
+</div>
 
   <script>
 let coverage = 50;
