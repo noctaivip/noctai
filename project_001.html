@@ -661,7 +661,7 @@ function onProjectChange(v){
 
   <!-- PDF -->
   <iframe
-    src="/presentations/ai-dispatcher-ru.pdf#view=FitH&zoom=page-width&toolbar=0&navpanes=0"
+    src="/presentations/ai-dispatcher-ru.html">
     style="width:100%; height:100%; border:none;">
   </iframe>
 
@@ -677,9 +677,9 @@ function onProjectChange(v){
     <a href="projects.html">Projects</a>
   </div>
   <div class="lang-switch">
-    <a href="project_001_ai-dispatcher.html" class="active">EN</a>
+    <a href="project_001.html" class="active">EN</a>
 	-
-    <a href="project_001_ai-dispatcher-ru.html">RU</a>
+    <a href="project_001-ru.html">RU</a>
   </div>
 </div>
   </div>
@@ -831,32 +831,5 @@ function closePresentation() {
   document.getElementById('presentationModal').style.display = 'none';
 }
 </script>
-<!-- Project Presentation Modal -->
-<div id="presentationModal" style="
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(5,8,14,0.88);
-  backdrop-filter:blur(6px);
-  z-index:9999;
-">
-  <button onclick="closePresentation()" style="
-    position:absolute;
-    top:18px;
-    right:22px;
-    background:none;
-    border:none;
-    color:#fff;
-    font-size:26px;
-    cursor:pointer;
-    z-index:10000;
-  ">×</button>
-
-  <iframe
-    src="/presentations/ai-dispatcher-ru.pdf#view=FitH&toolbar=0&navpanes=0"
-    style="width:100%; height:100%; border:none;">
-  </iframe>
-</div>
-
 </body>
 </html>
