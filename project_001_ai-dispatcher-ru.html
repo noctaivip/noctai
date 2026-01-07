@@ -585,7 +585,17 @@ border-color:var(--gold);
     </div>
 	</div>
   </div>
-  
+  <div id="presentationModal" style="
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100vw; height:100vh;
+  background:#0b0f14;
+  z-index:9999;
+">
+
+</div>
+
   <script>
 let coverage = 50;
 const MAX = 300000;
@@ -637,12 +647,6 @@ function recalc(){
 
 function onProjectChange(v){
   recalc();
-}
-function openPresentation(){
-  document.getElementById('presentationOverlay').style.display = 'flex';
-}
-function closePresentation(){
-  document.getElementById('presentationOverlay').style.display = 'none';
 }
 
 </script>
@@ -802,14 +806,41 @@ function closePresentation(){
   <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
   <a href="projects-ru.html">Проекты платформы</a>
 </div>
-<div id="presentationOverlay" style="display:none;" class="presentation-overlay">
-  <button class="presentation-close" onclick="closePresentation()">×</button>
+<script>
+function openPresentation() {
+  document.getElementById('presentationModal').style.display = 'block';
+}
 
-<iframe
-  src="/presentations/project-001-ru.pdf#view=FitH&zoom=page-width&toolbar=0&navpanes=0"
-  allowfullscreen
-></iframe>
+function closePresentation() {
+  document.getElementById('presentationModal').style.display = 'none';
+}
+</script>
+<!-- Project Presentation Modal -->
+<div id="presentationModal" style="
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(5,8,14,0.88);
+  backdrop-filter:blur(6px);
+  z-index:9999;
+">
+  <button onclick="closePresentation()" style="
+    position:absolute;
+    top:18px;
+    right:22px;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:26px;
+    cursor:pointer;
+    z-index:10000;
+  ">×</button>
 
+  <iframe
+    src="/presentations/project-001-ru.pdf#view=FitH&toolbar=0&navpanes=0"
+    style="width:100%; height:100%; border:none;">
+  </iframe>
 </div>
+
 </body>
 </html>
