@@ -2,59 +2,70 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>AI Dispatcher — Project Presentation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Dispatcher — Presentation</title>
 
 <style>
 html, body {
   margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
   background: #0f141c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: system-ui, sans-serif;
+  overflow: hidden;
 }
 
-.box {
-  max-width: 720px;
-  padding: 48px;
-  border: 1px solid #c9a44c;
-  border-radius: 16px;
-  text-align: center;
+#viewer {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 32px;
 }
 
-h1 {
-  color: #fff;
-  margin-bottom: 16px;
-}
-
-p {
-  color: #9aa4b2;
-  margin-bottom: 32px;
-}
-
-a {
-  display: inline-block;
-  padding: 14px 28px;
-  border: 1px solid #c9a44c;
-  border-radius: 8px;
-  color: #c9a44c;
-  text-decoration: none;
-  font-weight: 500;
+.page {
+  display: block;
+  margin: 0 auto 32px auto;
+  box-shadow: 0 0 0 1px #c9a44c;
+  background: #fff;
 }
 </style>
 </head>
 
 <body>
-  <div class="box">
-    <h1>AI Dispatcher</h1>
-    <p>Confidential project presentation</p>
 
-    <a href="ai-dispatcher-ru.pdf" target="_blank">
-      Open PDF Presentation
-    </a>
-  </div>
+<div id="viewer"></div>
+
+<script type="module">
+import * as pdfjsLib from './pdfjs/pdf.mjs';
+
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  './pdfjs/pdf.worker.mjs';
+
+const url = './ai-dispatcher-ru.pdf';
+const container = document.getElementById('viewer');
+
+const pdf = await pdfjsLib.getDocument(url).promise;
+
+for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+  const page = await pdf.getPage(pageNum);
+  const viewport = page.getViewport({ scale: 1.4 });
+
+  const canvas = document.createElement('canvas');
+  canvas.className = 'page';
+
+  const context = canvas.getContext('2d');
+  canvas.width = viewport.width;
+  canvas.height = viewport.height;
+
+  container.appendChild(canvas);
+
+  await page.render({
+    canvasContext: context,
+    viewport: viewport
+  }).promise;
+}
+</script>
+
 </body>
 </html>
