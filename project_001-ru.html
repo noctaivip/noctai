@@ -417,16 +417,49 @@ border-color:var(--gold);
   border:none;
 }
 
-.presentation-close{
-  position:absolute;
-  top:14px;
-  right:16px;
-  background:none;
-  border:none;
-  color:#aaa;
-  font-size:26px;
-  cursor:pointer;
+.presentation-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 300;
+
+  color: #0f141c;
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  z-index: 1001;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
 }
+.presentation-close:hover {
+  background: #0f141c;
+  color: #ffffff;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+.presentation-close:active {
+  transform: scale(0.96);
+}
+
 </style>
 <style>
 #pdfViewer {
