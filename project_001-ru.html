@@ -411,12 +411,6 @@ border-color:var(--gold);
   overflow: hidden;
 }
 
-.presentation-modal iframe{
-  width:100%;
-  height:100%;
-  border:none;
-}
-
 .presentation-close{
   position:absolute;
   top:14px;
@@ -601,11 +595,9 @@ border-color:var(--gold);
     
     <button class="presentation-close" onclick="closePresentation()">×</button>
 
-    <iframe
-      src="/presentations/ai-dispatcher-viewer-ru.html"
-      style="width:100%;height:100%;border:none;"
-      loading="lazy">
-    </iframe>
+<div id="pdfViewer"
+     style="width:100%;height:100%;overflow:auto;background:#0f141c;">
+</div>
 
   </div>
 </div>
@@ -828,6 +820,55 @@ function openPresentation(){
 function closePresentation(){
   document.getElementById('presentationOverlay').style.display = 'none';
 }
+</script>
+<script type="module">
+import * as pdfjsLib from '/presentations/pdfjs/pdf.mjs';
+
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  '/presentations/pdfjs/pdf.worker.mjs';
+
+let pdfLoaded = false;
+
+async function loadPdf() {
+  if (pdfLoaded) return;
+  pdfLoaded = true;
+
+  const pdf = await pdfjsLib.getDocument(
+    '/presentations/ai-dispatcher-ru.pdf'
+  ).promise;
+
+  const container = document.getElementById('pdfViewer');
+  container.innerHTML = '';
+
+  for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+    const page = await pdf.getPage(pageNum);
+    const viewport = page.getViewport({ scale: 1.35 });
+
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+
+    canvas.width = viewport.width;
+    canvas.height = viewport.height;
+    canvas.style.display = 'block';
+    canvas.style.margin = '0 auto 24px';
+
+    container.appendChild(canvas);
+
+    await page.render({
+      canvasContext: context,
+      viewport
+    }).promise;
+  }
+}
+
+window.openPresentation = function () {
+  document.getElementById('presentationOverlay').style.display = 'flex';
+  loadPdf();
+};
+
+window.closePresentation = function () {
+  document.getElementById('presentationOverlay').style.display = 'none';
+};
 </script>
 
 </body>
