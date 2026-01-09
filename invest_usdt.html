@@ -368,7 +368,8 @@ display:none;
 .coverage-title{font-size:14px; color:#9aa3ad; margin-bottom:10px;}
 .coverage-buttons{display:flex; gap:10px; margin-bottom:26px;}
 .coverage-buttons button{
-  padding:0 12px;
+  padding:0 14px;
+  box-sizing: border-box;
   height:32px;
   width:fit-content;
   line-height:32px;
@@ -510,18 +511,15 @@ This is not a crypto investment, but a form of fixing shares.  </p>
   <div style="font-size:13px;color:var(--muted);margin-bottom:6px">
     Network
   </div>
-
   <div class="coverage-buttons" id="networkButtons">
     <button onclick="selectNetwork('trc20', event)">TRC20</button>
     <button onclick="selectNetwork('sol', event)">SOL</button>
     <button onclick="selectNetwork('arbitrum', event)">ARBITRUM</button>
-
   </div>
   <div id="networkHint"
      style="margin-top:6px;font-size:12px;line-height:1.5;color:var(--muted)">
   TRC20 — Send USDT via TRON (TRC20) network
 </div>
-
 </div>
   <div class="copy-status" id="copyStatus">Address copied</div>
   <div style="display:flex;align-items:center;gap:24px;margin-top:18px">
