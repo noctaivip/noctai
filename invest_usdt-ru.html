@@ -372,27 +372,28 @@ display:none;
   align-items: center;
   justify-content: flex-start;
 }
-
 .coverage-buttons button {
   all: unset;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  flex: 0 0 auto;          /* ← НЕ ДАЁТ РАСТЯГИВАТЬ */
+  flex: 0 0 auto;
   padding: 6px 14px;
-
   border-radius: 8px;
   background: #0b0f16;
   border: 1px solid #c9a44c;
   color: #ffffff;
   font-size: 12px;
   font-weight: 500;
+  letter-spacing: 0.02em; /* ← КЛЮЧ */
   cursor: pointer;
   white-space: nowrap;
   box-sizing: border-box;
 }
-
+.coverage-buttons button.active {
+  background: linear-gradient(180deg,#f1d48a,#d6b15e);
+  color: #050b16;
+}
 
 .coverage-buttons button.active {
   background: linear-gradient(180deg,#f1d48a,#d6b15e);
