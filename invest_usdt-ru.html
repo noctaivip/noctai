@@ -374,10 +374,17 @@ display:none;
 .coverage-title{font-size:14px; color:#9aa3ad; margin-bottom:10px;}
 .coverage-buttons{display:flex; gap:10px; margin-bottom:26px;}
 .coverage-buttons button{
-  width:56px; height:34px; border-radius:8px;
-  background:#0b0f16; border:1px solid #c9a44c;
-  color:#fff; font-size:12px; cursor:pointer;
+  padding:0 14px;
+  height:34px;
+  border-radius:8px;
+  background:#0b0f16;
+  border:1px solid #c9a44c;
+  color:#fff;
+  font-size:12px;
+  cursor:pointer;
+  white-space:nowrap;
 }
+
 .coverage-buttons button.active{
   background:linear-gradient(180deg,#f1d48a,#d6b15e);
   color:#050b16;
@@ -505,13 +512,28 @@ display:none;
       TYzS8upYw57S5wqHkDDxhsxcwoWE7tYALU
     </span>
   </div>
-  <p><strong>Сеть:</strong> TRC20</p>
+<div style="margin-top:10px">
+  <div style="font-size:13px;color:var(--muted);margin-bottom:6px">
+    Сеть
+  </div>
+<div class="coverage-buttons" id="networkButtons">
+    <button onclick="selectNetwork('trc20', event)">TRC20</button>
+    <button onclick="selectNetwork('sol', event)">SOL</button>
+    <button onclick="selectNetwork('arbitrum', event)">ARBITRUM</button>
+  </div>
+  <div id="networkHint"
+     style="margin-top:6px;font-size:12px;line-height:1.5;color:var(--muted)">
+  TRC20 - отправляйте USDT через сеть TRON (TRC20)
+</div>
+
+</div>
   <div class="copy-status" id="copyStatus">Адрес скопирован</div>
   <div style="display:flex;align-items:center;gap:24px;margin-top:18px">
     <div id="qrBox" style="display:none">
       <img
-        src="assets/qr/usdt-trc20.jpg"
-        alt="USDT TRC20 QR"
+  id="networkQr"
+  src="assets/qr/usdt-trc20.jpg"
+  alt="TRC20 QR"
         style="width:140px;height:140px;border-radius:12px;border:1px solid var(--border)">
       <div style="margin-top:6px;font-size:12px;color:var(--muted);text-align:center">
         QR код кошелька
@@ -767,6 +789,51 @@ if (!window.__calculatorModuleLoaded) {
     });
 }
 </script>
+<script>
+const NETWORKS = {
+  trc20: {
+    address: "TYzS8upYw57S5wqHkDDxhsxcwoWE7tYALU",
+    qr: "assets/qr/usdt-trc20.jpg",
+    hint: "TRC20 - отправляйте USDT через сеть TRON (TRC20)"
+  },
+  sol: {
+    address: "2eity9eqYTGwkMdNVmC2R7o9KMgL7qDoi6HDcaUGPLWE",
+    qr: "assets/qr/sol.jpg",
+    hint: "SOLANA - отправляйте USDT через сеть Solana"
+  },
+  arbitrum: {
+    address: "0xDA10F4c3062dd39da9Cc7438FD172F5634070C1",
+    qr: "assets/qr/arbitrum.jpg",
+    hint: "ARBITRUM (ETH address) - отправляйте USDT только через сеть Arbitrum One"
+  }
+};
+
+
+function selectNetwork(key, event){
+  const net = NETWORKS[key];
+  if(!net) return;
+
+  document.getElementById('walletAddress').innerText = net.address;
+
+  const qrImg = document.getElementById('networkQr');
+  if(qrImg){
+    qrImg.src = net.qr;
+    qrImg.alt = key.toUpperCase() + " QR";
+  }
+
+  const hint = document.getElementById('networkHint');
+  if(hint){
+    hint.innerText = net.hint;
+  }
+
+  document
+    .querySelectorAll('#networkButtons button')
+    .forEach(b => b.classList.remove('active'));
+
+  event.target.classList.add('active');
+}
+</script>
+
 <script>
 const agree = document.getElementById('riskAgree');
 const addr = document.getElementById('usdtAddressBlock');
