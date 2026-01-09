@@ -792,15 +792,13 @@ function closeOnsiteConfirm(){
 }
 </script>
 <script>
-if (!window.__calculatorModuleLoaded) {
-  window.__calculatorModuleLoaded = true;
-  fetch('calculator_modal.html')
-    .then(r => r.text())
-    .then(html => {
-      if (!document.getElementById('investmentCalcOverlay')) {
-        document.body.insertAdjacentHTML('beforeend', html);
-      }
-    });
+function copyAddress(){
+  const addr = document.getElementById('usdtAddress').innerText.trim();
+  navigator.clipboard.writeText(addr).then(()=>{
+    const s=document.getElementById('copyStatus');
+    s.style.display='block';
+    setTimeout(()=>{s.style.display='none';},2000);
+  });
 }
 </script>
 <script>
