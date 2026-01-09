@@ -370,6 +370,7 @@ display:none;
 .coverage-buttons button{
   display: inline-flex;
   align-items: center;
+  box-sizing: content-box; /* ← ВАЖНО */
   padding: 0 14px;
   height: 32px;
   line-height: 32px;
@@ -381,7 +382,6 @@ display:none;
   cursor: pointer;
   white-space: nowrap;
 }
-
 
 .coverage-buttons button.active{
   background:linear-gradient(180deg,#f1d48a,#d6b15e);
