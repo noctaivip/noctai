@@ -52,7 +52,6 @@ text-decoration:underline;
 .footer-right{
   text-align:right;
 }
-
 *{box-sizing:border-box}
 body{
   margin:0;
@@ -60,13 +59,11 @@ body{
   color:var(--text);
   font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
 }
-
 .container{
   max-width:980px;
   margin:80px auto;
   padding:0 20px;
 }
-
 .badge{
   display:inline-block;
   padding:6px 14px;
@@ -76,71 +73,59 @@ body{
   font-size:12px;
   letter-spacing:.08em;
 }
-
 h1{
   margin:18px 0 10px;
   font-size:36px;
   font-weight:700;
 }
-
 .sub{
   color:var(--muted);
   max-width:720px;
 }
-
 .section{
   margin-top:48px;
 }
-
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:18px;
 }
-
 .card{
   background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));
   border:1px solid var(--border);
   border-radius:16px;
   padding:22px;
 }
-
 .card h3{
   margin:0 0 8px;
   font-size:16px;
   color:var(--gold-soft);
 }
-
 .card p{
   margin:0;
   color:var(--muted);
   font-size:14px;
   line-height:1.55;
 }
-
 .step{
   font-size:13px;
   color:var(--gold);
   margin-bottom:6px;
   letter-spacing:.06em;
 }
-
 hr{
   border:none;
   border-top:1px solid var(--border);
   margin:36px 0;
 }
-
 .footer-note{
   margin-top:36px;
   color:var(--muted);
   font-size:13px;
 }
-
 .section:first-of-type .card{
   box-shadow: 0 -1px 0 rgba(214,177,94,0.35) inset;
 }
-
 .section:last-of-type .card h3{
   color: var(--text);
   font-weight: 700;
@@ -169,11 +154,9 @@ padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
-
 .logo:hover{
   text-decoration:none;
 }
-
 .nav-links a{
 margin-left:28px;
 text-decoration:none;
@@ -213,17 +196,14 @@ border-radius:999px;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin-left:8px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -242,17 +222,14 @@ border-radius:999px;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -326,13 +303,11 @@ border-radius:999px;
   height:6px;
   accent-color:#d6b15e;
 }
-
 .calc-range::-webkit-slider-runnable-track{
   height:6px;
   background:#3a3f47;
   border-radius:6px;
 }
-
 .calc-range::-webkit-slider-thumb{
   -webkit-appearance:none;
   appearance:none;
@@ -344,13 +319,11 @@ border-radius:999px;
   border:2px solid #050b16;
   cursor:pointer;
 }
-
 .calc-range::-moz-range-track{
   height:6px;
   background:#3a3f47;
   border-radius:6px;
 }
-
 .calc-range::-moz-range-thumb{
   width:18px;
   height:18px;
@@ -449,9 +422,7 @@ border-radius:999px;
   <script>
 let coverage = 50;
 const MAX = 300000;
-
 function q(id){ return document.getElementById(id); }
-
 function openInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'flex';
   recalc();
@@ -459,7 +430,6 @@ function openInvestmentCalc(){
 function closeInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'none';
 }
-
 function setCoverageCalc(p){
   coverage = p;
   document.querySelectorAll('.coverage-buttons button')
@@ -468,13 +438,11 @@ function setCoverageCalc(p){
     .classList.add('active');
   recalc();
 }
-
 function syncFromRange(){
   const v = Number(q('m_invRange').value);
   q('m_invInput').value = v;
   recalc();
 }
-
 function syncFromInput(){
   let v = Number(q('m_invInput').value);
   if (isNaN(v)) return;
@@ -484,7 +452,6 @@ function syncFromInput(){
   q('m_invRange').value = v;
   recalc();
 }
-
 function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
@@ -494,7 +461,6 @@ function recalc(){
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
-
 function onProjectChange(v){
   recalc();
 }

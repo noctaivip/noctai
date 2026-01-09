@@ -95,11 +95,9 @@ padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
-
 .logo:hover{
   text-decoration:none;
 }
-
 .nav-links a{
 margin-left:28px;
 text-decoration:none;
@@ -171,17 +169,14 @@ text-decoration:underline;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin-left:8px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -200,17 +195,14 @@ text-decoration:underline;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -415,8 +407,8 @@ border-color:var(--gold);
   }
 }
 </style>
-
 </head>
+
 <body>
  <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
   <div class="calc-modal">
@@ -491,9 +483,7 @@ The calculator is recalculated depending on the selected project.  </div>
   <script>
 let coverage = 50;
 const MAX = 300000;
-
 function q(id){ return document.getElementById(id); }
-
 function openInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'flex';
   recalc();
@@ -501,7 +491,6 @@ function openInvestmentCalc(){
 function closeInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'none';
 }
-
 function setCoverageCalc(p){
   coverage = p;
   document.querySelectorAll('.coverage-buttons button')
@@ -510,13 +499,11 @@ function setCoverageCalc(p){
     .classList.add('active');
   recalc();
 }
-
 function syncFromRange(){
   const v = Number(q('m_invRange').value);
   q('m_invInput').value = v;
   recalc();
 }
-
 function syncFromInput(){
   let v = Number(q('m_invInput').value);
   if (isNaN(v)) return;
@@ -526,7 +513,6 @@ function syncFromInput(){
   q('m_invRange').value = v;
   recalc();
 }
-
 function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
@@ -536,7 +522,6 @@ function recalc(){
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
-
 function onProjectChange(v){
   recalc();
 }
@@ -571,9 +556,7 @@ function onProjectChange(v){
     <strong>actively executed</strong> infrastructure work.
     The material is provided for informational purposes only and does not contain forecasts, marketing statements, or a public offering.
   </p>
-
   <h2>Active Project #001 — AI Dispatcher + Marketplace</h2>
-
   <div class="panel">
     <h3 class="status-exec">Executed</h3>
     <p>• Legal project structure established</p>
@@ -582,7 +565,6 @@ function onProjectChange(v){
       GTX Shipper Board, Carrier Board, and AI‑Dispatcher Marketplace</p>
     <p>• Exclusive execution logic implemented with no third‑party broker loads</p>
   </div>
-
   <div class="panel">
     <h3 class="status-exec">Execution Logic</h3>
     <p>1. A shipper posts a load in the <strong>GTX Shipper Board</strong></p>
@@ -590,7 +572,6 @@ function onProjectChange(v){
     <p>3. The AI‑Dispatcher user opens the <strong>Open Load Board</strong></p>
     <p>4. When <strong>GTX Platform</strong> is selected, only internal platform loads are displayed</p>
   </div>
-
   <div class="panel">
     <h3 class="status-work">In Progress</h3>
     <p>• Development and stabilization of the MVP version</p>
@@ -599,7 +580,6 @@ function onProjectChange(v){
     <p>• Formation of the operational governance framework</p>
     <p>• Ongoing maintenance and expansion of the patent portfolio</p>
   </div>
-
   <div class="panel">
     <h3 class="status-rest">Restricted Disclosure</h3>
     <p>
@@ -608,7 +588,6 @@ function onProjectChange(v){
       trade‑secret considerations, and regulatory constraints.
     </p>
   </div>
-
   <h2>Update Principle</h2>
   <div class="panel">
     <p>
@@ -619,10 +598,6 @@ function onProjectChange(v){
       Prototype demonstrations are conducted exclusively
       in closed sessions and are not publicly released.
     </p>
-  </div>
-
-  <div class="footer">
-    © 2025 NoctAI™ · Indicative information only. No public offering.
   </div>
 </main>
 

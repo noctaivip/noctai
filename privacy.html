@@ -53,11 +53,9 @@ body{
   letter-spacing:.04em;
   text-decoration:none;
 }
-
 .logo:hover{
   text-decoration:none;
 }
-
 .nav-links a{
   margin-left:28px;
   text-decoration:none;
@@ -86,17 +84,14 @@ body{
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin-left:8px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -115,21 +110,17 @@ body{
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
-
 .container{
   max-width:900px;
   margin:80px auto;
@@ -156,7 +147,6 @@ h1{
   line-height:1.7;
   color:var(--muted);
 }
-
 .site-footer{
 margin-top:100px;
 border-top:1px solid var(--border);
@@ -262,13 +252,11 @@ text-decoration:underline;
   height:6px;
   accent-color:#d6b15e;
 }
-
 .calc-range::-webkit-slider-runnable-track{
   height:6px;
   background:#3a3f47;
   border-radius:6px;
 }
-
 .calc-range::-webkit-slider-thumb{
   -webkit-appearance:none;
   appearance:none;
@@ -280,13 +268,11 @@ text-decoration:underline;
   border:2px solid #050b16;
   cursor:pointer;
 }
-
 .calc-range::-moz-range-track{
   height:6px;
   background:#3a3f47;
   border-radius:6px;
 }
-
 .calc-range::-moz-range-thumb{
   width:18px;
   height:18px;
@@ -384,9 +370,7 @@ The calculator is recalculated depending on the selected project.  </div>
   <script>
 let coverage = 50;
 const MAX = 300000;
-
 function q(id){ return document.getElementById(id); }
-
 function openInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'flex';
   recalc();
@@ -394,7 +378,6 @@ function openInvestmentCalc(){
 function closeInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'none';
 }
-
 function setCoverageCalc(p){
   coverage = p;
   document.querySelectorAll('.coverage-buttons button')
@@ -403,13 +386,11 @@ function setCoverageCalc(p){
     .classList.add('active');
   recalc();
 }
-
 function syncFromRange(){
   const v = Number(q('m_invRange').value);
   q('m_invInput').value = v;
   recalc();
 }
-
 function syncFromInput(){
   let v = Number(q('m_invInput').value);
   if (isNaN(v)) return;
@@ -419,7 +400,6 @@ function syncFromInput(){
   q('m_invRange').value = v;
   recalc();
 }
-
 function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
@@ -429,7 +409,6 @@ function recalc(){
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
-
 function onProjectChange(v){
   recalc();
 }

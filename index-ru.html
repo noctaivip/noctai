@@ -102,11 +102,9 @@ padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
-
 .logo:hover{
   text-decoration:none;
 }
-
 .nav-links a{
 margin-left:28px;
 text-decoration:none;
@@ -178,17 +176,14 @@ text-decoration:underline;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin-left:8px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -207,17 +202,14 @@ text-decoration:underline;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -423,13 +415,11 @@ border-color:var(--gold);
 }
 </style>
 <style>
-/* Clickable project card enhancement */
 .project-card-link {
   display:block;
   text-decoration:none;
   color:inherit;
 }
-
 .project-card-link .panel {
   cursor:pointer;
   transition:
@@ -437,7 +427,6 @@ border-color:var(--gold);
     box-shadow 0.25s ease,
     border-color 0.25s ease;
 }
-
 .project-card-link .panel:hover {
   transform: translateY(-3px);
   border-color: var(--gold);
@@ -445,7 +434,6 @@ border-color:var(--gold);
     0 12px 34px rgba(201,162,77,0.18),
     0 0 0 1px rgba(201,162,77,0.25) inset;
 }
-
 .project-cta {
   margin-top:18px;
   display:flex;
@@ -456,18 +444,15 @@ border-color:var(--gold);
   text-transform:uppercase;
   color:var(--gold);
 }
-
 .project-cta span {
   color:var(--muted);
   letter-spacing:normal;
   text-transform:none;
 }
-
 .project-arrow {
   font-size:18px;
   line-height:1;
 }
-
 </style>
 </head>
 
@@ -546,9 +531,7 @@ border-color:var(--gold);
   <script>
 let coverage = 50;
 const MAX = 300000;
-
 function q(id){ return document.getElementById(id); }
-
 function openInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'flex';
   recalc();
@@ -556,7 +539,6 @@ function openInvestmentCalc(){
 function closeInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'none';
 }
-
 function setCoverageCalc(p){
   coverage = p;
   document.querySelectorAll('.coverage-buttons button')
@@ -565,13 +547,11 @@ function setCoverageCalc(p){
     .classList.add('active');
   recalc();
 }
-
 function syncFromRange(){
   const v = Number(q('m_invRange').value);
   q('m_invInput').value = v;
   recalc();
 }
-
 function syncFromInput(){
   let v = Number(q('m_invInput').value);
   if (isNaN(v)) return;
@@ -581,7 +561,6 @@ function syncFromInput(){
   q('m_invRange').value = v;
   recalc();
 }
-
 function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
@@ -591,7 +570,6 @@ function recalc(){
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
-
 function onProjectChange(v){
   recalc();
 }
@@ -672,7 +650,6 @@ function onProjectChange(v){
 до предоставления доступа инвесторам.
 </p>
 </div>
-
 <h2>Контур ответственности</h2>
 <div class="panel">
 <p>
@@ -695,7 +672,6 @@ function onProjectChange(v){
   </a>
 </p>
 </div>
-
 <h2 class="section-title">Как формируется доход</h2>
 <div class="panel">
 Пример: проект AI Dispatcher + Marketplace
@@ -709,7 +685,6 @@ function onProjectChange(v){
 </div>
 </div>
 </div>
-
 <h2>Почему инвестиции начинаются от $10</h2>
 <div class="panel">
 <p>
@@ -731,7 +706,6 @@ function onProjectChange(v){
 через открытый и публичный розыгрыш после достижения ключевых показателей.
 </p>
 </div>
-
 <h2>Важно понимать</h2>
 <div class="panel">
 <p>
@@ -750,7 +724,6 @@ function onProjectChange(v){
 <strong>в соответствии с внутренними правилами и процедурами NOCTAI.</strong>
 </p>
 </div>
-
 <h2>Открытый розыгрыш 3% доли проекта</h2>
 <div class="panel">
 <p>Каждый проект на платформе предусматривает публичное <strong>распределение 3% доли проекта</strong> среди участников платформы.</p>
@@ -764,7 +737,6 @@ function onProjectChange(v){
 <p>Если вы являетесь венчурным или стратегическим инвестором и рассматриваете участие в проекте с объёмом более 50% инвестиционного пула, возможен индивидуальный формат взаимодействия.</p>
 <a class="cta-secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=AI-Dispatcher-Investments%40proton.me&su=Investment%20Inquiry%20-%201%24EXIT&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%0A%0A%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D1%81%D0%BE%20%D0%BC%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%83%20%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85%20%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%86%D0%B8%D0%B9.%0A%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%BE%D1%82%20%24300%2C000.%0A%0A%D0%A1%20%D1%83%D0%B2%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC%2C" target="_blank" rel="noopener">Contact directly</a>
 </div>
-
 </main>
 
 <footer class="site-footer">

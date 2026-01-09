@@ -25,7 +25,6 @@ body{
   font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
 }
 header{padding:56px 20px;border-bottom:1px solid var(--border)}
-
 .container{
   max-width:960px;
   margin:90px auto;
@@ -119,11 +118,9 @@ padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
-
 .logo:hover{
   text-decoration:none;
 }
-
 .nav-links a{
 margin-left:28px;
 text-decoration:none;
@@ -195,17 +192,14 @@ text-decoration:underline;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin-left:8px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -224,17 +218,14 @@ text-decoration:underline;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -515,9 +506,7 @@ The calculator is recalculated depending on the selected project.  </div>
   <script>
 let coverage = 50;
 const MAX = 300000;
-
 function q(id){ return document.getElementById(id); }
-
 function openInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'flex';
   recalc();
@@ -525,7 +514,6 @@ function openInvestmentCalc(){
 function closeInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'none';
 }
-
 function setCoverageCalc(p){
   coverage = p;
   document.querySelectorAll('.coverage-buttons button')
@@ -534,13 +522,11 @@ function setCoverageCalc(p){
     .classList.add('active');
   recalc();
 }
-
 function syncFromRange(){
   const v = Number(q('m_invRange').value);
   q('m_invInput').value = v;
   recalc();
 }
-
 function syncFromInput(){
   let v = Number(q('m_invInput').value);
   if (isNaN(v)) return;
@@ -550,7 +536,6 @@ function syncFromInput(){
   q('m_invRange').value = v;
   recalc();
 }
-
 function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
@@ -560,7 +545,6 @@ function recalc(){
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
-
 function onProjectChange(v){
   recalc();
 }

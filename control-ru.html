@@ -22,7 +22,6 @@ body{
   background: radial-gradient(circle at top, #12161b 0%, var(--bg) 55%);
   color: var(--text);
 }
-
 header {
   display: flex;
   justify-content: space-between;
@@ -30,14 +29,12 @@ header {
   padding: 22px 64px;
   border-bottom: 1px solid rgba(184,155,94,0.25);
 }
-
 header .logo{
   letter-spacing: 0.35em;
   font-size: 13px;
   color: #e6e6e6;
   text-decoration: none;
 }
-
 nav a {
   margin-left: 28px;
   font-size: 11px;
@@ -46,7 +43,6 @@ nav a {
   color: var(--muted);
   position: relative;
 }
-
 nav a::after {
   content: "";
   position: absolute;
@@ -57,7 +53,6 @@ nav a::after {
   background: var(--line);
   transition: width .3s ease;
 }
-
 nav a:hover::after { width: 100%; }
 nav a:hover { color: var(--text); }
 .lang-switch{
@@ -71,17 +66,14 @@ nav a:hover { color: var(--text); }
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
-
 .lang-switch a.active{
   color:var(--line);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -93,25 +85,21 @@ nav a:hover { color: var(--text); }
   max-width: 1440px;
   margin: 0 auto;
 }
-
 .hero small {
   letter-spacing: 0.18em;
   font-size: 11px;
   color: var(--muted);
 }
-
 .hero h1 {
   font-size: 44px;
   line-height: 1.2;
   margin: 18px 0 22px;
 }
-
 .hero p {
   max-width: 520px;
   color: var(--muted);
   line-height: 1.6;
 }
-
 .hero .cta {
   display: inline-block;
   margin-top: 26px;
@@ -121,7 +109,6 @@ nav a:hover { color: var(--text); }
   color: var(--text);
   position: relative;
 }
-
 .hero .cta::after {
   content: "";
   position: absolute;
@@ -132,46 +119,38 @@ nav a:hover { color: var(--text); }
   background: var(--line);
   transition: width .3s ease;
 }
-
 .hero .cta:hover::after { width: 100%; }
-
 .status {
   border: 1px solid rgba(184,155,94,0.45);
   padding: 28px 30px;
   background: linear-gradient(180deg, #10161c, #0c1014);
 }
-
 .status h3 {
   margin: 0 0 14px;
   font-size: 11px;
   letter-spacing: 0.18em;
   color: var(--muted);
 }
-
 .status ul {
   list-style: none;
   padding: 0;
   margin: 0 0 22px;
 }
-
 .status li {
   margin: 8px 0;
   font-size: 13px;
 }
-
 .status .meta {
   font-size: 11px;
   color: var(--muted);
   border-top: 1px solid rgba(184,155,94,0.25);
   padding-top: 12px;
 }
-
 .divider {
   height: 1px;
   background: linear-gradient(to right, rgba(184,155,94,0), rgba(184,155,94,0.7), rgba(184,155,94,0));
   margin: 40px 64px;
 }
-
 .why {
   padding: 70px 64px;
   display: grid;
@@ -180,44 +159,36 @@ nav a:hover { color: var(--text); }
   max-width: 1440px;
   margin: 0 auto;
 }
-
 .why h2 { margin-bottom: 14px; }
 .why p { color: var(--muted); line-height: 1.6; }
-
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-
 .card {
   border: 1px solid rgba(255,255,255,0.08);
   padding: 18px;
   background: rgba(255,255,255,0.02);
 }
-
 .card strong { display: block; margin-bottom: 6px; }
 .card span { color: var(--muted); font-size: 13px; }
-
 .process {
   padding: 70px 64px;
   max-width: 1600px;
   margin: 0 auto;
 }
-
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 }
-
 .step {
   position: relative;
   text-align: center;
   font-size: 12px;
   color: var(--muted);
 }
-
 .step::before {
   content: "";
   position: absolute;
@@ -227,21 +198,17 @@ nav a:hover { color: var(--text); }
   height: 1px;
   background: linear-gradient(to right, rgba(184,155,94,0), var(--line), rgba(184,155,94,0));
 }
-
 .step span {
   position: relative;
   padding: 0 14px;
   background: var(--bg);
 }
-
 .access {
   text-align: center;
   padding: 90px 64px 110px;
 }
-
 .access h2 { margin-bottom: 10px; }
 .access p { color: var(--muted); margin-bottom: 24px; }
-
 .access a {
   font-size: 12px;
   letter-spacing: 0.14em;
@@ -249,7 +216,6 @@ nav a:hover { color: var(--text); }
   text-decoration: none;
   position: relative;
 }
-
 .access a::after {
   content: "";
   position: absolute;
@@ -260,15 +226,13 @@ nav a:hover { color: var(--text); }
   background: var(--line);
   transition: width .3s ease;
 }
-
 .access a:hover::after { width: 100%; }
-
 .site-footer {
   border-top: 1px solid rgba(255, 200, 80, 0.15);
   padding: 42px 0 32px;
 }
 .container {
-    max-width: 1200px; /* или твой размер */
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -299,18 +263,15 @@ nav a:hover { color: var(--text); }
   color: rgba(255,255,255,0.6);
   text-decoration: none;
 }
-
 .footer-links a:hover {
   opacity: 0.8;
   color: rgba(255,255,255,0.85);
 }
-
 .footer-text {
   font-size: 13px;
   line-height: 1.6;
   color: rgba(255,255,255,0.6);
 }
-
 .footer-meta {
   text-align: right;
   font-size: 12px;
@@ -319,7 +280,6 @@ nav a:hover { color: var(--text); }
 .footer-meta a {
   color: rgba(255,255,255,0.5);
 }
-
 .logo:hover{
   text-decoration:none;
 }
@@ -380,7 +340,6 @@ nav a:hover { color: var(--text); }
     <div class="card"><strong>Приоритет капитала</strong><span>Масштаб подменяет точность.</span></div>
   </div>
 </section>
-
 <div class="divider"></div>
 <section class="process">
   <div class="process-grid">
@@ -390,7 +349,6 @@ nav a:hover { color: var(--text); }
     <div class="step"><span>Проект продолжается или ротируется</span></div>
   </div>
 </section>
-
 <div class="divider"></div>
 <section class="access">
   <h2>Доступ ограничен. Проекты ротируются.</h2>

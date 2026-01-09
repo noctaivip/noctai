@@ -69,17 +69,14 @@ nav a:hover{color:var(--text)}
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
-
 .lang-switch a.active{
   color:var(--line);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -134,7 +131,7 @@ h1{font-size:42px;margin:18px 0}
   padding: 42px 0 32px;
 }
 .container {
-    max-width: 1200px; /* или твой размер */
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -165,18 +162,15 @@ h1{font-size:42px;margin:18px 0}
   color: rgba(255,255,255,0.6);
   text-decoration: none;
 }
-
 .footer-links a:hover {
   opacity: 0.8;
   color: rgba(255,255,255,0.85);
 }
-
 .footer-text {
   font-size: 13px;
   line-height: 1.6;
   color: rgba(255,255,255,0.6);
 }
-
 .footer-meta {
   text-align: right;
   font-size: 12px;
@@ -185,7 +179,6 @@ h1{font-size:42px;margin:18px 0}
 .footer-meta a {
   color: rgba(255,255,255,0.5);
 }
-
 .logo{
   color:var(--gold);
   font-weight:700;
@@ -344,14 +337,12 @@ const dossiers = {
   timing:"До распределения фабрик.",
   role:"Резервирующий капитал."
 }
-
 };
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 const d = dossiers[id];
 const c = document.getElementById("content");
-
 if(!d){
   c.innerHTML = "<h1>Досье не найдено</h1>";
 }else{
@@ -359,25 +350,20 @@ if(!d){
   <small>ИДЕНТИФИКАТОР ДОСЬЕ: ${id}</small>
   <h1>${d.title}</h1>
   <p style="color:var(--muted);max-width:720px">${d.desc}</p>
-
   <div class="meta">
     <div><small>Стадия капитала</small>${d.capital}</div>
     <div><small>Окно раскрытия</small>${d.disclosure}</div>
     <div><small>Статус IP</small>${d.ip}</div>
     <div><small>Структура владения</small>${d.owner}</div>
   </div>
-
   <div class="line"></div>
-
   <div class="grid">
     <div class="box"><h3>АСИММЕТРИЯ ПРОБЛЕМЫ</h3><p>${d.problem}</p></div>
     <div class="box"><h3>СТРУКТУРНОЕ ПРЕИМУЩЕСТВО</h3><p>${d.edge}</p></div>
     <div class="box"><h3>ВРЕМЕННОЕ ОКНО</h3><p>${d.timing}</p></div>
     <div class="box"><h3>РОЛЬ КАПИТАЛА</h3><p>${d.role}</p></div>
   </div>
-
   <div class="line"></div>
-
   <div class="protocol">
     <h3>ПРОТОКОЛ ДОСТУПА — NCT-AP-001</h3>
     <ol>

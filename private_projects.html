@@ -35,7 +35,6 @@ body{
   color:var(--text);
   font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
 }
-
 .badge{
     display:inline-block;
     padding:6px 14px;
@@ -117,7 +116,6 @@ ul{padding-left:18px;}
     font-size:12px;
     color:#7f8896;
 }
-
 body{margin:0;font-family:Inter,Arial;background:#070b14;color:#e6e9ef}
 .container{max-width:1200px;margin:60px auto;padding:40px;border:1px solid #3a2f1a;border-radius:18px;background:linear-gradient(180deg,#0b1220,#070b14)}
 h1{font-size:32px;margin-bottom:30px}
@@ -130,8 +128,6 @@ h1{font-size:32px;margin-bottom:30px}
 .close{position:absolute;top:16px;right:20px;font-size:20px;}
 .metric{margin:8px 0}
 footer{margin-top:40px;font-size:13px;color:#8a8f9c}
-
-
 .modal-content{
     box-shadow: 0 0 60px rgba(212,175,55,.18);
     border:1px solid rgba(212,175,55,.45);
@@ -156,11 +152,9 @@ footer{margin-top:40px;font-size:13px;color:#8a8f9c}
     mask-composite: exclude;
     pointer-events:none;
 }
-
 .project {
   cursor: pointer;
 }
-
 .project:hover {
   box-shadow: 0 0 0 1px rgba(214,174,77,0.6) inset;
   transition: box-shadow 0.2s ease;
@@ -189,11 +183,9 @@ padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
-
 .logo:hover{
   text-decoration:none;
 }
-
 .nav-links a{
 margin-left:28px;
 text-decoration:none;
@@ -226,7 +218,6 @@ border-radius:999px;
   background:rgba(214,177,94,.08);
   box-shadow:0 0 0 1px var(--gold-soft);
 }
-
 .project {
   cursor: pointer;
 }
@@ -242,17 +233,14 @@ border-radius:999px;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin-left:8px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -271,17 +259,14 @@ border-radius:999px;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -296,11 +281,9 @@ border-radius:999px;
   --gold-soft:#f1d48a;
   --border:rgba(214,177,94,.35);
 }
-
 .project {
   cursor: pointer;
 }
-
 .project:hover {
   box-shadow: 0 0 0 1px rgba(214,174,77,0.6) inset;
   transition: box-shadow 0.2s ease;
@@ -342,11 +325,9 @@ text-decoration:underline;
 .footer-right{
   text-align:right;
 }
-
 .project {
   cursor: pointer;
 }
-
 .project:hover {
   box-shadow: 0 0 0 1px rgba(214,174,77,0.6) inset;
   transition: box-shadow 0.2s ease;
@@ -360,7 +341,6 @@ text-decoration:underline;
   position:relative;
   padding-bottom:2px;
 }
-
 .private-inline-link::after{
   content:"";
   position:absolute;
@@ -371,11 +351,9 @@ text-decoration:underline;
   background:rgba(214,177,94,.6);
   transition:width .25s ease;
 }
-
 .private-inline-link:hover{
   color:#d6b15e;
 }
-
 .private-inline-link:hover::after{
   width:100%;
 }
@@ -449,13 +427,11 @@ text-decoration:underline;
   height:6px;
   accent-color:#d6b15e;
 }
-
 .calc-range::-webkit-slider-runnable-track{
   height:6px;
   background:#3a3f47;
   border-radius:6px;
 }
-
 .calc-range::-webkit-slider-thumb{
   -webkit-appearance:none;
   appearance:none;
@@ -467,13 +443,11 @@ text-decoration:underline;
   border:2px solid #050b16;
   cursor:pointer;
 }
-
 .calc-range::-moz-range-track{
   height:6px;
   background:#3a3f47;
   border-radius:6px;
 }
-
 .calc-range::-moz-range-thumb{
   width:18px;
   height:18px;
@@ -573,9 +547,7 @@ The calculator is recalculated depending on the selected project.  </div>
   <script>
 let coverage = 50;
 const MAX = 300000;
-
 function q(id){ return document.getElementById(id); }
-
 function openInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'flex';
   recalc();
@@ -583,7 +555,6 @@ function openInvestmentCalc(){
 function closeInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'none';
 }
-
 function setCoverageCalc(p){
   coverage = p;
   document.querySelectorAll('.coverage-buttons button')
@@ -592,13 +563,11 @@ function setCoverageCalc(p){
     .classList.add('active');
   recalc();
 }
-
 function syncFromRange(){
   const v = Number(q('m_invRange').value);
   q('m_invInput').value = v;
   recalc();
 }
-
 function syncFromInput(){
   let v = Number(q('m_invInput').value);
   if (isNaN(v)) return;
@@ -608,7 +577,6 @@ function syncFromInput(){
   q('m_invRange').value = v;
   recalc();
 }
-
 function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
@@ -618,7 +586,6 @@ function recalc(){
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
-
 function onProjectChange(v){
   recalc();
 }
@@ -765,22 +732,16 @@ if(type==='logistics'){ body.innerHTML=`
 
 <div class="metric"><b>Market Failure</b></div>
 <p>The US logistics market (~$940B annually) is structurally broken by broker dominance, fraud, double brokering, and lack of enforcement.</p>
-
 <div class="metric"><b>Core Breakthrough</b></div>
 <p>First broker-free logistics marketplace in the US built on a patented enforcement architecture that makes intermediary bypass technically impossible.</p>
-
 <div class="metric"><b>Why Now</b></div>
 <p>Market downturn (2023–2025), carrier bankruptcies, broker distrust, and regulatory pressure create a unique adoption window for a new national logistics standard.</p>
-
 <div class="metric"><b>Scale Signal</b></div>
 <p>Addressable market: ~1.2M active OTR trucks in the US. Even partial penetration produces infrastructure-scale economics.</p>
-
 <div class="metric"><b>Monetization Logic</b></div>
 <p>$180/month subscription per truck. Additional upside from marketplace and infrastructure modules (not included in base projections).</p>
-
 <div class="metric"><b>Defensibility</b></div>
 <p>Protected by a patent covering device-level enforcement and platform exclusivity. Architecture is legally and technically non-replicable.</p>
-
 <div class="metric"><b>Investment Framing</b></div>
 <p>Capital participation is structured individually. Allocation size, economics, and legal form are defined manually.</p>
 `; }

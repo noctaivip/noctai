@@ -102,11 +102,9 @@ padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
-
 .logo:hover{
   text-decoration:none;
 }
-
 .nav-links a{
 margin-left:28px;
 text-decoration:none;
@@ -178,17 +176,14 @@ text-decoration:underline;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin-left:8px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -207,17 +202,14 @@ text-decoration:underline;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -398,7 +390,6 @@ border-color:var(--gold);
   justify-content: center;
   z-index: 9999;
 }
-
 .presentation-modal {
   width: 92vw;
   height: 92vh;
@@ -410,50 +401,38 @@ border-color:var(--gold);
   position: relative;
   overflow: hidden;
 }
-
 .presentation-modal iframe{
   width:100%;
   height:100%;
   border:none;
 }
-
 .presentation-close {
   position: absolute;
   top: 18px;
   right: 18px;
-
   width: auto;
   height: auto;
-
   background: transparent;
   border: none;
-
   font-size: 28px;
   font-weight: 700;
   line-height: 1;
-
-  color: #c9a44c; /* фирменное золото */
-
+  color: #c9a44c; 
   cursor: pointer;
   opacity: 0.9;
-
   transition:
     color 0.2s ease,
     opacity 0.2s ease,
     transform 0.15s ease;
 }
-
 .presentation-close:hover {
-  color: #e6c76a; /* светлее золото */
+  color: #e6c76a;
   opacity: 1;
   transform: scale(1.08);
 }
-
 .presentation-close:active {
   transform: scale(0.96);
 }
-
-
 </style>
 <style>
 #pdfViewer {
@@ -465,16 +444,13 @@ border-color:var(--gold);
   background: #0f141c;
   box-sizing: border-box;
 }
-
 #pdfViewer canvas {
   display: block;
   margin: 0 auto 24px auto;
   max-width: 100%;
   height: auto;
 }
-
 </style>
-
 <style>
 .calc-panel input[type=number]{
   width:100%;
@@ -510,7 +486,6 @@ border-color:var(--gold);
 }
 </style>
 <style>
-
 .doc-card{
   display:flex;
   align-items:center;
@@ -522,13 +497,11 @@ border-color:var(--gold);
   text-decoration:none;
   transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
-
 .doc-card:hover{
   transform:translateY(-2px);
   border-color:var(--gold);
   box-shadow:0 12px 26px rgba(201,162,77,.25);
 }
-
 .doc-icon{
   width:46px;
   height:56px;
@@ -537,7 +510,6 @@ border-color:var(--gold);
     linear-gradient(180deg,#f1d48a,#d6b15e);
   position:relative;
 }
-
 .doc-icon::after{
   content:"";
   position:absolute;
@@ -548,18 +520,15 @@ border-color:var(--gold);
   background:#050b16;
   clip-path:polygon(0 0,100% 0,100% 100%);
 }
-
 .doc-meta{
   display:flex;
   flex-direction:column;
 }
-
 .doc-title{
   color:#e6eef7;
   font-weight:600;
   font-size:15px;
 }
-
 .doc-subtitle{
   margin-top:4px;
   font-size:12px;
@@ -567,7 +536,6 @@ border-color:var(--gold);
   letter-spacing:.04em;
 }
 </style>
-
 </head>
 
 <body>
@@ -650,9 +618,7 @@ The calculator is recalculated depending on the selected project.  </div>
   <script>
 let coverage = 50;
 const MAX = 300000;
-
 function q(id){ return document.getElementById(id); }
-
 function openInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'flex';
   recalc();
@@ -660,7 +626,6 @@ function openInvestmentCalc(){
 function closeInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'none';
 }
-
 function setCoverageCalc(p){
   coverage = p;
   document.querySelectorAll('.coverage-buttons button')
@@ -669,13 +634,11 @@ function setCoverageCalc(p){
     .classList.add('active');
   recalc();
 }
-
 function syncFromRange(){
   const v = Number(q('m_invRange').value);
   q('m_invInput').value = v;
   recalc();
 }
-
 function syncFromInput(){
   let v = Number(q('m_invInput').value);
   if (isNaN(v)) return;
@@ -685,7 +648,6 @@ function syncFromInput(){
   q('m_invRange').value = v;
   recalc();
 }
-
 function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
@@ -695,7 +657,6 @@ function recalc(){
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
-
 function onProjectChange(v){
   recalc();
 }
@@ -747,7 +708,6 @@ function onProjectChange(v){
     <div class="doc-subtitle">Confidential · Internal Use</div>
   </div>
 </a>
-
   </div>
 </div>
 </header>
@@ -755,23 +715,19 @@ function onProjectChange(v){
 <main class="container">
 <div class="panel" style="margin-top:56px;margin-bottom:56px;">
   <h3>Project Investment Round</h3>
-
   <p>
     The project is raising <strong>$3,500,000</strong> in capital.
     Within this round, investors are collectively allocated <strong>10% equity in the project</strong>.
   </p>
-
   <p>
     Each participation is recorded <strong>proportionally to the invested capital</strong>
     within the unified ownership structure of the NoctAI platform.
   </p>
-
   <p>
     The minimum entry is <strong>$10</strong>.
     All settlements are conducted in  <strong>USDT</strong>.
   </p>
 </div>
-
 <h2>Progress of work and execution</h2>
 <div class="panel">
   <p>
@@ -789,7 +745,6 @@ function onProjectChange(v){
     </a>
   </p>
 </div>
-
 </div>
 <h2 class="section-title">How income is generated</h2><div class="grid">
 <div class="panel"><h3>Attracting Investment</h3>
@@ -799,7 +754,6 @@ function onProjectChange(v){
 <div class="panel"><h3>Investor Income</h3>
 <p>10% of business income → <strong>$5,400,000 / month</strong></p></div>
 </div>
-
 <h2>Open drawing for a 3% share of the project</h2>
 <div class="panel">
 <p>After reaching <strong>50% of the American transport logistics market</strong>
@@ -860,7 +814,6 @@ A platform for equity participation in real projects.
 function openPresentation(){
   document.getElementById('presentationOverlay').style.display = 'flex';
 }
-
 function closePresentation(){
   document.getElementById('presentationOverlay').style.display = 'none';
 }
@@ -869,60 +822,44 @@ function closePresentation(){
 function openPresentation(){
   document.getElementById('presentationOverlay').style.display = 'flex';
 }
-
 function closePresentation(){
   document.getElementById('presentationOverlay').style.display = 'none';
 }
 </script>
 <script type="module">
 import * as pdfjsLib from '/presentations/pdfjs/pdf.mjs';
-
 pdfjsLib.GlobalWorkerOptions.workerSrc =
   '/presentations/pdfjs/pdf.worker.mjs';
-
 let pdfLoaded = false;
-
 async function loadPdf() {
   if (pdfLoaded) return;
   pdfLoaded = true;
-
   const pdf = await pdfjsLib.getDocument(
     '/presentations/ai-dispatcher-en.pdf'
   ).promise;
-
   const container = document.getElementById('pdfViewer');
   container.innerHTML = '';
-
   for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
     const page = await pdf.getPage(pageNum);
-
     const containerWidth = container.clientWidth;
     const unscaledViewport = page.getViewport({ scale: 1 });
     const scale = (containerWidth - 48) / unscaledViewport.width;
-
     const viewport = page.getViewport({ scale });
-
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
-
     canvas.width = viewport.width;
     canvas.height = viewport.height;
-
     container.appendChild(canvas);
-
     await page.render({
       canvasContext: context,
       viewport
     }).promise;
   }
 }
-
-
 window.openPresentation = function () {
   document.getElementById('presentationOverlay').style.display = 'flex';
   loadPdf();
 };
-
 window.closePresentation = function () {
   document.getElementById('presentationOverlay').style.display = 'none';
 };

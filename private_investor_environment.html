@@ -49,11 +49,9 @@ p{line-height:1.6;color:#cbd5e1;}
     padding:20px;
     background:rgba(10,14,22,.9);
 }
-
 .modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:10}
 .modal-content{background:#0b1220;border:1px solid rgba(212,175,55,.4);border-radius:16px;padding:32px;max-width:560px;width:90%;position:relative}
 .close{position:absolute;top:14px;right:18px;font-size:22px;cursor:pointer}
-
 .room-panel{
   position:fixed;
   inset:0;
@@ -75,7 +73,6 @@ p{line-height:1.6;color:#cbd5e1;}
   color:#d4af37;
   font-size:14px;
 }
-
 .door.locked{
     cursor:default;
     opacity:0.55;
@@ -83,7 +80,6 @@ p{line-height:1.6;color:#cbd5e1;}
 .door.locked:hover{
     box-shadow:none;
 }
-
 #ndaModal button{
     background: linear-gradient(180deg, #e6c56f 0%, #c9a24d 100%);
     border: none;
@@ -129,11 +125,9 @@ padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
-
 .logo:hover{
   text-decoration:none;
 }
-
 .nav-links a{
 margin-left:28px;
 text-decoration:none;
@@ -202,17 +196,14 @@ border-radius:999px;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -341,13 +332,11 @@ text-decoration:underline;
   height:6px;
   accent-color:#d6b15e;
 }
-
 .calc-range::-webkit-slider-runnable-track{
   height:6px;
   background:#3a3f47;
   border-radius:6px;
 }
-
 .calc-range::-webkit-slider-thumb{
   -webkit-appearance:none;
   appearance:none;
@@ -359,13 +348,11 @@ text-decoration:underline;
   border:2px solid #050b16;
   cursor:pointer;
 }
-
 .calc-range::-moz-range-track{
   height:6px;
   background:#3a3f47;
   border-radius:6px;
 }
-
 .calc-range::-moz-range-thumb{
   width:18px;
   height:18px;
@@ -463,9 +450,7 @@ The calculator is recalculated depending on the selected project.  </div>
   <script>
 let coverage = 50;
 const MAX = 300000;
-
 function q(id){ return document.getElementById(id); }
-
 function openInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'flex';
   recalc();
@@ -473,7 +458,6 @@ function openInvestmentCalc(){
 function closeInvestmentCalc(){
   q('investmentCalcOverlay').style.display = 'none';
 }
-
 function setCoverageCalc(p){
   coverage = p;
   document.querySelectorAll('.coverage-buttons button')
@@ -482,13 +466,11 @@ function setCoverageCalc(p){
     .classList.add('active');
   recalc();
 }
-
 function syncFromRange(){
   const v = Number(q('m_invRange').value);
   q('m_invInput').value = v;
   recalc();
 }
-
 function syncFromInput(){
   let v = Number(q('m_invInput').value);
   if (isNaN(v)) return;
@@ -498,7 +480,6 @@ function syncFromInput(){
   q('m_invRange').value = v;
   recalc();
 }
-
 function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
@@ -508,7 +489,6 @@ function recalc(){
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
 }
-
 function onProjectChange(v){
   recalc();
 }
@@ -666,12 +646,10 @@ function projectProjection(){
 <script>
 const cb = document.getElementById('agree');
 const btn = document.getElementById('proceedBtn');
-
 cb.addEventListener('change',()=>{
     btn.classList.toggle('active',cb.checked);
     btn.disabled = !cb.checked;
 });
-
 function proceedNDA(){
     if(!cb.checked){
         alert('Please confirm the non-disclosure agreement to continue.');
