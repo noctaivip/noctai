@@ -42,9 +42,11 @@ max-width:1120px;margin:0 auto;padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
+
 .logo:hover{
   text-decoration:none;
 }
+
 .nav-links a{
 margin-left:28px;text-decoration:none;color:var(--text);
 }
@@ -88,6 +90,7 @@ color:#0a0d12;text-decoration:none;font-weight:700;
   color: #ff5a5a;
   display: none;
 }
+
 footer{
 margin-top:80px;border-top:1px solid var(--border);
 padding:32px 0;color:var(--muted);font-size:13px;
@@ -175,9 +178,11 @@ padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
+
 .logo:hover{
   text-decoration:none;
 }
+
 .nav-links a{
 margin-left:28px;
 text-decoration:none;
@@ -217,14 +222,17 @@ border-radius:999px;
   text-transform:uppercase;
   white-space:nowrap;
 }
+
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin-left:8px;
 }
+
 .lang-switch a.active{
   color:var(--gold);
 }
+
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -243,14 +251,17 @@ border-radius:999px;
   text-transform:uppercase;
   white-space:nowrap;
 }
+
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
+
 .lang-switch a.active{
   color:var(--gold);
 }
+
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -383,10 +394,12 @@ display:none;
   background: linear-gradient(180deg,#f1d48a,#d6b15e);
   color: #050b16;
 }
+
 .coverage-buttons button.active {
   background: linear-gradient(180deg,#f1d48a,#d6b15e);
   color: #050b16;
 }
+
 .coverage-buttons button.active{
   background:linear-gradient(180deg,#f1d48a,#d6b15e);
   color:#050b16;
@@ -428,9 +441,9 @@ display:none;
 </style>
 <link rel="stylesheet" href="mobile-noctai.css">
 <style>
-  .page-invest .mobile-bottom-nav {
-    display: none !important;
-  }
+.page-invest .mobile-bottom-nav {
+  display: none !important;
+}
 </style>
 <style>
 .mobile-bottom-nav {
@@ -443,7 +456,6 @@ display:none;
 }
 </style>
 </head>
-
 <body class="page-invest">
 
 <nav class="top-nav">
@@ -483,9 +495,11 @@ display:none;
        value="1000"
        class="manual-input"
        oninput="syncFromInput()">
+
 <div id="invError" class="input-error-text">
   Минимальная сумма инвестиций 10 долларов
 </div>
+
     <p>Ваша доля: <strong><span id="eq">0.000003%</span></strong></p>
     <p>Доход при 50% рынка: <strong>$<span id="i50">16.67</span> / мес</strong></p>
     <p>Доход при 100% рынка: <strong>$<span id="i100">33.33</span> / мес</strong></p>
@@ -553,6 +567,7 @@ display:none;
     </a>
   </div>
 </div>
+
 <div id="noUsdtHelp" style="margin-top:18px;padding-top:14px;border-top:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.6">
   <strong style="color:var(--text)">Нет USDT?</strong><br>
   Вы можете создать криптокошелёк и пополнить его банковской картой через сторонний сервис
@@ -575,6 +590,8 @@ display:none;
     <input type="text" id="cTx" class="manual-input" placeholder="0x...">
     <label style="margin-top:12px">Сумма</label>
     <input type="text" id="cAmount" class="manual-input" readonly>
+	<label style="margin-top:12px">Ваша доля</label>
+    <input type="text" id="cShare" class="manual-input" readonly>
     <div style="margin-top:20px;display:flex;justify-content:center">
       <a class="cta-primary" href="#" onclick="sendConfirm()">Подтвердить инвестицию</a>
     </div>
@@ -624,25 +641,32 @@ display:none;
 const INVESTOR_POOL = 3500000;
 const MONTHLY_50 = 5400000;
 const MONTHLY_100 = 10800000;
+
 function syncFromInput(){
   const v = Number(invInput.value);
   const error = document.getElementById('invError');
+
   if (isNaN(v) || v < 10) {
     invInput.classList.add('error');
     error.style.display = 'block';
     return;
   }
+
   invInput.classList.remove('error');
   error.style.display = 'none';
 
   inv.value = v;
   calc();
 }
+
 function calc(){
   let v = Number(inv.value);
+
   if (v < 10) return;
+
   invv.innerText = v.toLocaleString();
   invInput.value = v;
+
   eq.innerText = ((v / INVESTOR_POOL) * 100).toFixed(6) + "%";
   i50.innerText = (MONTHLY_50 * (v / INVESTOR_POOL)).toFixed(2);
   i100.innerText = (MONTHLY_100 * (v / INVESTOR_POOL)).toFixed(2);
@@ -658,9 +682,11 @@ function sendConfirm(){
   cEmailView.innerText = cEmail.value;
   cAmountView.innerText = cAmount.value;
   cTxView.innerText = cTx.value;
+
   closeConfirm();
   document.getElementById('onsiteConfirm').style.display = 'block';
 }
+
 function copyConfirm(){
   const text =
     "Project: AI Dispatcher + Marketplace\n" +
@@ -670,6 +696,7 @@ function copyConfirm(){
   navigator.clipboard.writeText(text);
   alert("Данные скопированы");
 }
+
 function sendViaGmail(){
   const subject = encodeURIComponent('NoctAI — Investment Confirmation');
 const body = encodeURIComponent(
@@ -684,7 +711,10 @@ window.open(gmailUrl, '_blank');
 </script>
 <script>
 function openConfirm(){
-  document.getElementById('cAmount').value = invv.innerText + " USDT";
+  document.getElementById('cAmount').value =
+    invv.innerText + " USDT";
+  document.getElementById('cShare').value =
+    eq.innerText;
   document.getElementById('confirmModal').style.display = 'block';
 }
 function closeConfirm(){
@@ -720,6 +750,7 @@ function sendConfirm(){
   closeConfirm();
   document.getElementById('onsiteConfirm').style.display = 'block';
 }
+
 function copyConfirm(){
   const text =
     "Project: AI Dispatcher + Marketplace\n" +
@@ -729,6 +760,7 @@ function copyConfirm(){
   navigator.clipboard.writeText(text);
   alert("Данные скопированы");
 }
+
 function sendViaGmail(){
   const subject = encodeURIComponent('NoctAI — Investment Confirmation');
 const body = encodeURIComponent(
@@ -797,19 +829,25 @@ const NETWORKS = {
     hint: "ARBITRUM (ETH address) - отправляйте USDT только через сеть Arbitrum One"
   }
 };
+
+
 function selectNetwork(key, event){
   const net = NETWORKS[key];
   if(!net) return;
+
   document.getElementById('walletAddress').innerText = net.address;
+
   const qrImg = document.getElementById('networkQr');
   if(qrImg){
     qrImg.src = net.qr;
     qrImg.alt = key.toUpperCase() + " QR";
   }
+
   const hint = document.getElementById('networkHint');
   if(hint){
     hint.innerText = net.hint;
   }
+
   document
     .querySelectorAll('#networkButtons button')
     .forEach(b => b.classList.remove('active'));
@@ -823,6 +861,7 @@ const addr = document.getElementById('usdtAddressBlock');
 const sendBtn = document.getElementById('sendBtn');
 const noUsdtHelp = document.getElementById('noUsdtHelp');
 const qrBox = document.getElementById('qrBox');
+
 agree.addEventListener('change', ()=>{
   if(agree.checked){
     addr.style.display = 'block';
@@ -838,9 +877,11 @@ agree.addEventListener('change', ()=>{
     if(noUsdtHelp) noUsdtHelp.style.display = 'block';
   }
 });
+
 const walletBox = document.getElementById('walletBox');
 const walletAddress = document.getElementById('walletAddress');
 const copyStatus = document.getElementById('copyStatus');
+
 if (walletBox && walletAddress) {
   walletBox.addEventListener('click', () => {
     navigator.clipboard.writeText(walletAddress.innerText.trim())

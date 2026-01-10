@@ -42,9 +42,11 @@ max-width:1120px;margin:0 auto;padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
+
 .logo:hover{
   text-decoration:none;
 }
+
 .nav-links a{
 margin-left:28px;text-decoration:none;color:var(--text);
 }
@@ -88,6 +90,7 @@ color:#0a0d12;text-decoration:none;font-weight:700;
   color: #ff5a5a;
   display: none;
 }
+
 footer{
 margin-top:80px;border-top:1px solid var(--border);
 padding:32px 0;color:var(--muted);font-size:13px;
@@ -175,9 +178,11 @@ padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
+
 .logo:hover{
   text-decoration:none;
 }
+
 .nav-links a{
 margin-left:28px;
 text-decoration:none;
@@ -217,14 +222,17 @@ border-radius:999px;
   text-transform:uppercase;
   white-space:nowrap;
 }
+
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin-left:8px;
 }
+
 .lang-switch a.active{
   color:var(--gold);
 }
+
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -243,14 +251,17 @@ border-radius:999px;
   text-transform:uppercase;
   white-space:nowrap;
 }
+
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
+
 .lang-switch a.active{
   color:var(--gold);
 }
+
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -369,6 +380,7 @@ display:none;
   cursor:pointer;
   white-space:nowrap;
 }
+
 .coverage-buttons button.active{
   background:linear-gradient(180deg,#f1d48a,#d6b15e);
   color:#050b16;
@@ -409,10 +421,9 @@ display:none;
 }
 </style>
 <link rel="stylesheet" href="mobile-noctai.css">
-<style>
-  .page-invest .mobile-bottom-nav {
-    display: none !important;
-  }
+<style>.page-invest .mobile-bottom-nav {
+  display: none !important;
+}
 </style>
 <style>
 .mobile-bottom-nav {
@@ -425,7 +436,6 @@ display:none;
 }
 </style>
 </head>
-
 <body class="page-invest">
 
 <nav class="top-nav">
@@ -465,6 +475,7 @@ display:none;
        value="1000"
        class="manual-input"
        oninput="syncFromInput()">
+
 <div id="invError" class="input-error-text">
   Minimum investment amount is $10
 </div>
@@ -492,6 +503,7 @@ This is not a crypto investment, but a form of fixing shares.  </p>
 	financial risks and does not imply guaranteed returns.
   </span>
 </label>
+
 <div id="usdtAddressBlock" style="display:none">
   <div class="address-box" id="walletBox">
     <span class="address-text" id="walletAddress">
@@ -533,6 +545,7 @@ This is not a crypto investment, but a form of fixing shares.  </p>
     </a>
   </div>
 </div>
+
 <div id="noUsdtHelp" style="margin-top:18px;padding-top:14px;border-top:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.6">
   <strong style="color:var(--text)">No USDT?</strong><br>
   You can create a crypto wallet and top it up using a bank card via a third-party service
@@ -551,10 +564,15 @@ This is not a crypto investment, but a form of fixing shares.  </p>
     <p>We manually confirm transactions and record the investor's share.</p>
     <label>Email for communication</label>
     <input type="email" id="cEmail" class="manual-input" placeholder="you@email.com">
+		<br/>
     <label style="margin-top:12px">TxID / Transaction Hash</label>
     <input type="text" id="cTx" class="manual-input" placeholder="0x...">
+	    <br/>
     <label style="margin-top:12px">Amount</label>
-    <input type="text" id="cAmount" class="manual-input" readonly>
+	<input type="text" id="cAmount" class="manual-input" readonly>
+		<br/>
+	<label style="margin-top:12px">Your Share</label>
+    <input type="text" id="cShare" class="manual-input" readonly>
     <div style="margin-top:20px;display:flex;justify-content:center">
       <a class="cta-primary" href="#" onclick="sendConfirm()">Confirm investment</a>
     </div>
@@ -603,24 +621,32 @@ A platform for equity participation in real projects.
 const INVESTOR_POOL = 3500000;
 const MONTHLY_50 = 5400000;
 const MONTHLY_100 = 10800000;
+
 function syncFromInput(){
   const v = Number(invInput.value);
   const error = document.getElementById('invError');
+
   if (isNaN(v) || v < 10) {
     invInput.classList.add('error');
     error.style.display = 'block';
     return; 
   }
+
   invInput.classList.remove('error');
   error.style.display = 'none';
+
   inv.value = v;
   calc();
 }
+
 function calc(){
   let v = Number(inv.value);
+
   if (v < 10) return;
+
   invv.innerText = v.toLocaleString();
   invInput.value = v;
+
   eq.innerText = ((v / INVESTOR_POOL) * 100).toFixed(6) + "%";
   i50.innerText = (MONTHLY_50 * (v / INVESTOR_POOL)).toFixed(2);
   i100.innerText = (MONTHLY_100 * (v / INVESTOR_POOL)).toFixed(2);
@@ -636,9 +662,11 @@ function sendConfirm(){
   cEmailView.innerText = cEmail.value;
   cAmountView.innerText = cAmount.value;
   cTxView.innerText = cTx.value;
+
   closeConfirm();
   document.getElementById('onsiteConfirm').style.display = 'block';
 }
+
 function copyConfirm(){
   const text =
     "Project: AI Dispatcher + Marketplace\n" +
@@ -648,6 +676,7 @@ function copyConfirm(){
   navigator.clipboard.writeText(text);
   alert("Данные скопированы");
 }
+
 function sendViaGmail(){
   const subject = encodeURIComponent('NoctAI — Investment Confirmation');
 const body = encodeURIComponent(
@@ -662,7 +691,10 @@ window.open(gmailUrl, '_blank');
 </script>
 <script>
 function openConfirm(){
-  document.getElementById('cAmount').value = invv.innerText + " USDT";
+  document.getElementById('cAmount').value =
+    invv.innerText + " USDT";
+  document.getElementById('cShare').value =
+    eq.innerText;
   document.getElementById('confirmModal').style.display = 'block';
 }
 function closeConfirm(){
@@ -698,6 +730,7 @@ function sendConfirm(){
   closeConfirm();
   document.getElementById('onsiteConfirm').style.display = 'block';
 }
+
 function copyConfirm(){
   const text =
     "Project: AI Dispatcher + Marketplace\n" +
@@ -707,6 +740,7 @@ function copyConfirm(){
   navigator.clipboard.writeText(text);
   alert("Данные скопированы");
 }
+
 function sendViaGmail(){
   const subject = encodeURIComponent('NoctAI — Investment Confirmation');
 const body = encodeURIComponent(
@@ -774,22 +808,29 @@ const NETWORKS = {
     hint: "ARBITRUM (ETH address) - Send USDT via Arbitrum One only"
   }
 };
+
+
 function selectNetwork(key, event){
   const net = NETWORKS[key];
   if(!net) return;
+
   document.getElementById('walletAddress').innerText = net.address;
+
   const qrImg = document.getElementById('networkQr');
   if(qrImg){
     qrImg.src = net.qr;
     qrImg.alt = key.toUpperCase() + " QR";
   }
+
   const hint = document.getElementById('networkHint');
   if(hint){
     hint.innerText = net.hint;
   }
+
   document
     .querySelectorAll('#networkButtons button')
     .forEach(b => b.classList.remove('active'));
+
   event.target.classList.add('active');
 }
 </script>
@@ -799,6 +840,7 @@ const addr = document.getElementById('usdtAddressBlock');
 const sendBtn = document.getElementById('sendBtn');
 const noUsdtHelp = document.getElementById('noUsdtHelp');
 const qrBox = document.getElementById('qrBox');
+
 agree.addEventListener('change', ()=>{
   if(agree.checked){
     addr.style.display = 'block';
@@ -814,9 +856,11 @@ agree.addEventListener('change', ()=>{
     if(noUsdtHelp) noUsdtHelp.style.display = 'block';
   }
 });
+
 const walletBox = document.getElementById('walletBox');
 const walletAddress = document.getElementById('walletAddress');
 const copyStatus = document.getElementById('copyStatus');
+
 if (walletBox && walletAddress) {
   walletBox.addEventListener('click', () => {
     navigator.clipboard.writeText(walletAddress.innerText.trim())
