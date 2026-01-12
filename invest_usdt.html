@@ -637,7 +637,7 @@ async function sendConfirm(){
   const tx = document.getElementById('cTx').value.trim();
 
   if(!email || !tx){
-    alert("Заполните email и TxID");
+    alert("Fill in email and TxID");
     return;
   }
 
@@ -659,14 +659,14 @@ async function sendConfirm(){
   };
 
   try {
-    const res = await fetch('http://127.0.0.1:3001/api/investments', {
+    const res = await fetch('/api/investments', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
 
     if(!res.ok){
-      alert('Ошибка отправки в систему');
+      alert('Error sending to the system');
       return;
     }
 
@@ -674,7 +674,7 @@ async function sendConfirm(){
     document.getElementById('onsiteConfirm').style.display = 'block';
 
   } catch(e){
-    alert('Backend недоступен');
+    alert('The backend is unavailable');
   }
 }
 </script>
