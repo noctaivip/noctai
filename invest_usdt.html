@@ -659,7 +659,7 @@ async function sendConfirm(){
   };
 
   try {
-    const res = await fetch('https://www.noctai.vip/api/investments', {
+    const res = await fetch('/api/investments', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
