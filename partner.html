@@ -75,7 +75,7 @@ const params = new URLSearchParams(location.search);
 const ref = params.get('ref');
 document.getElementById('ref').innerText = 'Referral ID: '+ref;
 
-const API = 'http://127.0.0.1:3001/api/partner/investments?ref='+ref;
+const API = '/api/partner/investments?ref=' + ref;
 
 async function load(){
   const res = await fetch(API);
