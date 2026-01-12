@@ -42,11 +42,9 @@ max-width:1120px;margin:0 auto;padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
-
 .logo:hover{
   text-decoration:none;
 }
-
 .nav-links a{
 margin-left:28px;text-decoration:none;color:var(--text);
 }
@@ -90,7 +88,6 @@ color:#0a0d12;text-decoration:none;font-weight:700;
   color: #ff5a5a;
   display: none;
 }
-
 footer{
 margin-top:80px;border-top:1px solid var(--border);
 padding:32px 0;color:var(--muted);font-size:13px;
@@ -178,11 +175,9 @@ padding:14px 20px;
   letter-spacing:.04em;
   text-decoration:none;
 }
-
 .logo:hover{
   text-decoration:none;
 }
-
 .nav-links a{
 margin-left:28px;
 text-decoration:none;
@@ -222,17 +217,14 @@ border-radius:999px;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin-left:8px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -251,17 +243,14 @@ border-radius:999px;
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .lang-switch a{
   color:var(--muted);
   text-decoration:none;
   margin:0 6px;
 }
-
 .lang-switch a.active{
   color:var(--gold);
 }
-
 .lang-switch a:hover{
   color:var(--text);
 }
@@ -380,7 +369,6 @@ display:none;
   cursor:pointer;
   white-space:nowrap;
 }
-
 .coverage-buttons button.active{
   background:linear-gradient(180deg,#f1d48a,#d6b15e);
   color:#050b16;
@@ -475,7 +463,6 @@ display:none;
        value="1000"
        class="manual-input"
        oninput="syncFromInput()">
-
 <div id="invError" class="input-error-text">
   Minimum investment amount is $10
 </div>
@@ -621,74 +608,77 @@ A platform for equity participation in real projects.
 const INVESTOR_POOL = 3500000;
 const MONTHLY_50 = 5400000;
 const MONTHLY_100 = 10800000;
-
 function syncFromInput(){
   const v = Number(invInput.value);
   const error = document.getElementById('invError');
-
   if (isNaN(v) || v < 10) {
     invInput.classList.add('error');
     error.style.display = 'block';
     return; 
   }
-
   invInput.classList.remove('error');
   error.style.display = 'none';
-
   inv.value = v;
   calc();
 }
-
 function calc(){
   let v = Number(inv.value);
-
   if (v < 10) return;
-
   invv.innerText = v.toLocaleString();
   invInput.value = v;
-
   eq.innerText = ((v / INVESTOR_POOL) * 100).toFixed(6) + "%";
   i50.innerText = (MONTHLY_50 * (v / INVESTOR_POOL)).toFixed(2);
   i100.innerText = (MONTHLY_100 * (v / INVESTOR_POOL)).toFixed(2);
 }
 </script>
-
 <script>
-function sendConfirm(){
-  if(!cEmail.value || !cTx.value){
+async function sendConfirm(){
+  const email = document.getElementById('cEmail').value.trim();
+  const tx = document.getElementById('cTx').value.trim();
+
+  if(!email || !tx){
     alert("Заполните email и TxID");
     return;
   }
-  cEmailView.innerText = cEmail.value;
-  cAmountView.innerText = cAmount.value;
-  cTxView.innerText = cTx.value;
 
-  closeConfirm();
-  document.getElementById('onsiteConfirm').style.display = 'block';
-}
+  const amountText = document.getElementById('cAmount').value;
+  const amount = parseFloat(amountText.replace(/[^0-9.]/g,''));
 
-function copyConfirm(){
-  const text =
-    "Project: AI Dispatcher + Marketplace\n" +
-    "Email: " + cEmailView.innerText + "\n" +
-    "Amount: " + cAmountView.innerText + "\n" +
-    "TxID: " + cTxView.innerText;
-  navigator.clipboard.writeText(text);
-  alert("Данные скопированы");
-}
+  const activeBtn = document.querySelector('#networkButtons button.active');
+  const network = activeBtn ? activeBtn.textContent.trim() : null;
 
-function sendViaGmail(){
-  const subject = encodeURIComponent('NoctAI — Investment Confirmation');
-const body = encodeURIComponent(
-  'Project:\nLogistics Intelligence & Broker Tracking Platform\n\nInvestor Email:\n{email}\n\nAmount:\n{amount}\n\nTransaction Hash (TxID):\n{txid}\n\nStatus:\nSubmitted for manual verification\n\n—\nThis confirmation was submitted via the NoctAI investment platform.'
-    .replace('{email}', cEmailView.innerText)
-    .replace('{amount}', cAmountView.innerText)
-    .replace('{txid}', cTxView.innerText)
-);
-const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1' + '&to=' + encodeURIComponent('noctai.vip@proton.me') + '&su=' + subject + '&body=' + body;
-window.open(gmailUrl, '_blank');
+  const params = new URLSearchParams(window.location.search);
+
+  const payload = {
+    project: params.get('project') || 'PRJ-001',
+    partner: params.get('ref') || null,
+    email: email,
+    amount: amount,
+    network: network,
+    tx: tx
+  };
+
+  try {
+    const res = await fetch('http://127.0.0.1:3001/api/investments', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    if(!res.ok){
+      alert('Ошибка отправки в систему');
+      return;
+    }
+
+    closeConfirm();
+    document.getElementById('onsiteConfirm').style.display = 'block';
+
+  } catch(e){
+    alert('Backend недоступен');
+  }
 }
 </script>
+
 <script>
 function openConfirm(){
   document.getElementById('cAmount').value =
@@ -699,58 +689,6 @@ function openConfirm(){
 }
 function closeConfirm(){
   document.getElementById('confirmModal').style.display = 'none';
-}
-function sendConfirm(){
-  if(!cEmail.value || !cTx.value){
-    alert("Заполните email и TxID");
-    return;
-  }
-  const subject = encodeURIComponent('NoctAI — Investment Confirmation');
-const body = encodeURIComponent(
-  'nProject:\nLogistics Intelligence & Broker Tracking Platform\n\nInvestor Email:\n{email}\n\nAmount:\n{amount}\n\nTransaction Hash (TxID):\n{txid}\n\nStatus:\nSubmitted for manual verification\n\n—\nThis confirmation was submitted via the NoctAI investment platform.'
-    .replace('{email}', cEmailView.innerText)
-    .replace('{amount}', cAmountView.innerText)
-    .replace('{txid}', cTxView.innerText)
-);
-const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1' + '&to=' + encodeURIComponent('noctai.vip@proton.me') + '&su=' + subject + '&body=' + body;
-window.open(gmailUrl, '_blank');
-  closeConfirm();
-}
-</script>
-<script>
-function sendConfirm(){
-  if(!cEmail.value || !cTx.value){
-    alert("Заполните email и TxID");
-    return;
-  }
-  cEmailView.innerText = cEmail.value;
-  cAmountView.innerText = cAmount.value;
-  cTxView.innerText = cTx.value;
-
-  closeConfirm();
-  document.getElementById('onsiteConfirm').style.display = 'block';
-}
-
-function copyConfirm(){
-  const text =
-    "Project: AI Dispatcher + Marketplace\n" +
-    "Email: " + cEmailView.innerText + "\n" +
-    "Amount: " + cAmountView.innerText + "\n" +
-    "TxID: " + cTxView.innerText;
-  navigator.clipboard.writeText(text);
-  alert("Данные скопированы");
-}
-
-function sendViaGmail(){
-  const subject = encodeURIComponent('NoctAI — Investment Confirmation');
-const body = encodeURIComponent(
-  'Project:\nLogistics Intelligence & Broker Tracking Platform\n\nInvestor Email:\n{email}\n\nAmount:\n{amount}\n\nTransaction Hash (TxID):\n{txid}\n\nStatus:\nSubmitted for manual verification\n\n—\nThis confirmation was submitted via the NoctAI investment platform.'
-    .replace('{email}', cEmailView.innerText)
-    .replace('{amount}', cAmountView.innerText)
-    .replace('{txid}', cTxView.innerText)
-);
-const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1' + '&to=' + encodeURIComponent('noctai.vip@proton.me') + '&su=' + subject + '&body=' + body;
-window.open(gmailUrl, '_blank');
 }
 </script>
 
@@ -771,7 +709,8 @@ window.open(gmailUrl, '_blank');
       <a class="gmail-link" href="#" onclick="sendViaGmail()">Send via Gmail</a>
     </div>
     <p style="margin-top:14px;font-size:13px">
-Confirmation and fixation of the share - within 24 hours.    </p>
+Confirmation and fixation of the share - within 24 hours.    
+</p>
   </div>
 </div>
 
@@ -808,29 +747,22 @@ const NETWORKS = {
     hint: "ARBITRUM (ETH address) - Send USDT via Arbitrum One only"
   }
 };
-
-
 function selectNetwork(key, event){
   const net = NETWORKS[key];
   if(!net) return;
-
   document.getElementById('walletAddress').innerText = net.address;
-
   const qrImg = document.getElementById('networkQr');
   if(qrImg){
     qrImg.src = net.qr;
     qrImg.alt = key.toUpperCase() + " QR";
   }
-
   const hint = document.getElementById('networkHint');
   if(hint){
     hint.innerText = net.hint;
   }
-
   document
     .querySelectorAll('#networkButtons button')
     .forEach(b => b.classList.remove('active'));
-
   event.target.classList.add('active');
 }
 </script>
@@ -840,7 +772,6 @@ const addr = document.getElementById('usdtAddressBlock');
 const sendBtn = document.getElementById('sendBtn');
 const noUsdtHelp = document.getElementById('noUsdtHelp');
 const qrBox = document.getElementById('qrBox');
-
 agree.addEventListener('change', ()=>{
   if(agree.checked){
     addr.style.display = 'block';
@@ -856,7 +787,6 @@ agree.addEventListener('change', ()=>{
     if(noUsdtHelp) noUsdtHelp.style.display = 'block';
   }
 });
-
 const walletBox = document.getElementById('walletBox');
 const walletAddress = document.getElementById('walletAddress');
 const copyStatus = document.getElementById('copyStatus');
@@ -878,5 +808,53 @@ if (walletBox && walletAddress) {
   <a href="how_it_works.html">How it works</a>
   <a href="projects.html">Platform projects</a>
 </div>
+
+<script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const ref = params.get('ref');
+  const project = params.get('project') || 'PRJ-001';
+  if (ref && !localStorage.getItem('noctai_ref')) {
+    localStorage.setItem('noctai_ref', ref);
+    localStorage.setItem('noctai_project', project);
+    localStorage.setItem('noctai_ref_ts', Date.now().toString());
+  }
+  window.__noctai = window.__noctai || {};
+  window.__noctai.getContext = function(){
+    return {
+      ref: localStorage.getItem('noctai_ref'),
+      project: localStorage.getItem('noctai_project') || project
+    };
+  };
+  function queueInvestment(payload){
+    const key = 'noctai_investments';
+    const arr = JSON.parse(localStorage.getItem(key) || '[]');
+    arr.push(payload);
+    localStorage.setItem(key, JSON.stringify(arr));
+  }
+  const _origSendConfirm = window.sendConfirm;
+  window.sendConfirm = function(){
+    if(!_origSendConfirm) return;
+    const ctx = window.__noctai.getContext();
+    const amountText = document.getElementById('cAmount')?.value || '';
+    const amount = parseFloat(amountText.replace(/[^0-9.]/g,'')) || null;
+    const activeBtn = document.querySelector('#networkButtons button.active');
+    const network = activeBtn ? activeBtn.textContent.trim() : null;
+    const payload = {
+      id: 'INV-' + Date.now(),
+      project: ctx.project,
+      partner: ctx.ref || null,
+      investor: (document.getElementById('cEmail')?.value || '').replace(/(.{2}).+(@.+)/,'$1***$2'),
+      amount: amount,
+      network: network,
+      tx: document.getElementById('cTx')?.value || null,
+      status: 'PENDING',
+      created_at: new Date().toISOString()
+    };
+    queueInvestment(payload);
+    return _origSendConfirm();
+  };
+})();
+</script>
 </body>
 </html>

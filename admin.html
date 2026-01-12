@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NoctAI — Admin Panel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#0a0d12;
+  --panel:#11161d;
+  --text:#e8eaf0;
+  --muted:#9aa3b2;
+  --gold:#c9a24d;
+  --border:#1e2430;
+  --ok:#2ecc71;
+  --bad:#e74c3c;
+}
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.container{
+  max-width:1200px;
+  margin:40px auto;
+  padding:0 20px;
+}
+h1{
+  margin-bottom:20px;
+}
+.panel{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:20px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+th,td{
+  padding:10px;
+  border-bottom:1px solid var(--border);
+  text-align:left;
+}
+th{
+  color:var(--muted);
+  font-weight:500;
+}
+.status{
+  font-weight:600;
+}
+.status.PENDING{color:#f1c40f;}
+.status.APPROVED{color:var(--ok);}
+.status.DECLINED{color:var(--bad);}
+button{
+  padding:6px 12px;
+  border-radius:6px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+.approve{background:var(--ok);color:#0a0d12;}
+.decline{background:var(--bad);color:#fff;}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>Admin — Investment Requests</h1>
+
+  <div class="panel">
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Amount</th>
+          <th>Network</th>
+          <th>TxID</th>
+          <th>Partner</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+const API = 'http://127.0.0.1:3001/api/admin/investments';
+
+async function load(){
+const res = await fetch(API);
+  const data = await res.json();
+  const tbody = document.querySelector('tbody');
+  tbody.innerHTML='';
+  data.forEach(i=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${i.email}</td>
+      <td>${i.amount} USDT</td>
+      <td>${i.network}</td>
+      <td style="font-family:monospace">${i.tx}</td>
+      <td>${i.partner || '-'}</td>
+      <td class="status ${i.status}">${i.status}</td>
+      <td>
+        ${i.status==='PENDING' ? `
+        <button class="approve" onclick="act('${i.id}','approve')">Approve</button>
+        <button class="decline" onclick="act('${i.id}','decline')">Decline</button>
+        ` : ''}
+      </td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+async function act(id,action){
+  await fetch(`${API}/${id}/${action}`,{
+    method:'POST',
+    headers:{ 'Authorization':'Bearer ADMIN_TOKEN' }
+  });
+  load();
+}
+
+load();
+</script>
+</body>
+</html>

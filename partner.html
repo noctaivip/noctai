@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NoctAI — Partner Panel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#0a0d12;
+  --panel:#11161d;
+  --text:#e8eaf0;
+  --muted:#9aa3b2;
+  --gold:#c9a24d;
+  --border:#1e2430;
+}
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.container{
+  max-width:1100px;
+  margin:40px auto;
+  padding:0 20px;
+}
+h1{margin-bottom:8px;}
+small{color:var(--muted);}
+.panel{
+  margin-top:20px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:20px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+th,td{
+  padding:10px;
+  border-bottom:1px solid var(--border);
+}
+th{color:var(--muted);}
+.status.PENDING{color:#f1c40f;}
+.status.APPROVED{color:#2ecc71;}
+.status.DECLINED{color:#e74c3c;}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>Partner Dashboard</h1>
+  <small id="ref"></small>
+
+  <div class="panel">
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const ref = params.get('ref');
+document.getElementById('ref').innerText = 'Referral ID: '+ref;
+
+const API = 'http://127.0.0.1:3001/api/partner/investments?ref='+ref;
+
+async function load(){
+  const res = await fetch(API);
+  const data = await res.json();
+  const rows = document.getElementById('rows');
+  rows.innerHTML='';
+  data.forEach(i=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${i.email}</td>
+      <td>${i.amount} USDT</td>
+      <td class="status ${i.status}">${i.status}</td>
+      <td>${new Date(i.created_at).toLocaleDateString()}</td>
+    `;
+    rows.appendChild(tr);
+  });
+}
+load();
+</script>
+</body>
+</html>
