@@ -684,20 +684,17 @@ async function sendConfirm(){
   closeConfirm();
   document.getElementById('onsiteConfirm').style.display = 'block';
 
-  /* ---------- BACKEND — ТОЛЬКО ЕСЛИ REF ---------- */
-  if(ref){
-    try {
-      await fetch(`${window.NOCTAI_API_BASE}/api/investments`, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(payload)
-});
-
-    } catch(e){
-      console.warn('Backend unavailable, fallback to email only');
-    }
-  }
+/* ---------- BACKEND (ALWAYS) ---------- */
+try {
+  await fetch(`${window.NOCTAI_API_BASE}/api/investments`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+} catch (e) {
+  console.warn('Backend unavailable, fallback to email only');
 }
+
 </script>
 
 <script>
