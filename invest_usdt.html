@@ -643,38 +643,40 @@ async function sendConfirm(){
 
   const amountText = document.getElementById('cAmount').value;
   const amount = parseFloat(amountText.replace(/[^0-9.]/g,''));
-
   const activeBtn = document.querySelector('#networkButtons button.active');
   const network = activeBtn ? activeBtn.textContent.trim() : null;
 
   const params = new URLSearchParams(window.location.search);
+  const ref = params.get('ref');
 
   const payload = {
     project: params.get('project') || 'PRJ-001',
-    partner: params.get('ref') || null,
-    email: email,
-    amount: amount,
-    network: network,
-    tx: tx
+    partner: ref || null,
+    email,
+    amount,
+    network,
+    tx
   };
 
-  try {
-    const res = await fetch('http://127.0.0.1:3001/api/investments', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
+  /* ---------- UI CONFIRMATION — ВСЕГДА ---------- */
+  document.getElementById('cEmailView').innerText = email;
+  document.getElementById('cAmountView').innerText = amount + " USDT";
+  document.getElementById('cTxView').innerText = tx;
 
-    if(!res.ok){
-      alert('Error sending to the system');
-      return;
+  closeConfirm();
+  document.getElementById('onsiteConfirm').style.display = 'block';
+
+  /* ---------- BACKEND — ТОЛЬКО ЕСЛИ REF ---------- */
+  if(ref){
+    try {
+      await fetch('/api/investments', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    } catch(e){
+      console.warn('Backend unavailable, fallback to email only');
     }
-
-    closeConfirm();
-    document.getElementById('onsiteConfirm').style.display = 'block';
-
-  } catch(e){
-    alert('The backend is unavailable');
   }
 }
 </script>
