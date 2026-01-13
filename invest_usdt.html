@@ -423,6 +423,10 @@ display:none;
   }
 }
 </style>
+<script>
+  window.NOCTAI_API_BASE = 'https://api.noctai.vip';
+</script>
+
 </head>
 <body class="page-invest">
 
@@ -669,11 +673,12 @@ async function sendConfirm(){
   /* ---------- BACKEND — ТОЛЬКО ЕСЛИ REF ---------- */
   if(ref){
     try {
-      await fetch('/api/investments', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
+      await fetch(`${window.NOCTAI_API_BASE}/api/investments`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(payload)
+});
+
     } catch(e){
       console.warn('Backend unavailable, fallback to email only');
     }
