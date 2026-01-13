@@ -48,6 +48,10 @@ th{color:var(--muted);}
 .status.APPROVED{color:#2ecc71;}
 .status.DECLINED{color:#e74c3c;}
 </style>
+<script>
+  window.NOCTAI_API_BASE = 'https://api.noctai.vip';
+</script>
+
 </head>
 
 <body>
@@ -75,7 +79,8 @@ const params = new URLSearchParams(location.search);
 const ref = params.get('ref');
 document.getElementById('ref').innerText = 'Referral ID: '+ref;
 
-const API = '/api/partner/investments?ref=' + ref;
+fetch(`${window.NOCTAI_API_BASE}/api/partner/investments?ref=${ref}`)
+
 
 async function load(){
   const res = await fetch(API);

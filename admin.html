@@ -66,6 +66,10 @@ button{
 .approve{background:var(--ok);color:#0a0d12;}
 .decline{background:var(--bad);color:#fff;}
 </style>
+<script>
+  window.NOCTAI_API_BASE = 'https://api.noctai.vip';
+</script>
+
 </head>
 
 <body>
@@ -91,7 +95,8 @@ button{
 </div>
 
 <script>
-const API = '/api/admin/investments';
+const API = `${window.NOCTAI_API_BASE}/api/admin/investments`;
+
 
 async function load(){
 const res = await fetch(API);
