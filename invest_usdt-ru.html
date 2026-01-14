@@ -625,6 +625,11 @@ display:none;
 </footer>
 
 <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const partner_ref = urlParams.get('ref') || 'DIRECT';
+</script>
+
+<script>
 const INVESTOR_POOL = 3500000;
 const MONTHLY_50 = 5400000;
 const MONTHLY_100 = 10800000;
@@ -670,13 +675,14 @@ async function sendConfirm(){
   const ref = params.get('ref');
 
   const payload = {
-    project: params.get('project') || 'PRJ-001',
-    partner: ref || null,
-    email,
-    amount,
-    network,
-    tx
-  };
+  project: 'PRJ-001',
+  partner_ref: partner_ref,
+  email,
+  amount,
+  network,
+  tx
+};
+
 
   /* ---------- UI CONFIRMATION — ВСЕГДА ---------- */
   document.getElementById('cEmailView').innerText = email;
