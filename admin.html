@@ -110,7 +110,7 @@ const res = await fetch(API);
       <td>${i.amount} USDT</td>
       <td>${i.network}</td>
       <td style="font-family:monospace">${i.tx}</td>
-      <td>${i.partner || '-'}</td>
+      <td>${i.partner === 'DIRECT' ? '— DIRECT —' : i.partner}</td>
       <td class="status ${i.status}">${i.status}</td>
       <td>
         ${i.status==='PENDING' ? `

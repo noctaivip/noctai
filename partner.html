@@ -77,17 +77,25 @@ th{color:var(--muted);}
 <script>
 const params = new URLSearchParams(location.search);
 const ref = params.get('ref');
-document.getElementById('ref').innerText = 'Referral ID: '+ref;
 
-fetch(`${window.NOCTAI_API_BASE}/api/partner/investments?ref=${ref}`)
-
+document.getElementById('ref').innerText =
+  ref ? 'Referral ID: ' + ref : 'No referral id';
 
 async function load(){
-  const res = await fetch(API);
+  if (!ref) {
+    // если ref нет — партнёр НИЧЕГО не видит
+    return;
+  }
+
+  const res = await fetch(
+    `${window.NOCTAI_API_BASE}/api/partner/investments?ref=${ref}`
+  );
+
   const data = await res.json();
   const rows = document.getElementById('rows');
-  rows.innerHTML='';
-  data.forEach(i=>{
+  rows.innerHTML = '';
+
+  data.forEach(i => {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td>${i.email}</td>
@@ -98,7 +106,9 @@ async function load(){
     rows.appendChild(tr);
   });
 }
+
 load();
 </script>
+
 </body>
 </html>
