@@ -725,7 +725,7 @@ function closeOnsiteConfirm(){
 </script>
 <script>
 function copyAddress(){
-  const addr = document.getElementById('usdtAddress').innerText.trim();
+  const addr = document.getElementById('walletAddress').innerText.trim();
   navigator.clipboard.writeText(addr).then(()=>{
     const s=document.getElementById('copyStatus');
     s.style.display='block';
