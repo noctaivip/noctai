@@ -654,6 +654,11 @@ async function sendConfirm(){
   const amount = parseFloat(amountText.replace(/[^0-9.]/g,''));
   const activeBtn = document.querySelector('#networkButtons button.active');
   const network = activeBtn ? activeBtn.textContent.trim() : null;
+  
+  if (!network) {
+  alert("Select network");
+  return;
+}
 
 const payload = {
   project: 'PRJ-001',
