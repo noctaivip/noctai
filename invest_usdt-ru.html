@@ -671,16 +671,16 @@ async function sendConfirm(){
   const activeBtn = document.querySelector('#networkButtons button.active');
   const network = activeBtn ? activeBtn.textContent.trim() : null;
 
-  const params = new URLSearchParams(window.location.search);
-  const ref = params.get('ref');
+  const urlParams = new URLSearchParams(window.location.search);
+  const partnerRef = urlParams.get('ref');
 
   const payload = {
   project: 'PRJ-001',
-  partner_ref: partner_ref,
   email,
   amount,
   network,
   tx
+  partner_ref: partnerRef
 };
 
 
