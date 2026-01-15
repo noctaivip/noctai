@@ -672,15 +672,15 @@ async function sendConfirm(){
   const network = activeBtn ? activeBtn.textContent.trim() : null;
 
   const params = new URLSearchParams(window.location.search);
-  const ref = params.get('ref');
+  const partner_ref = params.get('ref') || null;
 
   const payload = {
   project: 'PRJ-001',
-  partner_ref: partner_ref,
   email,
   amount,
   network,
-  tx
+  tx,
+  partner_ref
 };
 
 
