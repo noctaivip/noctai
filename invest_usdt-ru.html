@@ -671,9 +671,6 @@ async function sendConfirm(){
   const activeBtn = document.querySelector('#networkButtons button.active');
   const network = activeBtn ? activeBtn.textContent.trim() : null;
 
-  const params = new URLSearchParams(window.location.search);
-  const partner_ref = params.get('ref') || null;
-
   const payload = {
   project: 'PRJ-001',
   email,
@@ -879,5 +876,25 @@ if (walletBox && walletAddress) {
   };
 })();
 </script>
+<script>
+function copyConfirm(){
+  const text =
+    "Email: " + document.getElementById('cEmailView').innerText + "\n" +
+    "Amount: " + document.getElementById('cAmountView').innerText + "\n" +
+    "TxID: " + document.getElementById('cTxView').innerText;
+  navigator.clipboard.writeText(text);
+}
+
+function sendViaGmail(){
+  const subject = encodeURIComponent("Investment Confirmation");
+  const body = encodeURIComponent(
+    "Email: " + document.getElementById('cEmailView').innerText + "\n" +
+    "Amount: " + document.getElementById('cAmountView').innerText + "\n" +
+    "TxID: " + document.getElementById('cTxView').innerText
+  );
+  window.open(`https://mail.google.com/mail/?view=cm&fs=1&su=${subject}&body=${body}`);
+}
+</script>
+
 </body>
 </html>
