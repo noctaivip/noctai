@@ -67,6 +67,41 @@ th { color:var(--muted); }
   color:#e74c3c;
   text-align:center;
 }
+#approvedCount {
+  color: #2ecc71;
+  font-weight: 600;
+}
+.panel.stats {
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.08) inset;}
+  .summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.summary-card {
+  background: #0f141c;
+border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 14px;
+  padding: 18px;
+}
+.summary-card .label {
+  color: var(--muted); 
+  font-size: 13px;
+}
+.summary-card .value {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+}
+.summary-card .value.approved {
+  color: #22c55e;
+}
+.panel table thead th {
+  color: var(--gold);
+  font-weight: 600;
+}
 </style>
 </head>
 
@@ -76,12 +111,33 @@ th { color:var(--muted); }
 <h1>Partner Dashboard</h1>
 <small id="refLabel">Referral ID:</small>
 
-<div class="panel stats">
-  <div class="stat">Total leads<br><b id="totalCount">0</b></div>
-  <div class="stat">Approved<br><b id="approvedCount">0</b></div>
-  <div class="stat">Total amount<br><b id="totalAmount">0</b> USDT</div>
-  <div class="stat">Commission rate<br><b id="commissionPct">0</b>%</div>
-  <div class="stat">Commission earned<br><b id="commissionAmount">0</b> USDT</div>
+<div class="summary-grid">
+
+  <div class="summary-card">
+    <div class="label">Total leads</div>
+    <div class="value" id="totalCount">0</div>
+  </div>
+
+  <div class="summary-card approved">
+    <div class="label">Approved</div>
+    <div class="value approved" id="approvedCount">0</div>
+  </div>
+
+  <div class="summary-card">
+    <div class="label">Total amount (USDT)</div>
+    <div class="value" id="totalAmount">0</div>
+  </div>
+
+  <div class="summary-card">
+    <div class="label">Commission rate</div>
+    <div class="value" id="commissionPct">10%</div>
+  </div>
+
+  <div class="summary-card">
+    <div class="label">Commission earned (USDT)</div>
+    <div class="value" id="commissionAmount">0</div>
+  </div>
+
 </div>
 
 <div class="panel">
