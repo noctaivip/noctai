@@ -441,6 +441,41 @@ display:none;
   window.NOCTAI_API_BASE = 'https://api.noctai.vip';
 </script>
 
+
+<!-- ===========================
+     MOBILE FIX PATCH (SAFE, RU)
+     =========================== -->
+<style>
+@media (max-width: 768px){
+  /* Reserve space for fixed bottom nav */
+  main.container{
+    padding-bottom: 120px !important;
+  }
+
+  /* Ensure normal page scroll */
+  html, body{
+    overflow-y: auto !important;
+    height: auto !important;
+    min-height: 100% !important;
+  }
+
+  /* Mobile modals must scroll internally */
+  .modal{
+    align-items: flex-start !important;
+  }
+  .modal .panel{
+    margin: 16px auto !important;
+    max-height: calc(100vh - 32px) !important;
+    overflow-y: auto !important;
+  }
+
+  /* Remove inner scroll traps */
+  .panel{
+    overflow-y: visible;
+  }
+}
+</style>
+
 </head>
 <body class="page-invest">
 
