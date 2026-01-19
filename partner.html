@@ -103,37 +103,126 @@ border: 1px solid rgba(212, 175, 55, 0.45);
   font-weight: 500;
   letter-spacing: 0.3px;
 }
-@media (max-width: 768px) {
+</style>
 
-  /* Жёстко запрещаем горизонтальный скролл */
-  html, body {
+<!-- ===========================
+     PARTNER MOBILE COMFORT MODE
+     (NO HORIZONTAL SCROLL)
+     =========================== -->
+<style>
+@media (max-width: 768px){
+
+  /* Never allow page horizontal movement */
+  html, body{
     overflow-x: hidden !important;
     max-width: 100% !important;
   }
 
-  /* Контейнер никогда не шире экрана */
-  .container {
+  /* Disable table layout on mobile */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr{
+    display: block !important;
     width: 100% !important;
-    max-width: 100% !important;
-    margin: 24px auto !important;
-    padding: 0 16px !important;
-    box-sizing: border-box;
   }
 
-  /* Summary всегда строго в 1 колонку */
-  .summary-grid {
-    grid-template-columns: 1fr !important;
+  thead{
+    display: none !important;
   }
 
-  /* На всякий случай */
-  .panel {
-    max-width: 100% !important;
+  tr{
+    margin-bottom: 14px;
+    padding: 14px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(214,177,94,0.25);
+  }
+
+  td{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0 !important;
+    font-size: 13px;
+    border: none !important;
+  }
+
+  td::before{
+    content: attr(data-label);
+    font-size: 11px;
+    opacity: 0.6;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+}
+</style>
+
+
+<!-- ===========================
+     PARTNER CARD CENTER FIX
+     =========================== -->
+<style>
+@media (max-width: 768px){
+
+  /* Center partner cards horizontally */
+  table tr{
+    max-width: 92%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
+</style>
+
+
+<!-- ===========================
+     PARTNER MOBILE CARD FIX v3
+     Fix text cut / wrapping issues
+     =========================== -->
+<style>
+@media (max-width: 768px){
+
+  /* Cards should be full-width inside viewport */
+  table tr{
+    width: 100% !important;
+    max-width: 92% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Allow content to wrap instead of being clipped */
+  td{
+    align-items: flex-start !important;
+    gap: 8px !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    word-break: break-word !important;
+  }
+
+  /* Labels */
+  td::before{
+    flex: 0 0 auto !important;
+    max-width: 40% !important;
+  }
+
+  /* Values */
+  td > *{
+    max-width: 60% !important;
+    text-align: right !important;
+    word-break: break-all !important;
+  }
+
+  /* Safety: nothing clips horizontally */
+  .panel, .container{
     overflow-x: hidden !important;
   }
 
 }
-
 </style>
+
 </head>
 
 <body>
@@ -223,7 +312,7 @@ Invalid or inactive referral link
     document.getElementById('totalCount').innerText = data.total_count || 0;
     document.getElementById('approvedCount').innerText = approved;
     document.getElementById('totalAmount').innerText = data.total_amount || 0;
-	document.getElementById('commissionPct').innerText = (data.commission_pct ?? 0) + '%';
+	document.getElementById('commissionPct').innerText = data.commission_pct || 0;
     document.getElementById('commissionAmount').innerText = data.commission_amount || 0;
 
 
