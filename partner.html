@@ -104,80 +104,6 @@ border: 1px solid rgba(212, 175, 55, 0.45);
   letter-spacing: 0.3px;
 }
 </style>
-
-<!-- ===========================
-     PARTNER MOBILE COMFORT MODE
-     (NO HORIZONTAL SCROLL)
-     =========================== -->
-<style>
-@media (max-width: 768px){
-
-  /* Never allow page horizontal movement */
-  html, body{
-    overflow-x: hidden !important;
-    max-width: 100% !important;
-  }
-
-  /* Disable table layout on mobile */
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr{
-    display: block !important;
-    width: 100% !important;
-  }
-
-  thead{
-    display: none !important;
-  }
-
-  tr{
-    margin-bottom: 14px;
-    padding: 14px;
-    border-radius: 14px;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(214,177,94,0.25);
-  }
-
-  td{
-    display: flex !important;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 0 !important;
-    font-size: 13px;
-    border: none !important;
-  }
-
-  td::before{
-    content: attr(data-label);
-    font-size: 11px;
-    opacity: 0.6;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-
-}
-</style>
-
-
-<!-- ===========================
-     PARTNER CARD CENTER FIX
-     =========================== -->
-<style>
-@media (max-width: 768px){
-
-  /* Center partner cards horizontally */
-  table tr{
-    max-width: 92%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-}
-</style>
-
 </head>
 
 <body>
@@ -267,7 +193,7 @@ Invalid or inactive referral link
     document.getElementById('totalCount').innerText = data.total_count || 0;
     document.getElementById('approvedCount').innerText = approved;
     document.getElementById('totalAmount').innerText = data.total_amount || 0;
-	document.getElementById('commissionPct').innerText = data.commission_pct || 0;
+	document.getElementById('commissionPct').innerText = (data.commission_pct ?? 0) + '%';
     document.getElementById('commissionAmount').innerText = data.commission_amount || 0;
 
 
