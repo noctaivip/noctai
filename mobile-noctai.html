@@ -7,14 +7,6 @@
 }
 
 @media (max-width: 768px){
-/* FIX: consolidated body rules (mobile) */
-body{
-  position:relative;
-  height:auto !important;
-  min-height:100%;
-  font-size:15px;
-  padding-bottom:220px; /* space for mobile bottom nav */
-}
 
   header{
     padding:32px 16px;
@@ -119,20 +111,25 @@ body{
     max-width:100%;
     overflow-x:hidden;
   }
-main,
-.modal,
-.modal-content{
+  
+  main{
   overflow-y:auto;
   max-width:100%;
 }
 
-/* FIX: panel must not trap vertical scroll */
+/* ВАЖНО: panel НЕ должен перехватывать вертикальный скролл */
 .panel{
   overflow-y:visible;
 }
 
-  /* 2. Убираем ошибочный height */
-  /* FIX: removed conflicting body override */
+
+body{
+  position:relative;
+  height:auto !important;
+  min-height:100%;
+  font-size:15px;
+  padding-bottom:220px; /* >= высоты mobile-bottom-nav */
+}
 
   /* 3. Футер гарантированно выходит из-под кнопок */
   footer,
@@ -243,7 +240,7 @@ main,
 
   .modal-content{
     width:100%;
-    height:100%;
+  height:auto;
     max-width:none;
     max-height:none;
 
