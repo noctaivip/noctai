@@ -128,10 +128,13 @@ Invalid or inactive referral link
     }
 
     const items = Array.isArray(data.items) ? data.items : [];
+	
+	const approved = items.filter(i => i.status === 'APPROVED').length;
+    const declined = items.filter(i => i.status === 'DECLINED').length;
 
     document.getElementById('totalCount').innerText = data.total_count || 0;
-    document.getElementById('approvedCount').innerText = data.approved_count || 0;
-    document.getElementById('declinedCount').innerText = data.declined_count || 0;
+    document.getElementById('approvedCount').innerText = approved;
+    document.getElementById('declinedCount').innerText = declined;
     document.getElementById('totalAmount').innerText = data.total_amount || 0;
 
     const rows = document.getElementById('rows');
