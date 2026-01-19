@@ -432,36 +432,3 @@ th, td{
   }
 
 }
-
-
-/* ===========================
-   FINAL MOBILE SCROLL OVERRIDE
-   (last rule wins – do not move)
-   =========================== */
-@media (max-width: 768px){
-
-  /* Force the page itself to be the scroll container */
-  html, body{
-    height:auto !important;
-    min-height:100% !important;
-    overflow-y:auto !important;
-  }
-
-  /* Neutralize any inner scroll traps */
-  main,
-  .panel,
-  .grid,
-  .container,
-  .modal,
-  .modal-content{
-    overflow-y:visible !important;
-    height:auto !important;
-    max-height:none !important;
-  }
-
-  /* Explicit safe zone for fixed bottom bar */
-  body{
-    padding-bottom:240px !important;
-  }
-
-}
