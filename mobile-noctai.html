@@ -7,19 +7,16 @@
 }
 
 @media (max-width: 768px){
-html, body{
-  height:100%;
+body{
+  position:relative;
+  height:auto !important;
+  min-height:100%;
 }
 
 body{
-  position:relative;
+  font-size:15px;
+  padding-bottom:180px;
 }
-
-  /* BASE */
-  body{
-    font-size:15px;
-    padding-bottom:110px;
-  }
 
   header{
     padding:32px 16px;
@@ -124,6 +121,13 @@ body{
     max-width:100%;
     overflow-x:hidden;
   }
+main,
+.modal,
+.modal-content,
+.panel{
+  overflow-y:auto;
+  max-width:100%;
+}
 
   /* 2. Убираем ошибочный height */
   body{
@@ -352,6 +356,18 @@ body{
     right:12px !important;
     z-index:99999 !important;
   }
+  .panel{
+  overflow-x:auto;
+}
+
+table{
+  min-width:720px;
+}
+
+th, td{
+  white-space:nowrap;
+}
+
 }
 
   /* ===========================
