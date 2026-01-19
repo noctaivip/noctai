@@ -7,6 +7,16 @@
 }
 
 @media (max-width: 768px){
+body{
+  position:relative;
+  height:auto !important;
+  min-height:100%;
+}
+
+body{
+  font-size:15px;
+  padding-bottom:180px;
+}
 
   header{
     padding:32px 16px;
@@ -111,25 +121,20 @@
     max-width:100%;
     overflow-x:hidden;
   }
-  
-  main{
+main,
+.modal,
+.modal-content,
+.panel{
   overflow-y:auto;
   max-width:100%;
 }
 
-/* ВАЖНО: panel НЕ должен перехватывать вертикальный скролл */
-.panel{
-  overflow-y:visible;
-}
-
-
-body{
-  position:relative;
-  height:auto !important;
-  min-height:100%;
-  font-size:15px;
-  padding-bottom:220px; /* >= высоты mobile-bottom-nav */
-}
+  /* 2. Убираем ошибочный height */
+  body{
+    height:auto !important;
+    min-height:100%;
+    padding-bottom:160px; /* МЕСТО под нижнюю панель */
+  }
 
   /* 3. Футер гарантированно выходит из-под кнопок */
   footer,
@@ -240,7 +245,7 @@ body{
 
   .modal-content{
     width:100%;
-  height:auto;
+    height:100%;
     max-width:none;
     max-height:none;
 
@@ -424,6 +429,39 @@ th, td{
     box-shadow:
       inset 0 0 0 1px rgba(214,177,94,0.18),
       0 8px 18px rgba(0,0,0,0.45);
+  }
+
+}
+
+
+/* ===========================
+   FINAL MOBILE SCROLL OVERRIDE
+   (last rule wins – do not move)
+   =========================== */
+@media (max-width: 768px){
+
+  /* Force the page itself to be the scroll container */
+  html, body{
+    height:auto !important;
+    min-height:100% !important;
+    overflow-y:auto !important;
+  }
+
+  /* Neutralize any inner scroll traps */
+  main,
+  .panel,
+  .grid,
+  .container,
+  .modal,
+  .modal-content{
+    overflow-y:visible !important;
+    height:auto !important;
+    max-height:none !important;
+  }
+
+  /* Explicit safe zone for fixed bottom bar */
+  body{
+    padding-bottom:240px !important;
   }
 
 }
