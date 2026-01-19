@@ -427,6 +427,41 @@ display:none;
   window.NOCTAI_API_BASE = 'https://api.noctai.vip';
 </script>
 
+
+<!-- ===========================
+     MOBILE FIX PATCH (SAFE)
+     =========================== -->
+<style>
+@media (max-width: 768px){
+  /* 1) Reserve space for fixed bottom nav so content can scroll past it */
+  main.container{
+    padding-bottom: 120px !important; /* >= bottom nav height */
+  }
+
+  /* 2) Ensure page can scroll normally */
+  html, body{
+    overflow-y: auto !important;
+    height: auto !important;
+    min-height: 100% !important;
+  }
+
+  /* 3) Modals: keep content accessible on small screens */
+  .modal{
+    align-items: flex-start !important;
+  }
+  .modal .panel{
+    margin: 16px auto !important;
+    max-height: calc(100vh - 32px) !important;
+    overflow-y: auto !important;
+  }
+
+  /* 4) Avoid inner scroll traps */
+  .panel{
+    overflow-y: visible;
+  }
+}
+</style>
+
 </head>
 <body class="page-invest">
 
