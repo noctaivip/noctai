@@ -66,6 +66,36 @@ button{
 .approve{background:var(--ok);color:#0a0d12;}
 .decline{background:var(--bad);color:#fff;}
 </style>
+<style>
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.summary-card {
+  background: #0f141c;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 16px;
+}
+.summary-card .label {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+.summary-card .value {
+  font-size: 22px;
+  font-weight: 600;
+}
+.summary-card .approved {
+  color: #22c55e;
+}
+.summary-card .declined {
+  color: #ef4444;
+}
+</style>
+
 <script>
   window.NOCTAI_API_BASE = 'https://api.noctai.vip';
 </script>
@@ -75,6 +105,25 @@ button{
 <body>
 <div class="container">
   <h1>Admin — Investment Requests</h1>
+  
+  <div class="summary-grid">
+  <div class="summary-card">
+    <div class="label">Total leads</div>
+    <div class="value" id="sumTotal">0</div>
+  </div>
+  <div class="summary-card">
+    <div class="label">Approved</div>
+    <div class="value approved" id="sumApproved">0</div>
+  </div>
+  <div class="summary-card">
+    <div class="label">Declined</div>
+    <div class="value declined" id="sumDeclined">0</div>
+  </div>
+  <div class="summary-card">
+    <div class="label">Total amount</div>
+    <div class="value" id="sumAmount">0 USDT</div>
+  </div>
+</div>
 
   <div class="panel">
     <table id="table">
@@ -101,6 +150,26 @@ const API = `${window.NOCTAI_API_BASE}/api/admin/investments`;
 async function load(){
 const res = await fetch(API);
   const data = await res.json();
+  let total = data.length;
+let approved = 0;
+let declined = 0;
+let amount = 0;
+
+data.forEach(i => {
+  if (i.status === 'APPROVED') {
+    approved++;
+    amount += Number(i.amount || 0);
+  }
+  if (i.status === 'DECLINED') {
+    declined++;
+  }
+});
+
+document.getElementById('sumTotal').innerText = total;
+document.getElementById('sumApproved').innerText = approved;
+document.getElementById('sumDeclined').innerText = declined;
+document.getElementById('sumAmount').innerText = amount + ' USDT';
+
   const tbody = document.querySelector('tbody');
   tbody.innerHTML='';
   data.forEach(i=>{
