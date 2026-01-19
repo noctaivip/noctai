@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>NoctAI — Partner Panel</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title>NoctAI Partner Panel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <style>
-:root{
+:root {
   --bg:#0a0d12;
   --panel:#11161d;
   --text:#e8eaf0;
@@ -14,100 +14,146 @@
   --gold:#c9a24d;
   --border:#1e2430;
 }
-body{
+body {
   margin:0;
   font-family:Inter,Arial,sans-serif;
   background:var(--bg);
   color:var(--text);
 }
-.container{
+.container {
   max-width:1100px;
   margin:40px auto;
   padding:0 20px;
 }
-h1{margin-bottom:8px;}
-small{color:var(--muted);}
-.panel{
+h1 { margin-bottom:6px; }
+small { color:var(--muted); }
+
+.panel {
   margin-top:20px;
   background:var(--panel);
   border:1px solid var(--border);
   border-radius:12px;
   padding:20px;
 }
-table{
+.stats {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:12px;
+}
+.stat {
+  background:#0f131a;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:14px;
+}
+table {
   width:100%;
   border-collapse:collapse;
+  margin-top:20px;
   font-size:14px;
 }
-th,td{
+th,td {
   padding:10px;
   border-bottom:1px solid var(--border);
+  text-align:left;
 }
-th{color:var(--muted);}
-.status.PENDING{color:#f1c40f;}
-.status.APPROVED{color:#2ecc71;}
-.status.DECLINED{color:#e74c3c;}
-</style>
-<script>
-  window.NOCTAI_API_BASE = 'https://api.noctai.vip';
-</script>
+th { color:var(--muted); }
+.status.PENDING { color:#f1c40f; }
+.status.APPROVED { color:#2ecc71; }
+.status.DECLINED { color:#e74c3c; }
 
+.error {
+  margin-top:40px;
+  color:#e74c3c;
+  text-align:center;
+}
+</style>
 </head>
 
 <body>
 <div class="container">
-  <h1>Partner Dashboard</h1>
-  <small id="ref"></small>
 
-  <div class="panel">
-    <table>
-      <thead>
-        <tr>
-          <th>Email</th>
-          <th>Amount</th>
-          <th>Status</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody id="rows"></tbody>
-    </table>
-  </div>
+<h1>Partner Dashboard</h1>
+<small id="refLabel">Referral ID:</small>
+
+<div class="panel stats">
+  <div class="stat">Total leads<br><b id="totalCount">0</b></div>
+  <div class="stat">Approved<br><b id="approvedCount">0</b></div>
+  <div class="stat">Declined<br><b id="declinedCount">0</b></div>
+  <div class="stat">Total amount<br><b id="totalAmount">0</b> USDT</div>
+</div>
+
+<div class="panel">
+<table>
+<thead>
+<tr>
+  <th>Email</th>
+  <th>Amount</th>
+  <th>Status</th>
+  <th>Date</th>
+</tr>
+</thead>
+<tbody id="rows"></tbody>
+</table>
+</div>
+
+<div id="error" class="error" style="display:none">
+Invalid or inactive referral link
+</div>
+
 </div>
 
 <script>
-const params = new URLSearchParams(location.search);
-const ref = params.get('ref');
+(async function () {
 
-document.getElementById('ref').innerText =
-  ref ? 'Referral ID: ' + ref : 'No referral id';
+  const params = new URLSearchParams(window.location.search);
+  const ref = (params.get('ref') || '').trim();
 
-async function load(){
   if (!ref) {
-    // если ref нет — партнёр НИЧЕГО не видит
+    document.getElementById('error').style.display = 'block';
     return;
   }
 
-  const res = await fetch(
-    `${window.NOCTAI_API_BASE}/api/partner/investments?ref=${ref}`
-  );
+  document.getElementById('refLabel').innerText = 'Referral ID: ' + ref;
 
-  const data = await res.json();
-  const rows = document.getElementById('rows');
-  rows.innerHTML = '';
+  try {
+    const res = await fetch(
+      'https://api.noctai.vip/api/partner/investments?ref=' + encodeURIComponent(ref)
+    );
+    const data = await res.json();
 
-  data.forEach(i => {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td>${i.email}</td>
-      <td>${i.amount} USDT</td>
-      <td class="status ${i.status}">${i.status}</td>
-      <td>${new Date(i.created_at).toLocaleDateString()}</td>
-    `;
-    rows.appendChild(tr);
-  });
-}
+    if (!data || String(data.partner || '').trim() !== ref) {
+      document.getElementById('error').style.display = 'block';
+      return;
+    }
 
-load();
+    const items = Array.isArray(data.items) ? data.items : [];
+
+    document.getElementById('totalCount').innerText = data.total_count || 0;
+    document.getElementById('approvedCount').innerText = data.approved_count || 0;
+    document.getElementById('declinedCount').innerText = data.declined_count || 0;
+    document.getElementById('totalAmount').innerText = data.total_amount || 0;
+
+    const rows = document.getElementById('rows');
+    rows.innerHTML = '';
+
+    items.forEach(i => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${i.email || '-'}</td>
+        <td>${i.amount || 0} USDT</td>
+        <td class="status ${i.status}">${i.status}</td>
+        <td>${new Date(i.created_at).toLocaleString()}</td>
+      `;
+      rows.appendChild(tr);
+    });
+
+  } catch (e) {
+    console.error(e);
+    document.getElementById('error').style.display = 'block';
+  }
+
+})();
 </script>
 
 </body>
