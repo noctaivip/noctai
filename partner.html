@@ -178,51 +178,6 @@ border: 1px solid rgba(212, 175, 55, 0.45);
 }
 </style>
 
-
-<!-- ===========================
-     PARTNER MOBILE CARD FIX v3
-     Fix text cut / wrapping issues
-     =========================== -->
-<style>
-@media (max-width: 768px){
-
-  /* Cards should be full-width inside viewport */
-  table tr{
-    width: 100% !important;
-    max-width: 92% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Allow content to wrap instead of being clipped */
-  td{
-    align-items: flex-start !important;
-    gap: 8px !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    word-break: break-word !important;
-  }
-
-  /* Labels */
-  td::before{
-    flex: 0 0 auto !important;
-    max-width: 40% !important;
-  }
-
-  /* Values */
-  td > *{
-    max-width: 60% !important;
-    text-align: right !important;
-    word-break: break-all !important;
-  }
-
-  /* Safety: nothing clips horizontally */
-  .panel, .container{
-    overflow-x: hidden !important;
-  }
-
-}
-</style>
-
 </head>
 
 <body>
