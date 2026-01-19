@@ -106,33 +106,58 @@ border: 1px solid rgba(212, 175, 55, 0.45);
 </style>
 
 <!-- ===========================
-     MOBILE TABLE FIX (SAFE)
+     PARTNER MOBILE COMFORT MODE
+     (NO HORIZONTAL SCROLL)
      =========================== -->
 <style>
 @media (max-width: 768px){
 
-  /* Prevent page from shifting horizontally */
+  /* Never allow page horizontal movement */
   html, body{
     overflow-x: hidden !important;
     max-width: 100% !important;
   }
 
-  /* Allow tables to scroll horizontally inside their own container */
-  .table-wrapper,
-  .table-container,
-  .panel{
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
+  /* Disable table layout on mobile */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr{
+    display: block !important;
+    width: 100% !important;
   }
 
-  table{
-    min-width: 720px !important;
-    width: max-content !important;
+  thead{
+    display: none !important;
   }
 
-  th, td{
-    white-space: nowrap !important;
+  tr{
+    margin-bottom: 14px;
+    padding: 14px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(214,177,94,0.25);
   }
+
+  td{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0 !important;
+    font-size: 13px;
+    border: none !important;
+  }
+
+  td::before{
+    content: attr(data-label);
+    font-size: 11px;
+    opacity: 0.6;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
 }
 </style>
 
