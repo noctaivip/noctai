@@ -103,6 +103,36 @@ border: 1px solid rgba(212, 175, 55, 0.45);
   font-weight: 500;
   letter-spacing: 0.3px;
 }
+@media (max-width: 768px) {
+
+  /* Жёстко запрещаем горизонтальный скролл */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+
+  /* Контейнер никогда не шире экрана */
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 24px auto !important;
+    padding: 0 16px !important;
+    box-sizing: border-box;
+  }
+
+  /* Summary всегда строго в 1 колонку */
+  .summary-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* На всякий случай */
+  .panel {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+}
+
 </style>
 </head>
 
