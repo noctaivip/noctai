@@ -103,37 +103,24 @@ table thead th {
   border: 1px solid rgba(212, 175, 55, 0.45);
   box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.08) inset;
 }
-
 </style>
 
 <script>
   window.NOCTAI_API_BASE = 'https://api.noctai.vip';
 </script>
-
-
-<!-- ===========================
-     ADMIN MOBILE COMFORT MODE
-     Card-based, no horizontal scroll
-     =========================== -->
 <style>
 @media (max-width: 768px){
-
   html, body{
     overflow-x:hidden !important;
     max-width:100% !important;
   }
-
-  /* Disable table layout on mobile */
   table, thead, tbody, tr, th, td{
     display:block !important;
     width:100% !important;
   }
-
   thead{
     display:none !important;
   }
-
-  /* Admin card */
   tr{
     margin:16px auto;
     max-width:92%;
@@ -142,7 +129,6 @@ table thead th {
     background:rgba(255,255,255,0.02);
     border:1px solid rgba(214,177,94,0.28);
   }
-
   td{
     display:flex !important;
     justify-content:space-between;
@@ -151,7 +137,6 @@ table thead th {
     border:none !important;
     font-size:13px;
   }
-
   td::before{
     content:attr(data-label);
     font-size:11px;
@@ -159,36 +144,28 @@ table thead th {
     letter-spacing:.06em;
     text-transform:uppercase;
   }
-
-  /* Status emphasis */
   td.status{
     justify-content:flex-end;
     font-weight:600;
   }
-
-  /* Action buttons */
   td.actions{
     margin-top:12px;
     display:flex !important;
     gap:10px;
   }
-
   td.actions button{
     flex:1;
     padding:10px 0;
     border-radius:12px;
     font-size:13px;
   }
-
 }
 </style>
-
 </head>
 
 <body>
 <div class="container">
   <h1>Admin — Investment Requests</h1>
-  
   <div class="summary-grid">
   <div class="summary-card">
     <div class="label">Total leads</div>
@@ -273,7 +250,6 @@ document.getElementById('sumAmount').innerText = amount + ' USDT';
     tbody.appendChild(tr);
   });
 }
-
 async function act(id,action){
   await fetch(`${API}/${id}/${action}`,{
     method:'POST',
@@ -281,7 +257,6 @@ async function act(id,action){
   });
   load();
 }
-
 load();
 </script>
 </body>
