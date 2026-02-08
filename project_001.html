@@ -72,7 +72,13 @@ border-radius:14px;
 padding:30px;
 box-shadow:0 0 0 1px rgba(201,162,77,.05) inset
 }
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+  align-items: stretch;
+}
 .calculator{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}
 .result{font-size:22px;font-weight:700;color:var(--gold)}
 input[type=range]{width:100%;accent-color:var(--gold)}
@@ -569,7 +575,7 @@ border-color:var(--gold);
   <div style="font-size:12px;color:var(--muted);margin-top:6px;">
 The calculator is recalculated depending on the selected project.  </div>
 </div>
-    <h2>Investment calculator</h2>
+    <h2>Project participation scenario calculator</h2>
     <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
@@ -583,7 +589,7 @@ The calculator is recalculated depending on the selected project.  </div>
     </div>
     <div class="calc-grid">
       <div class="calc-panel">
-        <h3>Investment amount</h3>
+        <h3>Participation amount</h3>
         <input type="range"
        class="calc-range"
        min="10"
@@ -596,9 +602,9 @@ The calculator is recalculated depending on the selected project.  </div>
         <div class="calc-muted">Estimated share: <span id="m_invShare">0.006667%</span></div>
       </div>
       <div class="calc-panel">
-        <h3>Income assessment</h3>
+        <h3>Scenario assessment</h3>
         <div class="calc-income">
-          <div>Income / month</div>
+          <div>Illustrative scenario outcome</div>
           <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
         </div>
       </div>
@@ -652,7 +658,7 @@ function recalc(){
   const v = Number(q('m_invRange').value);
   q('m_invValue').innerText = v.toLocaleString();
   q('m_invShare').innerText = ((v / 3500000) * 100).toFixed(6) + '%';
-  const INVESTOR_MONTHLY_50 = 5400000;
+  const SCENARIO_BASE_50 = 5400000;
   const baseIncome = INVESTOR_MONTHLY_50 * (coverage / 50);
   q('m_incomeValue').innerText =
     (baseIncome * (v / 3500000)).toFixed(2);
@@ -686,14 +692,14 @@ function onProjectChange(v){
 <span class="badge platform-badge">ACTIVE PROJECT #001</span>
 <h1>GTX Co-Driver (Ai-Dispatcher)</h1>
 <br/>
-<a class="cta-primary" href="invest_usdt.html">Invest (USDT)</a><br>
+<a class="cta-primary" href="invest_usdt.html">Participate (USDT)</a><br>
 <a
   class="cta-secondary"
   href="mailto:contact@noctai.vip"
   target="_blank"
   rel="noopener"
 >
-  Investments from $300,000 - contact the team
+  Strategic participation from $300,000 — contact the team
 </a>
 </div>
 <div style="display:flex;align-items:center;justify-content:center;">
@@ -714,18 +720,23 @@ function onProjectChange(v){
 
 <main class="container">
 <div class="panel" style="margin-top:56px;margin-bottom:56px;">
-  <h3>Project Investment Round</h3>
+<h3>Project Participation Framework</h3>
+<p>
+  The project is targeting a <strong>$3,500,000 participation threshold</strong>
+  to activate its next operational phase.
+</p>
+<p>
+  Up to <strong>10% of the project’s economic structure</strong> is reserved
+  for early-stage participants, subject to separate legal agreements
+  and project-specific conditions.
+</p>
+<p>
+  Participation amounts are recorded proportionally as <strong>participation signals</strong>
+  and do not represent direct equity ownership or guaranteed investment rights.
+</p>
   <p>
-    The project is raising <strong>$3,500,000</strong> in capital.
-    Within this round, investors are collectively allocated <strong>10% equity in the project</strong>.
-  </p>
-  <p>
-    Each participation is recorded <strong>proportionally to the invested capital</strong>
-    within the unified ownership structure of the NoctAI platform.
-  </p>
-  <p>
-    The minimum entry is <strong>$10</strong>.
-    All settlements are conducted in  <strong>USDT</strong>.
+    The minimum participation amount is <strong>$10</strong>.
+    All participation contributions are processed in <strong>USDT</strong>.
   </p>
 </div>
 <h2>Progress of work and execution</h2>
@@ -746,19 +757,36 @@ function onProjectChange(v){
   </p>
 </div>
 </div>
-<h2 class="section-title">How income is generated</h2><div class="grid">
-<div class="panel"><h3>Attracting Investment</h3>
-<p>$3,500,000 is being raised in exchange for <strong>10% of the project's share</strong>.</p></div>
-<div class="panel"><h3>Business Income</h3>
-<p>50% of the US logistics market → <strong>$54,000,000 / month</strong></p></div>
-<div class="panel"><h3>Investor Income</h3>
-<p>10% of business income → <strong>$5,400,000 / month</strong></p></div>
+<h2 class="section-title">Value creation model</h2>
+<div class="grid">
+  <div class="panel">
+    <h3>Attracting Investment</h3>
+    <p>$3,500,000 is being raised in exchange for <strong>10% of the project's share</strong>.</p>
+  </div>
+  <div class="panel">
+    <h3>Business Income</h3>
+    <p>50% of the US logistics market → <strong>$54,000,000 / month</strong></p>
+  </div>
+  <div class="panel">
+    <h3>Participation Scenario</h3>
+    <p>
+      Illustrative scenario based on large-scale market adoption.
+      Figures shown do not represent guaranteed outcomes or projected returns.
+    </p>
+  </div>
 </div>
-<h2>Open drawing for a 3% share of the project</h2>
-<div class="panel">
-<p>After reaching <strong>50% of the American transport logistics market</strong>
-We are holding a public drawing for a <strong>3% share of the project</strong>.</p>
-<p><strong>$1 = 1 chance.</strong> $100 = 100 chances. $1,000 = 1,000 chances.</p>
+</div>
+<h2>Randomized participation allocation</h2>
+<p>
+  Upon reaching predefined operational milestones,
+  a randomized allocation of <strong>up to 3% participation capacity</strong>
+  may be distributed among early participants.
+</p>
+<p>
+  Participation amounts determine eligibility weighting.
+  This mechanism does not constitute a lottery, prize draw,
+  or guaranteed economic outcome.
+</p>
 <p>Up to 3 winners. Maximum 1% per participant. Everything is open and public.</p>
 </div>
 <div class="anchor">
@@ -774,7 +802,7 @@ We are holding a public drawing for a <strong>3% share of the project</strong>.<
     <div>
   <strong>NoctAI™</strong><br>
 <span style="font-size:13px;color:#9aa3b2;">
-A platform for equity participation in real projects.
+A platform for participation in investment-oriented real projects.
 </span>
 </div>
     <div>

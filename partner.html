@@ -162,8 +162,8 @@ border: 1px solid rgba(212, 175, 55, 0.45);
 
 <body>
 <div class="container">
-<h1>Partner Dashboard</h1>
-<small id="refLabel">Referral ID:</small>
+<h1>Partner Participation Overview</h1>
+<small id="refLabel">Participation Reference:</small>
 <div class="summary-grid">
   <div class="summary-card">
     <div class="label">Total leads</div>
@@ -174,26 +174,26 @@ border: 1px solid rgba(212, 175, 55, 0.45);
     <div class="value approved" id="approvedCount">0</div>
   </div>
   <div class="summary-card">
-    <div class="label">Total amount (USDT)</div>
+    <div class="label">Total participation volume (USDT)</div>
     <div class="value" id="totalAmount">0</div>
   </div>
   <div class="summary-card">
-    <div class="label">Commission rate</div>
+    <div class="label">Participation attribution rate</div>
     <div class="value" id="commissionPct">10%</div>
   </div>
 
   <div class="summary-card">
-    <div class="label">Commission earned (USDT)</div>
+    <div class="label">Attributed participation value (USDT)</div>
     <div class="value" id="commissionAmount">0</div>
   </div>
 </div>
 <div class="panel" style="margin-bottom:24px;">
   <div style="font-size:14px; line-height:1.6; color:var(--text);">
     <div>
-      Minimum commission withdrawal threshold: <strong>100 USDT</strong>.
+      Minimum attribution settlement threshold: <strong>100 USDT</strong>.
     </div>
     <div>
-      Commission payouts are processed within <strong>3 business days</strong> following approval.
+      Attribution settlements are processed following internal confirmation.
     </div>
   </div>
 </div>
@@ -203,7 +203,7 @@ border: 1px solid rgba(212, 175, 55, 0.45);
 <thead>
 <tr>
   <th>Email</th>
-  <th>Amount</th>
+  <th>Participation Volume</th>
   <th>Status</th>
   <th>Date</th>
 </tr>
@@ -213,7 +213,7 @@ border: 1px solid rgba(212, 175, 55, 0.45);
 </div>
 
 <div id="error" class="error" style="display:none">
-Invalid or inactive referral link
+Invalid or inactive participation reference
 </div>
 </div>
 
