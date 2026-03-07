@@ -571,7 +571,16 @@ border-color:var(--gold);
   </div>
 </div>
     <h2>Калькулятор сценариев участия в проекте</h2>
-    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
+    <p class="calc-sub">
+Иллюстративный калькулятор сценариев. Представленные значения
+основаны на гипотетических моделях масштабирования рынка
+и упрощённых расчётах.
+
+Они не являются прогнозом дохода,
+гарантией результатов,
+финансовой рекомендацией
+или инвестиционным предложением.
+</p>
     <div class="coverage-block">
       <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
       <div class="coverage-buttons">
@@ -587,9 +596,9 @@ border-color:var(--gold);
         <h3>Сумма участия</h3>
         <input type="range"
        class="calc-range"
-       min="10"
-       max="300000"
-       value="1000"
+       min="50000"
+max="3500000"
+value="350000"
        id="m_invRange"
        oninput="syncFromRange()">
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
@@ -616,54 +625,6 @@ border-color:var(--gold);
 <div id="pdfViewer"></div>
   </div>
 </div>
-
-  <script>
-let coverage = 50;
-const MAX = 300000;
-function q(id){ return document.getElementById(id); }
-function openInvestmentCalc(){
-  q('investmentCalcOverlay').style.display = 'flex';
-  recalc();
-}
-function closeInvestmentCalc(){
-  q('investmentCalcOverlay').style.display = 'none';
-}
-function setCoverageCalc(p){
-  coverage = p;
-  document.querySelectorAll('.coverage-buttons button')
-    .forEach(b => b.classList.remove('active'));
-  document.querySelector('.coverage-buttons button[data-p="'+p+'"]')
-    .classList.add('active');
-  recalc();
-}
-function syncFromRange(){
-  const v = Number(q('m_invRange').value);
-  q('m_invInput').value = v;
-  recalc();
-}
-function syncFromInput(){
-  let v = Number(q('m_invInput').value);
-  if (isNaN(v)) return;
-  if (v < 0) v = 0;
-  if (v > MAX) v = MAX;
-  q('m_invInput').value = v;
-  q('m_invRange').value = v;
-  recalc();
-}
-function recalc(){
-  const v = Number(q('m_invRange').value);
-  q('m_invValue').innerText = v.toLocaleString();
-  q('m_invShare').innerText = ((v / 3500000) * 100).toFixed(6) + '%';
-  const SCENARIO_BASE_50 = 5400000;
-  const baseIncome = INVESTOR_MONTHLY_50 * (coverage / 50);
-  q('m_incomeValue').innerText =
-    (baseIncome * (v / 3500000)).toFixed(2);
-}
-function onProjectChange(v){
-  recalc();
-}
-</script>
-
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index-ru.html" class="logo">NoctAI™</a>
@@ -688,14 +649,15 @@ function onProjectChange(v){
 <span class="badge platform-badge">АКТИВНЫЙ ПРОЕКТ #001</span>
 <h1>GTX Co-Driver (Ai-Dispatcher)</h1>
 <br/>
-<a class="cta-primary" href="invest_usdt-ru.html">Принять участие (USDT)</a><br>
+<a class="cta-primary" href="mailto:contact@noctai.vip">Запросить стратегический доступ</a><br>
 <a
   class="cta-secondary"
   href="mailto:contact@noctai.vip"
   target="_blank"
   rel="noopener"
 >
-  Участие (USDT) Стратегическое участие от 300 000 долларов — свяжитесь с командой
+  Участие (USDT) Стратегическое участие обсуждается
+начиная приблизительно от 350 000 долларов — свяжитесь с командой
 </a>
 </div>
 <div style="display:flex;align-items:center;justify-content:center;">
@@ -716,24 +678,33 @@ function onProjectChange(v){
 
 <main class="container">
 <div class="panel" style="margin-top:56px;margin-bottom:56px;">
-<h3>Структура участия в проекте</h3>
+<h3>Стратегическая структура участия</h3>
+
 <p>
-Проект нацелен на достижение порога участия в размере <strong>3 500 000 долларов США</strong>
-для активации следующей операционной фазы.
+Проект формирует стратегический раунд
+в размере <strong>3 500 000 долларов США</strong>
+для запуска следующей операционной фазы.
 </p>
+
 <p>
-До <strong>10% экономической структуры проекта</strong> зарезервировано
-для участников на ранней стадии, в соответствии с отдельными юридическими соглашениями
-и условиями, специфичными для проекта.
+До <strong>10% экономической структуры проекта</strong>
+может быть распределено в рамках данного раунда
+через отдельные двусторонние соглашения
+со стратегическими участниками.
 </p>
+
 <p>
-Суммы участия регистрируются пропорционально как <strong>сигналы участия</strong>
-и не представляют собой прямое владение акциями или гарантированные инвестиционные права.
+Условия участия, структура сделки
+и распределение долей определяются индивидуально
+и фиксируются отдельными юридическими соглашениями.
 </p>
+
 <p>
-Минимальная сумма участия составляет <strong>10 долларов США</strong>.
-Все взносы на участие обрабатываются в <strong>USDT</strong>.
+Платформа NoctAI не принимает платежи
+и не осуществляет сбор средств по данному проекту.
+Обсуждение стратегического участия происходит напрямую с командой проекта.
 </p>
+
 </div>
 <h2>Ход работ и исполнение</h2>
 <div class="panel">
@@ -756,9 +727,14 @@ function onProjectChange(v){
 <h2 class="section-title">Модель создания ценности</h2>
 <div class="grid">
 <div class="panel"><h3>Привлечение инвестиций</h3>
-<p>$3,500,000 привлекаются в обмен на <strong>10% доли</strong> проекта.</p></div>
+<p>Стратегический раунд проекта ориентирован
+на привлечение <strong>3 500 000 долларов</strong>
+с возможным распределением
+до <strong>10% экономической структуры проекта</strong>
+между стратегическими участниками.</p></div>
 <div class="panel"><h3>Доход бизнеса</h3>
-<p>50% рынка логистики США → <strong>$54,000,000 / месяц</strong></p></div>
+<p>Иллюстративный масштабный сценарий
+для рынка логистики США → <strong>до $54,000,000 / месяц</strong></p></div>
 <div class="panel"><h3>Сценарий участия</h3>
 <p>
 Иллюстративный сценарий, основанный на широкомасштабном внедрении на рынке.
@@ -766,21 +742,29 @@ function onProjectChange(v){
 </p>
 </div>
 </div>
-<h2>Рандомизированное распределение участия</h2>
+<h2>Распределение стратегического участия</h2>
 <p>
-По достижении заранее определенных операционных этапов,
-среди первых участников может быть распределено рандомизированное количество участников в размере <strong>до 3% от общей вместимости</strong>
+Распределение участия может осуществляться
+между ранними стратегическими участниками
+в зависимости от этапов развития проекта
+и внутренних решений управления.
+</p><p>
+Любое распределение определяется
+отдельными соглашениями и механизмами управления проекта.
 </p>
-<p>
-Размер участия определяет весовые коэффициенты для определения права на участие.
-Этот механизм не является лотереей, розыгрышем призов,
-или гарантированным экономическим результатом.
-</p>
-<p>До 3 победителей. Максимум 1% на одного участника. Всё проходит открыто и публично.</p>
+<p>Распределение участия в рамках стратегического раунда
+определяется индивидуально
+через отдельные соглашения
+со стратегическими участниками.</p>
 </div>
 <div class="anchor">
 <h2>Для стратегических инвесторов</h2>
-<p>Инвестиции от <strong>$300,000</strong> рассматриваются индивидуально.</p>
+<p>Стратегическое участие
+рассматривается индивидуально
+начиная приблизительно от <strong>350 000 долларов США</strong>.
+
+Доступ к участию предоставляется ограниченно
+и только после прямого взаимодействия с командой проекта.</p>
 <p>Раунд ограничен 10% доли. Возможны якорные условия, SPV и стратегическое партнёрство.</p>
 <a class="cta-secondary" href="mailto:contact@noctai.vip" target="_blank" rel="noopener">Contact directly</a>
 </div>
@@ -842,7 +826,7 @@ Centralized management · Manual access
 
 <div class="mobile-bottom-nav">
   <a href="how_it_works-ru.html">Как это работает</a>
-  <a href="#calc" onclick="openInvestmentCalc(); return false;">Инвестиционный Калькулятор</a>
+  <a href="#calc" onclick="openInvestmentCalc(); return false;">Калькулятор сценария</a>
   <a href="projects-ru.html">Проекты платформы</a>
 </div>
 <script>

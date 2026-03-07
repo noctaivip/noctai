@@ -576,7 +576,12 @@ border-color:var(--gold);
 The calculator is recalculated depending on the selected project.  </div>
 </div>
     <h2>Project participation scenario calculator</h2>
-    <p class="calc-sub">Indicative calculation. This does not constitute an offer or investment recommendation.</p>
+    <p class="calc-sub">
+Illustrative scenario calculator. Figures shown represent hypothetical
+market adoption scenarios and simplified modelling.
+They do not represent guarantees, projections, financial advice,
+or expected investment returns.
+</p>
     <div class="coverage-block">
       <div class="coverage-title">When covering the trucking business in the USA</div>
       <div class="coverage-buttons">
@@ -592,9 +597,9 @@ The calculator is recalculated depending on the selected project.  </div>
         <h3>Participation amount</h3>
         <input type="range"
        class="calc-range"
-       min="10"
-       max="300000"
-       value="1000"
+       min="50000"
+max="3500000"
+value="350000"
        id="m_invRange"
        oninput="syncFromRange()">
         <div class="calc-value">$<span id="m_invValue">1,000</span></div>
@@ -620,54 +625,6 @@ The calculator is recalculated depending on the selected project.  </div>
     <div id="pdfViewer"></div>
   </div>
 </div>
-
-  <script>
-let coverage = 50;
-const MAX = 300000;
-function q(id){ return document.getElementById(id); }
-function openInvestmentCalc(){
-  q('investmentCalcOverlay').style.display = 'flex';
-  recalc();
-}
-function closeInvestmentCalc(){
-  q('investmentCalcOverlay').style.display = 'none';
-}
-function setCoverageCalc(p){
-  coverage = p;
-  document.querySelectorAll('.coverage-buttons button')
-    .forEach(b => b.classList.remove('active'));
-  document.querySelector('.coverage-buttons button[data-p="'+p+'"]')
-    .classList.add('active');
-  recalc();
-}
-function syncFromRange(){
-  const v = Number(q('m_invRange').value);
-  q('m_invInput').value = v;
-  recalc();
-}
-function syncFromInput(){
-  let v = Number(q('m_invInput').value);
-  if (isNaN(v)) return;
-  if (v < 0) v = 0;
-  if (v > MAX) v = MAX;
-  q('m_invInput').value = v;
-  q('m_invRange').value = v;
-  recalc();
-}
-function recalc(){
-  const v = Number(q('m_invRange').value);
-  q('m_invValue').innerText = v.toLocaleString();
-  q('m_invShare').innerText = ((v / 3500000) * 100).toFixed(6) + '%';
-  const SCENARIO_BASE_50 = 5400000;
-  const baseIncome = INVESTOR_MONTHLY_50 * (coverage / 50);
-  q('m_incomeValue').innerText =
-    (baseIncome * (v / 3500000)).toFixed(2);
-}
-function onProjectChange(v){
-  recalc();
-}
-</script>
-
 <nav class="top-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">NoctAI™</a>
@@ -692,14 +649,14 @@ function onProjectChange(v){
 <span class="badge platform-badge">ACTIVE PROJECT #001</span>
 <h1>GTX Co-Driver (Ai-Dispatcher)</h1>
 <br/>
-<a class="cta-primary" href="invest_usdt.html">Participate (USDT)</a><br>
+<a class="cta-primary" href="mailto:contact@noctai.vip">Request Strategic Access</a><br>
 <a
   class="cta-secondary"
   href="mailto:contact@noctai.vip"
   target="_blank"
   rel="noopener"
 >
-  Strategic participation from $300,000 — contact the team
+  Strategic participation discussions starting from approximately $350,000 — contact the team
 </a>
 </div>
 <div style="display:flex;align-items:center;justify-content:center;">
@@ -720,24 +677,31 @@ function onProjectChange(v){
 
 <main class="container">
 <div class="panel" style="margin-top:56px;margin-bottom:56px;">
-<h3>Project Participation Framework</h3>
+<h3>Strategic Participation Framework</h3>
+
 <p>
-  The project is targeting a <strong>$3,500,000 participation threshold</strong>
-  to activate its next operational phase.
+The project targets a <strong>$3,500,000 strategic round</strong>
+to activate its next operational phase.
 </p>
+
 <p>
-  Up to <strong>10% of the project’s economic structure</strong> is reserved
-  for early-stage participants, subject to separate legal agreements
-  and project-specific conditions.
+Up to <strong>10% of the project's economic structure</strong>
+may be allocated within this round through
+separate bilateral agreements with strategic participants.
 </p>
+
 <p>
-  Participation amounts are recorded proportionally as <strong>participation signals</strong>
-  and do not represent direct equity ownership or guaranteed investment rights.
+Participation terms, structure, and allocation are
+defined individually and documented through
+project-specific legal agreements.
 </p>
-  <p>
-    The minimum participation amount is <strong>$10</strong>.
-    All participation contributions are processed in <strong>USDT</strong>.
-  </p>
+
+<p>
+The NoctAI platform does not process payments
+or collect funds for this project.
+Strategic participation discussions are conducted directly with the team.
+</p>
+
 </div>
 <h2>Progress of work and execution</h2>
 <div class="panel">
@@ -761,11 +725,14 @@ function onProjectChange(v){
 <div class="grid">
   <div class="panel">
     <h3>Attracting Investment</h3>
-    <p>$3,500,000 is being raised in exchange for <strong>10% of the project's share</strong>.</p>
+    <p>The strategic round targets <strong>$3,500,000</strong>
+with up to <strong>10% project allocation</strong>
+reserved for strategic participants.</p>
   </div>
   <div class="panel">
     <h3>Business Income</h3>
-    <p>50% of the US logistics market → <strong>$54,000,000 / month</strong></p>
+    <p>Illustrative large-scale market scenario
+for the US logistics sector → <strong>up to $54,000,000 / month</strong></p>
   </div>
   <div class="panel">
     <h3>Participation Scenario</h3>
@@ -776,22 +743,27 @@ function onProjectChange(v){
   </div>
 </div>
 </div>
-<h2>Randomized participation allocation</h2>
+<h2>Strategic participation allocation</h2>
 <p>
-  Upon reaching predefined operational milestones,
-  a randomized allocation of <strong>up to 3% participation capacity</strong>
-  may be distributed among early participants.
+  Participation allocations may be structured
+among early strategic participants
+based on project milestones and internal governance decisions.
+</p><p>
+Any allocation decisions are determined
+through private agreements and project governance mechanisms.
 </p>
-<p>
-  Participation amounts determine eligibility weighting.
-  This mechanism does not constitute a lottery, prize draw,
-  or guaranteed economic outcome.
-</p>
-<p>Up to 3 winners. Maximum 1% per participant. Everything is open and public.</p>
+<p>Allocation of participation within the strategic round
+is determined individually through private agreements
+with qualified strategic participants.</p>
 </div>
 <div class="anchor">
 <h2>For strategic investors</h2>
-<p>Investments from <strong>$300,000</strong> are considered individually.</p>
+<p>Strategic participation discussions
+start from approximately <strong>$350,000</strong>
+and are structured individually.
+
+Participation access is limited and granted
+only after direct communication with the project team.</p>
 <p>The round is capped at 10% stake. Anchor terms, SPV, and strategic partnerships are possible.</p>
 <a class="cta-secondary" href="mailto:contact@noctai.vip" target="_blank" rel="noopener">Contact directly</a>
 </div>
@@ -853,7 +825,7 @@ Centralized management · Manual access
 
 <div class="mobile-bottom-nav">
   <a href="how_it_works.html">How it works</a>
-  <a href="#calc" onclick="openInvestmentCalc(); return false;">Investment calculator</a>
+  <a href="#calc" onclick="openInvestmentCalc(); return false;">Scenario calculator</a>
   <a href="projects.html">Platform projects</a>
 </div>
 <script>
