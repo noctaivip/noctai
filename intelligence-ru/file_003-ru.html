@@ -481,61 +481,6 @@ border-color:var(--gold);
     </div>
 	</div>
   </div>
-  
-  <script>
-let coverage = 50;
-const MAX = 300000;
-
-function q(id){ return document.getElementById(id); }
-
-function openInvestmentCalc(){
-  q('investmentCalcOverlay').style.display = 'flex';
-  recalc();
-}
-function closeInvestmentCalc(){
-  q('investmentCalcOverlay').style.display = 'none';
-}
-
-function setCoverageCalc(p){
-  coverage = p;
-  document.querySelectorAll('.coverage-buttons button')
-    .forEach(b => b.classList.remove('active'));
-  document.querySelector('.coverage-buttons button[data-p="'+p+'"]')
-    .classList.add('active');
-  recalc();
-}
-
-function syncFromRange(){
-  const v = Number(q('m_invRange').value);
-  q('m_invInput').value = v;
-  recalc();
-}
-
-function syncFromInput(){
-  let v = Number(q('m_invInput').value);
-  if (isNaN(v)) return;
-  if (v < 0) v = 0;
-  if (v > MAX) v = MAX;
-  q('m_invInput').value = v;
-  q('m_invRange').value = v;
-  recalc();
-}
-
-function recalc(){
-  const v = Number(q('m_invRange').value);
-  q('m_invValue').innerText = v.toLocaleString();
-  q('m_invShare').innerText = ((v / 3500000) * 100).toFixed(6) + '%';
-  const INVESTOR_MONTHLY_50 = 5400000;
-  const baseIncome = INVESTOR_MONTHLY_50 * (coverage / 50);
-  q('m_incomeValue').innerText =
-    (baseIncome * (v / 3500000)).toFixed(2);
-}
-
-function onProjectChange(v){
-  recalc();
-}
-</script>
-
 <nav class="top-nav">
   <div class="nav-container">
     <a href="/index-ru.html" class="logo">NoctAI™</a>
