@@ -1,314 +1,883 @@
-<!-- ЗАМЕНИ ТОЛЬКО ТЕКУЩИЙ <header> И <main> НА ЭТО -->
+<!DOCTYPE html>
+<html lang="en">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://noctai.vip/#organization",
+  "name": "NoctAI Corporation",
+  "legalName": "NoctAI Corporation",
+  "url": "https://noctai.vip/",
+  "logo": "https://noctai.vip/noctai-logo.png",
+  "email": "contact@noctai.vip",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1007 N Orange St",
+    "addressLocality": "Wilmington",
+    "addressRegion": "DE",
+    "postalCode": "19801",
+    "addressCountry": "US"
+  },
+  "foundingDate": "2025",
+  "sameAs": [
+    "https://www.crunchbase.com/organization/noctai"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://noctai.vip/#website",
+  "url": "https://noctai.vip/",
+  "name": "NoctAI",
+  "publisher": {
+    "@id": "https://noctai.vip/#organization"
+  }
+}
+</script>
+<head>
+<meta charset="UTF-8">
+<title>NoctAI.VIP — Shared participation platform</title>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="alternate" hreflang="en" href="https://noctai.vip/index.html">
+<link rel="alternate" hreflang="ru" href="https://noctai.vip/index-ru.html">
+
+<style>
+:root{
+  --bg:#050b16;
+  --panel:#071827;
+  --muted:#95a6b9;
+  --text:#e6eef7;
+  --gold:#d6b15e;
+  --gold-soft:#f1d48a;
+  --border:rgba(214,177,94,.35);
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+background:radial-gradient(1200px 600px at 20% -10%,#111826 0%,var(--bg) 55%);
+color:var(--text);
+line-height:1.65;
+}
+header{padding:56px 20px;border-bottom:1px solid var(--border)}
+.container{max-width:1120px;margin:0 auto}
+h1{font-size:40px;margin:0 0 12px}
+h2{
+font-size:28px;
+margin:72px 0 28px;
+text-align:center;
+}
+h3{font-size:18px;margin:0 0 10px}
+p{margin:0 0 14px;color:var(--muted)}
+.hero{
+display:grid;
+grid-template-columns:1.25fr .75fr;
+gap:48px;
+align-items:center;
+}
+.badge{
+display:inline-block;
+padding-left:14px;
+border:none;
+border-left:2px solid var(--gold-soft);
+border-radius:0;
+font-size:13px;
+color:var(--gold);
+margin-bottom:18px;
+letter-spacing:0.16em;
+text-transform:uppercase;
+opacity:0.85;
+}
+.cta-primary{
+display:inline-block;
+margin-top:24px;
+padding:15px 34px;
+border-radius:8px;
+background:linear-gradient(180deg,#e6c56f 0%,#c9a24d 100%);
+color:#0a0d12;
+text-decoration:none;
+font-weight:700
+}
+.cta-secondary{
+display:inline-block;
+margin-top:14px;
+padding:13px 28px;
+border-radius:8px;
+border:1px solid var(--gold-soft);
+color:var(--gold);
+text-decoration:none;
+background:rgba(201,162,77,.04)
+}
+.panel{
+background:linear-gradient(180deg,#131a24 0%,var(--panel) 100%);
+border:1px solid var(--gold-soft);
+border-radius:14px;
+padding:34px;
+box-shadow:
+0 10px 30px rgba(0,0,0,0.35),
+0 0 0 1px rgba(201,162,77,0.06) inset;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:26px;
+margin:36px auto 0;
+max-width:1120px;
+}
+.calculator{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}
+.result{font-size:22px;font-weight:700;color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--gold)}
+footer{margin-top:96px;padding:36px 20px;border-top:1px solid var(--border);color:var(--muted);font-size:13px}
+@media(max-width:900px){.hero,.grid,.calculator{grid-template-columns:1fr}}
+</style>
+<style>
+.top-nav{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(10,13,18,0.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+}
+.nav-container{
+max-width:1120px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+.logo:hover{
+  text-decoration:none;
+}
+.nav-links a{
+margin-left:28px;
+text-decoration:none;
+color:var(--text);
+position:relative;
+padding-bottom:4px;
+}
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:2px;
+background:var(--gold);
+transition:width 0.3s ease;
+}
+.nav-links a:hover::after{
+width:100%;
+}
+.nav-cta{
+border:1px solid var(--gold-soft);
+padding:8px 18px;
+border-radius:999px;
+}
+.site-footer{
+margin-top:100px;
+border-top:1px solid var(--border);
+background:#0a0d12;
+}
+.footer-container{
+max-width:1120px;
+margin:0 auto;
+padding:40px 20px;
+display:grid;
+  grid-template-columns: 1fr 0.8fr 0.8fr 1fr;
+  gap: 28px;
+  align-items: start;
+color:var(--muted);
+font-size:14px;
+}
+.footer-heading {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em; 
+  text-transform: uppercase;
+  color: var(--muted); 
+}
+.footer-container a{
+color:var(--gold);
+text-decoration:none;
+}
+.footer-container a:hover{
+text-decoration:underline;
+}
+.footer-right{
+  text-align:right;
+}
+@media(max-width:900px){
+.footer-container{grid-template-columns:1fr}
+.nav-links a{margin-left:16px}
+}
+.lang-switch{
+  margin-left:28px;
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:8px;
+}
+.lang-switch a.active{
+  color:var(--gold);
+}
+.lang-switch a:hover{
+  color:var(--text);
+}
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+.lang-switch{
+  margin-left:28px;
+  padding:4px 10px;
+  border:1px solid rgba(201,162,77,0.35);
+  border-radius:999px;
+  background:rgba(201,162,77,0.06);
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+.lang-switch a.active{
+  color:var(--gold);
+}
+.lang-switch a:hover{
+  color:var(--text);
+}
+</style>
+<style>
+.cta-primary{
+transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+.cta-primary:hover{
+transform: translateY(-1px);
+box-shadow: 0 8px 22px rgba(201,162,77,0.25);
+filter: brightness(1.05);
+}
+.cta-secondary{
+transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.cta-secondary:hover{
+border-color: var(--gold);
+box-shadow: 0 0 0 1px rgba(201,162,77,0.35) inset;
+}
+</style>
+<style>
+.top-nav .nav-cta{
+text-decoration: none;
+transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+.top-nav .nav-cta:hover{
+text-decoration: none;
+transform: translateY(-1px);
+box-shadow: 0 8px 22px rgba(201,162,77,0.25);
+filter: brightness(1.05);
+}
+.top-nav .nav-cta::after{
+display:none !important;
+}
+</style>
+<style>
+.platform-tag{
+font-size:14px;
+letter-spacing:0.08em;
+text-transform:uppercase;
+color:var(--muted);
+margin-bottom:14px;
+}
+.active-project{
+margin-top:10px;
+}
+.project-label{
+display:inline-block;
+margin-bottom:6px;
+font-size:12px;
+letter-spacing:0.12em;
+color:var(--gold);
+}
+</style>
+<style>
+.platform-badge{
+background: rgba(201,162,77,0.08);
+border-color: var(--gold);
+color: var(--gold);
+letter-spacing: 0.12em;
+}
+</style>
+<style>
+.project-box{
+margin-bottom:18px;
+}
+.project-box .project-title{
+font-weight:600;
+margin-top:6px;
+}
+</style>
+<style>
+.shimmer{
+position:relative;
+overflow:hidden;
+}
+.shimmer::after{
+content:"";
+position:absolute;
+top:0;
+left:-150%;
+width:50%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent 0%,
+rgba(255,255,255,0.35) 50%,
+transparent 100%
+);
+opacity:0.4;
+animation:shimmer 8s ease-in-out infinite;
+}
+@keyframes shimmer{
+0%{left:-150%;}
+70%{left:-150%;}
+100%{left:150%;}
+}
+</style>
+<style>
+.manual-input-label{
+display:block;
+margin-top:14px;
+margin-bottom:6px;
+font-size:13px;
+color:var(--muted);
+}
+.manual-input{
+width:100%;
+padding:10px 12px;
+border-radius:8px;
+background:#0f141c;
+border:1px solid var(--border);
+color:var(--text);
+font-size:15px;
+}
+.manual-input:focus{
+outline:none;
+border-color:var(--gold);
+}
+</style>
+<style>
+.section-title{
+  margin-top:80px;
+  margin-bottom:28px;
+  font-size:30px;
+  font-weight:700;
+}
+</style>
+<link rel="stylesheet" href="mobile-noctai.css">
+
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
+<style>
+.project-card-link {
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
+.project-card-link .panel {
+  cursor:pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+.project-card-link .panel:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow:
+    0 12px 34px rgba(201,162,77,0.18),
+    0 0 0 1px rgba(201,162,77,0.25) inset;
+}
+.project-cta {
+  margin-top:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:13px;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+.project-cta span {
+  color:var(--muted);
+  letter-spacing:normal;
+  text-transform:none;
+}
+.project-arrow {
+  font-size:18px;
+  line-height:1;
+}
+</style>
+</head>
+
+<body>
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">NoctAI™</a>
+    <div class="nav-right">
+  <div class="nav-links">
+    <a href="how_it_works.html">How it works</a>
+    <a href="projects.html">Projects</a>
+  </div>
+  <div class="lang-switch">
+    <a href="index.html" class="active">EN</a>
+	-
+    <a href="index-ru.html">RU</a>
+  </div>
+</div>
+  </div>
+</nav>
 
 <header>
 <div class="container hero">
 <div>
-<span class="badge platform-badge">Private Access • Curated Deals • Controlled Participation</span>
+<span class="badge platform-badge">A platform for shared participation in real projects</span>
 <h1>NoctAI™</h1>
 <div class="platform-tag">
 Institutional access to private company equity
 </div>
 <br/>
 <h3 style="margin-top:0;">
-Curated access to minority stakes in private companies
+Global marketplace for private company equity
 </h3>
-<p>
-NoctAI is a structured access platform where selected companies offer minority equity participation 
-to a controlled network of investors.
+  <p>
+    NoctAI is a marketplace where founders can offer a minority stake in their companies
+and where investors gain access to private equity opportunities normally unavailable
+outside closed venture networks.
 
-The platform is not open marketplace infrastructure.  
-Each opportunity is individually reviewed, structured and presented 
-under controlled access conditions.
-</p>
-<p>
-All participation is executed outside the platform through direct legal agreements 
-between founders and investors.
-</p>
+The platform connects founders seeking strategic capital with investors
+interested in acquiring equity in high-growth private companies.
+  </p>
+  <p>
+    Participation terms are defined individually for each project and are disclosed on the project’s dedicated page.
+  </p>
 </div>
-
 <a href="project_001.html" class="project-card-link">
   <div class="panel shimmer">
     <div class="project-box">
-      <span class="project-label">Active Deal #001</span>
+      <span class="project-label">Active Project #001</span>
       <div class="project-title">GTX Co-Driver (Ai-Dispatcher)</div>
     </div>
-<h3>Deal parameters</h3>
+<h3>Key parameters of the round</h3>
 <p>
 • Strategic round: <strong>$3,500,000</strong><br>
-• Allocation: <strong>up to 10%</strong><br>
-• Participation: <strong>from ~$350,000</strong><br>
+• Equity allocation: <strong>up to 10%</strong><br>
+• Strategic participation: <strong>from ~$350,000</strong><br>
 • Structure: <strong>private agreements</strong>
 </p>
     <div class="project-cta">
-      <span>Request Access</span>
+      <span>Project Investment Parameters</span>
       <div class="project-arrow">→</div>
     </div>
   </div>
 </a>
 </div>
 </header>
-
 <main class="container">
-
 <section class="trust-bar">
-<h2 class="section-title">Platform architecture</h2>
+<h2 class="section-title">Institutional infrastructure</h2>
 
 <div class="grid">
 
 <div class="panel">
-<h3>Controlled access</h3>
+<h3>U.S. Legal Entity</h3>
 <p>
-Project data is not fully public.
-Access is granted progressively based on user status.
+NoctAI operates through a registered U.S. corporation,
+providing a transparent legal structure for platform governance.
 </p>
 </div>
 
 <div class="panel">
-<h3>Curated selection</h3>
+<h3>Structured Deal Framework</h3>
 <p>
-Only selected companies with structured equity offers 
-are admitted to the platform.
+All participation structures are executed through
+separate legal agreements between founders and investors.
 </p>
 </div>
 
 <div class="panel">
-<h3>Off-platform execution</h3>
+<h3>Private Equity Access</h3>
 <p>
-All transactions are executed independently 
-under direct legal agreements.
+The platform focuses exclusively on minority stakes
+in private high-growth companies.
 </p>
 </div>
 
 </div>
 </section>
-
-<h2>Access model</h2>
+<h2>How the platform works</h2>
 
 <div class="grid">
 
 <div class="panel">
-<h3>Public view</h3>
+<h3>For founders</h3>
 <p>
-Overview of selected projects and general parameters.
+List a minority equity stake in your company and connect with global investors.
+Raise capital without relying on traditional venture networks.
 </p>
 </div>
 
 <div class="panel">
-<h3>Verified access</h3>
+<h3>For investors</h3>
 <p>
-Expanded information including structure, allocation 
-and participation conditions.
+Discover private companies offering equity participation.
+Access curated opportunities and connect directly with founders.
 </p>
 </div>
 
 <div class="panel">
-<h3>Approved access</h3>
+<h3>Direct deal structure</h3>
 <p>
-Direct interaction with founders and access 
-to deal execution process.
+NoctAI does not process investments or hold funds.
+All transactions are executed directly between founders and investors
+through separate legal agreements.
 </p>
 </div>
 
 </div>
+<h2>Platform requirements</h2>
 
-<h2>Deal structure</h2>
+<div class="panel">
+
+<p>Companies listed on NoctAI must meet several requirements:</p>
+
+<p>
+• Registered legal entity<br>
+• Clear equity structure<br>
+• Verified company ownership<br>
+• Transparent documentation of the offered stake
+</p>
+
+<p>
+Projects that do not meet these criteria are not admitted to the platform.
+</p>
+
+</div>
+<h2>Platform model</h2>
 
 <div class="panel">
 
 <p>
-Each project defines its own participation structure:
+NoctAI acts as a discovery platform for private equity opportunities.
 </p>
 
 <p>
-• Allocation size and valuation<br>
-• Minimum participation threshold<br>
-• Legal agreement format<br>
-• Strategic conditions
+The platform does not sell securities, does not act as a broker,
+and does not process investment transactions.
 </p>
 
 <p>
-The platform standardizes presentation, 
-but does not standardize deal terms.
+Investment agreements are executed directly
+between founders and investors outside the platform.
 </p>
 
 </div>
-
-<h2>Admission criteria</h2>
-
-<div class="panel">
-
-<p>
-Projects are admitted only after internal review:
-</p>
-
-<p>
-• Verified legal entity<br>
-• Defined ownership structure<br>
-• Documented equity allocation<br>
-• Founder identity confirmation
-</p>
-
-<p>
-Unverified or unstructured offers are not listed.
-</p>
-
-</div>
-
-<h2>Platform positioning</h2>
-
-<div class="panel">
-
-<p>
-NoctAI is not a broker, marketplace or investment platform.
-</p>
-
-<p>
-It is a controlled access layer 
-between founders offering equity 
-and investors seeking structured participation.
-</p>
-
-<p>
-The platform does not process capital, 
-does not execute transactions 
-and does not provide investment advice.
-</p>
-
-</div>
-
 <section>
 
-<h2>Private investor layer</h2>
+<h2>Verified Deal Framework</h2>
+
+<div class="grid">
+
+<div class="panel">
+<h3>Company verification</h3>
+<p>
+Companies listed on the platform undergo
+basic verification of legal entity
+and founder ownership.
+</p>
+</div>
+
+<div class="panel">
+<h3>Document verification</h3>
+<p>
+Key corporate documents and
+equity structure may be reviewed
+before project listing.
+</p>
+</div>
+
+<div class="panel">
+<h3>Deal structure review</h3>
+<p>
+Participation structure and equity allocation
+are examined to ensure transparency
+for investors.
+</p>
+</div>
+
+</div>
+
+</section>
+<section>
+
+<h2>Private Investor Club</h2>
 
 <p style="text-align:center;max-width:720px;margin:0 auto 30px;color:var(--muted)">
-A restricted investor layer receives early and exclusive access 
-to selected opportunities before public visibility.
+NoctAI maintains a private investor community
+that receives early access to new investment opportunities
+before they become publicly visible on the platform.
 </p>
 
 <div class="grid">
 
 <div class="panel">
-<h3>Early access</h3>
+<h3>Early Access</h3>
 <p>
-New deals become available prior to public listing.
+New projects become available to members
+72 hours before public listing.
 </p>
 </div>
 
 <div class="panel">
-<h3>Direct communication</h3>
+<h3>Instant Notifications</h3>
 <p>
-Access to founders before deal allocation is completed.
+Members receive instant alerts
+when new projects appear on the platform.
 </p>
 </div>
 
 <div class="panel">
-<h3>Restricted deals</h3>
+<h3>Private Opportunities</h3>
 <p>
-Some opportunities are not publicly listed.
+Certain deals may be available
+exclusively to club members.
 </p>
 </div>
 
 </div>
 
 <p style="text-align:center;margin-top:30px">
-<strong style="font-size:20px;color:var(--gold)">Access by approval</strong>
+<strong style="font-size:20px;color:var(--gold)">$500 / year</strong>
 </p>
+
+</section>
+<section>
+
+<h2>Platform traction</h2>
+
+<div class="grid">
+
+<div class="panel">
+<h3>Global investor network</h3>
+<p>
+27 investors across 9 jurisdictions
+participate in private equity opportunities.
+</p>
+</div>
+
+<div class="panel">
+<h3>Projects under review</h3>
+<p>
+7 companies currently undergoing internal evaluation
+before appearing on the platform.
+</p>
+</div>
+
+<div class="panel">
+<h3>Strategic capital rounds</h3>
+<p>
+$12M capital pipeline in strategic minority equity rounds.
+</p>
+</div>
+
+</div>
 
 </section>
 
 <section>
 
-<h2>Pipeline</h2>
+<h2>Investor deal room</h2>
+
+<p style="text-align:center;max-width:720px;margin:0 auto 40px;color:var(--muted)">
+Institutional investors receive structured access to project documentation,
+financial models and direct founder communication before strategic rounds.
+</p>
 
 <div class="grid">
 
 <div class="panel">
-<h3>Active deals</h3>
-<p>
-Live structured equity opportunities available for participation.
-</p>
+<h3>Market analysis</h3>
+<p>Detailed market size and competitive landscape analysis.</p>
 </div>
 
 <div class="panel">
-<h3>Under review</h3>
-<p>
-Projects currently undergoing internal evaluation.
-</p>
+<h3>Product & traction</h3>
+<p>Current adoption metrics and product architecture.</p>
 </div>
 
 <div class="panel">
-<h3>Upcoming</h3>
-<p>
-Deals scheduled for controlled release.
-</p>
+<h3>Financial model</h3>
+<p>Revenue projections, capital structure and expected operating margins.</p>
 </div>
 
 </div>
-
 </section>
-
+<br/>
+<br/>
 <section class="institutional-notice">
   <p>
-    NoctAI operates as a structured access system for private company participation.
-    The platform does not offer securities, does not act as a broker-dealer,
-    and does not process investment transactions.
+    NoctAI operates as an investment-oriented project origination and participation platform.
+    The platform itself does not offer securities, does not act as a broker-dealer, investment advisor, or fund,
+    and does not provide financial or profit guarantees.
   </p>
   <p>
-    Participation occurs exclusively through separate legal agreements 
-    between independent parties outside the platform.
+    Any references to investment logic relate to the underlying projects, not to direct user actions on this site.
+    Participation through NoctAI does not constitute equity ownership or an investment relationship.
+    Formal investment arrangements, if any, are executed separately under individualized legal agreements.
   </p>
 </section>
-
 <section>
-
-<h2>Project admission</h2>
+<br/>
+<h2>Project Listing on the Platform</h2>
 
 <p style="text-align:center;max-width:760px;margin:0 auto 30px;color:var(--muted)">
-Companies may apply for admission to present structured equity participation 
-to a controlled investor network.
+Companies and startups can list their projects on the platform
+to present minority equity opportunities to a global network of investors.
+
+Projects listed on NoctAI are presented to a global network
+of private investors and strategic capital partners.
 </p>
 
 <div class="grid">
 
 <div class="panel">
-<h3>Initial review</h3>
-<p>Basic eligibility and structure verification.</p>
+<h3>Standard Listing</h3>
+<p>
+Project listing with a dedicated project page
+and visibility to platform investors.
+</p>
+<p><strong>$999</strong></p>
 </div>
 
 <div class="panel">
-<h3>Documentation review</h3>
-<p>Assessment of ownership and equity structure.</p>
+<h3>Featured Listing</h3>
+<p>
+Higher project visibility,
+priority placement in the project list
+and increased exposure to investors.
+</p>
+<p><strong>$1,999</strong></p>
 </div>
 
-<div class="panel">
-<h3>Approval</h3>
-<p>Controlled admission and listing.</p>
+<div class="panel" style="border:1px solid var(--gold); box-shadow:0 0 0 1px rgba(201,162,77,0.3) inset;">
+<h3>Priority Listing</h3>
+<p>
+Top placement on the platform
+with enhanced exposure
+and a <strong>Featured Opportunity</strong> badge.
+</p>
+<p><strong>$2,999</strong></p>
 </div>
 
 </div>
 
 </section>
-
+<br>
 <section class="founders-cta container">
 
 <div class="panel" style="text-align:center;">
 
-<h2>Offer a stake in your company</h2>
+<h2>Sell a stake in your company</h2>
 <p style="margin-top:8px;color:var(--gold)">
-Admission is selective and controlled
+Projects are reviewed before appearing on the platform.
 </p>
-
 <p>
-Companies may submit an equity participation proposal 
-for internal review.
+Founders can offer a minority equity stake
+and connect with investors seeking
+strategic participation in private companies.
 </p>
 
 <a class="cta-primary" href="contact.html">
-Submit application
+Submit your company
 </a>
 
 </div>
 
 </section>
-
 </main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div>
+  <strong>NoctAI™</strong><br>
+<span style="font-size:13px;color:#9aa3b2;">
+A platform for structured project participation.<br>
+Centralized management · Manual access
+</span>
+</div>
+    <div>
+<strong class="footer-heading">
+  LEGAL & GOVERNANCE
+</strong>
+      <a href="terms.html">Terms</a><br>
+      <a href="risk-disclosure.html">Risk Disclosure</a><br>
+      <a href="data-processing.html">Data Processing</a><br>
+	  <a href="privacy.html">Privacy</a>
+    </div>
+	<div>
+<strong class="footer-heading">
+    Platform
+  </strong>
+      <a href="overview.html">Platform Overview</a><br>
+      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+    </div>
+<div class="footer-right">
+      <a href="mailto:contact@noctai.vip"
+   style="color:var(--muted)">
+  contact@noctai.vip
+</a><br>
+	  <span style="display:block;margin-top:6px;font-size:13px;color:#9aa3b2;">
+  NoctAI Corporation<br>
+  1007 N Orange St, Wilmington, DE 19801, United States
+</span>
+      © 2025 NoctAI™
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bottom-nav">
+  <a href="how_it_works.html">How it works</a>
+  <a href="projects.html">Platform projects</a>
+</div>
+</body>
+</html>
