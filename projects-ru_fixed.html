@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>NoctAI.VIP — projects</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="alternate" hreflang="ru" href="https://noctai.vip/projects-ru.html">
+<link rel="alternate" hreflang="en" href="https://noctai.vip/projects.html">
+
+<style>
+:root{
+  --bg:#050b16;
+  --panel:#071827;
+  --card:#0a2030;
+  --muted:#a9b6c6;
+  --text:#e6eef7;
+  --gold:#d6b15e;
+  --gold-soft:#f1d48a;
+  --border:rgba(214,177,94,.35);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:radial-gradient(1200px 600px at 50% -200px,#0b2238 0%,#050b16 55%);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+}
+.container{
+  max-width:1100px;
+  margin:80px auto;
+  padding:0 20px;
+}
+.badge{
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:.08em;
+}
+h1{
+  margin:18px 0 10px;
+  font-size:36px;
+  font-weight:700;
+}
+.sub{
+  color:var(--muted);
+  max-width:760px;
+}
+.section{
+  margin-top:48px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:26px;
+  position:relative;
+}
+.status{
+  position:absolute;
+  top:18px;
+  right:18px;
+  font-size:12px;
+  color:var(--gold);
+  border:1px solid var(--border);
+  padding:4px 10px;
+  border-radius:999px;
+}
+.card h3{
+  margin:0 0 10px;
+  font-size:18px;
+  color:var(--gold-soft);
+}
+.card p{
+  margin:0 0 14px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.55;
+}
+.meta{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.6;
+}
+.meta strong{
+  color:var(--text);
+  font-weight:600;
+}
+.cta{
+  margin-top:18px;
+  display:inline-block;
+  background:linear-gradient(180deg,#e7c776,#c9a24f);
+  color:#0b1020;
+  padding:12px 18px;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+}
+.lock{
+  opacity:.6;
+}
+hr{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:48px 0;
+}
+.footer-note{
+  margin-top:36px;
+  color:var(--muted);
+  font-size:13px;
+}
+</style>
+<style>
+h1 { color: #ffffff; }
+.sub { 
+  color: var(--muted); 
+}
+.sub strong {
+  color: var(--text);
+  font-weight: 600;
+}
+</style>
+<style>
+.top-nav{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(10,13,18,0.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+}
+.nav-container{
+max-width:1120px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+.logo:hover{
+  text-decoration:none;
+}
+.nav-links a{
+margin-left:28px;
+text-decoration:none;
+color:var(--text);
+position:relative;
+padding-bottom:4px;
+}
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:2px;
+background:var(--gold);
+transition:width 0.3s ease;
+}
+.nav-links a:hover::after{
+width:100%;
+}
+.nav-cta{
+border:1px solid var(--gold-soft);
+padding:8px 18px;
+border-radius:999px;
+}
+.nav-cta::after{
+  display:none !important;
+}
+.nav-cta:hover{
+  background:rgba(214,177,94,.08);
+  box-shadow:0 0 0 1px var(--gold-soft);
+}
+.lang-switch{
+  margin-left:28px;
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:8px;
+}
+.lang-switch a.active{
+  color:var(--gold);
+}
+.lang-switch a:hover{
+  color:var(--text);
+}
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+.lang-switch{
+  margin-left:28px;
+  padding:4px 10px;
+  border:1px solid rgba(201,162,77,0.35);
+  border-radius:999px;
+  background:rgba(201,162,77,0.06);
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+.lang-switch a.active{
+  color:var(--gold);
+}
+.lang-switch a:hover{
+  color:var(--text);
+}
+</style>
+<style>
+.site-footer{
+margin-top:100px;
+border-top:1px solid var(--border);
+background:#0a0d12;
+}
+.footer-container{
+max-width:1120px;
+margin:0 auto;
+padding:40px 20px;
+display:grid;
+  grid-template-columns: 1fr 0.8fr 0.8fr 1fr;
+  gap: 28px;
+  align-items: start;
+color:var(--muted);
+font-size:14px;
+}
+.footer-heading {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em; 
+  text-transform: uppercase;
+  color: var(--muted); 
+}
+.footer-container a{
+color:var(--gold);
+text-decoration:none;
+}
+.footer-container a:hover{
+text-decoration:underline;
+}
+.footer-right{
+  text-align:right;
+}
+</style>
+<link rel="stylesheet" href="mobile-noctai.css">
+
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
+</head>
+
+
+<body>
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="index-ru.html" class="logo">NoctAI™</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="how_it_works-ru.html">Как это работает</a>
+        <a href="projects-ru.html">Проекты</a>
+      </div>
+      <div class="lang-switch">
+        <a href="projects-ru.html" class="active">RU</a>
+        -
+        <a href="projects.html">EN</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <span class="badge">КАТАЛОГ ПРОЕКТОВ</span>
+  <h1>Каталог проектов NoctAI</h1>
+  <p class="sub">
+    <strong>NoctAI ведёт контролируемый каталог возможностей участия в долях частных компаний и проектов, находящихся на структурной оценке.</strong><br><br>
+    Эта страница не является публичным маркетплейсом и не является публичным инвестиционным предложением. Это каталог активных, ограниченных и готовящихся позиций доступа к проектам в рамках контролируемой модели участия.<br><br>
+    Каждый проект проходит индивидуальную оценку по структуре сделки, юридической ясности и качеству представления до открытия более широкого доступа.<br><br>
+    <strong>Детальный доступ предоставляется выборочно и может быть ограничен, отложен или закрыт без публичного уведомления.</strong>
+  </p>
+
+  <div class="section">
+    <h2>Активные сделки</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="status">ACTIVE</span>
+        <h3>GTX Co-Driver (Ai-Dispatcher)</h3>
+        <p>
+          AI-платформа логистической инфраструктуры для транспортного и trucking-сектора США.
+        </p>
+        <div class="meta">
+          <div><strong>Сектор:</strong> Logistics / AI Infrastructure</div>
+          <div><strong>Юрисдикция:</strong> United States</div>
+          <div><strong>Стадия:</strong> MVP / Early Growth</div>
+          <div><strong>Раунд:</strong> Strategic</div>
+          <div><strong>Объём раунда:</strong> $3,500,000</div>
+          <div><strong>Распределение:</strong> до 10%</div>
+          <div><strong>Минимальное участие:</strong> от приблизительно $350,000</div>
+          <div><strong>Структура:</strong> прямые соглашения / возможен SPV</div>
+          <div><strong>Доступ:</strong> после внутренней проверки</div>
+        </div>
+        <a class="cta" href="project_001-ru.html">Открыть активную сделку</a>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="section">
+    <h2>На внутренней оценке</h2>
+    <div class="grid">
+      <div class="card lock">
+        <span class="status">UNDER REVIEW</span>
+        <h3>FinTech Infrastructure Project</h3>
+        <p>
+          Концепт инфраструктурного проекта в сфере финансовых сервисов, проходящий структурную, юридическую и access-оценку.
+        </p>
+        <div class="meta">
+          <div><strong>Сектор:</strong> FinTech Infrastructure</div>
+          <div><strong>Статус:</strong> внутренняя оценка</div>
+          <div><strong>Доступ:</strong> ещё не открыт</div>
+        </div>
+      </div>
+
+      <div class="card lock">
+        <span class="status">UNDER REVIEW</span>
+        <h3>Data Intelligence Platform</h3>
+        <p>
+          Платформа отраслевой аналитики и обработки данных, проходящая оценку по структуре, позиционированию и условиям контролируемого допуска.
+        </p>
+        <div class="meta">
+          <div><strong>Сектор:</strong> Data / Intelligence</div>
+          <div><strong>Статус:</strong> внутренняя оценка</div>
+          <div><strong>Доступ:</strong> ещё не открыт</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="section">
+    <h2>Ограниченный доступ</h2>
+    <div class="grid">
+      <div class="card lock">
+        <span class="status">RESTRICTED</span>
+        <h3>Проекты в контролируемой подготовке</h3>
+        <p>
+          Отдельные проекты могут оставаться недоступными, пока завершается документация, логика распределения или защитное структурирование.
+        </p>
+        <div class="meta">
+          <div><strong>Видимость:</strong> ограничена</div>
+          <div><strong>Доступ:</strong> только после внутреннего открытия</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="section">
+    <h2>Только по приглашению</h2>
+    <div class="grid">
+      <div class="card lock">
+        <span class="status">PRIVATE</span>
+        <h3>Private capital opportunities</h3>
+        <p>
+          Часть возможностей может предоставляться только по прямому приглашению, внутреннему распределению или через introduction со стороны основателя.
+        </p>
+        <div class="meta">
+          <div><strong>Доступ:</strong> только по приглашению</div>
+          <div><strong>Контактный путь:</strong> через команду NoctAI</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub" style="margin-top:28px;">
+    Доступ к отдельным проектам, ограниченным раундам и детальным материалам сделки управляется через отдельный процесс доступа.
+  </p>
+  <p class="sub">
+    <a href="project_access-ru.html" style="color:var(--gold); text-decoration:none;">
+      Перейти к Project Access →
+    </a>
+  </p>
+  <p class="footer-note">
+    Информация на этой странице не является публичной офертой, предложением ценных бумаг, инвестиционной рекомендацией или обязательством открыть доступ.
+    Видимость проектов и условия участия могут быть изменены, ограничены или отозваны в любой момент.
+  </p>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div>
+      <strong>NoctAI™</strong><br>
+      <span style="font-size:13px;color:#9aa3b2;">
+        Платформа для структурированного участия в проектах.<br>
+        Централизованное управление · Ручной доступ
+      </span>
+    </div>
+    <div>
+      <strong class="footer-heading">
+        ЮРИДИКА И КОРПОРАТИВНОЕ УПРАВЛЕНИЕ
+      </strong>
+      <a href="terms-ru.html">Условия</a><br>
+      <a href="risk-disclosure-ru.html">Раскрытие рисков</a><br>
+      <a href="data-processing-ru.html">Обработка данных</a><br>
+      <a href="privacy-ru.html">Конфиденциальность</a>
+    </div>
+    <div>
+      <strong class="footer-heading">
+        ПЛАТФОРМА
+      </strong>
+      <a href="overview-ru.html">Обзор платформы</a><br>
+      <a href="oversight_governance-ru.html">Надзор и корпоративное управление</a>
+    </div>
+    <div class="footer-right">
+      <a href="mailto:contact@noctai.vip" style="color:var(--muted)">
+        contact@noctai.vip
+      </a><br>
+      <span style="display:block;margin-top:6px;font-size:13px;color:#9aa3b2;">
+        NoctAI Corporation<br>
+        1007 N Orange St, Wilmington, DE 19801, United States
+      </span>
+      © 2025 NoctAI™
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bottom-nav">
+  <a href="how_it_works-ru.html">Как это работает</a>
+  <a href="projects-ru.html">Проекты платформы</a>
+</div>
+</body>
+
+</html>
