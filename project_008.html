@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NoctAI.VIP — Shared participation platform</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="alternate" hreflang="en" href="https://noctai.vip/project_007.html">
+<link rel="alternate" hreflang="ru" href="https://noctai.vip/project_007-ru.html">
+
+<style>
+:root{
+  --bg:#050b16;
+  --panel:#071827;
+  --muted:#95a6b9;
+  --text:#e6eef7;
+  --gold:#d6b15e;
+  --gold-soft:#f1d48a;
+  --border:rgba(214,177,94,.35);
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+background:radial-gradient(1200px 600px at 20% -10%,#111826 0%,var(--bg) 55%);
+color:var(--text);
+line-height:1.65;
+}
+header{padding:56px 20px;border-bottom:1px solid var(--border)}
+.container{max-width:1120px;margin:0 auto}
+h1{font-size:40px;margin:0 0 12px}
+h2{font-size:26px;margin:64px 0 18px}
+h3{font-size:18px;margin:0 0 10px}
+p{margin:0 0 14px;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:42px}
+.badge{
+display:inline-block;
+padding-left:14px;
+border:none;
+border-left:2px solid var(--gold-soft);
+border-radius:0;
+font-size:13px;
+color:var(--gold);
+margin-bottom:18px;
+letter-spacing:0.16em;
+text-transform:uppercase;
+opacity:0.85;
+}
+.cta-primary{
+display:inline-block;
+margin-top:24px;
+padding:15px 34px;
+border-radius:8px;
+background:linear-gradient(180deg,#e6c56f 0%,#c9a24d 100%);
+color:#0a0d12;
+text-decoration:none;
+font-weight:700
+}
+.cta-secondary{
+display:inline-block;
+margin-top:14px;
+padding:13px 28px;
+border-radius:8px;
+border:1px solid var(--gold-soft);
+color:var(--gold);
+text-decoration:none;
+background:rgba(201,162,77,.04)
+}
+.panel{
+background:linear-gradient(180deg,#131a24 0%,var(--panel) 100%);
+border:1px solid var(--gold-soft);
+border-radius:14px;
+padding:30px;
+box-shadow:0 0 0 1px rgba(201,162,77,.05) inset
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+  align-items: stretch;
+}
+.calculator{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}
+.result{font-size:22px;font-weight:700;color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--gold)}
+footer{margin-top:96px;padding:36px 20px;border-top:1px solid var(--border);color:var(--muted);font-size:13px}
+@media(max-width:900px){.hero,.grid,.calculator{grid-template-columns:1fr}}
+</style>
+<style>
+.top-nav{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(10,13,18,0.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+}
+.nav-container{
+max-width:1120px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+.logo:hover{
+  text-decoration:none;
+}
+.nav-links a{
+margin-left:28px;
+text-decoration:none;
+color:var(--text);
+position:relative;
+padding-bottom:4px;
+}
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:2px;
+background:var(--gold);
+transition:width 0.3s ease;
+}
+.nav-links a:hover::after{
+width:100%;
+}
+.nav-cta{
+border:1px solid var(--gold-soft);
+padding:8px 18px;
+border-radius:999px;
+}
+.site-footer{
+margin-top:100px;
+border-top:1px solid var(--border);
+background:#0a0d12;
+}
+.footer-container{
+max-width:1120px;
+margin:0 auto;
+padding:40px 20px;
+display:grid;
+  grid-template-columns: 1fr 0.8fr 0.8fr 1fr;
+  gap: 28px;
+  align-items: start;
+color:var(--muted);
+font-size:14px;
+}
+.footer-heading {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em; 
+  text-transform: uppercase;
+  color: var(--muted); 
+}
+.footer-container a{
+color:var(--gold);
+text-decoration:none;
+}
+.footer-container a:hover{
+text-decoration:underline;
+}
+.footer-right{
+  text-align:right;
+}
+@media(max-width:900px){
+.footer-container{grid-template-columns:1fr}
+.nav-links a{margin-left:16px}
+}
+.lang-switch{
+  margin-left:28px;
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:8px;
+}
+.lang-switch a.active{
+  color:var(--gold);
+}
+.lang-switch a:hover{
+  color:var(--text);
+}
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+.lang-switch{
+  margin-left:28px;
+  padding:4px 10px;
+  border:1px solid rgba(201,162,77,0.35);
+  border-radius:999px;
+  background:rgba(201,162,77,0.06);
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+.lang-switch a.active{
+  color:var(--gold);
+}
+.lang-switch a:hover{
+  color:var(--text);
+}
+</style>
+<style>
+.cta-primary{
+transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+.cta-primary:hover{
+transform: translateY(-1px);
+box-shadow: 0 8px 22px rgba(201,162,77,0.25);
+filter: brightness(1.05);
+}
+.cta-secondary{
+transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.cta-secondary:hover{
+border-color: var(--gold);
+box-shadow: 0 0 0 1px rgba(201,162,77,0.35) inset;
+}
+</style>
+<style>
+.top-nav .nav-cta{
+text-decoration: none;
+transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+.top-nav .nav-cta:hover{
+text-decoration: none;
+transform: translateY(-1px);
+box-shadow: 0 8px 22px rgba(201,162,77,0.25);
+filter: brightness(1.05);
+}
+.top-nav .nav-cta::after{
+display:none !important;
+}
+</style>
+<style>
+.platform-tag{
+font-size:14px;
+letter-spacing:0.08em;
+text-transform:uppercase;
+color:var(--muted);
+margin-bottom:14px;
+}
+.active-project{
+margin-top:10px;
+}
+.project-label{
+display:inline-block;
+margin-bottom:6px;
+font-size:12px;
+letter-spacing:0.12em;
+color:var(--gold);
+}
+</style>
+<style>
+.platform-badge{
+background: rgba(201,162,77,0.08);
+border-color: var(--gold);
+color: var(--gold);
+letter-spacing: 0.12em;
+}
+</style>
+<style>
+.project-box{
+margin-bottom:18px;
+}
+.project-box .project-title{
+font-weight:600;
+margin-top:6px;
+}
+</style>
+<style>
+.shimmer{
+position:relative;
+overflow:hidden;
+}
+.shimmer::after{
+content:"";
+position:absolute;
+top:0;
+left:-150%;
+width:50%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent 0%,
+rgba(255,255,255,0.35) 50%,
+transparent 100%
+);
+opacity:0.4;
+animation:shimmer 8s ease-in-out infinite;
+}
+@keyframes shimmer{
+0%{left:-150%;}
+70%{left:-150%;}
+100%{left:150%;}
+}
+</style>
+<style>
+.manual-input-label{
+display:block;
+margin-top:14px;
+margin-bottom:6px;
+font-size:13px;
+color:var(--muted);
+}
+.manual-input{
+width:100%;
+padding:10px 12px;
+border-radius:8px;
+background:#0f141c;
+border:1px solid var(--border);
+color:var(--text);
+font-size:15px;
+}
+.manual-input:focus{
+outline:none;
+border-color:var(--gold);
+}
+</style>
+<style>
+.section-title{
+  margin-top:80px;
+  margin-bottom:28px;
+  font-size:30px;
+  font-weight:700;
+}
+</style>
+<style>
+.calc-overlay{
+  position:fixed; inset:0; background:rgba(5,8,14,0.85);
+  backdrop-filter:blur(6px); z-index:3000;
+  display:flex; align-items:center; justify-content:center;
+}
+.calc-modal{
+  width:100%; max-width:960px; background:#0f141c;
+  border:1px solid #c9a44c; border-radius:18px;
+  padding:36px; position:relative;
+}
+.calc-close{
+  position:absolute; top:16px; right:18px;
+  background:none; border:none; color:#aaa; font-size:24px;
+  cursor:pointer;
+}
+.calc-sub{color:#9aa3ad; margin-bottom:20px;}
+.coverage-title{font-size:14px; color:#9aa3ad; margin-bottom:10px;}
+.coverage-buttons{display:flex; gap:10px; margin-bottom:26px;}
+.coverage-buttons button{
+  width:56px; height:34px; border-radius:8px;
+  background:#0b0f16; border:1px solid #c9a44c;
+  color:#fff; font-size:12px; cursor:pointer;
+}
+.coverage-buttons button.active{
+  background:linear-gradient(180deg,#f1d48a,#d6b15e);
+  color:#050b16;
+}
+.calc-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+.calc-panel{
+  border:1px solid #c9a44c; border-radius:14px; padding:24px;
+}
+.calc-value{font-size:22px; margin:10px 0;}
+.calc-muted{font-size:13px; color:#9aa3ad;}
+.calc-income .calc-main{font-size:26px; color:#f1d48a;}
+.calc-footer{text-align:right; margin-top:24px;}
+.calc-close-btn{
+  background:#0b0f16; border:1px solid #c9a44c;
+  padding:10px 18px; border-radius:10px; color:#fff;
+}
+</style>
+<style>
+.presentation-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.presentation-modal {
+  width: 92vw;
+  height: 92vh;
+  max-width: 1400px;
+  max-height: 900px;
+  background: #0f141c;
+  border: 1px solid #c9a44c;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.presentation-modal iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+.presentation-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: #c9a44c; 
+  cursor: pointer;
+  opacity: 0.9;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.15s ease;
+}
+.presentation-close:hover {
+  color: #e6c76a;
+  opacity: 1;
+  transform: scale(1.08);
+}
+.presentation-close:active {
+  transform: scale(0.96);
+}
+</style>
+<style>
+#pdfViewer {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 24px 0;
+  background: #0f141c;
+  box-sizing: border-box;
+}
+#pdfViewer canvas {
+  display: block;
+  margin: 0 auto 24px auto;
+  max-width: 100%;
+  height: auto;
+}
+</style>
+<style>
+.calc-panel input[type=number]{
+  width:100%;
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius:10px;
+  background:#0b0f16;
+  border:1px solid #c9a44c;
+  color:#f1d48a;
+  font-size:16px;
+  font-weight:600;
+  box-shadow: inset 0 0 0 1px rgba(201,164,76,0.15);
+}
+.calc-panel input[type=number]:focus{
+  outline:none;
+  border-color:#f1d48a;
+  box-shadow:0 0 0 2px rgba(201,164,76,0.25);
+}
+.calc-muted{
+  margin-top:10px;
+}
+</style>
+<link rel="stylesheet" href="mobile-noctai.css">
+
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
+<style>
+.doc-card{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:20px 26px;
+  border-radius:14px;
+  border:1px solid var(--gold-soft);
+  background:linear-gradient(180deg,#0f141c,#0b1119);
+  text-decoration:none;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.doc-card:hover{
+  transform:translateY(-2px);
+  border-color:var(--gold);
+  box-shadow:0 12px 26px rgba(201,162,77,.25);
+}
+.doc-icon{
+  width:46px;
+  height:56px;
+  border-radius:8px;
+  background:
+    linear-gradient(180deg,#f1d48a,#d6b15e);
+  position:relative;
+}
+.doc-icon::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  width:14px;
+  height:14px;
+  background:#050b16;
+  clip-path:polygon(0 0,100% 0,100% 100%);
+}
+.doc-meta{
+  display:flex;
+  flex-direction:column;
+}
+.doc-title{
+  color:#e6eef7;
+  font-weight:600;
+  font-size:15px;
+}
+.doc-subtitle{
+  margin-top:4px;
+  font-size:12px;
+  color:#95a6b9;
+  letter-spacing:.04em;
+}
+</style>
+</head>
+
+<body>
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">NoctAI™</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="how_it_works.html">How it works</a>
+        <a href="projects.html">Projects</a>
+      </div>
+      <div class="lang-switch">
+        <a href="project_007.html" class="active">EN</a>
+        -
+        <a href="project_007-ru.html">RU</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="container hero">
+    <div>
+      <span class="badge platform-badge">ACTIVE DEAL #008</span>
+      <h1>Proof-of-Life Financial Infrastructure (PoLFI)</h1>
+<div style="margin:14px 0 16px;display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid rgba(241,212,138,0.45);border-radius:999px;background:rgba(214,177,94,0.10);color:var(--gold-soft);font-size:13px;font-weight:700;letter-spacing:0.10em;text-transform:uppercase;">IP Protection — process initiated</div>
+      <div class="platform-tag">Financial Security · Proof-of-Life · Anti-Coercion Verification</div>
+      <p>
+        Structured access to an early-stage healthcare-financing infrastructure platform focused on
+        verifying surgical cases, validating treatment economics, and controlling staged disbursement of funds
+        for medically necessary operations.
+      </p>
+      <p>
+        This page is a public overview only. Detailed verification architecture, clinical validation workflow,
+        fund-control logic, compliance structure, and investor participation terms are available only
+        on a controlled access basis.
+      </p>
+      <a class="cta-primary" href="mailto:contact@noctai.vip?subject=Project%20007%20Deal%20Access">Request Deal Access</a><br>
+      <a class="cta-secondary" href="mailto:contact@noctai.vip?subject=Project%20007%20Deal%20Access" target="_blank" rel="noopener">
+        Access is granted selectively
+      </a>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;">
+      <div class="panel" style="width:100%;max-width:420px;">
+        <h3>Access note</h3>
+        <p>
+          Detailed materials are not publicly displayed at this stage.
+          Initial access is handled through direct review and controlled disclosure.
+        </p>
+        <p>
+          Lead investor, strategic healthcare-finance partner, or structured co-investor format is preferred for this round.
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="panel" style="margin-top:56px;margin-bottom:32px;">
+    <h3>Deal Snapshot</h3>
+    <div class="grid" style="margin-top:18px;">
+      <div class="panel">
+        <h3>Sector</h3>
+        <p>Healthcare Infrastructure / Verification Technology / Controlled Disbursement Systems</p>
+      </div>
+      <div class="panel">
+        <h3>Stage</h3>
+        <p>Pre-launch / verification engine and controlled-payment architecture build</p>
+      </div>
+      <div class="panel">
+        <h3>Jurisdiction</h3>
+        <p>To be finalized within project structuring</p>
+      </div>
+      <div class="panel">
+        <h3>Round</h3>
+        <p>Strategic round: <strong>$4,500,000</strong><br>Allocation: <strong>up to 15%</strong><br>Participation: <strong>from approximately $250,000</strong></p>
+      </div>
+      <div class="panel">
+        <h3>Structure</h3>
+        <p>Direct agreements<br>SPV possible<br>Structured participation</p>
+      </div>
+      <div class="panel">
+        <h3>Access</h3>
+        <p>Internal review<br>Selective access<br>No public allocation</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-bottom:56px;">
+    <h3>Strategic Participation Framework</h3>
+    <p>
+      The project is positioned as a trust-and-control infrastructure layer for the financing of medical operations.
+      It is not a generic donation page or mass crowdfunding product. Its function is to verify cases,
+      validate treatment paths, and release funding only through structured, auditable stages.
+    </p>
+    <p>
+      Existing fundraising systems often stop at the point of collection. This platform is designed for the next layer:
+      clinical verification, staged fund release, treatment-linked confirmation, and transparent audit trails for donors,
+      family offices, charitable entities, and healthcare partners.
+    </p>
+    <p>
+      For institutional presentation, the project is framed as healthcare trust infrastructure rather than a public charity portal.
+      The proposed working target of <strong>$4,500,000</strong> is intended to support case-verification architecture,
+      controlled-disbursement systems, medical-partner onboarding, compliance controls, and launch-phase operating readiness.
+    </p>
+    <p>
+      Fixed return timelines are not presented. Any participation structure, economics,
+      and investor rights are subject to direct review and separate legal agreements.
+    </p>
+  </div>
+
+  <div class="panel" style="margin-bottom:56px;">
+    <h3>Investment Use</h3>
+    <p>
+      Capital is expected to be allocated across five core areas:
+    </p>
+    <p>
+      • Surgical-case verification engine, medical-document validation, and audit workflow design<br>
+      • Controlled disbursement infrastructure, staged release logic, and payment-governance systems<br>
+      • Partner onboarding across clinics, surgeons, validators, and charitable entities<br>
+      • Compliance, identity controls, records protection, and platform hardening<br>
+      • Pilot deployment, institutional partnerships, and operating reserve
+    </p>
+    <p>
+      A phased deployment model is preferred, beginning with controlled use cases and selected medical partners before broader expansion.
+    </p>
+  </div>
+
+  <h2 class="section-title">Value creation logic</h2>
+  <div class="grid">
+    <div class="panel">
+      <h3>Verification before funding</h3>
+      <p>
+        The platform addresses one of the hardest problems in medical giving: how to verify that a surgical case, treatment path, provider, and financial requirement are real before funds are committed.
+      </p>
+    </div>
+    <div class="panel">
+      <h3>Trust after collection</h3>
+      <p>
+        The product adds a missing trust layer after fundraising by linking disbursement to validated treatment stages, reducing fraud risk and improving donor confidence.
+      </p>
+    </div>
+    <div class="panel">
+      <h3>Institutional applicability</h3>
+      <p>
+        The infrastructure can serve charitable funds, private donors, religious giving organizations, medical NGOs, and white-label healthcare financing programs that require auditability and controlled release of capital.
+      </p>
+    </div>
+  </div>
+
+  <h2>Access status</h2>
+  <div class="panel">
+    <p>
+      The project is presented as an <strong>active structured opportunity</strong> with selective access.
+      Detailed case-validation mechanics, fee logic, partner economics, disbursement rules,
+      and legal structure are not publicly disclosed at this stage.
+    </p>
+    <p>
+      Access to detailed materials may be granted after direct review,
+      depending on investor profile, strategic relevance, and round structuring requirements.
+    </p>
+  </div>
+
+  <h2>Commercial positioning</h2>
+  <div class="grid">
+    <div class="panel">
+      <h3>Core product</h3>
+      <p>
+        Verified surgical-case intake, medical-document review, staged disbursement logic, audit tracking, and controlled financial release tied to validated treatment milestones.
+      </p>
+    </div>
+    <div class="panel">
+      <h3>Revenue channels</h3>
+      <p>
+        Transaction-based fees, institutional subscriptions, white-label deployments for funds and healthcare organizations, and premium verification services.
+      </p>
+    </div>
+    <div class="panel">
+      <h3>Preferred route</h3>
+      <p>
+        Controlled launch through selected medical partners, charitable institutions, and verified pilot cases before broader multi-region expansion.
+      </p>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:48px;">
+    <h3>Funding & Participation Disclosure</h3>
+    <p>This page is a controlled project overview and does not constitute a public investment offer,
+      guaranteed return representation, or securities solicitation.
+    </p>
+    <p>
+      Any participation discussion, if opened, is conducted separately through direct review,
+      jurisdiction-specific legal structuring, and individualized documentation.
+    </p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div>
+      <strong>NoctAI™</strong><br>
+      <span style="font-size:13px;color:#9aa3b2;">
+        A platform for structured project participation.<br>
+        Centralized management · Manual access
+      </span>
+    </div>
+    <div>
+      <strong class="footer-heading">LEGAL & GOVERNANCE</strong>
+      <a href="terms.html">Terms</a><br>
+      <a href="risk-disclosure.html">Risk Disclosure</a><br>
+      <a href="data-processing.html">Data Processing</a><br>
+      <a href="privacy.html">Privacy</a>
+    </div>
+    <div>
+      <strong class="footer-heading">Platform</strong>
+      <a href="overview.html">Platform Overview</a><br>
+      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+    </div>
+    <div class="footer-right">
+      <a href="mailto:contact@noctai.vip" style="color:var(--muted)">contact@noctai.vip</a><br>
+      <span style="display:block;margin-top:6px;font-size:13px;color:#9aa3b2;">
+        NoctAI Corporation<br>
+        1007 N Orange St, Wilmington, DE 19801, United States
+      </span>
+      © 2025 NoctAI™
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bottom-nav">
+  <a href="how_it_works.html">How it works</a>
+  <a href="projects.html">Platform projects</a>
+</div>
+
+</body>
+</html>
