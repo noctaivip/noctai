@@ -412,6 +412,139 @@ border-color:var(--gold);
   line-height:1;
 }
 </style>
+
+<style>
+.support-section{
+  margin-top:64px;
+}
+.support-panel{
+  text-align:left;
+}
+.support-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:26px;
+  align-items:start;
+}
+.support-kicker{
+  display:inline-block;
+  margin-bottom:10px;
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+.support-heading{
+  margin:0 0 14px;
+  font-size:30px;
+  text-align:left;
+}
+.support-wallet{
+  margin-top:18px;
+  padding:18px 20px;
+  border:1px solid rgba(241,212,138,0.35);
+  border-radius:12px;
+  background:#0f141c;
+}
+.support-label{
+  display:block;
+  margin-bottom:6px;
+  font-size:12px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.support-address{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+  font-size:14px;
+  line-height:1.7;
+  color:var(--text);
+  word-break:break-all;
+}
+.support-list p{
+  margin:0 0 12px;
+}
+@media(max-width:900px){
+  .support-grid{grid-template-columns:1fr;}
+}
+</style>
+
+
+<style>
+.support-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);
+  gap:48px;
+  align-items:start;
+  margin-top:18px;
+}
+.support-wallet{
+  margin-top:18px;
+  padding:20px 20px 16px;
+  border:1px solid rgba(241,212,138,0.35);
+  border-radius:14px;
+  background:#0b1018;
+  max-width:640px;
+}
+.support-wallet-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:8px;
+}
+.support-address{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+  font-size:14px;
+  line-height:1.65;
+  color:var(--text);
+  word-break:break-all;
+  flex:1;
+}
+.copy-btn{
+  width:34px;
+  height:34px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(241,212,138,0.24);
+  border-radius:8px;
+  background:rgba(255,255,255,0.02);
+  cursor:pointer;
+  flex:0 0 auto;
+}
+.copy-btn:hover{
+  border-color:var(--gold);
+  background:rgba(214,177,94,0.06);
+}
+.copy-btn img{
+  width:16px;
+  height:16px;
+  opacity:.88;
+  display:block;
+}
+.qr-trigger{
+  display:inline-block;
+  margin-top:14px;
+  color:var(--gold);
+  cursor:pointer;
+  font-size:14px;
+}
+.support-right p{
+  margin:0 0 18px;
+}
+.support-toast{
+  display:none;
+  margin-top:10px;
+  font-size:12px;
+  color:var(--gold);
+}
+@media(max-width:900px){
+  .support-layout{grid-template-columns:1fr;gap:28px;}
+  .support-wallet{max-width:none;}
+}
+</style>
+
 </head>
 
 <body>
@@ -784,6 +917,39 @@ NoctAI выступает как структурированный уровен
 </section>
 </main>
 
+
+
+<section class="support-section container">
+  <div class="panel support-panel">
+    <span class="support-kicker">Support NoctAI</span>
+    <h2 class="support-heading">Поддержать платформу</h2>
+    <p>Если вы хотите поддержать долгосрочное развитие NoctAI, вы можете отправить добровольный взнос.</p>
+    <p>Этот блок поддержки отделён от участия в проектах, доступа к сделкам и любой структурированной модели долевого участия на платформе.</p>
+
+    <div class="support-layout">
+      <div>
+        <div class="support-wallet">
+          <span class="support-label">USDT wallet · TRC20</span>
+          <div class="support-wallet-row">
+            <div class="support-address" id="wallet">TV3XmkRdQpVQRbNjNEp2TFeZghLD1vqxmL</div>
+            <button class="copy-btn" type="button" onclick="copyWallet()" aria-label="Copy wallet">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAABzCAYAAABEgVbYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARPSURBVHhe7d1PKGxhHMbx3xj50/izkwULNiKhiLJTFrKUnRVSysbWRlnZKzWxkCQpWcqCrShqzEY2o2QhZUMSGXP9Tm93uu7BzNwz97znOc+n3u457+0s3G93vOa8zkREJPMxKOBKzJ8UcAwJgiFBMCQIhgTBkCAYEgRDgmBIEAwJgiFBMCQIhgTBkCAYEoSV9yMbGhpkenpaBgcHpaKiwsziSqfTkkwmJR6Py+npqXOeL+tC1tXVydbWlvT395uZ8EilUjIxMSEnJydmJnfWvbSOjo6GMqJqbm52XokKYV3Ivr4+cxROHR0d5ig/1oUsLS01R+EUjUbNUX64agVh3WJnc3NTRkZGzFnW3d2dHB4eysPDg5kJrpKSEunt7ZXOzk4zk3V5eSldXV3mLHeBCanL85mZGbm4uDAzwaU/Ui0sLMjk5KSZySo0pNKQ1oyPkJnn5+e/xvHxceZjIeB6TdBGLBbLLC0tuX6diUTC9ZqfBr9HgmBIEAwJgiFBMCQIhgTBkCAYEgRDgrAu5Pv7uzn6k85/9Xfk4Xutemdfbwrr/cRCb0VpqO7ubmlqajIzWff39842iKenJzPjr8fHR9nb25P9/X15fX01s7mJxWKyuLgoU1NTZibL1zfNdY/N+vp6KO/sr62tyezsbF4xixHSk5dW3Z4Q1u0Z4+PjMjQ0ZM7840lI3e0WZsPDw+bIP56EDMOWxe9UV1ebI//wxw8Qnix2EomEtLS0mLMs3Z5xe3srmYwnC2NflZWVSWNjo1RVVZmZrN3dXRkbGzNnP7N21fpVyO3tbVleXpaXlxczE1y653R+fl5aW1vNTJYNIZWG/Keh2xPcti3odgbd1uB2TdCGbjPR7SZuX6duT3G75quh/ybc6kGuGBIEQ4JgSBAMCYIhQTAkCIYEwZAgGBIEQ4JgSBAMCYIhQTAkCIYEwZAgGBIEQ4JgSBAMCYIhQTAkCIYEwZAgGBIEQ4JgSBAMCYIhPaC/Jtfe3u58QkAuo62tTWpra83V3ijq70eurq7K3NycNY9U+RcaYGVlxfU55PromOvra+dZ5bmIRCJSX1/vPNLmMyt/0TUsIb3k6+NZyH8MaZlCX70Y0jIHBwfmKD8MaZGjoyNnXVEILnZy9N1i5+rqSs7OznJetX729vbmfNTgzs6O80ibQv1+MkShI+xP9djY2HC95n8OvrR6oND/iV5iSBAMCYIhQTAkCIYEwZAgGBIEQ4JgSBBFDanveFRWVjpbIYI+ysvLnTv7tirqm+bn5+fOp+cgfBRSTU2NDAwMuG7PyPdR2MVQ1JBhYUNIfo8E4UnIdDptjsJJ7yf6zZOQyWTSHIWT3hT2mych4/G4pFIpcxYuuj1D7+z7zZPFTjQalZ6eHudT63RLhJ6j0+0rulFKt7Pc3NyYWf94EpL8x1UrCIYEwZAgGBIEQ4JgSBAMCYIhQTAkCIYEwZAgGBIEQ4JgSAgivwAqxRSi4Isl4gAAAABJRU5ErkJggg==" alt="">
+            </button>
+          </div>
+          <div class="qr-trigger" onclick="toggleQR()">QR кошелька</div>
+<img id="qr" src="qr-wallet.png" style="display:none;margin-top:12px;width:160px;border-radius:8px;">
+          <div id="copyToast" class="support-toast">Скопировано</div>
+        </div>
+      </div>
+      <div class="support-right">
+        <p><strong>Назначение:</strong> развитие платформы, инфраструктура, исследования и поддержка контента.</p>
+        <p><strong>Формат:</strong> только добровольная поддержка.</p>
+        <p><strong>Важно:</strong> через этот канал не предоставляются инвестиционные права, права участия, доля собственности или финансовая доходность.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="footer-container">
     <div>
@@ -828,5 +994,25 @@ NoctAI выступает как структурированный уровен
   <a href="how_it_works-ru.html">Как это работает</a>
   <a href="projects-ru.html">Проекты платформы</a>
 </div>
+
+
+
+<script>
+function copyWallet(){
+  const wallet = document.getElementById('wallet').innerText;
+  navigator.clipboard.writeText(wallet);
+  const toast = document.getElementById('copyToast');
+  if (toast){
+    toast.style.display = 'block';
+    setTimeout(() => { toast.style.display = 'none'; }, 1400);
+  }
+}
+
+function toggleQR(){
+  const qr = document.getElementById('qr');
+  qr.style.display = (qr.style.display === 'none' || qr.style.display === '') ? 'block' : 'none';
+}
+</script>
+
 </body>
 </html>
