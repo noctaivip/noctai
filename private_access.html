@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NoctAI.VIP — private_access</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="alternate" hreflang="en" href="https://noctai.vip/private_access.html">
+<link rel="alternate" hreflang="ru" href="https://noctai.vip/private_access-ru.html">
+<link rel="stylesheet" href="mobile-noctai.css">
+<style>
+:root{--bg:#050b16;--panel:#071827;--muted:#95a6b9;--text:#e6eef7;--gold:#d6b15e;--gold-soft:#f1d48a;--border:rgba(214,177,94,.35)}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 50% -200px,#0b2238 0%,#050b16 55%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+.container{max-width:1120px;margin:60px auto;padding:0 20px}
+.badge{display:inline-block;padding:6px 14px;border-radius:999px;border:1px solid var(--border);color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.hero-card,.section,.project-card,.contact-card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));border:1px solid var(--border);border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.20)}
+.hero-card{padding:34px}
+h1{margin:18px 0 14px;font-size:40px;font-weight:700}
+.lead,.sub,p,li{color:var(--muted);line-height:1.7}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;margin-top:24px}
+.metric-box{border:1px solid rgba(214,177,94,.25);border-radius:16px;padding:22px;background:rgba(0,0,0,.20)}
+.metric-title{color:var(--gold-soft);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.metric-value{font-size:28px;font-weight:700;color:var(--text)}
+.section{margin-top:32px;padding:28px}
+.section h2{margin:0 0 14px;font-size:24px;color:var(--gold-soft)}
+.projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:20px}
+.project-card{padding:26px}
+.project-badge{display:inline-block;margin-bottom:10px;padding:5px 12px;border-radius:999px;border:1px solid rgba(214,177,94,.35);color:var(--gold);font-size:11px;letter-spacing:.10em;text-transform:uppercase}
+.project-card h3{margin:0 0 14px;font-size:30px;line-height:1.25;color:var(--gold-soft)}
+.project-card p{margin:0 0 14px}
+.project-lines{margin-top:14px}
+.project-lines div{margin-bottom:6px;line-height:1.6;color:var(--text)}
+.access-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.contact-card{padding:28px;margin-top:24px}
+.form{margin-top:18px}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+input{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--border);background:#050b16;color:var(--text);margin-bottom:16px}
+.cta-wrap{text-align:center;margin-top:24px}
+.cta-primary{display:inline-block;background:linear-gradient(180deg,#f1d48a,#d6b15e);color:#050b16;border:none;border-radius:14px;padding:16px 34px;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 10px 30px rgba(214,177,94,.35)}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+.top-nav{position:sticky;top:0;z-index:999;background:rgba(10,13,18,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav-container{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.logo{color:var(--gold);font-weight:700;letter-spacing:.04em;text-decoration:none}
+.nav-links a{margin-left:28px;text-decoration:none;color:var(--text);position:relative;padding-bottom:4px}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold);transition:width .3s ease}
+.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center}
+.lang-switch{margin-left:28px;padding:4px 10px;border:1px solid rgba(201,162,77,0.35);border-radius:999px;background:rgba(201,162,77,0.06);font-size:12px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.lang-switch a{color:var(--muted);text-decoration:none;margin:0 6px}
+.lang-switch a.active{color:var(--gold)}
+.site-footer{margin-top:100px;border-top:1px solid var(--border);background:#0a0d12}
+.footer-container{max-width:1120px;margin:0 auto;padding:40px 20px;display:grid;grid-template-columns:1fr .8fr .8fr 1fr;gap:28px;align-items:start;color:var(--muted);font-size:14px}
+.footer-heading{display:block;margin-bottom:4px;font-size:12px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.footer-container a{color:var(--gold);text-decoration:none}
+.footer-right{text-align:right}
+.mobile-bottom-nav{display:none}
+@media (max-width:900px){.hero-grid,.projects-grid,.access-grid,.footer-container{grid-template-columns:1fr}}
+@media (max-width:768px){.mobile-bottom-nav{display:flex}}
+</style>
+</head>
+<body>
+<nav class="top-nav"><div class="nav-container"><a href="index.html" class="logo">NoctAI™</a><div class="nav-right"><div class="nav-links"><a href="how_it_works.html">How it works</a><a href="projects.html">Projects</a></div><div class="lang-switch"><a href="private_access.html" class="active">EN</a> - <a href="private_access-ru.html">RU</a></div></div></div></nav>
+<div class="container">
+  <div class="hero-card">
+    <span class="badge">Private Capital Access</span>
+    <h1>Access to Private Opportunities</h1>
+    <p class="lead">This is the unified private access layer of the NoctAI platform: selected private projects, high-value infrastructure opportunities, and access qualification combined into one controlled page.</p>
+    <p class="sub">Access is available only to investors who meet the private capital participation threshold. The opportunities below are shown with intentionally limited disclosure. Full materials, deeper transaction structure, and extended project data remain restricted until manual approval.</p>
+    <div class="hero-grid">
+      <div class="metric-box"><div class="metric-title">Access threshold</div><div class="metric-value">$250,000+</div><p class="note">Total verified participation across platform opportunities, not a single transaction.</p></div>
+      <div class="metric-box"><div class="metric-title">Access format</div><div class="metric-value">Manual review</div><p class="note">Access is discretionary, not automatic, and may be declined without explanation.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Participation structure</h2>
+    <p><strong>Access capital is not a fee.</strong> Capital is allocated into a selected project after approval.</p>
+    <div class="access-grid">
+      <div class="metric-box">
+        <div class="metric-title">Base participation</div>
+        <div class="metric-value">$250,000 → ~1%</div>
+        <p class="note">Initial participation grants approximately 1% in a selected project after allocation.</p>
+      </div>
+      <div class="metric-box">
+        <div class="metric-title">Extended allocation</div>
+        <div class="metric-value">Depends on round structure</div>
+        <p class="note">Extended participation is determined by the structure of the selected project. As a standard framework, each round represents 12% of project allocation. Example: an $8,000,000 round represents 12% allocation; a $12,000,000 round represents 12% allocation.</p>
+      </div>
+    </div>
+    <p class="note">Final allocation depends on project selection, round structure, and availability at the time of approval.</p>
+  </div>
+
+  <div class="section">
+    <h2>Access qualification</h2>
+    <div class="access-grid">
+      <div class="metric-box"><div class="metric-title">What is evaluated</div><p>Total capital exposure is considered, not a single transaction. The platform evaluates participation level, allocation quality, and alignment with the private access layer.</p></div>
+      <div class="metric-box"><div class="metric-title">What access provides</div><p>Access to closed and future opportunities, early visibility into selected rounds, private updates, and limited deal materials.</p></div>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <h2 style="margin-top:0;color:var(--gold-soft);">Request private access</h2>
+    <p>For manual review, please provide a contact email and Transaction Hash (TxID) confirming your participation and qualification for access to the platform’s private capital opportunities.</p>
+    <div class="form">
+      <label>Email for communication</label>
+      <input id="pa-email" type="email" placeholder="you@email.com"/>
+      <label>TxID / Transaction Hash</label>
+      <input id="pa-txid" type="text" placeholder="0x..."/>
+    </div>
+    <div class="cta-wrap"><button id="requestAccessBtn" type="button" class="cta-primary">Request Private Access</button></div>
+    <p class="note">All requests are reviewed manually. Access may be declined without explanation. This page does not constitute a public offer or guarantee of participation.</p>
+  </div>
+  
+  <div class="section">
+    <h2>Private infrastructure opportunities</h2>
+    <p>The opportunities below are presented in private layer format. Only the upper level of investment logic is shown here: direction, scale, round, and illustrative economics. Full deal materials remain restricted until approval.</p>
+    <div class="projects-grid">
+      <div class="project-card"><span class="project-badge">Private review</span><h3>Sovereign Identity Execution Network</h3><p>A platform that records and executes legally significant actions in real time: consent, obligations, transactions, and human intent, anchored to biometric and behavioral verification.</p><div class="project-lines"><div><strong>Sector:</strong> LegalTech / Identity Infrastructure</div><div><strong>Stage:</strong> private review</div><div><strong>Round:</strong> strategic</div><div><strong>Round size:</strong> $8,000,000 (represents 12% equity allocation)</div><div><strong>Equity structure:</strong> 12% of the project is allocated proportionally among round participants</div><div><strong>Minimum participation:</strong> from $250,000</div><div><strong>Illustrative economics:</strong> infrastructure model targeting banks, private wealth, and cross-border compliance</div><div><strong>Access:</strong> internal review only</div></div></div>
+      <div class="project-card"><span class="project-badge">Limited access</span><h3>Global Asset Tokenization Grid (Private Layer)</h3><p>An infrastructure layer enabling real-world assets — real estate, businesses, contracts, and claims — to be structured into digital ownership units with controlled access and off-platform execution.</p><div class="project-lines"><div><strong>Sector:</strong> Asset Infrastructure / Private Markets</div><div><strong>Stage:</strong> limited access</div><div><strong>Round:</strong> strategic private round</div><div><strong>Round size:</strong> $12,000,000 (represents 12% equity allocation)</div><div><strong>Equity structure:</strong> 12% of the project is allocated proportionally among round participants</div><div><strong>Minimum participation:</strong> from $250,000</div><div><strong>Illustrative economics:</strong> scalable infrastructure for high-value assets and private allocations</div><div><strong>Access:</strong> by individual review only</div></div></div>
+      <div class="project-card"><span class="project-badge">Strategic</span><h3>Post-Access Data Control Infrastructure</h3><p>An infrastructure system designed to control disclosure, copying, export, and leakage of data after access has already been granted. Built for banks, private offices, law firms, and sensitive corporate environments.</p><div class="project-lines"><div><strong>Sector:</strong> Cybersecurity / Data Control Infrastructure</div><div><strong>Stage:</strong> private review</div><div><strong>Round:</strong> strategic</div><div><strong>Round size:</strong> $6,000,000 (represents 12% equity allocation)</div><div><strong>Equity structure:</strong> 12% of the project is allocated proportionally among round participants</div><div><strong>Minimum participation:</strong> from $250,000</div><div><strong>Illustrative economics:</strong> enterprise recurring revenue plus strategic licensing</div><div><strong>Access:</strong> internal review only</div></div></div>
+      <div class="project-card"><span class="project-badge">Invitation-only review</span><h3>Controlled Wealth Transfer System</h3><p>A system for managed capital transfer: inheritance, family asset distribution, large payouts, and capital eligibility based on predefined rules and legally significant events.</p><div class="project-lines"><div><strong>Sector:</strong> Wealth Infrastructure / Family Capital Systems</div><div><strong>Stage:</strong> invitation-only review</div><div><strong>Round:</strong> private structuring round</div><div><strong>Round size:</strong> $10,000,000 (represents 12% equity allocation)</div><div><strong>Equity structure:</strong> 12% of the project is allocated proportionally among round participants</div><div><strong>Minimum participation:</strong> from $250,000</div><div><strong>Illustrative economics:</strong> high-margin infrastructure for family offices, trustees, and private banks</div><div><strong>Access:</strong> restricted</div></div></div>
+    </div>
+  </div>
+
+
+</div>
+<footer class="site-footer"><div class="footer-container"><div><strong>NoctAI™</strong><br><span style="font-size:13px;color:#9aa3b2;">A platform for structured project participation.<br>Centralized management · Manual access</span></div><div><strong class="footer-heading">LEGAL & GOVERNANCE</strong><a href="terms.html">Terms</a><br><a href="risk-disclosure.html">Risk Disclosure</a><br><a href="data-processing.html">Data Processing</a><br><a href="privacy.html">Privacy</a></div><div><strong class="footer-heading">PLATFORM</strong><a href="overview.html">Platform Overview</a><br><a href="oversight_governance.html">Oversight &amp; Governance</a></div><div class="footer-right"><a href="mailto:contact@noctai.vip" target="_blank" rel="noopener" style="color:var(--muted)">contact@noctai.vip</a><br><span style="display:block;margin-top:6px;font-size:13px;color:#9aa3b2;">NoctAI Corporation<br>1007 N Orange St, Wilmington, DE 19801, United States</span>© 2025 NoctAI™</div></div></footer>
+<div class="mobile-bottom-nav"><a href="how_it_works.html">How it works</a><a href="projects.html">Platform projects</a></div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('requestAccessBtn');
+  const emailInput = document.getElementById('pa-email');
+  const txidInput = document.getElementById('pa-txid');
+  if (!btn) return;
+  btn.onclick = function () {
+    const email = emailInput.value.trim();
+    const txid = txidInput.value.trim();
+    if (!email || !txid) {
+      alert('Please provide email and Transaction Hash (TxID).');
+      return;
+    }
+    const subject = 'Private Access Request — NOCTAI';
+    const body = 'Hello,%0A%0A' + 'Please consider my request for access to private opportunities.%0A%0A' + 'Email for communication: ' + encodeURIComponent(email) + '%0A' + 'Transaction Hash (TxID): ' + encodeURIComponent(txid) + '%0A%0A' + 'Sincerely';
+    const gmailURL = 'https://mail.google.com/mail/?view=cm&fs=1' + '&to=contact@noctai.vip' + '&su=' + encodeURIComponent(subject) + '&body=' + body;
+    window.open(gmailURL, '_blank', 'noopener');
+  };
+});
+</script>
+</body>
+</html>
