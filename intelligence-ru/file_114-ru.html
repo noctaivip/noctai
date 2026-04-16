@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>NoctAI.VIP — Intelligence File 114</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="alternate" hreflang="ru" href="https://noctai.vip/intelligence/file_096-ru.html">
+<link rel="alternate" hreflang="en" href="https://noctai.vip/intelligence/file_096.html">
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+background:radial-gradient(1200px 600px at 20% -10%,#111826 0%,var(--bg) 55%);
+color:var(--text);
+line-height:1.65;
+}
+header{padding:56px 20px;border-bottom:1px solid var(--border)}
+.container{max-width:1120px;margin:0 auto}
+h1{font-size:40px;margin:0 0 12px}
+h2{font-size:26px;margin:64px 0 18px}
+h3{font-size:18px;margin:0 0 10px}
+p{margin:0 0 14px;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:42px}
+.badge{
+display:inline-block;
+padding-left:14px;
+border:none;
+border-left:2px solid var(--gold-soft);
+border-radius:0;
+font-size:13px;
+color:var(--gold);
+margin-bottom:18px;
+letter-spacing:0.16em;
+text-transform:uppercase;
+opacity:0.85;
+}
+.cta-primary{
+display:inline-block;
+margin-top:24px;
+padding:15px 34px;
+border-radius:8px;
+background:linear-gradient(180deg,#e6c56f 0%,#c9a24d 100%);
+color:#0a0d12;
+text-decoration:none;
+font-weight:700
+}
+.cta-secondary{
+display:inline-block;
+margin-top:14px;
+padding:13px 28px;
+border-radius:8px;
+border:1px solid var(--gold-soft);
+color:var(--gold);
+text-decoration:none;
+background:rgba(201,162,77,.04)
+}
+.panel{
+background:linear-gradient(180deg,#131a24 0%,var(--panel) 100%);
+border:1px solid var(--gold-soft);
+border-radius:14px;
+padding:30px;
+box-shadow:0 0 0 1px rgba(201,162,77,.05) inset
+}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.calculator{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}
+.result{font-size:22px;font-weight:700;color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--gold)}
+footer{margin-top:96px;padding:36px 20px;border-top:1px solid var(--border);color:var(--muted);font-size:13px}
+@media(max-width:900px){.hero,.grid,.calculator{grid-template-columns:1fr}}
+</style>
+<style>
+.top-nav{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(10,13,18,0.85);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+}
+.nav-container{
+max-width:1120px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+}
+.logo{
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.04em;
+  text-decoration:none;
+}
+
+.logo:hover{
+  text-decoration:none;
+}
+
+.nav-links a{
+margin-left:28px;
+text-decoration:none;
+color:var(--text);
+position:relative;
+padding-bottom:4px;
+}
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:2px;
+background:var(--gold);
+transition:width 0.3s ease;
+}
+.nav-links a:hover::after{
+width:100%;
+}
+.nav-cta{
+border:1px solid var(--gold-soft);
+padding:8px 18px;
+border-radius:999px;
+}
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+.lang-switch{
+  margin-left:28px;
+  padding:4px 10px;
+  border:1px solid rgba(201,162,77,0.35);
+  border-radius:999px;
+  background:rgba(201,162,77,0.06);
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.lang-switch a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.lang-switch a.active{
+  color:var(--gold);
+}
+
+.lang-switch a:hover{
+  color:var(--text);
+}
+.site-footer{
+margin-top:100px;
+border-top:1px solid var(--border);
+background:#0a0d12;
+}
+.footer-container{
+max-width:1120px;
+margin:0 auto;
+padding:40px 20px;
+display:grid;
+  grid-template-columns: 1fr 0.8fr 0.8fr 1fr;
+  gap: 28px;
+  align-items: start;
+color:var(--muted);
+font-size:14px;
+}
+.footer-heading {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em; 
+  text-transform: uppercase;
+  color: var(--muted); 
+}
+.footer-container a{
+color:var(--gold);
+text-decoration:none;
+}
+.footer-container a:hover{
+text-decoration:underline;
+}
+.footer-right{
+  text-align:right;
+}
+@media(max-width:900px){
+.footer-container{grid-template-columns:1fr}
+.nav-links a{margin-left:16px}
+}
+</style>
+<style>
+/* --- Button hover effects (added only) --- */
+.cta-primary{
+transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+.cta-primary:hover{
+transform: translateY(-1px);
+box-shadow: 0 8px 22px rgba(201,162,77,0.25);
+filter: brightness(1.05);
+}
+.cta-secondary{
+transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.cta-secondary:hover{
+border-color: var(--gold);
+box-shadow: 0 0 0 1px rgba(201,162,77,0.35) inset;
+}
+</style>
+<style>
+/* --- Header Invest button hover (added only) --- */
+.top-nav .nav-cta{
+text-decoration: none;
+transition: box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+.top-nav .nav-cta:hover{
+text-decoration: none;
+transform: translateY(-1px);
+box-shadow: 0 8px 22px rgba(201,162,77,0.25);
+filter: brightness(1.05);
+}
+/* remove underline effect from nav links hover for CTA */
+.top-nav .nav-cta::after{
+display:none !important;
+}
+</style>
+<style>
+.platform-tag{
+font-size:14px;
+letter-spacing:0.08em;
+text-transform:uppercase;
+color:var(--muted);
+margin-bottom:14px;
+}
+.active-project{
+margin-top:10px;
+}
+.project-label{
+display:inline-block;
+margin-bottom:6px;
+font-size:12px;
+letter-spacing:0.12em;
+color:var(--gold);
+}
+</style>
+<style>
+.platform-badge{
+background: rgba(201,162,77,0.08);
+border-color: var(--gold);
+color: var(--gold);
+letter-spacing: 0.12em;
+}
+</style>
+<style>
+.project-box{
+margin-bottom:18px;
+}
+.project-box .project-title{
+font-weight:600;
+margin-top:6px;
+}
+</style>
+<style>
+/* --- Logo shimmer effect (added only) --- */
+.shimmer{
+position:relative;
+overflow:hidden;
+}
+.shimmer::after{
+content:"";
+position:absolute;
+top:0;
+left:-150%;
+width:50%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent 0%,
+rgba(255,255,255,0.35) 50%,
+transparent 100%
+);
+opacity:0.4;
+animation:shimmer 8s ease-in-out infinite;
+}
+@keyframes shimmer{
+0%{left:-150%;}
+70%{left:-150%;}
+100%{left:150%;}
+}
+</style>
+<style>
+.manual-input-label{
+display:block;
+margin-top:14px;
+margin-bottom:6px;
+font-size:13px;
+color:var(--muted);
+}
+.manual-input{
+width:100%;
+padding:10px 12px;
+border-radius:8px;
+background:#0f141c;
+border:1px solid var(--border);
+color:var(--text);
+font-size:15px;
+}
+.manual-input:focus{
+outline:none;
+border-color:var(--gold);
+}
+</style>
+<style>
+.section-title{
+  margin-top:80px;
+  margin-bottom:28px;
+  font-size:30px;
+  font-weight:700;
+}
+</style>
+<style>
+.calc-overlay{
+  position:fixed; inset:0; background:rgba(5,8,14,0.85);
+  backdrop-filter:blur(6px); z-index:3000;
+  display:flex; align-items:center; justify-content:center;
+}
+.calc-modal{
+  width:100%; max-width:960px; background:#0f141c;
+  border:1px solid #c9a44c; border-radius:18px;
+  padding:36px; position:relative;
+}
+.calc-close{
+  position:absolute; top:16px; right:18px;
+  background:none; border:none; color:#aaa; font-size:24px;
+  cursor:pointer;
+}
+.calc-sub{color:#9aa3ad; margin-bottom:20px;}
+.coverage-title{font-size:14px; color:#9aa3ad; margin-bottom:10px;}
+.coverage-buttons{display:flex; gap:10px; margin-bottom:26px;}
+.coverage-buttons button{
+  width:56px; height:34px; border-radius:8px;
+  background:#0b0f16; border:1px solid #c9a44c;
+  color:#fff; font-size:12px; cursor:pointer;
+}
+.coverage-buttons button.active{
+  background:linear-gradient(180deg,#f1d48a,#d6b15e);
+  color:#096b16;
+}
+.calc-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+.calc-panel{
+  border:1px solid #c9a44c; border-radius:14px; padding:24px;
+}
+.calc-value{font-size:22px; margin:10px 0;}
+.calc-muted{font-size:13px; color:#9aa3ad;}
+.calc-income .calc-main{font-size:26px; color:#f1d48a;}
+.calc-footer{text-align:right; margin-top:24px;}
+.calc-close-btn{
+  background:#0b0f16; border:1px solid #c9a44c;
+  padding:10px 18px; border-radius:10px; color:#fff;
+}
+</style>
+<style>
+/* Enhanced calculator manual input styling */
+.calc-panel input[type=number]{
+  width:100%;
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius:10px;
+  background:#0b0f16;
+  border:1px solid #c9a44c;
+  color:#f1d48a;
+  font-size:16px;
+  font-weight:600;
+  box-shadow: inset 0 0 0 1px rgba(201,164,76,0.15);
+}
+.calc-panel input[type=number]:focus{
+  outline:none;
+  border-color:#f1d48a;
+  box-shadow:0 0 0 2px rgba(201,164,76,0.25);
+}
+.calc-muted{
+  margin-top:10px;
+}
+</style>
+<style>
+:root{
+  --bg:#050b16;
+  --panel:#071827;
+  --muted:#95a6b9;
+  --text:#e6eef7;
+  --gold:#d6b15e;
+  --gold-soft:#f1d48a;
+  --border:rgba(214,177,94,.35);
+}
+</style>
+
+<link rel="stylesheet" href="/mobile-noctai.css">
+
+<style>
+.mobile-bottom-nav {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+}
+</style>
+</head>
+
+<body>
+ <div id="investmentCalcOverlay" style="display:none;" class="calc-overlay">
+  <div class="calc-modal">
+    <button class="calc-close" onclick="closeInvestmentCalc()">×</button>
+<div style="margin:-6px 0 18px 0;">
+  <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px;">
+    Проект
+  </label>
+  <select id="projectSelector"
+    style="
+      width:100%;
+      padding:12px 14px;
+      border-radius:10px;
+      background:#0b0f16;
+      border:1px solid #c9a44c;
+      color:#f1d48a;
+      font-size:15px;
+      font-weight:600;
+    "
+    onchange="onProjectChange(this.value)"
+  >
+    <option value="p001" selected>
+      Active Project #001 — AI Dispatcher + Marketplace (Logistics)
+    </option>
+    <option value="private" disabled>
+      Private Projects — Invitation Only
+    </option>
+  </select>
+  <div style="font-size:12px;color:var(--muted);margin-top:6px;">
+    Калькулятор пересчитывается в зависимости от выбранного проекта.
+  </div>
+</div>
+    <h2>Инвестиционный калькулятор</h2>
+    <p class="calc-sub">Индикативный расчёт. Не является офертой или инвестиционной рекомендацией.</p>
+    <div class="coverage-block">
+      <div class="coverage-title">При охвате трекингового бизнеса в USA</div>
+      <div class="coverage-buttons">
+        <button data-p="10" onclick="setCoverageCalc(10)">10%</button>
+        <button data-p="30" onclick="setCoverageCalc(30)">30%</button>
+        <button data-p="50" class="active" onclick="setCoverageCalc(50)">50%</button>
+        <button data-p="70" onclick="setCoverageCalc(70)">70%</button>
+        <button data-p="100" onclick="setCoverageCalc(100)">100%</button>
+      </div>
+    </div>
+    <div class="calc-grid">
+      <div class="calc-panel">
+        <h3>Сумма инвестиций</h3>
+        <input type="range"
+       class="calc-range"
+       min="10"
+       max="300000"
+       value="1000"
+       id="m_invRange"
+       oninput="syncFromRange()">
+        <div class="calc-value">$<span id="m_invValue">1,000</span></div>
+        <input type="number" id="m_invInput" value="1000" oninput="syncFromInput()">
+        <div class="calc-muted">Оценочная доля: <span id="m_invShare">0.009667%</span></div>
+      </div>
+      <div class="calc-panel">
+        <h3>Оценка дохода</h3>
+        <div class="calc-income">
+          <div>Доход / месяц</div>
+          <div class="calc-main">$<span id="m_incomeValue">3,333.33</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="calc-footer">
+      <button class="calc-close-btn" onclick="closeInvestmentCalc()">Закрыть</button>
+    </div>
+	</div>
+  </div>
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="/index-ru.html" class="logo">NoctAI™</a>
+    <div class="nav-right">
+  <div class="nav-links">
+    <a href="/how_it_works-ru.html">Как это работает</a>
+    <a href="/projects-ru.html">Проекты</a>
+  </div>
+	<div class="lang-switch">
+	    <a href="/intelligence-ru/file_114-ru.html">RU</a>
+	-
+	    <a href="/intelligence/file_114.html" class="active">EN</a>
+  </div>
+  </div>
+</nav>
+
+<main class="container" style="max-width:1100px;margin:0 auto;padding:80px 20px;">
+<section class="panel">
+  <div class="badge">INTELLIGENCE BRIEFING</div>
+  <h1>Intelligence File 114</h1>
+  <p class="lead">Сохранение капитала</p>
+</section>
+
+<section class="panel intelligence-content">
+
+
+
+
+
+
+<div class="article-body">
+<h3>Устойчивость портфеля — как серьёзные инвесторы строят wealth, способный переживать смену режима</h3>
+
+<p>На институциональном уровне задача портфельного управления — это не просто доходность. Это устойчивость. Портфель, который показывает хороший результат только в комфортных условиях, нельзя считать сильным. Сильный портфель — это такой портфель, который способен переживать смену режима: инфляционные шоки, ужесточение ликвидности, сжатие valuation multiples, регуляторные изменения, геополитическое давление, contraction в финансировании и крупные ротации капитала между секторами и классами активов.</p>
+
+<p>В этом и заключается одно из ключевых отличий между розничным подходом и серьёзным capital allocation. Многие инвесторы оптимизируют портфель под последний рыночный цикл. Сильный капитал оптимизирует его под выносливость. Он строит такую структуру, которая не зависит от того, что один макросценарий, один режим ставок или одна valuation environment останутся неизменными навсегда.</p>
+
+<h3>Что на самом деле означает устойчивость портфеля</h3>
+
+<p>Устойчивость портфеля — это способность капитальной структуры оставаться функциональной при изменении условий. Это не означает, что портфель никогда не будет снижаться. Это означает, что временный стресс, mark-to-market волатильность и макроразвороты не разрушают его стратегическую целостность и не лишают его способности к дальнейшему compounding.</p>
+
+<p>Устойчивый портфель сохраняет ликвидность, optionality и свободу принятия решений. Он может absorb volatility без того, чтобы вынуждать инвестора к слабым действиям. Для миллионеров, миллиардеров и family offices это особенно важно, потому что крупный капитал должен оставаться стратегически полезным десятилетиями, а не просто прибыльным несколько кварталов подряд.</p>
+
+<ul>
+<li>устойчивость через разные макроциклы</li>
+<li>сохранение ликвидности под давлением</li>
+<li>снижение зависимости от одной темы, одного фактора или одного режима финансирования</li>
+<li>возможность ребалансировки без forced liquidation</li>
+<li>сохранение offensive opportunities во время dislocation</li>
+</ul>
+
+<h3>Почему смена режима разрушает слабые портфели</h3>
+
+<p>Слабые портфели обычно не уничтожаются одним плохим активом. Чаще всего их разрушает скрытая зависимость. На поверхности портфель может казаться диверсифицированным, но по сути он зависит от дешёвого капитала, избыточной ликвидности, высоких valuation, низкой волатильности или постоянной доступности рефинансирования.</p>
+
+<p>Когда режим меняется, иллюзия исчезает. Активы, которые раньше выглядели независимыми, начинают двигаться в одну сторону. Ликвидность исчезает в тот же момент, когда сжимаются multiples. Инвестор слишком поздно понимает, что у него была диверсификация по названию, а не по настоящему экономическому драйверу. Именно поэтому многие инвесторы строят хороший track record в лёгком цикле, а затем отдают рынку годы прибыли в следующем.</p>
+
+<h3>Институциональный подход к устойчивости</h3>
+
+<p>Серьёзный капитал создаёт устойчивость через несколько принципов одновременно. Это диверсификация по реальным risk factors, дисциплинированное управление ликвидностью, экспозиция к активам с разными duration profiles, выборочное defensive positioning и постоянный анализ того, где внутри портфеля скрывается концентрация риска.</p>
+
+<p>Институциональный инвестор также принципиально различает волатильность и impairment. Устойчивый портфель не пытается убрать любое краткосрочное движение. Это и невозможно, и не нужно. Его цель — избежать хрупкости, то есть такой структурной слабости, которая вынуждает продавать по плохой цене, уничтожает гибкость или permanently damages capital quality.</p>
+
+<h3>Диверсификация глубже внешних категорий</h3>
+
+<p>Одна из самых частых ошибок в построении портфеля — путать количество активов с диверсификацией. Портфель может содержать много позиций и при этом оставаться сильно зависимым от одного реального фактора. Technology exposure, cyclical businesses, leveraged assets, venture-style public equities и growth-sensitive platforms могут вести себя по-разному в хорошие времена, а затем одновременно слабеть, когда liquidity tightens.</p>
+
+<p>Устойчивый портфель строится через понимание корневой экономической экспозиции. Сильный инвестор задаёт вопрос: что на самом деле двигает этот актив? Зависит ли он от дешёвого финансирования, потребительского оптимизма, поддержки политики, низких ставок или завышенных multiples? Только ответ на этот вопрос показывает, действительно ли позиция диверсифицирует портфель или является ещё одной формой той же самой зависимости.</p>
+
+<h3>Ликвидность как инструмент устойчивости</h3>
+
+<p>Ликвидность — центральный элемент устойчивости, потому что она сохраняет свободу движения. Портфель может выглядеть прибыльным и при этом быть структурно слабым, если его нельзя изменить при ухудшении условий. Инвесторы без ликвидности обычно совершают худшие действия: продают качественные активы по слабой цене, отказываются от ребалансировки из-за отсутствия capacity или упускают exceptional opportunities, потому что весь капитал зажат внутри уже существующих позиций.</p>
+
+<p>Устойчивый портфель сохраняет ликвидность на уровне, достаточном для действий под давлением. Это может быть cash, short-duration instruments, liquid defensive holdings или незадействованные резервы. В сильном рынке такая логика выглядит как sacrifice of efficiency. Во время dislocation она превращается в стратегическое преимущество, которое нельзя быстро создать задним числом.</p>
+
+<h3>Баланс по времени и duration profile</h3>
+
+<p>Устойчивый портфель не размещает весь капитал на одном временном горизонте. Одни активы могут быть рассчитаны на long-duration growth, другие — на defensive stability, третьи — на tactical flexibility. Баланс временного профиля нужен для того, чтобы весь портфель не оказался заложником одного типа риска в один и тот же момент.</p>
+
+<p>Это особенно важно для инвесторов, которые сочетают public equities, private investments, operating businesses и structured deals. У каждой из этих групп собственный liquidity profile, чувствительность к valuation и реакция на стресс. Если эти различия не учитывать, портфель может внезапно оказаться либо слишком illiquid, либо слишком short-term в момент, когда нужен совершенно другой тип капитала.</p>
+
+<h3>Устойчивость в private capital</h3>
+
+<p>Для private investors устойчивость ещё важнее, потому что illiquidity усиливает любую структурную ошибку. Частный актив нельзя мгновенно продать, а значит сам портфель должен заранее учитывать, что неопределённость может длиться долго. Follow-on reserve capacity, pacing discipline, governance rights, access to information и planning around capital calls становятся частью самой устойчивости.</p>
+
+<p>Без этих элементов private-heavy portfolio может оказаться trapped внутри плохого тайминга. С ними illiquid capital способен сохранять стратегическую ценность даже тогда, когда public markets нестабильны и funding conditions ухудшаются.</p>
+
+<h3>Поведенческая устойчивость и выживание портфеля</h3>
+
+<p>Устойчивость портфеля — это не только финансовое свойство. Это ещё и поведенческое свойство. Даже технически сильный портфель может быть разрушен слабым decision-maker. Panic selling, indiscriminate averaging, эмоциональное de-risking или overconfidence после сильного роста подрывают устойчивость, потому что превращают временное изменение среды в постоянную ошибку.</p>
+
+<p>Именно поэтому серьёзный капитал опирается на заранее определённые rules: concentration thresholds, liquidity floors, rebalance triggers, review intervals и thesis discipline. Эти структуры защищают портфель не только от рынка, но и от самого инвестора в тот момент, когда эмоции пытаются заменить систему.</p>
+
+<h3>Устойчивость создаёт offensive power</h3>
+
+<p>Устойчивый портфель делает больше, чем просто выживает. Он сохраняет offensive capability. Когда более слабые портфели повреждены, заморожены или вынуждены ликвидироваться, устойчивый капитал получает возможность действовать. Он может приобретать quality assets ниже intrinsic value, предоставлять rescue capital, усиливать high-conviction позиции или увеличивать ownership в ситуациях, где конкуренты отступают.</p>
+
+<p>Это одна из самых глубоких истин институционального инвестирования: устойчивость — не только защита. Это основа offensive asymmetry во время стресса. Часть лучших долгосрочных результатов создаётся не в спокойной фазе роста, а в момент regime transitions, которые fragile portfolios пройти не могут.</p>
+
+<h3>Как wealthy investors думают об устойчивости</h3>
+
+<p>Миллионерам и миллиардерам обычно не нужен портфель, который максимизирует excitement. Им нужен портфель, который сохраняет strategic capacity. Это включает возможность финансировать obligations, поддерживать operating businesses, выполнять family-office mandates, сохранять negotiating strength и использовать крупные opportunities в нужный момент.</p>
+
+<p>Именно поэтому продвинутый капитал часто готов принять чуть менее впечатляющую visible performance в лёгком рынке в обмен на гораздо более сильную позицию под давлением. Для него важно не показать максимальную доходность в одном удобном году, а обеспечить максимальную вероятность остаться сильным в трудные годы.</p>
+
+<h3>Заключение</h3>
+
+<p>Устойчивость портфеля — один из самых глубоких принципов институционального wealth management. Это переход от погони за тем, что недавно работало, к созданию капитальной системы, сохраняющей целостность при изменении режима. Устойчивый портфель не зависит от стабильности. Он построен для функционирования внутри нестабильности.</p>
+
+<p>Для серьёзного инвестора это один из самых точных признаков качества. Портфель, который переживает regime change, сохраняет liquidity, защищает optionality и остаётся способным к рациональным действиям под давлением, — это не просто defensive construction. Это структура, спроектированная для долгосрочного доминирования капитала.</p>
+</div>
+
+
+
+
+
+
+</div>
+<div style="height:40px;"></div>
+</section>
+
+<section class="panel muted">
+  <strong>Intelligence Контекст</strong><br>
+Данный документ является частью интеллектуального уровня NoctAI.
+Подготовлено исключительно в аналитических целях.
+Не является предложением. Не является рекомендацией.
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div>
+  <strong>NoctAI™</strong><br>
+<span style="font-size:13px;color:#9aa3b2;">
+A platform for equity participation in real projects.
+</span>
+</div>
+    <div>
+<strong class="footer-heading">
+  LEGAL & GOVERNANCE
+</strong>
+      <a href="terms.html">Terms</a><br>
+      <a href="risk-disclosure.html">Risk Disclosure</a><br>
+      <a href="data-processing.html">Data Processing</a><br>
+	  <a href="privacy.html">Privacy</a>
+    </div>
+	<div>
+<strong class="footer-heading">
+    Platform
+  </strong>
+      <a href="overview.html">Platform Overview</a><br>
+      <a href="oversight_governance.html">Oversight &amp; Governance</a>
+    </div>
+<div class="footer-right">
+      <a href="mailto:contact@noctai.vip"
+   style="color:var(--muted)">
+  contact@noctai.vip
+</a><br>
+	  <span style="display:block;margin-top:6px;font-size:13px;color:#9aa3b2;">
+  NoctAI Corporation<br>
+  1007 N Orange St, Wilmington, DE 19801, United States
+</span>
+      © 2025 NoctAI™
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bottom-nav">
+  <a href="/how_it_works-ru.html">Как это работает</a>
+  <a href="/projects-ru.html">Проекты платформы</a>
+</div>
+</body>
+</html>
