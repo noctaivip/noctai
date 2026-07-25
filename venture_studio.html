@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>NoctAI.VIP — AI Mobile Venture Studio</title>
+  <style>
+
+    :root{
+      --bg:#050b16;
+      --bg-soft:#08111f;
+      --panel:#071827;
+      --panel-2:#0b1d2e;
+      --text:#e6eef7;
+      --muted:#95a6b9;
+      --gold:#d6b15e;
+      --gold-soft:#f1d48a;
+      --border:rgba(214,177,94,.35);
+      --border-soft:rgba(214,177,94,.18);
+      --shadow:0 16px 40px rgba(0,0,0,.34);
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% -10%,#111826 0%,var(--bg) 55%),
+        var(--bg);
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+
+    a{color:var(--gold);text-underline-offset:3px}
+    a:hover{color:var(--gold-soft)}
+    .page{max-width:1120px;margin:0 auto;padding:28px 20px 0}
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      min-height:470px;
+      display:flex;
+      align-items:center;
+      padding:58px 52px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      color:var(--text);
+      background:linear-gradient(180deg,#131a24 0%,var(--panel) 100%);
+      box-shadow:var(--shadow),0 0 0 1px rgba(201,162,77,.05) inset;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      width:520px;
+      height:520px;
+      right:-210px;
+      top:-250px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(214,177,94,.16),transparent 68%);
+      pointer-events:none;
+    }
+    .hero:after{
+      content:"";
+      position:absolute;
+      left:52px;
+      right:52px;
+      bottom:0;
+      height:1px;
+      background:linear-gradient(90deg,transparent,var(--gold),transparent);
+      opacity:.65;
+    }
+    .hero-content{position:relative;z-index:1;max-width:820px}
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:0 0 0 14px;
+      border-left:2px solid var(--gold-soft);
+      color:var(--gold);
+      font-size:12px;
+      font-weight:600;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+    .eyebrow i{
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:var(--gold-soft);
+      box-shadow:0 0 14px rgba(241,212,138,.6);
+    }
+
+    .hero h1{
+      font-size:clamp(48px,8vw,82px);
+      line-height:.98;
+      letter-spacing:-.045em;
+      margin:28px 0 14px;
+      color:#fff;
+    }
+    .hero h2{
+      font-size:clamp(22px,3vw,31px);
+      font-weight:600;
+      margin:0 0 18px;
+      color:var(--gold-soft);
+      letter-spacing:-.015em;
+    }
+    .hero p{font-size:18px;max-width:760px;color:var(--muted);margin:0}
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin-top:38px;
+    }
+    .hero-stat{
+      padding:18px 19px;
+      border:1px solid var(--border-soft);
+      border-radius:10px;
+      background:rgba(214,177,94,.035);
+    }
+    .hero-stat strong{display:block;font-size:23px;color:var(--gold-soft);line-height:1.2}
+    .hero-stat span{display:block;margin-top:5px;font-size:12px;color:var(--muted)}
+
+    .section{margin-top:24px}
+    .card{
+      background:linear-gradient(180deg,#0b1725 0%,var(--panel) 100%);
+      border:1px solid var(--border-soft);
+      border-radius:var(--radius);
+      padding:34px;
+      box-shadow:0 10px 30px rgba(0,0,0,.24);
+    }
+    .section-title{
+      margin:0 0 10px;
+      font-size:28px;
+      line-height:1.22;
+      letter-spacing:-.025em;
+      color:#fff;
+    }
+    .section-title:after{
+      content:"";
+      display:block;
+      width:44px;
+      height:1px;
+      margin-top:14px;
+      background:var(--gold);
+    }
+    .section-lead{margin:0 0 25px;color:var(--muted);font-size:16px}
+
+    .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px}
+    .col-4{grid-column:span 4}
+    .col-5{grid-column:span 5}
+    .col-6{grid-column:span 6}
+    .col-7{grid-column:span 7}
+    .col-8{grid-column:span 8}
+    .col-12{grid-column:span 12}
+
+    .metric{
+      height:100%;
+      padding:24px;
+      border-radius:11px;
+      background:rgba(5,11,22,.48);
+      border:1px solid var(--border-soft);
+    }
+    .metric .label{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      color:var(--gold);
+      font-weight:650;
+    }
+    .metric .value{
+      font-size:32px;
+      font-weight:750;
+      letter-spacing:-.035em;
+      line-height:1.15;
+      margin:10px 0 7px;
+      color:#fff;
+    }
+    .metric .note{color:var(--muted);font-size:13px}
+
+    .proof-list{display:grid;gap:12px}
+    .proof{
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+      padding:19px;
+      border-radius:10px;
+      border:1px solid var(--border-soft);
+      background:rgba(5,11,22,.46);
+    }
+    .proof .num{
+      flex:0 0 38px;
+      height:38px;
+      border-radius:8px;
+      display:grid;
+      place-items:center;
+      color:#0a0d12;
+      font-weight:800;
+      background:linear-gradient(180deg,#e6c56f 0%,#c9a24d 100%);
+    }
+    .proof h3{margin:0 0 4px;font-size:17px;color:#fff}
+    .proof p{margin:0;color:var(--muted);font-size:13px}
+
+    .companies{
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:12px;
+    }
+    .company{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      min-height:190px;
+      border-radius:10px;
+      padding:19px;
+      background:rgba(5,11,22,.55);
+      color:var(--text);
+      border:1px solid var(--border-soft);
+      transition:border-color .2s ease,transform .2s ease,background .2s ease;
+    }
+    .company:hover{
+      transform:translateY(-2px);
+      border-color:var(--border);
+      background:rgba(11,29,46,.8);
+    }
+    .company strong{font-size:19px;color:#fff}
+    .company p{font-size:13px;color:var(--muted);margin:10px 0 18px}
+    .company a{font-size:12px;text-decoration:none;color:var(--gold);font-weight:650}
+
+    .investment-box{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:24px;
+      padding:36px;
+      border-radius:var(--radius);
+      color:var(--text);
+      background:linear-gradient(180deg,#131a24 0%,var(--panel) 100%);
+      border:1px solid var(--gold-soft);
+      box-shadow:var(--shadow),0 0 0 1px rgba(201,162,77,.06) inset;
+    }
+    .investment-box .amount{
+      font-size:clamp(44px,7vw,70px);
+      font-weight:800;
+      letter-spacing:-.05em;
+      line-height:1;
+      margin:14px 0 15px;
+      color:var(--gold-soft);
+    }
+    .investment-box p{color:var(--muted)}
+    .investment-box p strong{color:#fff}
+    .principles{display:grid;gap:10px}
+    .principle{
+      padding:15px 16px;
+      border-radius:9px;
+      background:rgba(214,177,94,.045);
+      border:1px solid var(--border-soft);
+      color:var(--muted);
+      font-size:14px;
+    }
+    .principle strong{color:var(--gold-soft)}
+
+    details{
+      border:1px solid var(--border-soft);
+      border-radius:10px;
+      background:rgba(5,11,22,.42);
+      margin-top:11px;
+      overflow:hidden;
+    }
+    summary{
+      list-style:none;
+      cursor:pointer;
+      padding:18px 20px;
+      font-weight:650;
+      color:#fff;
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      align-items:center;
+    }
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font-size:22px;color:var(--gold)}
+    details[open] summary:after{content:"–"}
+    details[open] summary{color:var(--gold-soft)}
+    details .detail-body{padding:0 20px 20px;color:var(--muted)}
+
+    .budget-table,.forecast-table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      overflow:hidden;
+      border:1px solid var(--border-soft);
+      border-radius:10px;
+      background:rgba(5,11,22,.35);
+    }
+    .budget-table th,.budget-table td,.forecast-table th,.forecast-table td{
+      padding:15px;
+      border-bottom:1px solid var(--border-soft);
+      text-align:left;
+    }
+    .budget-table th,.forecast-table th{
+      background:rgba(214,177,94,.075);
+      color:var(--gold);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+    }
+    .budget-table td,.forecast-table td{color:var(--muted)}
+    .budget-table tr:last-child td,.forecast-table tr:last-child td{border-bottom:0}
+    .budget-table td:last-child,.forecast-table td:not(:first-child){font-weight:650}
+    .budget-table strong,.forecast-table strong{color:var(--gold-soft)}
+
+    .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .phase{
+      padding:23px;
+      border-radius:10px;
+      border:1px solid var(--border-soft);
+      background:rgba(5,11,22,.46);
+    }
+    .phase .tag{
+      display:inline-block;
+      padding:5px 9px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      color:var(--gold);
+      background:rgba(214,177,94,.04);
+      font-weight:650;
+      font-size:11px;
+      letter-spacing:.04em;
+    }
+    .phase h3{margin:14px 0 8px;color:#fff}
+    .phase ul{padding-left:18px;margin:0;color:var(--muted)}
+
+    .forecast-note{
+      padding:16px 18px;
+      border-left:2px solid var(--gold);
+      background:rgba(214,177,94,.055);
+      border-radius:0 8px 8px 0;
+      color:var(--muted);
+      margin-top:16px;
+    }
+    .forecast-note strong{color:var(--gold-soft)}
+
+    .closing{
+      margin-top:24px;
+      padding:40px 34px;
+      border-radius:var(--radius);
+      color:var(--text);
+      text-align:center;
+      background:linear-gradient(180deg,#131a24 0%,var(--panel) 100%);
+      border:1px solid var(--gold-soft);
+      box-shadow:var(--shadow);
+    }
+    .closing h2{font-size:32px;margin:0 0 12px;color:var(--gold-soft)}
+    .closing p{max-width:820px;margin:0 auto;color:var(--muted)}
+
+    .footer{
+      text-align:center;
+      margin-top:64px;
+      padding:32px 10px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    @media(max-width:980px){
+      .companies{grid-template-columns:repeat(2,1fr)}
+      .investment-box{grid-template-columns:1fr}
+      .timeline{grid-template-columns:1fr}
+      .col-4,.col-5,.col-6,.col-7,.col-8{grid-column:span 12}
+    }
+
+    @media(max-width:680px){
+      .page{padding:10px 10px 0}
+      .hero{
+        min-height:auto;
+        padding:34px 20px 28px;
+        border-radius:11px;
+      }
+      .hero:after{left:20px;right:20px}
+      .hero h1{font-size:43px;margin-top:23px}
+      .hero h2{font-size:21px}
+      .hero p{font-size:15px}
+      .hero-stats{grid-template-columns:1fr;gap:9px;margin-top:26px}
+      .hero-stat{padding:15px 16px}
+      .hero-stat strong{font-size:21px}
+
+      .section{margin-top:12px}
+      .card{padding:20px 17px;border-radius:11px}
+      .section-title{font-size:23px}
+      .section-lead{font-size:14px;margin-bottom:18px}
+
+      .grid{grid-template-columns:1fr;gap:10px}
+      .col-4,.col-5,.col-6,.col-7,.col-8,.col-12{grid-column:1}
+      .metric{padding:18px;border-radius:9px}
+      .metric .value{font-size:28px}
+
+      .companies{grid-template-columns:1fr}
+      .company{min-height:0}
+
+      .proof{padding:15px;gap:12px}
+      .proof h3{font-size:16px}
+
+      .investment-box{padding:22px 18px;border-radius:11px}
+      .investment-box .amount{font-size:40px}
+      .principle{font-size:13px}
+
+      summary{padding:15px 16px;font-size:14px;align-items:flex-start}
+      details .detail-body{padding:0 16px 16px;font-size:13px}
+
+      .budget-wrap,.forecast-wrap{
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+        padding-bottom:4px;
+      }
+      .budget-table,.forecast-table{min-width:700px}
+
+      .phase{padding:18px}
+      .closing{padding:28px 19px;border-radius:11px}
+      .closing h2{font-size:25px}
+      .closing p{font-size:14px}
+      .footer{margin-top:36px;padding:25px 8px}
+    }
+
+    @media(max-width:390px){
+      .page{padding:6px 6px 0}
+      .hero{padding:28px 16px 24px}
+      .hero h1{font-size:38px}
+      .card{padding:17px 14px}
+      .investment-box{padding:20px 15px}
+      .investment-box .amount{font-size:36px}
+    }
+
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow"><i></i> Investment Proposal · 2026</div>
+        <h1>NoctAI.VIP</h1>
+        <h2>AI Mobile Venture Studio</h2>
+        <p>Международная технологическая компания, создающая и масштабирующая портфель мобильных AI-приложений для глобального рынка.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>$1,5 млн</strong><span>инвестиционный запрос</span></div>
+          <div class="hero-stat"><strong>24 месяца</strong><span>гарантированный операционный период</span></div>
+          <div class="hero-stat"><strong>8–10 специалистов</strong><span>профессиональное ядро команды</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2 class="section-title">Почему именно сейчас</h2>
+      <p class="section-lead">NoctAI.VIP выходит на рынок в момент, когда смартфон стал главным цифровым устройством человека, а AI-функции быстро переходят из экспериментальных технологий в ежедневные пользовательские продукты.</p>
+      <div class="grid">
+        <div class="col-4"><div class="metric"><div class="label">Пользователи смартфонов</div><div class="value">7+ млрд</div><div class="note">Смартфоны охватывают практически весь мировой цифровой рынок.</div></div></div>
+        <div class="col-4"><div class="metric"><div class="label">Рынок мобильных приложений</div><div class="value">$500+ млрд</div><div class="note">Мобильные подписки, реклама и встроенные покупки формируют глобальную индустрию.</div></div></div>
+        <div class="col-4"><div class="metric"><div class="label">AI-приложения</div><div class="value">Быстрый рост</div><div class="note">Пользовательский спрос растет быстрее традиционного рынка программного обеспечения.</div></div></div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2 class="section-title">Модель уже доказала свою эффективность</h2>
+      <p class="section-lead">Во всем мире работают компании формата Venture Studio / Startup Studio. Они создают общую команду, инфраструктуру и процессы, а затем последовательно запускают новые технологические продукты.</p>
+      <div class="companies">
+        <article class="company"><div><strong>Atomic</strong><p>Создает и финансирует технологические компании совместно с предпринимателями.</p></div><a href="https://atomic.vc" target="_blank" rel="noopener">atomic.vc ↗</a></article>
+        <article class="company"><div><strong>Idealab</strong><p>Одна из первых startup studios, запустившая десятки технологических проектов.</p></div><a href="https://idealab.com" target="_blank" rel="noopener">idealab.com ↗</a></article>
+        <article class="company"><div><strong>Expa</strong><p>Разрабатывает и масштабирует стартапы, объединяя продуктовую и инвестиционную экспертизу.</p></div><a href="https://expa.com" target="_blank" rel="noopener">expa.com ↗</a></article>
+        <article class="company"><div><strong>Pioneer Square Labs</strong><p>Проверяет идеи, создает команды и выводит новые компании на рынок.</p></div><a href="https://psl.com" target="_blank" rel="noopener">psl.com ↗</a></article>
+        <article class="company"><div><strong>Rocket Internet</strong><p>Масштабировала цифровые компании на международных рынках через повторяемые процессы.</p></div><a href="https://rocket-internet.com" target="_blank" rel="noopener">rocket-internet.com ↗</a></article>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2 class="section-title">Чем отличается NoctAI.VIP</h2>
+      <div class="proof-list">
+        <div class="proof"><div class="num">1</div><div><h3>Фокус на мобильных AI-продуктах</h3><p>Студия специализируется не на любых стартапах, а на мобильных приложениях с понятной моделью монетизации.</p></div></div>
+        <div class="proof"><div class="num">2</div><div><h3>Одна команда — несколько продуктов</h3><p>Разработка, дизайн, тестирование, серверная инфраструктура и маркетинг используются сразу для всего портфеля приложений.</p></div></div>
+        <div class="proof"><div class="num">3</div><div><h3>Снижение риска</h3><p>Компания не зависит от одного приложения: успешные продукты масштабируются, слабые гипотезы быстро заменяются новыми.</p></div></div>
+        <div class="proof"><div class="num">4</div><div><h3>Международный подход</h3><p>Продукты изначально проектируются для нескольких стран и языков, что расширяет потенциальную аудиторию.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2 class="section-title">Что уже сделано</h2>
+      <div class="grid">
+        <div class="col-6"><div class="metric"><div class="label">Опубликованный продукт</div><div class="value">BarakaWay</div><div class="note">Первое приложение уже разработано и опубликовано.</div></div></div>
+        <div class="col-6"><div class="metric"><div class="label">Следующие продукты</div><div class="value">4 приложения</div><div class="note">Находятся на завершающей стадии разработки.</div></div></div>
+      </div>
+      <p style="margin:20px 0 0;color:var(--muted)">Инвестиции направляются не в идею с нуля, а в ускорение, систематизацию и международное масштабирование уже начатой работы.</p>
+    </section>
+
+    <section class="section investment-box">
+      <div>
+        <div class="eyebrow"><i></i> Инвестиционный запрос</div>
+        <div class="amount">$1 500 000</div>
+        <p><strong>Период финансирования — 24 месяца.</strong> Запрашивается вся сумма сразу, чтобы компания могла гарантированно сформировать профессиональную команду и обеспечить непрерывную работу на весь период запуска и масштабирования.</p>
+      </div>
+      <div class="principles">
+        <div class="principle"><strong>Защита команды</strong><br>Заработная плата каждого ключевого специалиста планируется на два года вперед.</div>
+        <div class="principle"><strong>Финансовая дисциплина</strong><br>Средства расходуются только по утвержденному бюджету и контролируются ежемесячно.</div>
+        <div class="principle"><strong>Операционная устойчивость</strong><br>Офис, серверы, лицензии и другие обязательные расходы резервируются на весь период.</div>
+        <div class="principle"><strong>Фокус на результате</strong><br>Команда работает над продуктами, а не отвлекается на постоянный поиск нового финансирования.</div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2 class="section-title">Почему финансирование привлекается сразу на два года</h2>
+      <p class="section-lead">Два года — достаточный период, чтобы сформировать компанию, выпустить портфель продуктов, протестировать маркетинговые каналы и вывести сильнейшие приложения на устойчивую выручку.</p>
+      <details open><summary>Профессиональные специалисты</summary><div class="detail-body">Сильные разработчики, дизайнеры и маркетологи переходят в новую компанию только при наличии стабильности. Резервирование зарплат на 24 месяца снижает текучесть кадров и позволяет удерживать специалистов до завершения ключевого этапа.</div></details>
+      <details><summary>Контролируемое хранение и расходование средств</summary><div class="detail-body">Неиспользованная часть инвестиций хранится на корпоративных банковских счетах и расходуется строго по утвержденному финансовому плану, с ежемесячной отчетностью и контролем бюджета.</div></details>
+      <details><summary>Предоплата обязательных расходов</summary><div class="detail-body">Все расходы, которые возможно выгодно и безопасно зафиксировать заранее — аренда, оборудование, лицензии, облачная инфраструктура и сервисы — могут быть оплачены или зарезервированы на согласованный срок.</div></details>
+      <details><summary>Снижение инвестиционного риска</summary><div class="detail-body">Компания получает полный операционный горизонт и может выполнять план без остановки из-за задержки следующего транша или изменения внешней ситуации.</div></details>
+    </section>
+
+    <section class="section card">
+      <h2 class="section-title">Команда</h2>
+      <p class="section-lead">На старте формируется компактное профессиональное ядро из 8 специалистов. Дополнительные роли подключаются по мере роста.</p>
+      <div class="grid">
+        <div class="col-6">
+          <div class="proof-list">
+            <div class="proof"><div class="num">01</div><div><h3>Founder / CEO</h3><p>Стратегия, продукт, партнерства и контроль исполнения.</p></div></div>
+            <div class="proof"><div class="num">02</div><div><h3>Product / Project Manager</h3><p>Координация команды, сроки, документация и приоритеты.</p></div></div>
+            <div class="proof"><div class="num">03</div><div><h3>2 Flutter Developers</h3><p>Разработка и поддержка мобильных приложений.</p></div></div>
+            <div class="proof"><div class="num">04</div><div><h3>Backend Developer</h3><p>API, базы данных, интеграции и серверная логика.</p></div></div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="proof-list">
+            <div class="proof"><div class="num">05</div><div><h3>UI/UX Designer</h3><p>Интерфейсы, дизайн-система и пользовательские сценарии.</p></div></div>
+            <div class="proof"><div class="num">06</div><div><h3>QA Engineer</h3><p>Тестирование, стабильность и контроль качества.</p></div></div>
+            <div class="proof"><div class="num">07</div><div><h3>Marketing & ASO Specialist</h3><p>Привлечение пользователей, аналитика и оптимизация магазинов приложений.</p></div></div>
+            <div class="proof"><div class="num">08</div><div><h3>Подрядчики по мере необходимости</h3><p>SMM, motion-дизайн, DevOps, юридическая и бухгалтерская поддержка.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2 class="section-title">Распределение инвестиций</h2>
+      <p class="section-lead">Бюджет сформирован на полный 24-месячный период и включает обязательный резерв.</p>
+      <div class="budget-wrap">
+        <table class="budget-table">
+          <thead><tr><th>Направление</th><th>Сумма</th><th>Назначение</th></tr></thead>
+          <tbody>
+            <tr><td>Команда</td><td>$900 000</td><td>Заработные платы, налоги, мотивация и удержание специалистов.</td></tr>
+            <tr><td>Маркетинг</td><td>$375 000</td><td>Google Ads, Meta, TikTok, Apple Search Ads, ASO, инфлюенсеры и PR.</td></tr>
+            <tr><td>Офис</td><td>$90 000</td><td>Аренда, мебель, рабочие места, интернет и коммунальные расходы.</td></tr>
+            <tr><td>Серверы и инфраструктура</td><td>$75 000</td><td>Облачные серверы, базы данных, AI API, мониторинг и резервное копирование.</td></tr>
+            <tr><td>Лицензии, юридические расходы и резерв</td><td>$60 000</td><td>Корпоративные сервисы, бухгалтерия, договоры и непредвиденные расходы.</td></tr>
+            <tr><td><strong>Итого</strong></td><td><strong>$1 500 000</strong></td><td><strong>Полный операционный бюджет на 24 месяца.</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2 class="section-title">План развития</h2>
+      <div class="timeline">
+        <article class="phase"><span class="tag">0–12 месяцев</span><h3>Запуск и проверка рынка</h3><ul><li>Завершение текущих приложений</li><li>Публикация в App Store и Google Play</li><li>Запуск международного маркетинга</li><li>Первые платные пользователи и регулярная выручка</li></ul></article>
+        <article class="phase"><span class="tag">12–24 месяца</span><h3>Масштабирование</h3><ul><li>Усиление успешных продуктов</li><li>Выпуск новых приложений</li><li>Расширение географии и языков</li><li>Рост повторяющейся месячной выручки</li></ul></article>
+        <article class="phase"><span class="tag">После 24 месяцев</span><h3>Устойчивая Venture Studio</h3><ul><li>Портфель прибыльных приложений</li><li>Собственная продуктовая инфраструктура</li><li>Выход на новые рынки</li><li>Подготовка к следующему этапу роста</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2 class="section-title">Прогноз развития</h2>
+      <p class="section-lead">Ниже представлены ориентировочные сценарии развития портфеля приложений. Это не гарантия дохода, а расчетные диапазоны при успешном запуске продуктов и эффективном маркетинге.</p>
+      <div class="forecast-wrap">
+        <table class="forecast-table">
+          <thead><tr><th>Период</th><th>Консервативный</th><th>Базовый</th><th>Оптимистичный</th></tr></thead>
+          <tbody>
+            <tr><td>Конец 1-го года</td><td>$20–40 тыс./мес.</td><td>$60–120 тыс./мес.</td><td>$150–300 тыс./мес.</td></tr>
+            <tr><td>Конец 2-го года</td><td>$100–250 тыс./мес.</td><td>$300–700 тыс./мес.</td><td>$800 тыс.–1,5 млн/мес.</td></tr>
+            <tr><td>Конец 3-го года</td><td>$300–600 тыс./мес.</td><td>$800 тыс.–2 млн/мес.</td><td>$2–5 млн/мес.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="forecast-note"><strong>Важно:</strong> фактический результат будет зависеть от стоимости привлечения пользователя, конверсии в оплату, удержания аудитории, цены подписки и скорости выпуска новых продуктов.</div>
+    </section>
+
+    <section class="closing">
+      <h2>Цель NoctAI.VIP</h2>
+      <p>За 24 месяца создать устойчивую международную AI Mobile Venture Studio с профессиональной командой, полноценной инфраструктурой, портфелем мобильных приложений и масштабируемой моделью регулярного дохода.</p>
+    </section>
+
+    <footer class="footer">NoctAI.VIP © 2026 · Investment Proposal</footer>
+  </main>
+</body>
+</html>
